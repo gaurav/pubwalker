@@ -1,0 +1,36 @@
+"""Step 7: one JSON per paper for the static site, plus site/data/index.json."""
+import datetime as dt
+import json
+
+from . import DATA, SITE_DATA
+from .analyze import histogram, load
+from .fetch import slugify
+from .llm import total_cost
+
+
+def run(doi):
+    slug = slugify(doi)
+    anchor, citers, P, R, S = load(doi, "anchor"), {c["id"]: c for c in load(doi, "citers")}, load(doi, "passages"), load(doi, "roles"), load(doi, "synthesis")
+    struct = load(doi, "structure") if (DATA / slug / "structure.json").exists() else None
+    comp = load(doi, "comparison") if (DATA / slug / "comparison.json").exists() else None
+    keep = ["id", "doi", "pmid", "pmcid", "title", "year", "venue", "type"]
+    years = {}
+    for c in citers.values():
+        if c.get("year"):
+            years[c["year"]] = years.get(c["year"], 0) + 1
+    out = {
+        "slug": slug, "anchor": anchor, "generated": dt.date.today().isoformat(),
+        "windows": {name: {**w, "roles": histogram(w["sampled"], R), "synthesis": S.get(name)} for name, w in P["windows"].items()},
+        "overall": S.get("overall"),
+        "citers": {i: {**{k: citers[i].get(k) for k in keep}, **P["passages"][i], "role": R.get(i)} for i in P["passages"]},
+        "years": sorted(years.items()),
+        "structure": struct, "comparison": comp, "cost_usd": total_cost(),
+    }
+    SITE_DATA.mkdir(parents=True, exist_ok=True)
+    (SITE_DATA / f"{slug}.json").write_text(json.dumps(out, indent=1))
+    index_path = SITE_DATA / "index.json"
+    index = {e["slug"]: e for e in json.loads(index_path.read_text())} if index_path.exists() else {}
+    index[slug] = {"slug": slug, "doi": anchor["doi"], "title": anchor["title"], "year": anchor["year"], "venue": anchor.get("venue"),
+                   "cited_by_count": anchor.get("cited_by_count"), "windows": {n: w["total"] for n, w in P["windows"].items()}, "generated": out["generated"]}
+    index_path.write_text(json.dumps(sorted(index.values(), key=lambda e: e["year"] or 0), indent=1))
+    print(f"wrote {SITE_DATA / (slug + '.json')} ({len(out['citers'])} citers with passages)")
