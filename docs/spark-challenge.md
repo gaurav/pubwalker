@@ -40,6 +40,10 @@ Constraints that shape any entry:
 - Eligibility: US citizens, permanent residents, or US entities to receive money; others may
   be team members. Federal grant funds may be used only consistently with the award's terms.
 
+A small illustration of why grounding is hard: the Track 2 worked example on NIH's own page
+lists Bunting et al. 2010 as PMCID PMC2846171, which is an unrelated otolaryngology paper. The
+correct PMCID is PMC2857570. Citation validity is one of the scored criteria.
+
 Pointers NIH gives: [TREC BioGen](https://trec-biogen.github.io/) as the closest prior
 challenge; the NLM Strategic Futures AI workshop recordings.
 
