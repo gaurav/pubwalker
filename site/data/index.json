@@ -1,0 +1,30 @@
+[
+ {
+  "slug": "10-1111-j-1096-0031-2010-00329-x",
+  "doi": "10.1111/j.1096-0031.2010.00329.x",
+  "title": "SequenceMatrix: concatenation software for the fast assembly of multi-gene datasets with character set and codon information",
+  "year": 2010,
+  "venue": "Cladistics",
+  "cited_by_count": 2685,
+  "windows": {
+   "last-12-months": 208,
+   "last-5-years": 1292,
+   "all-time": 2594
+  },
+  "generated": "2026-09-16"
+ },
+ {
+  "slug": "10-1016-j-cell-2010-03-012",
+  "doi": "10.1016/j.cell.2010.03.012",
+  "title": "53BP1 Inhibits Homologous Recombination in Brca1-Deficient Cells by Blocking Resection of DNA Breaks",
+  "year": 2010,
+  "venue": "Cell",
+  "cited_by_count": 1691,
+  "windows": {
+   "last-12-months": 59,
+   "last-5-years": 458,
+   "all-time": 1687
+  },
+  "generated": "2026-09-16"
+ }
+]
