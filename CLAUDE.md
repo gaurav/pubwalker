@@ -1,0 +1,16 @@
+# pubwalker: notes for agents
+
+- The ideas and the tooling survey live in `docs/`; read `docs/citation-role.md` and
+  `docs/argument-structure.md` before changing prompts or schemas in `pipeline/pubwalker/analyze.py`.
+- `data/` is gitignored scratch. Every HTTP response (`data/cache/http`) and LLM response
+  (`data/cache/llm`) is cached by hash, so a re-run of any pipeline step is offline and free
+  unless a prompt, model or schema changed. Per-paper intermediates are `data/<doi-slug>/*.json`.
+- All LLM calls go through `pipeline/pubwalker/llm.py` (`claude -p`, custom system prompt, no
+  tools, JSON schema). Keep it that way so an open-weight model can be swapped in for a SPARK entry.
+- `site/` is dependency-free vanilla HTML/JS with no build step; it reads `site/data/*.json`
+  written by `pubwalker export`. Check it with `python3 -m http.server -d site`.
+- Tests: `cd pipeline && uv run python -m unittest discover -s tests`. They use inline fixtures
+  and never touch the network or `claude`.
+- Gotchas: Europe PMC `fullTextXML` returns 500 for author manuscripts (NCBI efetch works);
+  OpenAlex's `per-page` also caps `group_by` results; NIH's SPARK page gives a wrong PMCID for
+  Bunting 2010 (correct: PMC2857570); Semantic Scholar contexts are sometimes just reference numbers.
