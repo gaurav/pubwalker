@@ -97,12 +97,17 @@ def roles(doi, workers=4):
         c, ps = citers[cid], P["passages"][cid]["passages"]
         body = "\n\n".join(f"[{p['source']}{', section: ' + p['section'] if p['section'] else ''}]\n{p['text'][:3000]}" for p in ps[:4])
         prompt = f"Cited paper: {anchor['title']} ({anchor['year']}).\nCiting paper: {cite(c)}.\n\nPassages:\n{body}"
-        return cid, ask(prompt, model="haiku", system=ROLE_SYSTEM, schema=ROLE_SCHEMA)
+        try:
+            return cid, ask(prompt, model="haiku", system=ROLE_SYSTEM, schema=ROLE_SCHEMA)
+        except RuntimeError as e:  # one bad passage must not sink the run; it is simply left unclassified
+            print(f"  {cid}: {e}")
+            return cid, None
 
     todo = [cid for cid in P["passages"] if cid not in done]
     with ThreadPoolExecutor(workers) as ex:
         for cid, out in ex.map(one, todo):
-            done[cid] = out
+            if out:
+                done[cid] = out
     save(doi, "roles", done)
     hist = {}
     for r in done.values():

@@ -27,10 +27,13 @@ def ask(prompt, *, model, system, schema=None):
     except json.JSONDecodeError:
         raise RuntimeError(f"claude -p failed: {r.stderr[-500:] or r.stdout[-500:]}")
     if d.get("is_error"):
-        raise RuntimeError(d.get("result"))
+        raise RuntimeError(f"claude -p error ({d.get('subtype')}): {d.get('result') or d.get('errors') or json.dumps(d)[:600]}")
     out = d.get("structured_output") if schema else d.get("result")
     if schema and out is None:  # older claude: structured answer only in `result`
-        out = json.loads(d["result"])
+        try:
+            out = json.loads(d["result"])
+        except (json.JSONDecodeError, TypeError):
+            raise RuntimeError(f"claude -p returned no structured output ({d.get('subtype')}): {str(d.get('result'))[:300]!r}")
     CACHE.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({"model": model, "cost_usd": d.get("total_cost_usd"), "output": out}))
     print(f"  [{model}] ${d.get('total_cost_usd', 0):.4f}", file=sys.stderr)
