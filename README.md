@@ -23,11 +23,31 @@ Two ideas, which are the same problem facing in opposite directions:
 `docs/tooling.md` surveys the data sources and tools we can lean on (OpenAlex, Semantic
 Scholar, Europe PMC, pubmed2db, Claude Code in headless mode, and so on).
 
-## Status
+## Demo
 
-Ideas and tooling notes only. A demo website with a pipeline that produces these reports for
-a couple of example papers is being built on a separate branch; when it lands it will live in
-`pipeline/` (Python, run locally) and `site/` (static, GitHub Pages).
+`site/` is a static page (no build step) that shows precomputed reports for two papers and a
+keyless live look-up for any DOI. It deploys to GitHub Pages from `main`; locally:
+
+```sh
+python3 -m http.server 8765 -d site   # then open http://localhost:8765/
+```
+
+`pipeline/` produces the reports. It needs [uv](https://docs.astral.sh/uv/) and a Claude Code
+login (`claude` on your PATH); every LLM call goes through `claude -p` and is cached, as is
+every HTTP response, under `data/`.
+
+```sh
+cd pipeline
+uv run pubwalker all 10.1111/j.1096-0031.2010.00329.x     # fetch → passages → roles → synth → structure → compare → export
+uv run pubwalker roles 10.1016/j.cell.2010.03.012 --n 40  # or one step at a time
+```
+
+Steps: `fetch` lists citers from OpenAlex; `passages` pulls the citing paragraph from Europe
+PMC full text or the citing sentence from Semantic Scholar and samples 40 citers per time
+window; `roles` labels each passage with Haiku; `synth` writes per-window and overall
+syntheses with Opus, each claim tied to citer ids; `structure` extracts the anchor's argument
+from its PMC full text (or abstract); `compare` sets claimed against cited; `export` writes
+`site/data/<slug>.json`. A full run for one paper costs a few dollars.
 
 ## Setup
 

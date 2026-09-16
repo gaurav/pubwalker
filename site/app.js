@@ -76,7 +76,7 @@ const links = (c) => [
 
 const citerDetails = (c, open = false) => `
   <details id="c-${esc(c.id)}" ${open ? 'open' : ''}>
-    <summary>${roleBadge(c.role?.role)} <b>${esc(c.title)}</b> <span class="muted">(${esc(c.year)}, ${esc(c.venue || c.type || '')})</span></summary>
+    <summary>${roleBadge(c.role?.role)} <b>${esc(c.title)}</b> <span class="muted">${[c.year, c.venue || c.type].filter(Boolean).map(esc).join(', ')}</span></summary>
     <div class="small muted">${links(c)}${c.role ? ` · stance: ${esc(c.role.stance)} · confidence: ${esc(c.role.confidence)}` : ''}</div>
     ${c.role ? `<p><b>Used for:</b> ${esc(c.role.what_for)}${c.role.combined_with?.length ? ` <span class="muted">· with ${esc(c.role.combined_with.join(', '))}</span>` : ''}</p>` : ''}
     ${(c.passages || []).map((p) => `<div class="pass"><div class="src">${p.source === 'epmc' ? 'Europe PMC full text' : 'Semantic Scholar context'}${p.section ? ` · ${esc(p.section)}` : ''}</div>${esc(p.text)}</div>`).join('')}
@@ -158,7 +158,7 @@ async function live(doi) {
     const [y1, y5, byYear] = await Promise.all([
       oa('/works', { filter: `cites:${id},from_publication_date:${since(365)}`, 'per-page': 1 }),
       oa('/works', { filter: `cites:${id},from_publication_date:${since(5 * 365 + 1)}`, 'per-page': 1 }),
-      oa('/works', { filter: `cites:${id}`, group_by: 'publication_year', 'per-page': 1 }),
+      oa('/works', { filter: `cites:${id}`, group_by: 'publication_year' }),  // per-page would also cap the groups
     ]);
     const years = byYear.group_by.map((g) => [+g.key, g.count]).filter(([y]) => y > 1900).sort((a, b) => a[0] - b[0]);
     const anchor = { id, doi: (w.doi || '').replace('https://doi.org/', ''), pmid: w.ids?.pmid?.split('/').pop(), title: w.title, year: w.publication_year, venue: w.primary_location?.source?.display_name, cited_by_count: w.cited_by_count };
