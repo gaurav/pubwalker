@@ -1,2 +1,5 @@
 # Ignore /data/ as a scratch space.
 /data/
+
+# Local secrets; copy env.default to .env and fill in.
+.env
