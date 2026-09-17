@@ -84,20 +84,6 @@
   "generated": "2026-09-17"
  },
  {
-  "slug": "10-2215-cjn-00810110",
-  "doi": "10.2215/cjn.00810110",
-  "title": "Serum Phosphate and Mortality in Patients with Chronic Kidney Disease",
-  "year": 2010,
-  "venue": "Clinical Journal of the American Society of Nephrology",
-  "cited_by_count": 244,
-  "windows": {
-   "last-12-months": 6,
-   "last-5-years": 74,
-   "all-time": 235
-  },
-  "generated": "2026-09-17"
- },
- {
   "slug": "10-1038-nature10489",
   "doi": "10.1038/nature10489",
   "title": "Active tactile exploration using a brain\u2013machine\u2013brain interface",
@@ -112,20 +98,6 @@
   "generated": "2026-09-17"
  },
  {
-  "slug": "10-3399-bjgp11x567054",
-  "doi": "10.3399/bjgp11x567054",
-  "title": "Patients' views of physical activity as treatment for depression: a qualitative study",
-  "year": 2011,
-  "venue": "British Journal of General Practice",
-  "cited_by_count": 118,
-  "windows": {
-   "last-12-months": 6,
-   "last-5-years": 34,
-   "all-time": 116
-  },
-  "generated": "2026-09-17"
- },
- {
   "slug": "10-1371-journal-pone-0036674",
   "doi": "10.1371/journal.pone.0036674",
   "title": "Genomic Selection for Fruit Quality Traits in Apple (Malus\u00d7domestica Borkh.)",
@@ -136,6 +108,34 @@
    "last-12-months": 8,
    "last-5-years": 73,
    "all-time": 247
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1016-j-socscimed-2013-06-014",
+  "doi": "10.1016/j.socscimed.2013.06.014",
+  "title": "Cultural health capital and the interactional dynamics of patient-centered care",
+  "year": 2013,
+  "venue": "Social Science & Medicine",
+  "cited_by_count": 216,
+  "windows": {
+   "last-12-months": 19,
+   "last-5-years": 93,
+   "all-time": 214
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1161-circulationaha-114-012957",
+  "doi": "10.1161/circulationaha.114.012957",
+  "title": "Effect of Inorganic Nitrate on Exercise Capacity in Heart Failure With Preserved Ejection Fraction",
+  "year": 2014,
+  "venue": "Circulation",
+  "cited_by_count": 307,
+  "windows": {
+   "last-12-months": 14,
+   "last-5-years": 80,
+   "all-time": 307
   },
   "generated": "2026-09-17"
  },
