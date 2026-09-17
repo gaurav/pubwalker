@@ -146,13 +146,30 @@ function report(d) {
       ${sampled.sort((x, y) => (y.year || 0) - (x.year || 0)).map((c) => citerDetails(c)).join('')}`;
   };
   const S = d.structure;
-  const structItem = (it) => `<dd>${esc(it.text)}${it.sources?.length ? ` <span class="muted small">[${it.sources.map((s) => `<abbr title="${esc(S.references?.[s] || s)}">${esc(s)}</abbr>`).join(', ')}]</span>` : ''}${it.evidence && it.evidence !== 'not stated' ? `<div class="ev">“${esc(it.evidence)}”</div>` : ''}</dd>`;
+  // Conclusions sit right under the question: the two together are the paper in a glance. The rest is how it got there.
+  const SECTIONS = [['conclusions', 'C'], ['assumptions', 'A'], ['design', 'D'], ['data', 'T'], ['analysis', 'N'], ['results', 'R'], ['implications', 'I'], ['limitations', 'L']];
+  const KINDS = { fact: ['◆', 'fact: established knowledge taken as given'], method: ['⚙', 'method: how something was done'], finding: ['▲', 'finding: observed or measured in this work'], claim: ['✦', 'claim: the authors’ interpretation, argument or proposal'], gap: ['○', 'gap: a caveat or something not addressed'] };
+  const cap = (k) => k[0].toUpperCase() + k.slice(1);
+  const emph = (text) => esc(text).replace(/\*\*(.+?)\*\*/, '<b>$1</b>');  // the model marks each item's key phrase with **…**
+  const structItem = (it, id) => `<li id="${id}" class="${it.highlight ? 'hi' : ''}">
+      ${it.kind ? `<span class="k k-${it.kind}" title="${esc(KINDS[it.kind]?.[1] || it.kind)}">${KINDS[it.kind]?.[0] || '•'}</span>` : ''}<span class="n">${id}</span>
+      ${emph(it.text)}${it.sources?.length ? ` <span class="muted small">[${it.sources.map((s) => `<abbr title="${esc(S.references?.[s] || s)}">${esc(s)}</abbr>`).join(', ')}]</span>` : ''}${it.based_on?.length ? ` <span class="small muted">rests on</span> ${it.based_on.map((r) => `<a class="chip" href="#${esc(r)}">${esc(r)}</a>`).join('')}` : ''}${it.evidence && it.evidence !== 'not stated' ? `<div class="ev">“${esc(it.evidence)}”</div>` : ''}</li>`;
+  const present = SECTIONS.filter(([k]) => S?.[k]?.length);
   const structure = S ? `
-    <p class="small muted">Extracted from ${S.source === 'pmc-full-text' ? 'the PMC full text' : 'the abstract only, so design, data and analysis are thin'}; each item carries the span it was read from.</p>
-    <dl class="struct">
-      <dt>Question</dt><dd>${esc(S.question)}</dd>
-      ${['assumptions', 'design', 'data', 'analysis', 'results', 'conclusions', 'implications', 'limitations'].filter((k) => S[k]?.length).map((k) => `<dt>${esc(k[0].toUpperCase() + k.slice(1))}</dt>${S[k].map(structItem).join('')}`).join('')}
-    </dl>` : '<p class="muted">Not extracted.</p>';
+    ${S.source === 'pmc-full-text' ? '<p class="small muted">Extracted from the PMC full text; each item carries the span it was read from.</p>' : `
+    <div class="flash"><b>No full text was available for this paper.</b> Everything below was extracted from the title and abstract alone,
+    so design, data, analysis and limitations are thin or guessed, and no assumption can be tied to a cited reference. Treat this tab as a sketch.
+    ${S.abstract ? `<p><b>The abstract, in full, as the model saw it:</b></p><p>${esc(S.abstract)}</p>` : ''}</div>`}
+    <div class="struct">
+      <nav class="toc">
+        <ul>${present.map(([k]) => `<li><a href="#s-${k}">${cap(k)}</a> <span class="muted">${S[k].length}</span></li>`).join('')}</ul>
+        <label><input type="checkbox" id="hi-only"> highlights only</label>
+        <label><input type="checkbox" id="ev-on"> show evidence spans</label>
+        <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => `<span class="k k-${k}" title="${esc(t)}">${g} ${k}</span>`).join(' ')}</div>
+      </nav>
+      <h3>Question</h3><p class="q">${esc(S.question)}</p>
+      ${present.map(([k, L]) => `<section id="s-${k}"><h3>${cap(k)}</h3><ul class="items">${S[k].map((it, i) => structItem(it, `${L}${i + 1}`)).join('')}</ul></section>`).join('')}
+    </div>` : '<p class="muted">Not extracted.</p>';
   const KIND = { 'cited-as-claimed': ['a', 'Cited as claimed'], 'cited-for-something-else': ['b', 'Cited for something else'], 'claimed-but-not-cited': ['c', 'Claimed but not cited'] };
   const comparison = d.comparison ? `<ul>${d.comparison.points.map((p) => `<li><span class="kind ${KIND[p.kind]?.[0]}">${esc(KIND[p.kind]?.[1] || p.kind)}</span>${esc(p.text)}</li>`).join('')}</ul>` : '<p class="muted">Not compared.</p>';
 

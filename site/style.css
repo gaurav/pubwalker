@@ -25,7 +25,15 @@ ol.claims li { margin:.6rem 0 } .chip { display:inline-block; font-size:.75rem; 
 .role { display:inline-block; font-size:.75rem; padding:0 .45rem; border-radius:10px; color:#fff; background:var(--muted) }
 details { margin:.4rem 0 } summary { cursor:pointer } details .pass { border-left:3px solid var(--line); padding:.25rem .75rem; margin:.5rem 0; font-size:.92rem } .pass .src { color:var(--muted); font-size:.8rem }
 table { width:100%; border-collapse:collapse; font-size:.9rem } td, th { text-align:left; padding:.35rem .5rem; border-bottom:1px solid var(--line); vertical-align:top } th { color:var(--muted); font-weight:600 }
-.struct dt { font-weight:600; margin-top:.75rem } .struct dd { margin:.2rem 0 .2rem 1rem } .ev { color:var(--muted); font-size:.85rem; font-style:italic }
+.struct .q { font-size:1.1rem; font-weight:500 } .struct h3 { margin-top:1.5rem } .struct section h3 { border-bottom:1px solid var(--line); padding-bottom:.2rem }
+.struct ul.items { list-style:none; padding:0; margin:0 } .struct ul.items li { position:relative; padding:.35rem 0 .35rem 2.6rem; border-bottom:1px dotted var(--line) } .struct ul.items li:target { background:var(--card) }
+.struct .k { display:inline-block; width:1.2rem; text-align:center } .struct ul.items .k { position:absolute; left:0 } .struct .n { position:absolute; left:1.3rem; color:var(--muted); font-size:.7rem; font-variant-numeric:tabular-nums; top:.6rem }
+.k-fact { color:var(--r-background-claim) } .k-method { color:var(--r-uses-tool-or-method) } .k-finding { color:var(--r-extends-or-modifies) } .k-claim { color:var(--r-compares-against) } .k-gap { color:var(--r-critiques-or-contradicts) }
+.struct .toc { font-size:.85rem; margin:.5rem 0 } .struct .toc ul { list-style:none; padding:0; margin:0 0 .5rem; display:flex; flex-wrap:wrap; gap:.25rem .75rem } .struct .toc a { text-decoration:none } .struct .toc label { display:block; cursor:pointer } .struct .legend { margin-top:.5rem; color:var(--muted) } .struct .legend .k { width:auto; margin-right:.5rem }
+@media (min-width:900px) { .struct .toc { float:right; position:sticky; top:1rem; width:14rem; margin:0 0 1rem 1.5rem; padding:.75rem; background:var(--card); border-radius:8px } .struct .toc ul { display:block } .struct .toc li { margin:.15rem 0 } }
+/* ponytail: the toggles are pure CSS via :has(); add JS if a browser without it matters */
+.ev { display:none; color:var(--muted); font-size:.85rem; font-style:italic; border-left:2px solid var(--line); padding-left:.6rem; margin-top:.25rem } .struct:has(#ev-on:checked) .ev { display:block }
+.struct:has(#hi-only:checked) ul.items li:not(.hi) { display:none }
 .kind { font-size:.75rem; font-weight:600; text-transform:uppercase; letter-spacing:.02em; margin-right:.4rem } .kind.a { color:var(--r-uses-tool-or-method) } .kind.b { color:var(--r-compares-against) } .kind.c { color:var(--r-critiques-or-contradicts) }
 .flash { border-left:3px solid var(--r-compares-against); padding:.5rem .75rem; background:var(--card); font-size:.9rem }
 @media (max-width:600px) { header .tag { display:none } .nums { gap:1rem } }
