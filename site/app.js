@@ -24,11 +24,11 @@ async function json(url) {
   if (!r.ok) throw new Error(`${r.status} ${url}`);
   return r.json();
 }
+const INDEX = json('data/index.json').catch(() => []);  // precomputed reports; empty until the pipeline has run
 
 // ---------- home ----------
 async function home() {
-  let index = [];
-  try { index = await json('data/index.json'); } catch { /* no precomputed reports yet */ }
+  const index = await INDEX;
   app.innerHTML = `
     <h1>What is this paper used for?</h1>
     <p>Two questions about any paper, answered from the papers that cite it and from its own text:
@@ -232,6 +232,9 @@ async function live(doi) {
 }
 
 // ---------- route ----------
+// Header jump box: the datalist offers the precomputed reports, anything else typed is a live look-up.
+// ponytail: a datalist is fine while there are a few dozen reports; a real picker if it grows past that.
+INDEX.then((index) => { document.getElementById('examples').innerHTML = index.map((e) => `<option value="${esc(e.doi)}">${esc(e.title)}</option>`).join(''); });
 const q = new URLSearchParams(location.search);
 const doi = (q.get('doi') || '').trim().replace(/^https?:\/\/doi\.org\//, '');
 doi ? paper(doi, q.get('tab')) : home();
