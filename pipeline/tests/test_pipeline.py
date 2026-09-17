@@ -154,7 +154,8 @@ class Export(unittest.TestCase):
             self.assertEqual(report["cost_usd"], 0.75)
             self.assertEqual(report["cost_by_model"], {"opus": 0.5, "haiku": 0.25})  # biggest first
             self.assertEqual(report["cost_by_step"], {"roles": {"haiku": 0.25}, "synth": {"opus": 0.5}})  # the site says which model did which job
-            self.assertNotIn("cost_by_model", entry)  # the split is a report-page figure; the home page keeps the scalar
+            for field in ("cost_by_model", "cost_by_step"):  # both are report-page figures; the home page keeps the scalar,
+                self.assertNotIn(field, entry)  # and index.json is fetched on every page view, report pages included
             self.assertEqual(report["years"], [[2012, 1]])  # the citer OpenAlex dates before the paper it cites is dropped
 
     def test_a_paper_without_full_text_says_so_rather_than_reporting_nothing(self):
