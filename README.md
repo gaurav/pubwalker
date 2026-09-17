@@ -43,7 +43,8 @@ and section it was read from (schema in [docs/argument-structure.md](docs/argume
 for, where in the paper, how old they are, and which ones carry the argument. **Backscatter** is
 how the literature uses the paper (roles per citing passage, syntheses per time window with
 linked evidence). **Claimed vs cited** sets the paper's claims against what it is cited for. `uv run screenshot out.png <doi> anatomy` renders a
-page in headless Chromium for checking without a browser window.
+page in headless Chromium for checking without a browser window, and `uv run clicktest [doi]`
+clicks through every tab and fails on any page error.
 
 `pipeline/` produces the reports. It needs [uv](https://docs.astral.sh/uv/) and a Claude Code
 login (`claude` on your PATH); every LLM call goes through `claude -p` and is cached, as is

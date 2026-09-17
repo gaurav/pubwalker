@@ -9,6 +9,7 @@ dependencies = ["httpx>=0.27", "python-dotenv>=1.0"]
 pubwalker = "pubwalker.cli:main"
 serve = "pubwalker.cli:serve"
 screenshot = "pubwalker.cli:screenshot"
+clicktest = "pubwalker.cli:clicktest"
 
 [build-system]
 requires = ["hatchling"]

@@ -12,7 +12,8 @@
   (livereload on :8765) or `python3 -m http.server -d site`. To see it rendered without a
   browser window: `cd pipeline && uv run screenshot out.png <doi> anatomy` (headless Chromium
   via playwright, a dev dependency; `uv run playwright install chromium` once), or
-  `node tools/render.mjs <doi> out.html` for the panel's HTML under a stub DOM. Firefox's
+  `node tools/render.mjs <doi> out.html` for the panel's HTML under a stub DOM. `uv run clicktest [doi]`
+  clicks every tab and fails on page errors, which a load-time screenshot cannot catch. Firefox's
   `-headless -screenshot` fails on this machine ("Could not find profile folder").
 - Tests: `cd pipeline && uv run python -m unittest discover -s tests`. They use inline fixtures
   and never touch the network or `claude`.

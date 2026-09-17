@@ -67,5 +67,41 @@ def screenshot():
     print(f"wrote {out or 'site.png'} from {url}")
 
 
+def clicktest():
+    """uv run clicktest [doi]: open a report in headless Chromium, click every top tab and a cross-tab chip, and fail on any
+    page error. `screenshot` only sees load-time errors; this catches handlers that break on interaction."""
+    import http.server
+    import json
+    import sys
+    import threading
+    from functools import partial
+
+    from playwright.sync_api import sync_playwright
+
+    from . import SITE_DATA
+
+    doi = sys.argv[1] if len(sys.argv) > 1 else json.loads((SITE_DATA / "index.json").read_text())[0]["doi"]
+    quiet = type("Quiet", (http.server.SimpleHTTPRequestHandler,), {"log_message": lambda *a: None})
+    httpd = http.server.ThreadingHTTPServer(("127.0.0.1", 0), partial(quiet, directory=str(SITE_DATA.parent)))
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
+    errors = []
+    with sync_playwright() as p:
+        page = p.chromium.launch().new_page()
+        page.on("pageerror", lambda e: errors.append(str(e)))
+        page.on("console", lambda m: m.type == "error" and errors.append(m.text))
+        page.goto(f"http://127.0.0.1:{httpd.server_port}/?doi={doi}")
+        page.wait_for_selector(".tabs.top")
+        tabs = [b.get_attribute("data-t") for b in page.query_selector_all(".tabs.top button")]
+        for t in tabs[1:] + tabs[:1]:
+            page.click(f".tabs.top button[data-t={t}]")
+            assert page.is_visible(f"section[data-t={t}]") and f"tab={t}" in page.url, (t, page.url)
+        if chip := page.query_selector("section[data-t=outgoing] .chip[href^='#A']"):  # Outgoing's "grounds" link into Anatomy
+            page.click(".tabs.top button[data-t=outgoing]")
+            chip.click()
+            assert page.is_visible("section[data-t=anatomy]"), "chip did not switch to Anatomy"
+    print(f"{doi}: clicked {len(tabs)} tabs; errors: {errors or 'none'}")
+    sys.exit(1 if errors else 0)
+
+
 if __name__ == "__main__":
     main()
