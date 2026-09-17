@@ -9,7 +9,11 @@
   tools, JSON schema). Keep it that way so an open-weight model can be swapped in for a SPARK entry.
 - `site/` is dependency-free vanilla HTML/JS with no build step; it reads `site/data/*.json`
   written by `pubwalker export`. Check it with `cd pipeline && uv run serve`
-  (livereload on :8765) or `python3 -m http.server -d site`.
+  (livereload on :8765) or `python3 -m http.server -d site`. To see it rendered without a
+  browser window: `cd pipeline && uv run screenshot out.png <doi> anatomy` (headless Chromium
+  via playwright, a dev dependency; `uv run playwright install chromium` once), or
+  `node tools/render.mjs <doi> out.html` for the panel's HTML under a stub DOM. Firefox's
+  `-headless -screenshot` fails on this machine ("Could not find profile folder").
 - Tests: `cd pipeline && uv run python -m unittest discover -s tests`. They use inline fixtures
   and never touch the network or `claude`.
 - Gotchas: Europe PMC `fullTextXML` returns 500 for author manuscripts (NCBI efetch works);

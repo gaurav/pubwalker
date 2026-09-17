@@ -8,6 +8,7 @@ dependencies = ["httpx>=0.27", "python-dotenv>=1.0"]
 [project.scripts]
 pubwalker = "pubwalker.cli:main"
 serve = "pubwalker.cli:serve"
+screenshot = "pubwalker.cli:screenshot"
 
 [build-system]
 requires = ["hatchling"]
@@ -19,4 +20,5 @@ packages = ["pubwalker"]
 [dependency-groups]
 dev = [
     "livereload>=2.7.1",
+    "playwright>=1.63.0",
 ]

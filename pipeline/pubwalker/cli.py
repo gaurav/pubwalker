@@ -39,5 +39,32 @@ def serve():
     server.serve(root=str(SITE_DATA.parent), port=int(sys.argv[1]) if len(sys.argv) > 1 else 8765)
 
 
+def screenshot():
+    """uv run screenshot <out.png> [doi] [tab] [width]: render site/ in headless Chromium (playwright, dev dependency) and save a
+    full-page screenshot; console errors are printed. Serves site/ itself on a free port, so nothing else needs to be running."""
+    import http.server
+    import sys
+    import threading
+    from functools import partial
+
+    from playwright.sync_api import sync_playwright
+
+    from . import SITE_DATA
+
+    out, doi, tab, width = (sys.argv[1:] + [None] * 4)[:4]
+    quiet = type("Quiet", (http.server.SimpleHTTPRequestHandler,), {"log_message": lambda *a: None})
+    httpd = http.server.ThreadingHTTPServer(("127.0.0.1", 0), partial(quiet, directory=str(SITE_DATA.parent)))
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
+    url = f"http://127.0.0.1:{httpd.server_port}/" + (f"?doi={doi}&tab={tab or 'backscatter'}" if doi else "")
+    with sync_playwright() as p:
+        page = p.chromium.launch().new_page(viewport={"width": int(width or 1200), "height": 900})
+        page.on("console", lambda m: m.type == "error" and print(f"console error: {m.text}", file=sys.stderr))
+        page.on("pageerror", lambda e: print(f"page error: {e}", file=sys.stderr))
+        page.goto(url)
+        page.wait_for_selector(".tabs.top" if doi else "form.live")  # rendered by app.js once data has loaded
+        page.screenshot(path=out or "site.png", full_page=True)
+    print(f"wrote {out or 'site.png'} from {url}")
+
+
 if __name__ == "__main__":
     main()
