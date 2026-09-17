@@ -56,7 +56,7 @@ def screenshot():
     quiet = type("Quiet", (http.server.SimpleHTTPRequestHandler,), {"log_message": lambda *a: None})
     httpd = http.server.ThreadingHTTPServer(("127.0.0.1", 0), partial(quiet, directory=str(SITE_DATA.parent)))
     threading.Thread(target=httpd.serve_forever, daemon=True).start()
-    url = f"http://127.0.0.1:{httpd.server_port}/" + (f"?doi={doi}&tab={tab or 'backscatter'}" if doi else "")
+    url = f"http://127.0.0.1:{httpd.server_port}/" + (f"?doi={doi}&tab={tab or 'anatomy'}" if doi else "")
     with sync_playwright() as p:
         page = p.chromium.launch().new_page(viewport={"width": int(width or 1200), "height": 900})
         page.on("console", lambda m: m.type == "error" and print(f"console error: {m.text}", file=sys.stderr))

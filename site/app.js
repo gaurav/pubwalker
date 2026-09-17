@@ -7,7 +7,8 @@ const app = document.getElementById('app');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const WINDOW_LABEL = { 'last-12-months': 'Last 12 months', 'last-5-years': 'Last 5 years', 'all-time': 'All time' };
 const fmt = (n) => (n ?? 0).toLocaleString();
-const TABS = { backscatter: 'Backscatter', anatomy: 'Anatomy', outgoing: 'Outgoing', comparison: 'Claimed vs cited' };
+// In order of direction: the paper itself, what it cites, what cites it, and the two directions compared.
+const TABS = { anatomy: 'Anatomy', outgoing: 'Outgoing', backscatter: 'Backscatter', comparison: 'Claimed vs cited' };
 const ROLES = ['uses-tool-or-method', 'uses-data', 'background-claim', 'compares-against', 'extends-or-modifies', 'critiques-or-contradicts', 'incidental'];
 const INTRO = {
   backscatter: `<p class="small muted">How the literature uses this paper. Every citing passage we could retrieve was given a role
@@ -198,7 +199,7 @@ async function paper(doi, tab) {
     app.innerHTML += `<p class="flash">Lookup failed: ${esc(e.message)}. Check the DOI, or try again if a rate limit was hit.</p>`;
     return;
   }
-  if (!TABS[tab]) tab = 'backscatter';
+  if (!TABS[tab]) tab = Object.keys(TABS)[0];
   const a = page.anchor;
   document.title = `pubwalker: ${a.title}`;
   app.innerHTML = `

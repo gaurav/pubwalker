@@ -34,13 +34,15 @@ cd pipeline && uv run serve   # http://localhost:8765/, reloads the browser when
 
 Without uv, `python3 -m http.server 8765 -d site` does the same minus the reloading.
 
-A paper page is `/?doi=<doi>&tab=backscatter|anatomy|comparison`; a DOI without a precomputed
-report falls back to the live look-up. **Backscatter** is how the literature uses the paper
-(roles per citing passage, syntheses per time window with linked evidence). **Anatomy** is the
-paper taken apart: question and conclusions first, then assumptions, design, data, analysis,
-results, implications and limitations, each statement typed and tied to the span and section it
-was read from (schema in [docs/argument-structure.md](docs/argument-structure.md)). **Claimed vs
-cited** sets the two against each other. `uv run screenshot out.png <doi> anatomy` renders a
+A paper page is `/?doi=<doi>&tab=anatomy|outgoing|backscatter|comparison`; a DOI without a
+precomputed report falls back to the live look-up. The tabs run from the paper outwards.
+**Anatomy** is the paper taken apart: question and conclusions first, then assumptions, design,
+data, analysis, results, implications and limitations, each statement typed and tied to the span
+and section it was read from (schema in [docs/argument-structure.md](docs/argument-structure.md)).
+**Outgoing** is its own reference list read with the citation roles: what it uses each reference
+for, where in the paper, how old they are, and which ones carry the argument. **Backscatter** is
+how the literature uses the paper (roles per citing passage, syntheses per time window with
+linked evidence). **Claimed vs cited** sets the paper's claims against what it is cited for. `uv run screenshot out.png <doi> anatomy` renders a
 page in headless Chromium for checking without a browser window.
 
 `pipeline/` produces the reports. It needs [uv](https://docs.astral.sh/uv/) and a Claude Code
