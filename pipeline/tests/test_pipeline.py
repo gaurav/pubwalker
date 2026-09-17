@@ -4,7 +4,7 @@ import datetime as dt
 import unittest
 import xml.etree.ElementTree as ET
 
-from pubwalker.analyze import fulltext, grounded, histogram, tidy_structure
+from pubwalker.analyze import fulltext, grounded, histogram, references, tidy_structure
 from pubwalker.fetch import flatten, slugify
 from pubwalker.passages import citing_paragraphs, find_ref, in_window
 
@@ -68,6 +68,11 @@ class Analyze(unittest.TestCase):
         self.assertIn("SequenceMatrix [B2] and analysed in RAxML [B3]", body)
         self.assertIn("## Phylogenetics", body)
         self.assertIn("10.1111/j.1096-0031.2010.00329.x", refs["B2"])
+
+    def test_references_carry_ids_years_and_mentions(self):
+        refs = {r["id"]: r for r in references(ROOT)}
+        self.assertEqual((refs["B2"]["doi"], refs["B2"]["year"], len(refs["B2"]["mentions"])), ("10.1111/j.1096-0031.2010.00329.x", 2011, 1))
+        self.assertEqual((refs["B3"]["pmid"], [m["section"] for m in refs["B3"]["mentions"]]), ("24451623", ["Methods > Phylogenetics", "Discussion"]))
 
 
 class Fetch(unittest.TestCase):

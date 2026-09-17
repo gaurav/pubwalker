@@ -57,7 +57,8 @@ Steps: `fetch` lists citers from OpenAlex; `passages` pulls the citing paragraph
 PMC full text or the citing sentence from Semantic Scholar and samples 40 citers per time
 window; `roles` labels each passage with Haiku; `synth` writes per-window and overall
 syntheses with Opus, each claim tied to citer ids; `structure` extracts the anchor's argument
-from its PMC full text (or abstract); `compare` sets claimed against cited; `export` writes
+from its PMC full text (or abstract); `outgoing` classifies what the anchor uses each of its own
+references for, with the same roles; `compare` sets claimed against cited; `export` writes
 `site/data/<slug>.json`. A full run for one paper costs a few dollars.
 
 ## Setup

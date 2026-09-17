@@ -72,11 +72,10 @@ def find_ref(root, anchor):
     return None
 
 
-def citing_paragraphs(root, anchor):
-    rid = find_ref(root, anchor)
-    if not rid:
-        return []
-    parent = {c: p for p in root.iter() for c in p}
+def paragraphs_citing(root, rid, parent=None):
+    """Every paragraph with an xref to reference `rid`, with its section path. Pass `parent` (child -> parent map) when
+    calling for many rids on the same tree."""
+    parent = parent or {c: p for p in root.iter() for c in p}
     out = []
     for p in root.iter("p"):
         if not any(x.get("rid") == rid for x in p.iter("xref")):
@@ -86,8 +85,13 @@ def citing_paragraphs(root, anchor):
             node = parent[node]
             if node.tag == "sec" and (t := node.find("title")) is not None:
                 titles.append(text(t))
-        out.append({"source": "epmc", "section": " > ".join(reversed(titles)) or None, "text": text(p)})
+        out.append({"section": " > ".join(reversed(titles)) or None, "text": text(p)})
     return out
+
+
+def citing_paragraphs(root, anchor):
+    rid = find_ref(root, anchor)
+    return [{"source": "epmc", **p} for p in paragraphs_citing(root, rid)] if rid else []
 
 
 def in_window(citer, days, today):

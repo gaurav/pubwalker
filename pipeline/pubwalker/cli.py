@@ -9,6 +9,7 @@ STEPS = {
     "roles": lambda a: analyze.roles(a.doi),
     "synth": lambda a: analyze.synth(a.doi),
     "structure": lambda a: analyze.structure(a.doi),
+    "outgoing": lambda a: analyze.outgoing(a.doi),
     "compare": lambda a: analyze.compare(a.doi),
     "export": lambda a: export.run(a.doi),
 }

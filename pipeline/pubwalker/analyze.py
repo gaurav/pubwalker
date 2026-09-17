@@ -1,13 +1,14 @@
 """Steps 3-6: classify each sampled passage (Haiku), synthesise per window and overall (Opus),
 extract the anchor's argument structure from its full text (Opus), and compare the two."""
 import json
+import re
 from concurrent.futures import ThreadPoolExecutor
 
 from . import DATA
-from .fetch import slugify
+from .fetch import flatten, slugify
 from .http import openalex
 from .llm import ask
-from .passages import jats, text
+from .passages import jats, paragraphs_citing, text
 
 ROLES = ["uses-tool-or-method", "uses-data", "background-claim", "compares-against",
          "extends-or-modifies", "critiques-or-contradicts", "incidental"]
@@ -24,12 +25,14 @@ ROLE_SCHEMA = {
         "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
     },
 }
-ROLE_SYSTEM = """You classify how a citing paper uses a cited paper, from the passage(s) where the citation appears.
-Roles: uses-tool-or-method (runs the cited software or applies its method); uses-data (reanalyses its data);
+ROLE_DEFS = """Roles: uses-tool-or-method (runs the cited software or applies its method); uses-data (reanalyses its data);
 background-claim (cites it for a fact or finding); compares-against (benchmarks or contrasts with it);
 extends-or-modifies (builds a new method or result on it); critiques-or-contradicts (disputes it or reports a limitation);
 incidental (appears in a list of alternatives, a review table, or a history). Label only what the passage supports.
 The section a passage comes from is a strong hint: Methods usually means use, Introduction usually means background."""
+ROLE_SYSTEM = "You classify how a citing paper uses a cited paper, from the passage(s) where the citation appears.\n" + ROLE_DEFS
+# Same roles from the other side: what the anchor paper uses each of its own references for.
+OUT_ROLE_SYSTEM = "You classify what a paper uses one of its own references for, from the passage(s) where it cites that reference.\n" + ROLE_DEFS
 
 CLAIMS_SCHEMA = {
     "type": "object", "additionalProperties": False, "required": ["claims", "follow_ups"],
@@ -203,6 +206,67 @@ def fulltext(root):
             parts.append(" ".join(walk(p).split()))
     refs = {r.get("id"): text(r) for r in root.iter("ref")}
     return "\n".join(parts), refs
+
+
+def references(root):
+    """The paper's own reference list: each <ref> with its ids and every paragraph that cites it."""
+    parent = {c: p for p in root.iter() for c in p}
+    out = []
+    for r in root.iter("ref"):
+        pub = {p.get("pub-id-type"): text(p) for p in r.iter("pub-id")}
+        t, y = r.find(".//article-title"), r.find(".//year")
+        m = re.search(r"\b(19|20)\d{2}\b", text(y) if y is not None else text(r))  # mixed-citation refs often have no <year>
+        out.append({"id": r.get("id"), "text": text(r), "title": text(t) if t is not None else None, "year": int(m.group()) if m else None,
+                    "doi": (pub.get("doi") or "").lower() or None, "pmid": pub.get("pmid"), "mentions": paragraphs_citing(root, r.get("id"), parent)})
+    return out
+
+
+def enrich(refs):
+    """OpenAlex id, citation count and OA flag for references with a DOI or PMID, 50 per request. Fills a missing year."""
+    for key in ("doi", "pmid"):
+        todo = [r for r in refs if r.get(key) and not r.get("openalex_id")]
+        for i in range(0, len(todo), 50):
+            chunk = todo[i:i + 50]
+            page = openalex("/works", filter=f"{key}:" + "|".join(r[key] for r in chunk), select="id,doi,ids,cited_by_count,publication_year,open_access", **{"per-page": 50})
+            found = {}
+            for w in page["results"]:
+                f = flatten(w)
+                found[f["doi"]] = found[f["pmid"]] = {"openalex_id": f["id"], "cited_by_count": w.get("cited_by_count"), "is_oa": f["is_oa"], "year": f["year"]}
+            for r in chunk:
+                if hit := found.get(r[key]):
+                    r.update({**hit, "year": r["year"] or hit["year"]})
+    return refs
+
+
+def outgoing(doi, workers=4):
+    anchor = load(doi, "anchor")
+    if not anchor.get("pmcid"):
+        print("no full text, so no outgoing citations")
+        return None
+    refs = enrich(references(jats(anchor["pmcid"])))
+    prev = load(doi, "outgoing")["references"] if (DATA / slugify(doi) / "outgoing.json").exists() else []
+    done = {r["id"]: r["role"] for r in prev if r.get("role")}
+
+    def one(r):
+        body = "\n\n".join(f"[section: {m['section'] or 'not stated'}]\n{m['text'][:3000]}" for m in r["mentions"][:4])
+        prompt = f"Paper: {anchor['title']} ({anchor['year']}).\nReference [{r['id']}]: {r['text'][:600]}\n\nPassages citing it:\n{body}"
+        try:
+            return r["id"], ask(prompt, model="haiku", system=OUT_ROLE_SYSTEM, schema=ROLE_SCHEMA)
+        except RuntimeError as e:
+            print(f"  {r['id']}: {e}")
+            return r["id"], None
+
+    todo = [r for r in refs if r["mentions"] and r["id"] not in done]  # a reference never cited in a paragraph (figure-only, say) is left unclassified
+    with ThreadPoolExecutor(workers) as ex:
+        for rid, out in ex.map(one, todo):
+            if out:
+                done[rid] = out
+    for r in refs:
+        r["role"] = done.get(r["id"])
+    hist = {role: sum(1 for r in refs if r["role"] and r["role"]["role"] == role) for role in ROLES}
+    save(doi, "outgoing", {"references": refs, "roles": hist})
+    print(f"{len(refs)} references, {sum(1 for r in refs if r['mentions'])} cited in the text, {len(done)} classified: {hist}")
+    return refs
 
 
 def abstract(work_id):

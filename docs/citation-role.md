@@ -81,6 +81,18 @@ LLM calls that changed.
    citers who did *not* use it chose instead. For a results paper: which claim is cited,
    whether it is being confirmed or contested, and by whom.
 
+## The other direction: outgoing citations
+
+The same question can be asked of the paper's own reference list: what does *it* use each
+reference for? Where we have JATS full text, every `<ref>` is paired with the paragraphs that
+`<xref>` it (with their section path), enriched from OpenAlex (id, citation count, OA), and
+classified by the cheap model with the **same seven roles**, from the citing side. Using one
+taxonomy in both directions is the point: the site can set "roles out" against "roles in", show
+where in the paper each role appears (Introduction is background, Methods is tools, or not), how
+old the references are per role, which references carry the most weight (mentions, sections,
+assumptions in the argument structure that name them), and whether the paper cites others the
+way it is itself cited.
+
 ## Things to watch
 
 - **Passage coverage is the bottleneck, not the LLM.** About 30% of citers are paywalled and
