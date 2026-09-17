@@ -40,6 +40,7 @@ section it came from, so the markup can be checked against the paper. Each entry
 | `kind` | A statement type that cuts across the sections: `fact` (established knowledge taken as given), `method` (how something was done), `finding` (observed or measured in this work), `claim` (the authors' interpretation, argument or proposal), `gap` (a caveat or something not addressed). Within Assumptions this separates cited facts from bare premises; within Results, measurements from interpretation; within Limitations, stated caveats from gaps the model noticed. |
 | `text` | One sentence, with the 2–6 words that carry its point wrapped in `**…**`; the site bolds them. (Asking for the phrase as a separate field failed: the model copied it from the paper rather than from its own sentence.) |
 | `highlight` | True for the one to three entries per section a reader should see first. |
+| `section` | The paper's own section heading the evidence sits under (`abstract` when only the abstract was available). The schema's fields are the argument's parts; `section` is where the paper put them, and the two need not agree. |
 | `based_on` | Conclusions only: the results the conclusion rests on, as `R1`, `R2`, … numbering the `results` list from 1. |
 
 ## Uses

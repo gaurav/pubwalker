@@ -50,6 +50,7 @@ STRUCT_ITEM_PROPS = {
     "kind": {"type": "string", "enum": STRUCT_KINDS, "description": "fact: established knowledge taken as given; method: how something was done; finding: observed or measured in this work; claim: the authors' interpretation, argument or proposal; gap: a caveat or something not addressed."},
     "highlight": {"type": "boolean", "description": "True for the 1-3 items in this field a reader should see first."},
     "evidence": {"type": "string", "description": "Verbatim span from the paper, or 'not stated'."},
+    "section": {"type": "string", "description": "The paper's own section heading the evidence sits under (as given after ## in the text), 'abstract' if only the abstract was available, or '' if not stated."},
 }
 STRUCT_ITEM = {"type": "object", "additionalProperties": False, "required": [*STRUCT_ITEM_PROPS], "properties": STRUCT_ITEM_PROPS}
 STRUCT_SOURCED = {"type": "object", "additionalProperties": False, "required": [*STRUCT_ITEM_PROPS, "sources"],
@@ -74,7 +75,9 @@ stated, tied to the design they come from); conclusions (what the authors say th
 results it rests on as R1, R2, ... in the order you give them); implications (what follows for the field if the
 conclusions hold, and proposed next steps); limitations (stated caveats, plus anything important the paper does not
 address, marked as such). Every item is one sentence with its key 2 to 6 words wrapped in **double asterisks**, plus a
-verbatim evidence span, a kind, and highlight=true for the 1 to 3 items per field a reader should see first. The kind
+verbatim evidence span, the paper's section heading that span sits under, a kind, and highlight=true for the 1 to 3
+items per field a reader should see first. The fields above are the argument's parts; the section is where the paper
+puts them, and they need not agree (a result stated in the Discussion still goes under results). The kind
 is independent of the field: an assumption asserted without citation is a claim, not a fact; a result that interprets
 rather than reports is a claim; a limitation the authors state is a finding or fact, one they do not address is a gap.
 Use 'not stated' rather than inventing. Be concise: 3 to 10 items per field."""

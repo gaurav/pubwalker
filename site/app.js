@@ -153,7 +153,7 @@ function report(d) {
   const emph = (text) => esc(text).replace(/\*\*(.+?)\*\*/, '<b>$1</b>');  // the model marks each item's key phrase with **…**
   const structItem = (it, id) => `<li id="${id}" class="${it.highlight ? 'hi' : ''}" data-kind="${esc(it.kind || '')}">
       ${it.kind ? `<span class="k k-${it.kind}" title="${esc(KINDS[it.kind]?.[1] || it.kind)}">${KINDS[it.kind]?.[0] || '•'}</span>` : ''}<span class="n">${id}</span>
-      ${emph(it.text)}${it.sources?.length ? ` <span class="muted small">[${it.sources.map((s) => `<abbr title="${esc(S.references?.[s] || s)}">${esc(s)}</abbr>`).join(', ')}]</span>` : ''}${it.based_on?.length ? ` <span class="small muted">rests on</span> ${it.based_on.map((r) => `<a class="chip" href="#${esc(r)}">${esc(r)}</a>`).join('')}` : ''}${it.evidence && it.evidence !== 'not stated' ? `<div class="ev">“${esc(it.evidence)}”</div>` : ''}</li>`;
+      ${emph(it.text)}${it.sources?.length ? ` <span class="muted small">[${it.sources.map((s) => `<abbr title="${esc(S.references?.[s] || s)}">${esc(s)}</abbr>`).join(', ')}]</span>` : ''}${it.based_on?.length ? ` <span class="small muted">rests on</span> ${it.based_on.map((r) => `<a class="chip" href="#${esc(r)}">${esc(r)}</a>`).join('')}` : ''}${it.evidence && it.evidence !== 'not stated' ? `<div class="ev">${it.section ? `<span class="sec">${a.pmcid ? `<a href="https://pmc.ncbi.nlm.nih.gov/articles/${esc(a.pmcid)}/">${esc(it.section)}</a>` : esc(it.section)}</span> ` : ''}“${esc(it.evidence)}”</div>` : ''}</li>`;
   const present = SECTIONS.filter(([k]) => S?.[k]?.length);
   const structure = S ? `
     ${S.source === 'pmc-full-text' ? '<p class="small muted">Extracted from the PMC full text; each item carries the span it was read from.</p>' : `
