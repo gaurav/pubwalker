@@ -7,13 +7,17 @@ const app = document.getElementById('app');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const WINDOW_LABEL = { 'last-12-months': 'Last 12 months', 'last-5-years': 'Last 5 years', 'all-time': 'All time' };
 const fmt = (n) => (n ?? 0).toLocaleString();
-const TABS = { backscatter: 'Backscatter', anatomy: 'Anatomy', comparison: 'Claimed vs cited' };
+const TABS = { backscatter: 'Backscatter', anatomy: 'Anatomy', outgoing: 'Outgoing', comparison: 'Claimed vs cited' };
+const ROLES = ['uses-tool-or-method', 'uses-data', 'background-claim', 'compares-against', 'extends-or-modifies', 'critiques-or-contradicts', 'incidental'];
 const INTRO = {
   backscatter: `<p class="small muted">How the literature uses this paper. Every citing passage we could retrieve was given a role
     (a tool run, data reused, a background claim, a comparison, an extension, a critique, or incidental), then synthesised per
     time window; each claim links to the citing papers it rests on.</p>`,
   anatomy: `<p class="small muted">The paper taken apart: the question it asks, the assumptions it borrows, its
     design, data, analysis, results, conclusions, implications and stated limitations, each with the span of text it was read from.</p>`,
+  outgoing: `<p class="small muted">The paper's own reference list, read the same way its citers are read: every reference was
+    given a role from the passages that cite it (a tool run, data reused, a background claim, a comparison, an extension, a critique,
+    or incidental), so what this paper leans on can be set against what others lean on it for.</p>`,
   comparison: `<p class="small muted">Does the literature use the paper for what it claims? The paper's own conclusions set against
     the roles its citers actually assign it.</p>`,
 };
@@ -56,13 +60,13 @@ async function home() {
 
 // ---------- shared pieces ----------
 // Horizontal bars, largest first; categories with no hits are listed below the chart instead of drawn as empty rows.
-const bars = (counts, colorFn) => {
+const bars = (counts, colorFn, none = 'No sampled citers used it for') => {
   const entries = Object.entries(counts).sort(([, a], [, b]) => b - a);
   const shown = entries.filter(([, n]) => n > 0), empty = entries.filter(([, n]) => !(n > 0)).map(([k]) => k);
   const max = Math.max(1, ...shown.map(([, n]) => n));
   return `<div class="bars">${shown.map(([k, n]) => `
     <span>${esc(k)}</span><div><div class="bar" style="width:${(100 * n / max).toFixed(1)}%;${colorFn ? 'background:' + colorFn(k) : ''}"></div></div><span class="n">${fmt(n)}</span>`).join('')}</div>
-    ${empty.length ? `<p class="small muted">No sampled citers used it for: ${empty.map(esc).join(', ')}.</p>` : ''}`;
+    ${empty.length ? `<p class="small muted">${none}: ${empty.map(esc).join(', ')}.</p>` : ''}`;
 };
 const roleColor = (r) => `var(--r-${r})`;
 const roleBadge = (r) => r ? `<span class="role" style="background:${roleColor(r)}">${esc(r)}</span>` : '';
@@ -91,11 +95,95 @@ const citerDetails = (c, open = false) => `
     ${(c.passages || []).map((p) => `<div class="pass"><div class="src">${p.source === 'epmc' ? 'Europe PMC full text' : 'Semantic Scholar context'}${p.section ? ` · ${esc(p.section)}` : ''}</div>${esc(p.text)}</div>`).join('')}
   </details>`;
 
+const emph = (text) => esc(text).replace(/\*\*(.+?)\*\*/, '<b>$1</b>');  // the model marks each item's key phrase with **…**
 const claims = (s, citers) => s ? `
-  <ol class="claims">${s.claims.map((cl) => `<li>${esc(cl.text)} ${cl.cites.map((id) => `<a class="chip" href="#c-${esc(id)}" title="${esc(citers[id]?.title || id)}" onclick="show('${esc(id)}')">${esc(id)}</a>`).join('')}</li>`).join('')}</ol>
+  <ol class="claims">${s.claims.map((cl) => `<li class="${cl.highlight ? 'hi' : ''}">${emph(cl.text)} ${cl.cites.map((id) => `<a class="chip" href="#c-${esc(id)}" title="${esc(citers[id]?.title || id)}" onclick="show('c-${esc(id)}')">${esc(id)}</a>`).join('')}</li>`).join('')}</ol>
   ${s.follow_ups?.length ? `<h3>Follow-up questions</h3><ul>${s.follow_ups.map((q) => `<li>${esc(q)}</li>`).join('')}</ul>` : ''}` : '<p class="muted">Not synthesised.</p>';
 
-window.show = (id) => { const d = document.getElementById(`c-${id}`); if (d) { d.open = true; d.scrollIntoView({ block: 'center' }); } };
+window.show = (elId) => { const d = document.getElementById(elId); if (d) { d.open = true; d.scrollIntoView({ block: 'center' }); } };  // open a <details> and scroll to it
+
+// ---------- outgoing: what the paper uses its own references for ----------
+// A reference's section path is folded to the IMRaD part it sits in, so roles can be laid out by where they appear.
+const imrad = (path) => {
+  const s = (path || '').split(' > ')[0].toLowerCase();
+  return !path ? 'No section' : /intro|background/.test(s) ? 'Introduction' : /method|material|procedure|experimental/.test(s) ? 'Methods'
+    : /result/.test(s) ? 'Results' : /discussion|conclusion/.test(s) ? 'Discussion' : 'Other';
+};
+const IMRAD = ['Introduction', 'Methods', 'Results', 'Discussion', 'Other', 'No section'];
+const median = (xs) => { const s = xs.filter((x) => x != null).sort((a, b) => a - b); return s.length ? s[Math.floor(s.length / 2)] : null; };
+const shortRef = (r) => r.title || r.text.slice(0, 120);
+
+function outgoingPanel(d, index) {
+  const O = d.outgoing;
+  if (!O) return '<p class="muted">Not extracted.</p>';
+  const a = d.anchor, refs = O.references, cited = refs.filter((r) => r.mentions.length), classified = refs.filter((r) => r.role);
+  const mentions = refs.reduce((n, r) => n + r.mentions.length, 0);
+  const ages = refs.map((r) => (r.year && a.year ? a.year - r.year : null)).filter((x) => x != null && x >= 0);
+  const years = refs.map((r) => r.year).filter(Boolean);
+  const reports = Object.fromEntries((index || []).map((e) => [e.doi, e]));
+  const top = (h) => Object.entries(h).sort((x, y) => y[1] - x[1])[0];
+  const outTop = top(O.roles), inRoles = d.windows?.['all-time']?.roles || {}, inTop = top(inRoles);
+  // Section × role: how many mentions of each role fall in each part of the paper.
+  const cell = {};
+  for (const r of classified) for (const m of r.mentions) cell[`${imrad(m.section)}|${r.role.role}`] = (cell[`${imrad(m.section)}|${r.role.role}`] || 0) + 1;
+  const used = ROLES.filter((k) => O.roles[k]), secs = IMRAD.filter((s) => used.some((k) => cell[`${s}|${k}`]));
+  const maxCell = Math.max(1, ...Object.values(cell));
+  const perYear = {};
+  for (const y of years) perYear[y] = (perYear[y] || 0) + 1;
+  const roleYears = used.map((k) => [k, median(refs.filter((r) => r.role?.role === k).map((r) => r.year))]).filter(([, y]) => y);
+  const assumptions = (d.structure?.assumptions || []).map((s, i) => [`A${i + 1}`, s.sources || []]);
+  const grounds = (r) => assumptions.filter(([, src]) => src.includes(r.id)).map(([id]) => `<a class="chip" href="#${id}" onclick="tab('anatomy')">${id}</a>`).join('');
+  const weight = (r) => [r.mentions.length, new Set(r.mentions.map((m) => m.section)).size];
+  const bearing = [...cited].sort((x, y) => weight(y)[0] - weight(x)[0] || weight(y)[1] - weight(x)[1]).slice(0, 10);
+  const refDetails = (r) => `
+    <details class="ref" id="r-${esc(r.id)}" data-role="${esc(r.role?.role || '')}">
+      <summary>${roleBadge(r.role?.role)} <b>${esc(shortRef(r))}</b> <span class="muted">${[r.year, r.mentions.length ? `${r.mentions.length} mention${r.mentions.length > 1 ? 's' : ''}` : 'not cited in the text'].filter(Boolean).map(esc).join(' · ')}</span></summary>
+      <div class="small muted">${esc(r.id)} · ${links({ doi: r.doi, pmid: r.pmid, id: r.openalex_id })}${r.cited_by_count != null ? ` · ${fmt(r.cited_by_count)} citations` : ''}${r.doi && reports[r.doi] ? ` · <a href="?doi=${encodeURIComponent(r.doi)}">pubwalker report</a>` : ''}${r.role ? ` · stance: ${esc(r.role.stance)} · confidence: ${esc(r.role.confidence)}` : ''}</div>
+      ${!r.title ? `<p class="small">${esc(r.text)}</p>` : ''}
+      ${r.role ? `<p><b>Used for:</b> ${esc(r.role.what_for)}${grounds(r) ? ` <span class="small muted">grounds</span> ${grounds(r)}` : ''}</p>` : ''}
+      ${r.mentions.map((m) => `<div class="pass"><div class="src">${esc(m.section || 'no section')}</div>${esc(m.text)}</div>`).join('')}
+    </details>`;
+  return `
+    <div class="struct">
+      <nav class="toc"><ul>
+        <li><a href="#og-roles">Roles out vs in</a></li><li><a href="#og-where">Where in the paper</a></li><li><a href="#og-age">Reference age</a></li>
+        <li><a href="#og-bearing">Load-bearing references</a></li><li><a href="#og-all">All references</a> <span class="muted">${refs.length}</span></li>
+      </ul>
+      <h4>Show only</h4>
+      <div class="rf">${used.map((k) => `<label><input type="checkbox" id="or-${k}"> ${roleBadge(k)} <span class="muted">${O.roles[k]}</span></label>`).join('')}</div>
+      </nav>
+      <div class="body">
+      <div class="nums">
+        <div><b>${fmt(refs.length)}</b><span>references</span></div>
+        <div><b>${fmt(cited.length)}</b><span>cited in the text</span></div>
+        <div><b>${fmt(mentions)}</b><span>mentions</span></div>
+        ${ages.length ? `<div><b>${median(ages)} yr</b><span>median age when published</span></div>` : ''}
+        ${years.length ? `<div><b>${Math.min(...years)}</b><span>oldest reference</span></div>` : ''}
+      </div>
+      <h3 id="og-roles">Roles out vs roles in</h3>
+      <div class="twin">
+        <div><h4>What this paper uses its ${fmt(classified.length)} references for</h4>${bars(O.roles, roleColor, 'Never used for')}</div>
+        <div><h4>What ${fmt(Object.values(inRoles).reduce((x, y) => x + y, 0))} sampled citers use it for (all time)</h4>${Object.keys(inRoles).length ? bars(inRoles, roleColor) : '<p class="muted">No sample.</p>'}</div>
+      </div>
+      ${outTop && inTop ? `<p class="small muted">It cites others mostly as <b>${esc(outTop[0])}</b>${inTop[0] === outTop[0] ? ' and is cited the same way' : `, and is cited mostly as <b>${esc(inTop[0])}</b>`}.</p>` : ''}
+      <h3 id="og-where">Where in the paper each role appears</h3>
+      <table class="matrix"><tr><th></th>${used.map((k) => `<th>${roleBadge(k)}</th>`).join('')}<th>all</th></tr>
+        ${secs.map((s) => `<tr><th>${s}</th>${used.map((k) => { const n = cell[`${s}|${k}`] || 0; return `<td${n ? ` style="background:color-mix(in srgb, ${roleColor(k)} ${Math.round(12 + 55 * n / maxCell)}%, transparent)"` : ''}>${n || ''}</td>`; }).join('')}<td>${used.reduce((t, k) => t + (cell[`${s}|${k}`] || 0), 0)}</td></tr>`).join('')}
+      </table>
+      <p class="small muted">Mentions of each role by the part of the paper they fall in.</p>
+      <h3 id="og-age">Reference age</h3>
+      ${yearChart(Object.entries(perYear).map(([y, n]) => [+y, n]).sort((x, y) => x[0] - y[0]))}
+      ${roleYears.length ? `<p class="small muted">Median reference year by role: ${roleYears.map(([k, y]) => `${roleBadge(k)} ${y}`).join(' ')}.</p>` : ''}
+      <h3 id="og-bearing">Load-bearing references</h3>
+      <p class="small muted">Cited most often, in the most sections; "grounds" links to the assumptions in Anatomy that name the reference.</p>
+      <table>${bearing.map((r) => `<tr><td>${roleBadge(r.role?.role)}</td><td><a href="#r-${esc(r.id)}" onclick="show('r-${esc(r.id)}')">${esc(shortRef(r))}</a> <span class="muted small">${esc(r.year || '')}</span></td>
+        <td class="small muted">${r.mentions.length}× in ${weight(r)[1]} section${weight(r)[1] > 1 ? 's' : ''}</td><td class="small muted">${r.cited_by_count != null ? fmt(r.cited_by_count) + ' cites' : ''}</td><td>${grounds(r)}</td></tr>`).join('')}</table>
+      <h3 id="og-all">All references, by role</h3>
+      ${used.map((k) => `<h4>${roleBadge(k)} <span class="muted">${O.roles[k]}</span></h4>${classified.filter((r) => r.role.role === k).map(refDetails).join('')}`).join('')}
+      ${refs.some((r) => !r.role) ? `<h4>Not located in the text <span class="muted">${refs.filter((r) => !r.role).length}</span></h4>${refs.filter((r) => !r.role).map(refDetails).join('')}` : ''}
+      </div>
+    </div>`;
+}
 
 // ---------- paper page: shared header + one tab per approach ----------
 // report() and live() each return { anchor, nums, years, panels: {tab: html}, note, after() } and paper() lays them out.
@@ -106,7 +194,7 @@ async function paper(doi, tab) {
   let d = null;
   try { d = await json(`data/${slug}.json`); } catch { /* ponytail: no report means live mode, at the cost of one 404 in the console */ }
   let page;
-  try { page = d ? report(d) : await live(doi); } catch (e) {
+  try { page = d ? report(d, await INDEX) : await live(doi); } catch (e) {
     app.innerHTML += `<p class="flash">Lookup failed: ${esc(e.message)}. Check the DOI, or try again if a rate limit was hit.</p>`;
     return;
   }
@@ -123,17 +211,17 @@ async function paper(doi, tab) {
     <div class="tabs top">${Object.entries(TABS).map(([k, label]) => `<button data-t="${k}" class="${k === tab ? 'on' : ''}">${label}</button>`).join('')}</div>
     ${Object.keys(TABS).map((k) => `<section data-t="${k}" ${k === tab ? '' : 'hidden'}>${page.panels[k]}</section>`).join('')}
     <p class="small muted">${page.note}</p>`;
-  app.querySelector('.tabs.top').addEventListener('click', (e) => {
-    const t = e.target.dataset.t; if (!t) return;
+  window.tab = (t) => {  // also called by cross-tab links, e.g. Outgoing's "grounds A3" chips into Anatomy
     app.querySelectorAll('.tabs.top button').forEach((b) => b.classList.toggle('on', b.dataset.t === t));
     app.querySelectorAll('section[data-t]').forEach((s) => { s.hidden = s.dataset.t !== t; });
     history.replaceState(null, '', '?' + new URLSearchParams({ doi, tab: t }));
-  });
+  };
+  app.querySelector('.tabs.top').addEventListener('click', (e) => { if (e.target.dataset.t) tab(e.target.dataset.t); });
   page.after?.();
 }
 
 // ---------- precomputed report ----------
-function report(d) {
+function report(d, index) {
   const a = d.anchor, C = d.citers, wins = Object.keys(d.windows), first = wins[wins.length - 1];
   const windowPanel = (w) => {
     const W = d.windows[w];
@@ -156,7 +244,6 @@ function report(d) {
   const SECTIONS = [['conclusions', 'C'], ['assumptions', 'A'], ['design', 'D'], ['data', 'T'], ['analysis', 'N'], ['results', 'R'], ['implications', 'I'], ['limitations', 'L']];
   const KINDS = { fact: ['◆', 'fact: established knowledge taken as given'], method: ['⚙', 'method: how something was done'], finding: ['▲', 'finding: observed or measured in this work'], claim: ['✦', 'claim: the authors’ interpretation, argument or proposal'], gap: ['○', 'gap: a caveat or something not addressed'] };
   const cap = (k) => k[0].toUpperCase() + k.slice(1);
-  const emph = (text) => esc(text).replace(/\*\*(.+?)\*\*/, '<b>$1</b>');  // the model marks each item's key phrase with **…**
   const structItem = (it, id) => `<li id="${id}" class="${it.highlight ? 'hi' : ''}" data-kind="${esc(it.kind || '')}">
       ${it.kind ? `<span class="k k-${it.kind}" title="${esc(KINDS[it.kind]?.[1] || it.kind)}">${KINDS[it.kind]?.[0] || '•'}</span>` : ''}<span class="n">${id}</span>
       ${emph(it.text)}${it.sources?.length ? ` <span class="muted small">[${it.sources.map((s) => `<abbr title="${esc(S.references?.[s] || s)}">${esc(s)}</abbr>`).join(', ')}]</span>` : ''}${it.based_on?.length ? ` <span class="small muted">rests on</span> ${it.based_on.map((r) => `<a class="chip" href="#${esc(r)}">${esc(r)}</a>`).join('')}` : ''}${it.evidence && it.evidence !== 'not stated' ? `<div class="ev">${it.section ? `<span class="sec">${a.pmcid ? `<a href="https://pmc.ncbi.nlm.nih.gov/articles/${esc(a.pmcid)}/">${esc(it.section)}</a>` : esc(it.section)}</span> ` : ''}“${esc(it.evidence)}”</div>` : ''}</li>`;
@@ -194,7 +281,8 @@ function report(d) {
           <li><a href="#bs-overall">Overall</a></li>
           <li><a href="#bs-window">By time window</a>
             <ul><li><a href="#bs-roles">Roles</a></li><li><a href="#bs-synthesis">Synthesis</a></li><li><a href="#bs-evidence">Evidence</a></li></ul></li>
-        </ul></nav>
+        </ul>
+        <label><input type="checkbox" id="bs-hi"> highlights only</label></nav>
         <div class="body">
         <h2 id="bs-overall">Overall</h2>
         ${claims(d.overall, C)}
@@ -203,6 +291,7 @@ function report(d) {
         <div id="win">${windowPanel(first)}</div>
         </div></div>`,
       anatomy: INTRO.anatomy + structure,
+      outgoing: INTRO.outgoing + outgoingPanel(d, index),
       comparison: INTRO.comparison + comparison,
     },
     note: 'Roles were assigned per passage by Claude Haiku from Europe PMC full-text paragraphs (with section) or Semantic Scholar citation sentences; syntheses and the argument structure by Claude Opus. Samples are seeded random draws from citers with a retrievable passage, so paywalled citers are under-represented.',
@@ -237,6 +326,7 @@ async function live(doi) {
     panels: {
       backscatter: `${INTRO.backscatter}<h2>Citation sentences from Semantic Scholar</h2><div id="s2" class="muted">Fetching…</div>`,
       anatomy: INTRO.anatomy + UNAVAILABLE,
+      outgoing: INTRO.outgoing + UNAVAILABLE,
       comparison: INTRO.comparison + UNAVAILABLE,
     },
     note: "Live mode stops here. The pipeline adds: Europe PMC full-text paragraphs with their section, a role for every passage, per-window syntheses with linked evidence, and the paper's argument structure.",

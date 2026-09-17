@@ -44,6 +44,19 @@ table { width:100%; border-collapse:collapse; font-size:.9rem } td, th { text-al
 .struct:has(#kind-fact:checked) ul.items li[data-kind=fact], .struct:has(#kind-method:checked) ul.items li[data-kind=method], .struct:has(#kind-finding:checked) ul.items li[data-kind=finding],
 .struct:has(#kind-claim:checked) ul.items li[data-kind=claim], .struct:has(#kind-gap:checked) ul.items li[data-kind=gap] { display:list-item }
 .struct:has(#hi-only:checked) ul.items li:not(.hi) { display:none }
+/* Backscatter synthesis claims carry the same key-phrase markup and highlight flag as Anatomy items. */
+ol.claims li b { font-weight:inherit; background:color-mix(in srgb, var(--accent) 14%, transparent); border-radius:3px; padding:0 .2em; box-decoration-break:clone; -webkit-box-decoration-break:clone }
+.struct:has(#bs-hi:checked) ol.claims li:not(.hi) { display:none }
+/* Outgoing: two role charts side by side, the section × role matrix, and a role filter over the reference list. */
+.twin { display:grid; grid-template-columns:1fr 1fr; gap:0 1.5rem } .twin h4, .struct .body h4 { margin:1rem 0 .25rem; font-size:.85rem; color:var(--muted) }
+table.matrix td { text-align:center; font-variant-numeric:tabular-nums } table.matrix th .role { font-size:.65rem }
+.struct .rf label { display:block; cursor:pointer; margin:.15rem 0 }
+.struct:has(.rf input:checked) details.ref { display:none }
+.struct:has(#or-uses-tool-or-method:checked) details.ref[data-role=uses-tool-or-method], .struct:has(#or-uses-data:checked) details.ref[data-role=uses-data],
+.struct:has(#or-background-claim:checked) details.ref[data-role=background-claim], .struct:has(#or-compares-against:checked) details.ref[data-role=compares-against],
+.struct:has(#or-extends-or-modifies:checked) details.ref[data-role=extends-or-modifies], .struct:has(#or-critiques-or-contradicts:checked) details.ref[data-role=critiques-or-contradicts],
+.struct:has(#or-incidental:checked) details.ref[data-role=incidental] { display:block }
+@media (max-width:700px) { .twin { grid-template-columns:1fr } }
 .kind { font-size:.75rem; font-weight:600; text-transform:uppercase; letter-spacing:.02em; margin-right:.4rem } .kind.a { color:var(--r-uses-tool-or-method) } .kind.b { color:var(--r-compares-against) } .kind.c { color:var(--r-critiques-or-contradicts) }
 .flash { border-left:3px solid var(--r-compares-against); padding:.5rem .75rem; background:var(--card); font-size:.9rem }
 @media (max-width:600px) { header .tag { display:none } .nums { gap:1rem } }
