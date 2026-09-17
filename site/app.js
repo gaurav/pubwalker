@@ -55,10 +55,14 @@ async function home() {
 }
 
 // ---------- shared pieces ----------
+// Horizontal bars, largest first; categories with no hits are listed below the chart instead of drawn as empty rows.
 const bars = (counts, colorFn) => {
-  const max = Math.max(1, ...Object.values(counts));
-  return `<div class="bars">${Object.entries(counts).map(([k, n]) => `
-    <span>${esc(k)}</span><div><div class="bar" style="width:${(100 * n / max).toFixed(1)}%;${colorFn ? 'background:' + colorFn(k) : ''}"></div></div><span class="n">${fmt(n)}</span>`).join('')}</div>`;
+  const entries = Object.entries(counts).sort(([, a], [, b]) => b - a);
+  const shown = entries.filter(([, n]) => n > 0), empty = entries.filter(([, n]) => !(n > 0)).map(([k]) => k);
+  const max = Math.max(1, ...shown.map(([, n]) => n));
+  return `<div class="bars">${shown.map(([k, n]) => `
+    <span>${esc(k)}</span><div><div class="bar" style="width:${(100 * n / max).toFixed(1)}%;${colorFn ? 'background:' + colorFn(k) : ''}"></div></div><span class="n">${fmt(n)}</span>`).join('')}</div>
+    ${empty.length ? `<p class="small muted">No sampled citers used it for: ${empty.map(esc).join(', ')}.</p>` : ''}`;
 };
 const roleColor = (r) => `var(--r-${r})`;
 const roleBadge = (r) => r ? `<span class="role" style="background:${roleColor(r)}">${esc(r)}</span>` : '';
