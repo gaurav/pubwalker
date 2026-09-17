@@ -165,7 +165,9 @@ function report(d) {
         <ul>${present.map(([k]) => `<li><a href="#s-${k}">${cap(k)}</a> <span class="muted">${S[k].length}</span></li>`).join('')}</ul>
         <label><input type="checkbox" id="hi-only"> highlights only</label>
         <label><input type="checkbox" id="ev-on"> show evidence spans</label>
-        <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => `<label class="k k-${k}" title="${esc(t)}"><input type="checkbox" id="kind-${k}"> ${g} ${k}</label>`).join(' ')}</div>
+        <h4>Kinds of statement</h4>
+        <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => [k, g, t, present.reduce((n, [s]) => n + S[s].filter((it) => it.kind === k).length, 0)]).filter(([, , , n]) => n).sort((a, b) => b[3] - a[3])
+          .map(([k, g, t, n]) => `<label class="k k-${k}" title="${esc(t)}"><input type="checkbox" id="kind-${k}"> ${g} ${k} <span class="muted">${n}</span></label>`).join('')}</div>
       </nav>
       <div class="body">
       <h3>Question</h3><p class="q">${esc(S.question)}</p>
