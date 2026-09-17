@@ -25,6 +25,41 @@ const INTRO = {
     the roles its citers actually assign it.</p>`,
 };
 const UNAVAILABLE = '<p class="muted">Not available in live mode; run the pipeline for this paper.</p>';
+const SOURCE_LABEL = { 'pmc-full-text': 'anatomy read from the full text', 'abstract-only': 'anatomy read from the abstract alone' };
+// The role mix of the sampled citers as one stacked bar: the site's headline question, at a glance, in the report's own colours.
+const roleStrip = (roles) => {
+  const shown = ROLES.map((r) => [r, roles?.[r] || 0]).filter(([, n]) => n);
+  return shown.length ? `<div class="strip">${shown.map(([r, n]) => `<i style="flex:${n};background:${roleColor(r)}" title="${esc(r)}: ${n}"></i>`).join('')}</div>` : '';
+};
+const roleLead = (roles) => {
+  const shown = Object.entries(roles || {}).filter(([, n]) => n);
+  if (!shown.length) return '';
+  const [role, n] = shown.reduce((a, b) => (b[1] > a[1] ? b : a));
+  return `${roleBadge(role)} for ${n} of ${shown.reduce((t, [, m]) => t + m, 0)} classified citers`;
+};
+// How varied the downstream use is: the effective number of roles, exp(Shannon entropy) of the role mix.
+// 1 means every classified citer used the paper for the same thing, 7 means an even spread over all seven roles.
+// It is what citation counts cannot say: SequenceMatrix is cited 2,685 times for one thing (1.1), ReMap 282 times for six (3.3).
+const variety = (roles) => {
+  const ns = Object.values(roles || {}).filter((n) => n > 0);
+  const total = ns.reduce((a, b) => a + b, 0);
+  return total ? Math.exp(-ns.reduce((h, n) => h + (n / total) * Math.log(n / total), 0)) : null;
+};
+const SORTS = {
+  variety: ['role variety', (e) => -(variety(e.roles) ?? 0)],
+  cost: ['LLM cost', (e) => -(e.cost_usd ?? 0)],
+  citations: ['citations', (e) => -(e.cited_by_count ?? 0)],
+  year: ['year', (e) => e.year ?? 0],
+};
+// ponytail: the choice lives for one page load, so a report page's Examples list is back in the default order; localStorage if that grates.
+let sortKey = 'variety';
+const ordered = (index) => [...index].sort((a, b) => SORTS[sortKey][1](a) - SORTS[sortKey][1](b));
+
+function setSort(key) {
+  sortKey = key;
+  fillExamples();
+  home();
+}
 
 async function json(url) {
   const r = await fetch(url);
@@ -42,16 +77,23 @@ async function home() {
     <b>what role does it play in the literature</b> (a tool people run, a finding people build on, a name in a list), and
     <b>what does its argument rest on</b>. Reports below were produced by the <a href="https://github.com/gaurav/pubwalker">pipeline</a>
     with a cheap model classifying each citing passage and a stronger one synthesising; every claim links to its evidence.</p>
-    <h2>Reports</h2>
+    <div class="rowhead"><h2>Reports</h2>
+      ${index.length > 1 ? `<label class="small muted">Sort by <select class="jump" onchange="setSort(this.value)">${Object.entries(SORTS).map(([k, [label]]) =>
+        `<option value="${k}"${k === sortKey ? ' selected' : ''}>${label}</option>`).join('')}</select></label>` : ''}</div>
     ${index.some((e) => e.cost_usd != null) ? `<p class="small muted">${index.length} reports, $${index.reduce((t, e) => t + (e.cost_usd || 0), 0).toFixed(2)} of LLM calls to produce all of them.</p>` : ''}
-    ${index.length ? index.map((e) => `
+    ${index.some((e) => e.roles) ? `<p class="small muted">The bar on each report is the role mix of its sampled citers: ${ROLES.map(roleBadge).join(' ')}</p>` : ''}
+    ${index.length ? ordered(index).map((e) => `
       <div class="card">
         <a class="title" href="?doi=${encodeURIComponent(e.doi)}">${esc(e.title)}</a>
         <div class="muted small">${esc(e.venue || '')} ${esc(e.year || '')} · doi:${esc(e.doi)}</div>
         <div class="nums">
           <div><b>${fmt(e.cited_by_count)}</b><span>citations (OpenAlex)</span></div>
           ${Object.entries(e.windows || {}).map(([w, n]) => `<div><b>${fmt(n)}</b><span>${esc(WINDOW_LABEL[w] || w)}</span></div>`).join('')}
+          ${money(e.cost_usd, 'LLM cost')}
+          ${variety(e.roles) ? `<div><b>${variety(e.roles).toFixed(1)}</b><span>role variety (of 7)</span></div>` : ''}
         </div>
+        ${roleStrip(e.roles)}
+        <div class="muted small">${[roleLead(e.roles), SOURCE_LABEL[e.source], e.outgoing && `${e.outgoing} of its own references classified`].filter(Boolean).join(' · ')}</div>
       </div>`).join('') : '<p class="muted">No precomputed reports yet.</p>'}
     <h2>Try any DOI</h2>
     <p class="small muted">Shows the precomputed report if the pipeline has produced one. Otherwise a live look-up in your browser, no LLM:
@@ -366,9 +408,13 @@ async function live(doi) {
 // ---------- route ----------
 const q = new URLSearchParams(location.search);
 const doi = (q.get('doi') || '').trim().replace(/^https?:\/\/doi\.org\//, '');
-// Header: the "Examples" select lists the precomputed reports, the box takes any DOI for a live look-up.
+// Header: the "Examples" select lists the precomputed reports in the same order the home page shows them,
+// the box takes any DOI for a live look-up.
 // ponytail: a plain <select> is fine while there are a few dozen reports; a searchable picker if it grows past that.
-INDEX.then((index) => {
-  document.getElementById('examples').insertAdjacentHTML('beforeend', index.map((e) => `<option value="${esc(e.doi)}">${esc(e.title)}</option>`).join(''));
-});
+async function fillExamples() {
+  const sel = document.getElementById('examples');
+  sel.length = 1;  // keep the "Examples" placeholder, replace the rest
+  sel.insertAdjacentHTML('beforeend', ordered(await INDEX).map((e) => `<option value="${esc(e.doi)}">${esc(e.title)}</option>`).join(''));
+}
+fillExamples();
 doi ? paper(doi, q.get('tab')) : home();
