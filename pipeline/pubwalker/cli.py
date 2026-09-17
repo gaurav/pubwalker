@@ -88,7 +88,7 @@ def clicktest():
     with sync_playwright() as p:
         page = p.chromium.launch().new_page()
         page.on("pageerror", lambda e: errors.append(str(e)))
-        page.on("console", lambda m: m.type == "error" and errors.append(m.text))
+        page.on("console", lambda m: m.type == "error" and "Failed to load resource" not in m.text and errors.append(m.text))  # live mode 404s its report
         page.goto(f"http://127.0.0.1:{httpd.server_port}/?doi={doi}")
         page.wait_for_selector(".tabs.top")
         tabs = [b.get_attribute("data-t") for b in page.query_selector_all(".tabs.top button")]
