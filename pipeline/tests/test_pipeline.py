@@ -1,6 +1,10 @@
 """Offline checks for the pure logic: JATS passage extraction, windowing, grounding, flattening.
 Run: cd pipeline && uv run python -m unittest discover -s tests"""
 import datetime as dt
+import json
+import os
+import shutil
+import subprocess
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
@@ -121,6 +125,35 @@ class Fetch(unittest.TestCase):
         f = flatten(w)
         self.assertEqual((f["id"], f["doi"], f["pmid"], f["pmcid"], f["venue"], f["topics"]), ("W1", "10.1000/abc", "42", None, "J", ["A", "B"]))
         self.assertEqual(slugify("10.1111/j.1096-0031.2010.00329.x"), "10-1111-j-1096-0031-2010-00329-x")
+
+
+APP_JS = Path(__file__).resolve().parents[2] / "site" / "app.js"
+# yearChart() is vanilla JS in the dependency-free site, so lift it out of app.js and run it under node
+# rather than reimplementing the logic here.
+YEAR_CHART = """
+const src = require('node:fs').readFileSync(process.env.APP_JS, 'utf8');
+const yearChart = eval('(' + src.match(/const yearChart = ([\\s\\S]*?\\n\\});/)[1] + ')');
+process.stdout.write(yearChart(JSON.parse(process.env.YEARS)));
+"""
+
+
+@unittest.skipUnless(shutil.which("node"), "node is not installed")
+class YearChart(unittest.TestCase):
+    def chart(self, years):
+        out = subprocess.run(["node", "-e", YEAR_CHART], capture_output=True, text=True,
+                             env={"PATH": os.environ["PATH"], "APP_JS": str(APP_JS), "YEARS": json.dumps(years)})
+        self.assertEqual(out.returncode, 0, out.stderr)
+        return out.stdout
+
+    def test_empty_years_are_filled_so_the_axis_stays_linear(self):
+        html = self.chart([[2001, 3], [2009, 5], [2010, 1]])
+        self.assertEqual(html.count("<div style="), 10)  # one bar per year 2001..2010, not one per year with citations
+        self.assertIn('data-l="2005: 0"', html)
+        self.assertIn('height:100.0%" data-l="2009: 5"', html)  # the bars are scaled to the tallest year
+        self.assertIn("<span>2001</span><span>2010</span>", html)  # the axis labels are the real endpoints
+
+    def test_no_years_renders_nothing(self):
+        self.assertEqual(self.chart([]), "")
 
 
 if __name__ == "__main__":
