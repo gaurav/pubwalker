@@ -64,6 +64,12 @@ from its PMC full text (or abstract); `outgoing` classifies what the anchor uses
 references for, with the same roles; `compare` sets claimed against cited; `export` writes
 `site/data/<slug>.json`. A full run for one paper costs a few dollars.
 
+To add a report, run `all` for the DOI and commit the new `site/data/` files; `export` merges it
+into `index.json`. Anatomy and Outgoing need PMC full text with a body, which a PMCID alone does
+not guarantee (some deposits are PDF-only; see the gotchas in `CLAUDE.md`), so check
+`analyze.has_body(passages.jats(pmcid))` first. The fourteen demo papers were sampled from OpenAlex
+(open access, in PMC, 100–2000 citations, 2008–2019) for variety of field and paper type.
+
 ## Setup
 
 Copy `env.default` to `.env` and fill in whatever keys you have. Nothing here requires a
