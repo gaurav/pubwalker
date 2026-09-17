@@ -7,6 +7,10 @@
   unless a prompt, model or schema changed. Per-paper intermediates are `data/<doi-slug>/*.json`.
 - All LLM calls go through `pipeline/pubwalker/llm.py` (`claude -p`, custom system prompt, no
   tools, JSON schema). Keep it that way so an open-weight model can be swapped in for a SPARK entry.
+  What each step spent is banked per paper in `data/<slug>/cost.json` by `llm.record`, counting
+  cache hits at their original price. That is why `roles` and `outgoing` re-ask for items they have
+  already classified rather than skipping them: the cache, not a skip list, is what makes a re-run
+  free, and skipping hides those calls from the tally. Don't reintroduce the skip.
 - `site/` is dependency-free vanilla HTML/JS with no build step; it reads `site/data/*.json`
   written by `pubwalker export`. Check it with `cd pipeline && uv run serve`
   (livereload on :8765) or `python3 -m http.server -d site`. To see it rendered without a
@@ -16,7 +20,9 @@
   clicks every tab and fails on page errors, which a load-time screenshot cannot catch. Firefox's
   `-headless -screenshot` fails on this machine ("Could not find profile folder").
 - Tests: `cd pipeline && uv run python -m unittest discover -s tests`. They use inline fixtures
-  and never touch the network or `claude`.
+  and never touch the network or `claude`. The site's logic is tested from the same suite: `call_js`
+  lifts one top-level arrow function out of `site/app.js` by name and runs it under node, so don't
+  reimplement a site function in Python to test it.
 - Gotchas: Europe PMC `fullTextXML` returns 500 for author manuscripts (NCBI efetch works); some PMC
   records are PDF-only deposits whose XML is front matter with no `<body>` (e.g. PMC2994087,
   PMC3063043), so check `analyze.has_body` before trusting a PMCID as full text; OpenAlex's

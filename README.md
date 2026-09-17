@@ -26,7 +26,13 @@ Scholar, Europe PMC, pubmed2db, Claude Code in headless mode, and so on).
 ## Demo
 
 `site/` is a static page (no build step) that shows precomputed reports for fourteen papers and a
-keyless live look-up for any DOI. It deploys to GitHub Pages from `main`; locally:
+keyless live look-up for any DOI. It is live at <http://www.ggvaidya.com/pubwalker/> (the account's
+custom domain, not `gaurav.github.io`), deployed by `.github/workflows/pages.yml` on every push to
+`main` that touches `site/**`. While the site still lives on a branch, that workflow is dispatched
+by hand — `gh workflow run pages.yml --ref demo-site` — which needs two things a fresh clone will
+not have: the workflow file present on the default branch, since `workflow_dispatch` is only
+offered there, and the `github-pages` environment set to custom branch policies with that branch
+allowed, or the run fails with "Branch … is not allowed to deploy to github-pages". Locally:
 
 ```sh
 cd pipeline && uv run serve   # http://localhost:8765/, reloads the browser when site/ changes

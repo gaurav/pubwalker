@@ -13,7 +13,7 @@ from unittest import mock
 
 import httpx
 
-from pubwalker import analyze, http, llm
+from pubwalker import analyze, export, http, llm
 from pubwalker.analyze import fulltext, grounded, has_body, histogram, references, tidy_structure
 from pubwalker.fetch import flatten, slugify
 from pubwalker.passages import citing_paragraphs, find_ref, in_window
@@ -125,6 +125,43 @@ class Fetch(unittest.TestCase):
         f = flatten(w)
         self.assertEqual((f["id"], f["doi"], f["pmid"], f["pmcid"], f["venue"], f["topics"]), ("W1", "10.1000/abc", "42", None, "J", ["A", "B"]))
         self.assertEqual(slugify("10.1111/j.1096-0031.2010.00329.x"), "10-1111-j-1096-0031-2010-00329-x")
+
+
+class Export(unittest.TestCase):
+    def paper(self, tmp, **extra):
+        """A one-citer paper on disk, as the steps before `export` would have left it."""
+        d = Path(tmp) / "10-1-a"
+        d.mkdir()
+        files = {"anchor": {"id": "W0", "doi": "10.1/a", "title": "T", "year": 2010, "cited_by_count": 9},
+                 "citers": [{"id": "W1", "title": "C", "year": 2012, "type": "article"}, {"id": "W2", "title": "Predates it", "year": 2009}],
+                 "passages": {"windows": {"all-time": {"total": 2, "with_passages": 1, "sampled": ["W1"]}}, "passages": {"W1": {"passages": []}}},
+                 "roles": {"W1": {"role": "uses-data"}}, "synthesis": {"all-time": {"claims": []}, "overall": {"claims": []}},
+                 "cost": {"roles": 0.25, "synth": 0.5}, **extra}
+        for name, obj in files.items():
+            (d / f"{name}.json").write_text(json.dumps(obj))
+        return d
+
+    def test_index_entry_carries_each_section_and_the_paper_s_own_cost(self):
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as site, \
+                mock.patch.object(export, "DATA", Path(tmp)), mock.patch.object(analyze, "DATA", Path(tmp)), \
+                mock.patch.object(llm, "DATA", Path(tmp)), mock.patch.object(export, "SITE_DATA", Path(site)):
+            self.paper(tmp, structure={"source": "pmc-full-text"}, outgoing={"references": [{"id": "B1"}, {"id": "B2"}]})
+            export.run("10.1/a")
+            entry, = json.loads((Path(site) / "index.json").read_text())
+            self.assertEqual((entry["cost_usd"], entry["source"], entry["outgoing"]), (0.75, "pmc-full-text", 2))
+            self.assertEqual(entry["roles"]["uses-data"], 1)  # the all-time histogram, for the home page's bar and sort
+            report = json.loads((Path(site) / "10-1-a.json").read_text())
+            self.assertEqual(report["cost_usd"], 0.75)
+            self.assertEqual(report["years"], [[2012, 1]])  # the citer OpenAlex dates before the paper it cites is dropped
+
+    def test_a_paper_without_full_text_says_so_rather_than_reporting_nothing(self):
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as site, \
+                mock.patch.object(export, "DATA", Path(tmp)), mock.patch.object(analyze, "DATA", Path(tmp)), \
+                mock.patch.object(llm, "DATA", Path(tmp)), mock.patch.object(export, "SITE_DATA", Path(site)):
+            self.paper(tmp)
+            export.run("10.1/a")
+            entry, = json.loads((Path(site) / "index.json").read_text())
+            self.assertEqual((entry["source"], entry["outgoing"]), (None, None))
 
 
 class Cost(unittest.TestCase):
