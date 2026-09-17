@@ -11,7 +11,8 @@
    "last-5-years": 211,
    "all-time": 947
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 2.921
  },
  {
   "slug": "10-1039-b814285h",
@@ -25,7 +26,8 @@
    "last-5-years": 116,
    "all-time": 563
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 3.8605
  },
  {
   "slug": "10-1111-j-1474-9726-2009-00459-x",
@@ -39,7 +41,8 @@
    "last-5-years": 131,
    "all-time": 588
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 4.3375
  },
  {
   "slug": "10-1111-j-1096-0031-2010-00329-x",
@@ -53,7 +56,8 @@
    "last-5-years": 1292,
    "all-time": 2594
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 2.1734
  },
  {
   "slug": "10-1016-j-cell-2010-03-012",
@@ -67,7 +71,8 @@
    "last-5-years": 458,
    "all-time": 1687
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 4.5269
  },
  {
   "slug": "10-1038-nature09565",
@@ -81,7 +86,8 @@
    "last-5-years": 163,
    "all-time": 813
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 2.7182
  },
  {
   "slug": "10-1038-nature10489",
@@ -95,7 +101,8 @@
    "last-5-years": 163,
    "all-time": 643
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 2.6211
  },
  {
   "slug": "10-1371-journal-pone-0036674",
@@ -109,7 +116,8 @@
    "last-5-years": 73,
    "all-time": 247
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 4.0322
  },
  {
   "slug": "10-1016-j-socscimed-2013-06-014",
@@ -123,7 +131,8 @@
    "last-5-years": 93,
    "all-time": 214
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 2.8231
  },
  {
   "slug": "10-1161-circulationaha-114-012957",
@@ -137,7 +146,8 @@
    "last-5-years": 80,
    "all-time": 307
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 3.1439
  },
  {
   "slug": "10-1257-aer-20130397",
@@ -151,7 +161,8 @@
    "last-5-years": 33,
    "all-time": 103
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 2.6051
  },
  {
   "slug": "10-1093-nar-gkx1092",
@@ -165,7 +176,8 @@
    "last-5-years": 91,
    "all-time": 276
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 3.1268
  },
  {
   "slug": "10-1007-s40273-018-0623-8",
@@ -179,7 +191,8 @@
    "last-5-years": 224,
    "all-time": 345
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 3.6316
  },
  {
   "slug": "10-1186-s40168-018-0568-3",
@@ -193,6 +206,7 @@
    "last-5-years": 70,
    "all-time": 126
   },
-  "generated": "2026-09-17"
+  "generated": "2026-09-17",
+  "cost_usd": 3.3809
  }
 ]

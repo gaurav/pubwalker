@@ -76,104 +76,107 @@
    "synthesis": {
     "claims": [
      {
-      "text": "All 40 sampled citing papers cite SequenceMatrix for the **same single operation: concatenating single-locus alignments** into a combined supermatrix before tree inference; none compares against it, extends it, or criticizes it.",
+      "text": "Every one of the 40 sampled citing papers cites SequenceMatrix for the same thing: **concatenating single-locus alignments into a supermatrix** before phylogenetic inference, with zero citations for data, background, comparison, or critique.",
       "cites": [
        "W7133206625",
        "W4414778736",
        "W7204166635",
-       "W7165795773",
-       "W4416505979",
-       "W7162989244",
+       "W7165366936",
+       "W7166126299",
+       "W7161260816",
        "W4415609111"
       ],
       "highlight": true
      },
      {
-      "text": "The citation is almost always a **single methods-section sentence** naming a version plus Vaidya et al., with no discussion of the character-set or codon-information features the paper's title advertises.",
+      "text": "The citation is almost always a **single methods-section sentence** naming the tool and version, with no discussion of the character-set or codon-partition features its title advertises.",
       "cites": [
        "W4415295276",
        "W7166799739",
+       "W4416038148",
        "W7131677090",
-       "W4414556801",
-       "W7162397763"
+       "W4414556801"
       ],
-      "highlight": false
+      "highlight": true
      },
      {
-      "text": "The dominant workflow is a **MAFFT \u2192 trimAl \u2192 SequenceMatrix \u2192 RAxML/IQ-TREE/MrBayes pipeline**, with FigTree for visualization; the tool is the glue between trimming and inference.",
+      "text": "The surrounding workflow is remarkably stable: **MAFFT for alignment, trimAl for trimming**, SequenceMatrix to concatenate, then RAxML/IQ-TREE plus MrBayes, with FigTree for display.",
       "cites": [
        "W7133206625",
        "W7164926330",
        "W7201831864",
        "W7126053148",
        "W4414284529",
-       "W4415609111"
+       "W7162989244"
       ],
       "highlight": true
      },
      {
-      "text": "Fungal taxonomy, especially in MycoKeys, is the largest user community, where concatenating **ITS, LSU, SSU, tef1-\u03b1 and rpb2** is boilerplate for describing new species and genera.",
+      "text": "A large share of sampled users are **fungal taxonomists describing new species**, mostly in MycoKeys, where multi-locus ITS/LSU/SSU/tef1/rpb2 concatenation is the house method.",
       "cites": [
        "W7204166635",
+       "W7197021636",
+       "W7164526651",
        "W7167498995",
        "W7154581987",
        "W7162397763",
-       "W7166126299",
-       "W4415474091",
-       "W7164526651"
+       "W7201831864",
+       "W7126053148"
       ],
       "highlight": false
      },
      {
-      "text": "Use has spread well beyond the multi-locus Sanger datasets it was built for, into **genome-scale and organellar phylogenomics**: 13\u201314 mitochondrial protein-coding genes, plastomes, and nuclear-plus-plastid exon sets.",
+      "text": "Beyond alpha taxonomy, the tool has been absorbed into **organellar phylogenomics**, concatenating 13\u201314 mitochondrial or plastid protein-coding genes and even whole nuclear and plastid exon sets.",
       "cites": [
        "W7125791052",
+       "W7154741013",
        "W7161260816",
        "W4415283553",
        "W7116693006",
-       "W4416038148",
        "W7125986291",
-       "W7165366936"
-      ],
-      "highlight": true
-     },
-     {
-      "text": "It also appears outside eukaryote systematics in **bacterial MLSA and clinical microbiology**, concatenating housekeeping loci to infer relatedness among Pseudomonas, Xanthomonas and wheat endophyte isolates.",
-      "cites": [
-       "W7123579634",
-       "W7171812468",
-       "W7131677090"
+       "W4415609111"
       ],
       "highlight": false
      },
      {
-      "text": "A few uses depart from DNA concatenation entirely \u2014 combining **aligned amino-acid datasets** for sawfly and viral protein phylogenies, or invoking the tool merely for NEXUS format conversion.",
+      "text": "Somewhat unexpectedly for DNA-oriented software, several papers run it on **amino-acid and protein alignments**, and one applied microbiology study builds an MLST-style \"super matrix\" for clinical isolate typing rather than for systematics.",
       "cites": [
        "W7162989244",
        "W4414284529",
-       "W7165366936"
+       "W7123579634",
+       "W7171812468"
       ],
       "highlight": false
      },
      {
-      "text": "Cited versions span **1.7.3 through 1.10** with no stated reason for the choice, and stance is uniformly neutral-to-positive \u2014 the tool is treated as settled infrastructure rather than a methodological decision, even in a Cladistics paper arguing about method sensitivity.",
+      "text": "Version drift is visible and unremarked \u2014 v1.7.3 through v1.10 co-cited in the same twelve-month window as if interchangeable \u2014 and one paper invokes it only for NEXUS format conversion rather than concatenation.",
       "cites": [
        "W4415819867",
-       "W4414556801",
+       "W7133206625",
        "W7162989244",
        "W7161260816",
-       "W7125986291",
-       "W4416293329"
+       "W7165366936",
+       "W4416505979"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Stance is uniformly **neutral-to-positive with no complaints**; even a Cladistics paper arguing about phylogenetic method treats it as an uncontested routine step.",
+      "cites": [
+       "W4416293329",
+       "W7204244506",
+       "W7118651887",
+       "W7165571345"
       ],
       "highlight": false
      }
     ],
     "follow_ups": [
-     "Do any citing papers justify supermatrix concatenation over coalescent/species-tree methods, or is the choice left unexamined?",
-     "Are the advertised character-set and codon-position outputs ever actually used downstream, e.g. fed to PartitionFinder or ModelFinder?",
-     "Why do cited versions span 1.7.3\u20131.10 \u2014 is methods text being copy-pasted within taxonomic journal templates?",
-     "In genome-scale studies, how does SequenceMatrix compare with AMAS, catfasta2phyml, or phyx for concatenation at scale?",
-     "Is the MycoKeys concentration real usage or a sampling artifact of that journal's high publication volume?"
+     "Do any citing papers actually use the codon-position or character-set export features, or only plain concatenation?",
+     "How does SequenceMatrix's citation share compare to alternatives like AMAS, catfasta2phyml, or FASconCAT in the same workflows?",
+     "Is the MycoKeys/fungal-taxonomy concentration real dominance or an artifact of which journals expose retrievable passages?",
+     "Do the organellar phylogenomics users hit scaling limits running a Java GUI tool on hundreds of genes?",
+     "Does the choice of concatenation tool ever surface in papers debating supermatrix versus coalescent approaches?"
     ]
    }
   },
@@ -486,7 +489,7 @@
  "overall": {
   "claims": [
    {
-    "text": "Across all three windows, 39-40 of every 40 sampled citers use SequenceMatrix as **a tool they ran, not read**: the step that concatenates separately aligned single-locus alignments into a supermatrix before tree inference.",
+    "text": "Across all three windows the role is the same: 39\u201340 of every 40 sampled citers cite SequenceMatrix as a **tool they ran, not read**, to concatenate separately aligned loci into a supermatrix before tree inference.",
     "cites": [
      "W2909844982",
      "W2999940060",
@@ -495,130 +498,130 @@
      "W4289993818",
      "W7133206625",
      "W4414778736",
-     "W7204166635"
+     "W4412000678"
     ],
     "highlight": true
    },
    {
-    "text": "The citation form is stable over fifteen years: **one methods-section sentence** naming a version and Vaidya et al., with no discussion of design, alternatives or trade-offs.",
+    "text": "The citation form is essentially frozen: a **single methods-section sentence** naming tool and version, with no engagement with design, alternatives, or the character-set machinery the title advertises.",
     "cites": [
      "W3086171914",
      "W3133887212",
      "W4376484924",
      "W4415295276",
      "W7166799739",
-     "W7131677090",
-     "W4414556801"
+     "W4416038148",
+     "W7131677090"
     ],
     "highlight": false
    },
    {
-    "text": "It holds a **fixed slot in an alignment-to-tree pipeline** \u2014 MAFFT/MUSCLE/ClustalX, then GBlocks or trimAl, then SequenceMatrix, then PartitionFinder or ModelFinder, then RAxML, IQ-TREE or MrBayes, with FigTree at the end. The surrounding tools have churned; the concatenation slot has not.",
+    "text": "It holds a **fixed slot in a stable pipeline** \u2014 MAFFT/MUSCLE align, GBlocks or trimAl trim, SequenceMatrix concatenate, PartitionFinder/ModelFinder partition, then RAxML, IQ-TREE or MrBayes \u2014 and that pipeline barely changes between 2010-era citers and 2025 ones except for trimAl displacing GBlocks and FigTree becoming standard for display.",
     "cites": [
      "W2113188331",
      "W2999940060",
-     "W4389341958",
+     "W7165129834",
      "W4281479744",
+     "W4290989970",
      "W7133206625",
      "W7164926330",
-     "W7201831864",
      "W4410903479"
     ],
     "highlight": true
    },
    {
-    "text": "Uptake is **taxonomically indiscriminate** \u2014 fungi, fish, primates, insects, molluscs, plants, centipedes, spiders, copepods, tardigrades, marsupials \u2014 and in the most recent year fungal taxonomy in MycoKeys is the single largest community, where concatenating ITS, LSU, SSU, tef1-\u03b1 and rpb2 is boilerplate for describing new taxa.",
+    "text": "Uptake is **taxonomically indiscriminate** \u2014 fungi, fish, primates, insect and mollusc mitogenomes, plant plastomes, centipedes, spiders, copepods, tardigrades, marsupials \u2014 but the recent year is dominated by fungal alpha taxonomy in MycoKeys, where ITS/LSU/SSU/tef1/rpb2 concatenation is the house method.",
     "cites": [
      "W4387972803",
      "W1989350663",
      "W2611219129",
      "W4406799603",
+     "W4393197805",
      "W7204166635",
-     "W7167498995",
-     "W7154581987",
-     "W7162397763"
+     "W7197021636",
+     "W7164526651",
+     "W7154581987"
     ],
     "highlight": false
    },
    {
-    "text": "The main drift over time is **scale and data type**: early citations are multi-locus Sanger matrices, while recent ones run it on 13-14 mitochondrial protein-coding genes, whole plastomes, nuclear-plus-plastid exon sets, 79 partitions, and megabase core-genome alignments \u2014 well past the Sanger-era use case it was designed for.",
-    "cites": [
-     "W2180283144",
-     "W1989350663",
-     "W2921470906",
-     "W7125791052",
-     "W7161260816",
-     "W4415283553",
-     "W7116693006",
-     "W4416038148"
-    ],
-    "highlight": true
-   },
-   {
-    "text": "The **codon and character-set export** in the title is used but rarely named: mitogenomic and systematic papers exploit it to build PCG12 / PCG12R matrices or three-codon partitions, yet most citers never mention the feature at all.",
+    "text": "The title's **codon and character-set export** is exercised by a minority: mitogenomic papers building PCG12/PCG12R matrices or three-codon partitions, and a few that use it only for Nexus/TNT format conversion rather than concatenation at all.",
     "cites": [
      "W2909844982",
      "W4404288208",
      "W4281479744",
      "W4290989970",
      "W4390701863",
-     "W4312204427"
+     "W4312204427",
+     "W4416505979"
     ],
     "highlight": false
    },
    {
-    "text": "Stance is uniformly neutral-to-positive with no benchmarks: no sampled paper critiques, compares against or extends it. The two non-tool citations are a competing software paper calling it \"a good choice\" for multi-locus concatenation, and BAD2matrix listing it among concatenation programs that do not scale to phylogenomic input \u2014 the only note of dissent anywhere in the sample.",
+    "text": "The main drift over time is **scale and data type**: early citers concatenate two barcode loci, later ones handle 79 partitions, 13\u201314 organellar protein-coding genes, whole exon sets and megabase core-genome alignments, and increasingly run it on amino-acid rather than DNA alignments.",
     "cites": [
-     "W4393060565",
-     "W7118651887",
-     "W4402765962"
-    ],
-    "highlight": false
-   },
-   {
-    "text": "Some uses depart from DNA concatenation entirely: **aligned amino-acid matrices** for sawfly and viral proteins, bacterial MLSA/MLST housekeeping schemes, experimental-evolution ancestry reconstruction, quality control to spot mislabelled sequences, auto-filling missing data for failed amplifications, plain NEXUS conversion, and an ethanol biorefinery study that inserted 150 bp of 'N' as inter-gene spacers.",
-    "cites": [
+     "W2180283144",
+     "W2921470906",
+     "W7125791052",
+     "W7154741013",
+     "W4415283553",
      "W7162989244",
      "W4414284529",
-     "W7165366936",
+     "W7123579634"
+    ],
+    "highlight": true
+   },
+   {
+    "text": "The tool repeatedly escapes classical systematics into **applied and microbiological work**: phytoplasma and clinical-isolate MLST typing, experimental-evolution ancestry reconstruction, an ethanol biorefinery study that padded genes with 150 bp of 'N', and a fishery survey of edible sea slugs.",
+    "cites": [
      "W4308630756",
-     "W2113188331",
      "W2588638903",
-     "W4399443559",
-     "W4282958834",
-     "W4399916502"
+     "W3169801531",
+     "W7171812468",
+     "W4399916502",
+     "W4410120673"
     ],
     "highlight": false
    },
    {
-    "text": "**Citation hygiene is loose**: versions from 1.7.3 to 1.10 are cited with no stated reason for the choice, plus an implausible \"v16.0\", the name appears as both \"SequenceMatrix\" and \"Sequence Matrix\", and authorship is sometimes truncated to \"Vaidya and Lohman\".",
+    "text": "Stance is **uniformly neutral-to-positive with no benchmarks or complaints**; the only critical note is indirect, from BAD2matrix, which lists SequenceMatrix among concatenation programs that do not scale to phylogenomic input, while another competing software paper calls it \"a good choice\" for multi-locus work.",
+    "cites": [
+     "W4402765962",
+     "W4393060565",
+     "W4391968996",
+     "W7118651887",
+     "W4416293329"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "Citation hygiene is loose and worth a maintainer's attention: **versions 1.7.3 to 1.10 co-cited** as interchangeable in a single year, plus \"Sequence Matrix\", \"Vaidya and Lohman\", and an implausible \"v16.0\".",
     "cites": [
      "W4401642532",
      "W4392926116",
      "W7168357347",
      "W4387052956",
      "W4415819867",
-     "W4414556801",
-     "W7125986291"
+     "W7161260816"
     ],
     "highlight": false
    },
    {
-    "text": "The takeaway for a maintainer: the paper is cited as **settled infrastructure, not a methodological decision** \u2014 even a Cladistics paper arguing about method sensitivity names it in passing \u2014 so the risk is not competition but silent use at scales the scaling critique targets.",
+    "text": "A handful of papers use it **off-label for quality control**: spotting mislabelled sequences before assembling elsewhere, auto-filling missing data for failed amplifications, and computing sequence statistics.",
     "cites": [
-     "W4416293329",
-     "W4402765962",
-     "W7161260816"
+     "W4399443559",
+     "W4282958834",
+     "W4404597642"
     ],
     "highlight": false
    }
   ],
   "follow_ups": [
-   "Do the genome-scale citers (plastomes, 13-14 PCG mitogenomes, core-genome alignments) report runtime or memory problems, or is BAD2matrix's scaling critique untested in practice?",
-   "Among papers that build PCG12/PCG12R or codon-partitioned matrices, how many credit SequenceMatrix's character-set export versus PartitionFinder or manual NEXUS blocks?",
-   "Has the share of fungal-taxonomy (MycoKeys-style) citations actually grown over time, or does it only look dominant in the last-12-months sample?",
-   "What did the competing software paper (W7118651887) and BAD2matrix (W4402765962) each propose instead, and did any later citer switch?",
-   "Which SequenceMatrix version is most cited per year, and do the odd strings (\"v16.0\", \"Vaidya and Lohman\") trace back to a single miscopied methods template?"
+   "Which SequenceMatrix features beyond concatenation (TNT export, taxon-set management, GUI drag-and-drop) are named explicitly, and has that share fallen as phylogenomics grew?",
+   "Do the phylogenomic-scale citers (core genomes, whole exon sets) report runtime or memory limits that would substantiate BAD2matrix's scaling complaint?",
+   "Is the fungal-taxonomy dominance in the last year real, or an artefact of MycoKeys volume and citation-copying between descriptive papers?",
+   "How often is SequenceMatrix co-cited with alternative concatenators (Phyutility, catfasta2phyml, AMAS, FASconCAT), and do those co-citations indicate substitution or redundancy?",
+   "Can the version and author-string variants be traced to a specific incorrect citation in a widely copied methods template?"
   ]
  },
  "citers": {
@@ -2928,6 +2931,11 @@
    "type": "article",
    "passages": [
     {
+     "source": "epmc",
+     "section": "Methods > Phylogenetic analysis",
+     "text": "To construct a mitochondrial genome phylogenetic tree, complete mitochondrial genomes of 29 Hypocreales species were downloaded from the NCBI. In addition, Aspergillus nidulans was used as an outgroup. The 14 core genes (atp6, atp8, atp9, cob, cox1, cox2, cox3, nad1, nad2, nad3, nad4, nad4L, nad5, and nad6) were used for phylogenetic analysis. The nucleotide sequences of the 14 core genes were individually aligned using MAFFT (v.7.453), and multiple sequence alignments were concatenated via SequenceMatrix (v.1.7.8) [43]. The concatenated protein alignment was used to infer a phylogenetic tree with IQ-TREE (v2.4.0) [42]. JTT substitution model was specified for protein evolution. The analysis was performed with 1,000 bootstrap replicates, and the bootstrap values are displayed on the nodes of the tree."
+    },
+    {
      "source": "s2",
      "section": null,
      "text": "The nucleotide sequences of the 14 core genes were individually aligned using MAFFT (v.7.453), and multiple sequence alignments were concatenated via SequenceMatrix (v.1.7.8) [43]."
@@ -2936,12 +2944,13 @@
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "To concatenate multiple sequence alignments from 14 core genes into a combined dataset for genomic analysis.",
+    "what_for": "Uses SequenceMatrix software to concatenate individually aligned mitochondrial gene sequences for phylogenetic tree construction.",
     "combined_with": [
-     "MAFFT"
+     "MAFFT",
+     "IQ-TREE"
     ],
     "stance": "neutral",
-    "evidence_quote": "multiple sequence alignments were concatenated via SequenceMatrix (v.1.7.8)",
+    "evidence_quote": "multiple sequence alignments were concatenated via SequenceMatrix (v.1.7.8) [43]",
     "confidence": "high"
    }
   },
@@ -4877,5 +4886,5 @@
   ]
  },
  "outgoing": null,
- "cost_usd": 44.9737
+ "cost_usd": 2.1734
 }
