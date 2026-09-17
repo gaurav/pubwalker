@@ -1,0 +1,2871 @@
+{
+ "slug": "10-1257-aer-20130397",
+ "anchor": {
+  "id": "W1951254933",
+  "doi": "10.1257/aer.20130397",
+  "pmid": "28935994",
+  "pmcid": "PMC5603250",
+  "title": "Crossing Party Lines: The Effects of Information on Redistributive Politics",
+  "year": 2015,
+  "date": "2015-08-01",
+  "type": "article",
+  "venue": "American Economic Review",
+  "is_oa": true,
+  "topics": [
+   "Media Influence and Politics",
+   "Political Conflict and Governance"
+  ],
+  "cited_by_count": 102
+ },
+ "generated": "2026-09-17",
+ "windows": {
+  "last-12-months": {
+   "total": 4,
+   "with_passages": 2,
+   "sampled": [
+    "W7116066471",
+    "W7165954608"
+   ],
+   "roles": {
+    "uses-tool-or-method": 0,
+    "uses-data": 0,
+    "background-claim": 2,
+    "compares-against": 0,
+    "extends-or-modifies": 0,
+    "critiques-or-contradicts": 0,
+    "incidental": 0
+   },
+   "synthesis": {
+    "claims": [
+     {
+      "text": "In the last 12 months, both classified citations use Casey (2015) **only as background support**. Neither uses its data or methods, compares against it, extends it or critiques it. The evidence is thin: only 2 of 4 citing works had a passage that could be retrieved.",
+      "cites": [
+       "W7116066471",
+       "W7165954608"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "A campaign-rally study cites it for the **role of information in voter behavior** and in how campaigns allocate resources. This matches the paper's core argument about information and redistributive politics.",
+      "cites": [
+       "W7165954608"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "Unexpectedly, a paper on caste discrimination in Africa cites it for the claim that **ethnic identities shape public goods distribution** and the trust needed for collective action. That reading focuses on identity and group politics rather than on the paper's point about information.",
+      "cites": [
+       "W7116066471"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "In the political-economy citation, it sits among **classic media-and-voting studies**: Chiang and Knight 2011, Knight and Schiff 2010 and Stromberg 2008.",
+      "cites": [
+       "W7165954608"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "In the caste paper, it is grouped with **ethnic politics and public goods** work: Lieberman 2009 and Miguel 2004.",
+      "cites": [
+       "W7116066471"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "The citing papers are **neutral to positive, with no complaints**. The caste paper accepts the finding it cites, and the rally paper cites it as settled context.",
+      "cites": [
+       "W7116066471",
+       "W7165954608"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Both citations are **bundled parenthetical references** in a single sentence alongside other works. Neither paper engages with Casey's Sierra Leone evidence or its specific results.",
+      "cites": [
+       "W7116066471",
+       "W7165954608"
+      ],
+      "highlight": false
+     }
+    ],
+    "follow_ups": [
+     "What do the 2 citing works without a retrievable passage use Casey (2015) for?",
+     "Over a longer window, do citations of Casey (2015) shift from voter-information and campaign-allocation claims toward ethnic-politics claims?",
+     "Does any recent work use the paper's Sierra Leone data or its model of how information affects cross-party voting, instead of just citing it as background?",
+     "Is the caste paper's reading, that the paper is about ethnic identity and public goods, supported by what Casey (2015) actually finds?"
+    ]
+   }
+  },
+  "last-5-years": {
+   "total": 33,
+   "with_passages": 8,
+   "sampled": [
+    "W4384558751",
+    "W4404814257",
+    "W4309322865",
+    "W7165954608",
+    "W4407587655",
+    "W4360618687",
+    "W7116066471",
+    "W4402731063"
+   ],
+   "roles": {
+    "uses-tool-or-method": 0,
+    "uses-data": 0,
+    "background-claim": 7,
+    "compares-against": 0,
+    "extends-or-modifies": 0,
+    "critiques-or-contradicts": 0,
+    "incidental": 1
+   },
+   "synthesis": {
+    "claims": [
+     {
+      "text": "In the recent sample, Casey (2015) is cited almost only as **background for empirical claims**: 7 of 8 passages are background citations. None use its data or methods, extend it, compare against it, or critique it.",
+      "cites": [
+       "W4384558751",
+       "W4404814257",
+       "W4407587655",
+       "W4360618687",
+       "W7116066471",
+       "W4402731063",
+       "W7165954608"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "A distinct group of citing papers are **Sierra Leone country studies**. They draw on Casey for local facts about politics: that ethnicity tracks party affiliation, and that followers switch allegiance to better leaders.",
+      "cites": [
+       "W4384558751",
+       "W4404814257",
+       "W4402731063"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "One mixed-methods labour-market study uses Casey to justify **ethnicity as a proxy** for political affiliation in its design. This is a methodological use of a background claim, not a use of the paper's data.",
+      "cites": [
+       "W4404814257"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "A comparative study of Sierra Leone and Liberia treats Casey's **prediction that ethnic voting will decline** as more media information reaches voters as a hypothesis to test. That makes it the only citing paper that engages with the paper's forward-looking argument.",
+      "cites": [
+       "W4402731063"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "Papers on distributive politics and clientelism cite Casey on **campaign targeting of competitive areas**. One uses it to define campaigning broadly; the other cites its finding that parties campaign more in competitive areas but struggle to spread resources evenly.",
+      "cites": [
+       "W4407587655",
+       "W4360618687"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "The paper also appears **outside its African context**. A study of US presidential campaign rallies cites it alongside Str\u00f6mberg, and Knight and Schiff, for how information shapes voting and where campaigns spend. A study of caste in Africa cites it with Miguel and Lieberman for ethnicity shaping public goods.",
+      "cites": [
+       "W7165954608",
+       "W7116066471"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Its one incidental citation is a **long string of citations** on information and elections in a Cambodia democracy-promotion study. There it sits among field-experiment papers such as Fujiwara & Wantchekon and Humphreys & Weinstein.",
+      "cites": [
+       "W4309322865"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Citing papers are **neutral or approving, with no complaints**, but the evidence is thin. Only 8 of 33 citing works in the window had a passage that could be retrieved.",
+      "cites": [
+       "W4384558751",
+       "W4404814257",
+       "W4309322865",
+       "W7165954608",
+       "W4407587655",
+       "W4360618687",
+       "W7116066471",
+       "W4402731063"
+      ],
+      "highlight": false
+     }
+    ],
+    "follow_ups": [
+     "Do the 25 citing works with no retrievable passage use Casey's debate-screening field experiment design or data, which this sample never shows?",
+     "Does the Sierra Leone\u2013Liberia comparison find the decline in ethnic voting that Casey predicted?",
+     "Is Casey's finding cited more for its information-and-voting result or for its ethnic-politics result, and has that balance changed since 2015?",
+     "Why do recent citing papers never adopt or critique the paper's experimental method, given that it was published in AER?"
+    ]
+   }
+  },
+  "all-time": {
+   "total": 103,
+   "with_passages": 24,
+   "sampled": [
+    "W2900524363",
+    "W4407587655",
+    "W2308799976",
+    "W2039944335",
+    "W3047246922",
+    "W4384558751",
+    "W2999663566",
+    "W7116066471",
+    "W2464034117",
+    "W4402731063",
+    "W2181225129",
+    "W2939267203",
+    "W2808566345",
+    "W2151347163",
+    "W3147319771",
+    "W2899283167",
+    "W4360618687",
+    "W4309322865",
+    "W2287295592",
+    "W2613035524",
+    "W4404814257",
+    "W7165954608",
+    "W2902323429",
+    "W3042176837"
+   ],
+   "roles": {
+    "uses-tool-or-method": 0,
+    "uses-data": 0,
+    "background-claim": 20,
+    "compares-against": 1,
+    "extends-or-modifies": 0,
+    "critiques-or-contradicts": 1,
+    "incidental": 2
+   },
+   "synthesis": {
+    "claims": [
+     {
+      "text": "The paper is overwhelmingly cited as **background for literature framing**: 20 of 24 sampled citations are background claims, and most place it in lists of work on how information affects elections and accountability.",
+      "cites": [
+       "W3147319771",
+       "W2151347163",
+       "W2902323429",
+       "W2613035524",
+       "W7165954608",
+       "W2899283167"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "Its best-known claim is that **better voter information weakens ethnic voting**. Citing papers use this to frame studies of ethnic favouritism and of whether ethnic salience fades after conflict, and one reads it as predicting ethnicity's long-term decline.",
+      "cites": [
+       "W2999663566",
+       "W4402731063",
+       "W7116066471",
+       "W2308799976"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "A second group of papers uses it for how **parties target campaign resources**. They cite it as showing that parties focus on swing or competitive areas but, as ethnic voting weakens, have trouble spotting pivotal areas and so spread resources evenly.",
+      "cites": [
+       "W2939267203",
+       "W4360618687",
+       "W3047246922",
+       "W4407587655"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "Some papers treat it as a source of facts about Sierra Leone rather than of its causal finding. They cite its evidence tying ethnicity to party loyalty, and one uses that link to justify ethnicity as a proxy variable for political affiliation.",
+      "cites": [
+       "W4404814257",
+       "W2464034117",
+       "W4384558751"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "It is usually listed alongside **Ferraz and Finan, Banerjee et al., and Fujiwara and Wantchekon**, the standard group of studies on information and accountability in developing countries. It also appears in long general citation strings on democracy promotion.",
+      "cites": [
+       "W2039944335",
+       "W2902323429",
+       "W2613035524",
+       "W3147319771",
+       "W4309322865"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "The only qualifying reading is mild. One paper grants that information-based policies work against statistical discrimination but argues they leave taste-based barriers to minority candidates in place. No sampled paper disputes the paper's findings.",
+      "cites": [
+       "W2900524363"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Two uses are unusual. One preprint compares its results directly against the paper, noting that both use poll survey responses as a proxy for votes. A public-choice paper cites it for a theory point: weaker partisan attachment means smaller equilibrium political rents.",
+      "cites": [
+       "W3042176837",
+       "W2287295592"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Citations are **loose about details**: one paper cites Casey 2012, another cites Casey 2010, and some attribute findings to 'Ghana' although the study is set in Sierra Leone.",
+      "cites": [
+       "W2464034117",
+       "W2039944335",
+       "W2999663566"
+      ],
+      "highlight": false
+     }
+    ],
+    "follow_ups": [
+     "Among the 79 citing works with no retrievable passage, are any reusing the paper's Sierra Leone data or its poll-based design?",
+     "Do later studies of ethnic salience in Sierra Leone and Liberia support the predicted decline of ethnic voting?",
+     "How do field experiments on voter information in other settings (e.g., Uganda SMS, Benin deliberation) compare in effect sizes?",
+     "Do other papers build on the idea that information-based fixes miss taste-based discrimination?",
+     "How often is the paper cited for its model of how parties allocate resources, as opposed to its evidence on voters?"
+    ]
+   }
+  }
+ },
+ "overall": {
+  "claims": [
+   {
+    "text": "Across all windows, Casey (2015) is used almost entirely as **background for literature framing**. 20 of 24 classified all-time citations are background claims, and no sampled paper uses its data or methods or extends it. This held in the last 5 years (7 of 8) and in the last 12 months (2 of 2).",
+    "cites": [
+     "W3147319771",
+     "W2151347163",
+     "W2902323429",
+     "W2613035524",
+     "W7165954608",
+     "W2899283167",
+     "W4384558751",
+     "W4404814257",
+     "W4407587655",
+     "W4360618687",
+     "W7116066471",
+     "W4402731063"
+    ],
+    "highlight": true
+   },
+   {
+    "text": "The claim citers most often take from it is that **better voter information weakens ethnic voting**. Papers use it to frame studies of ethnic favouritism and post-conflict ethnic salience, and one recent Sierra Leone\u2013Liberia comparison treats the predicted decline of ethnic voting as a hypothesis to test.",
+    "cites": [
+     "W2999663566",
+     "W4402731063",
+     "W7116066471",
+     "W2308799976"
+    ],
+    "highlight": true
+   },
+   {
+    "text": "A second use cites its finding on **how parties target campaign resources**: parties focus on competitive areas, but when ethnic voting weakens they struggle to identify pivotal areas and spread resources more evenly.",
+    "cites": [
+     "W2939267203",
+     "W4360618687",
+     "W3047246922",
+     "W4407587655"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "In recent years a group of Sierra Leone country studies has used it as a source of local facts rather than for its causal result. They cite the link between ethnicity and party loyalty, and one uses that link to justify ethnicity as a proxy for political affiliation.",
+    "cites": [
+     "W4384558751",
+     "W4404814257",
+     "W4402731063",
+     "W2464034117"
+    ],
+    "highlight": true
+   },
+   {
+    "text": "It is usually listed with **Ferraz and Finan, Banerjee et al., and Fujiwara and Wantchekon** as part of the standard information-and-accountability group. Recent citations move it into other contexts: next to Str\u00f6mberg and Knight\u2013Schiff in a US campaign-rally study, and next to Miguel and Lieberman in a paper on caste in Africa.",
+    "cites": [
+     "W2039944335",
+     "W2902323429",
+     "W2613035524",
+     "W3147319771",
+     "W4309322865",
+     "W7165954608",
+     "W7116066471"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "Stance is neutral to approving, with **no disputes of its findings**. The only qualification argues that information-based policies address statistical discrimination but leave taste-based barriers to minority candidates in place.",
+    "cites": [
+     "W2900524363",
+     "W7116066471",
+     "W7165954608"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "There are a few unusual uses. One preprint makes a **direct comparison**, since both studies use poll survey responses as a proxy for votes, and a public-choice paper cites it for a theory point about partisan attachment and political rents. Citations are also sloppy: some give the wrong year (2010 or 2012), and one says the study is set in Ghana when it is set in Sierra Leone.",
+    "cites": [
+     "W3042176837",
+     "W2287295592",
+     "W2464034117",
+     "W2039944335",
+     "W2999663566"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "Readers should treat these patterns as **based on thin evidence**. Only 24 of 103 all-time citers, 8 of 33 in the last 5 years and 2 of 4 in the last 12 months had a passage that could be retrieved, and recent citations are mostly short, bundled parenthetical references.",
+    "cites": [
+     "W7116066471",
+     "W7165954608",
+     "W4309322865"
+    ],
+    "highlight": false
+   }
+  ],
+  "follow_ups": [
+   "Do any of the ~79 citers without retrieved passages reuse Casey's Sierra Leone survey data or test its predictions directly?",
+   "Has any later study tested whether ethnic voting in Sierra Leone actually declined as media access grew?",
+   "How often do citing papers get the setting, year or version of Casey's paper wrong, and does that track with citing the working paper instead of the published version?",
+   "Is the move from citations about information and accountability toward Sierra Leone country facts a real trend, or just an artefact of which passages could be retrieved?"
+  ]
+ },
+ "citers": {
+  "W2151347163": {
+   "id": "W2151347163",
+   "doi": "10.1257/app.5.4.241",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Can Informed Public Deliberation Overcome Clientelism? Experimental Evidence from Benin",
+   "year": 2013,
+   "venue": "American Economic Journal Applied Economics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "2011; Banerjee et al. 2011; Bobonis, C\u00e1mara-Fuertes, and Schwabe 2011), and estimating the effects of information on issues and policies (Collier and Vicente 2011; Gin\u00e9 and Mansuri 2011; Banerjee et al. 2012). The current paper fits both categories, as it deals with a discussion of policy issues that is inserted in specific candidates\u2019 campaigns. Austen-Smith and Feddersen\u2019s (2006) model examines deliberation in the presence of preference uncertainty."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The control group mean is 21.6 percent, which falls to 17.2 percent in the treatment group. While this is a sizable reduction, the effect is not statistically significant (randomization test p-value is 0.166). The relatively low reported occurrence of vote buying in control villages could be driven by misreporting by respondents or that vote buying is not so prevalent in these areas, or is at least very targeted, as suggested by Finan and Schechter\u2019s (2012) analysis of Paraguayan campaigns."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper situates itself within prior literature examining the effects of information on political behavior and redistributive policy outcomes.",
+    "combined_with": [
+     "Collier and Vicente 2011",
+     "Gin\u00e9 and Mansuri 2011",
+     "Banerjee et al. 2012",
+     "Austen-Smith and Feddersen 2006"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "estimating the effects of information on issues and policies (Collier and Vicente 2011; Gin\u00e9 and Mansuri 2011; Banerjee et al. 2012). The current paper fits both categories, as it deals with a discussion of policy issues that is inserted in specific candidates' campaigns.",
+    "confidence": "low"
+   }
+  },
+  "W2939267203": {
+   "id": "W2939267203",
+   "doi": "10.1177/0022343318822709",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Intimidating voters with violence and mobilizing them with clientelism",
+   "year": 2019,
+   "venue": "Journal of Peace Research",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "In efforts to explain this \u2018puzzle of distributive politics\u2019 (Stokes, Nazareno & Brusco, 2013), researchers argued that core voters are easier to target because they are embedded in partisan networks (Calvo & Murillo, 2013; Dixit & Londregan, 1996) and that brokers follow their private agendas rather than those of party leaderships (Stokes, Nazareno & Brusco, 2013).3 Similarly, Casey (2015) pointed out that parties would ideally campaign predominantly in competitive areas, but as increased voter information reduces ethnic voting, parties have difficulty identifying pivotal areas and target resources evenly across electoral areas."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026& Londregan, 1996) and that brokers follow their private agendas rather than those of party leaderships (Stokes, Nazareno & Brusco, 2013).3 Similarly, Casey (2015) pointed out that parties would ideally campaign predominantly in competitive areas, but as increased voter information reduces ethnic\u2026"
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses Casey's finding that increased voter information reduces ethnic voting and thus impairs parties' ability to identify competitive areas, citing this as one explanation for why parties distribute campaign resources inefficiently across electoral areas.",
+    "combined_with": [
+     "Stokes, Nazareno & Brusco (2013)",
+     "Dixit & Londregan (1996)",
+     "Calvo & Murillo (2013)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Similarly, Casey (2015) pointed out that parties would ideally campaign predominantly in competitive areas, but as increased voter information reduces ethnic voting, parties have difficulty identifying pivotal areas and target resources evenly across electoral areas.",
+    "confidence": "high"
+   }
+  },
+  "W2308799976": {
+   "id": "W2308799976",
+   "doi": "10.1177/0010414015617963",
+   "pmid": null,
+   "pmcid": null,
+   "title": "The Ethnic Logic of Campaign Strategy in Diverse Societies",
+   "year": 2015,
+   "venue": "Comparative Political Studies",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "First and foremost, it adds to a growing literature that uses quantitative approaches to study campaign strategy in Africa\u2019s emerging multiparty systems (Bleck & van de Walle, 2012; Casey, 2015; Ferree, 2011; Posner, 2005; Scarritt, 2006; Wantchekon, 2003; Wantchekon & Fujiwara, 2013)."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Cites the work as part of a growing literature using quantitative approaches to study campaign strategy in Africa's multiparty systems.",
+    "combined_with": [
+     "Bleck & van de Walle (2012)",
+     "Ferree (2011)",
+     "Posner (2005)",
+     "Scarritt (2006)",
+     "Wantchekon (2003)",
+     "Wantchekon & Fujiwara (2013)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "it adds to a growing literature that uses quantitative approaches to study campaign strategy in Africa's emerging multiparty systems (Bleck & van de Walle, 2012; Casey, 2015; Ferree, 2011; Posner, 2005; Scarritt, 2006; Wantchekon, 2003; Wantchekon & Fujiwara, 2013)",
+    "confidence": "high"
+   }
+  },
+  "W3047246922": {
+   "id": "W3047246922",
+   "doi": "10.1017/s0007123420000241",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Who Benefits? How Local Ethnic Demography Shapes Political Favoritism in Africa",
+   "year": 2020,
+   "venue": "British Journal of Political Science",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026more efficiently 3 The need for national-level support mainly holds in winner-takes-all executive elections rather than majoritarian legislative elections, where politicians face incentives to target contested swing districts (Casey 2015). allocate benefits (Baldwin 2016; Dixit and Londregan 1996)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites Casey 2015 to establish the theoretical claim that electoral system type (winner-takes-all executive vs. majoritarian legislative) shapes politicians' benefit-allocation incentives, with winner-takes-all creating stronger needs for national-level support.",
+    "combined_with": [
+     "Baldwin 2016",
+     "Dixit and Londregan 1996"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "where politicians face incentives to target contested swing districts (Casey 2015)",
+    "confidence": "high"
+   }
+  },
+  "W2900524363": {
+   "id": "W2900524363",
+   "doi": "10.1016/j.jpubeco.2020.104201",
+   "pmid": null,
+   "pmcid": null,
+   "title": "A natural experiment on discrimination in elections",
+   "year": 2020,
+   "venue": "Journal of Public Economics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026the Act, our findings suggest policy responses that operate only on informational margins to reduce statistical discrimination, however e\u21b5ective (Casey, 2015), are likely to leave intact substantial barriers to the election of racial and ethnic minorities arising from taste-based\u2026"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "critiques-or-contradicts",
+    "what_for": "The citing paper acknowledges Casey's finding that informational policy approaches are effective, then reports a limitation: that such approaches alone fail to address taste-based discrimination barriers to minority candidates.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "policy responses that operate only on informational margins to reduce statistical discrimination, however effective (Casey, 2015), are likely to leave intact substantial barriers to the election of racial and ethnic minorities arising from taste-based",
+    "confidence": "high"
+   }
+  },
+  "W4309322865": {
+   "id": "W4309322865",
+   "doi": "10.1177/00104140221139387",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Promoting Democracy Under Electoral Authoritarianism: Evidence From Cambodia",
+   "year": 2022,
+   "venue": "Comparative Political Studies",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "See, e.g., Adida et al. (2020); Bidwell et al. (2020); Finkel and Lim (2021); Abadie et al. (2017); Buntaine et al. (2018); Casey (2015); De La O (2013); Fearon et al. (2009); Fujiwara and Wantchekon (2013); Humphreys and Weinstein (2009); Hyde (2010, 2015); Gottlieb (2016a); Malesky et al. (2012);\u2026"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "incidental",
+    "what_for": "Cited among examples of prior work on information, politics, and electoral dynamics.",
+    "combined_with": [
+     "Adida et al. (2020)",
+     "Bidwell et al. (2020)",
+     "Finkel and Lim (2021)",
+     "Abadie et al. (2017)",
+     "Buntaine et al. (2018)",
+     "Casey (2015)",
+     "De La O (2013)",
+     "Fearon et al. (2009)",
+     "Fujiwara and Wantchekon (2013)",
+     "Humphreys and Weinstein (2009)",
+     "Hyde (2010, 2015)",
+     "Gottlieb (2016a)",
+     "Malesky et al. (2012)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "See, e.g., Adida et al. (2020); Bidwell et al. (2020); Finkel and Lim (2021); Abadie et al. (2017); Buntaine et al. (2018); Casey (2015); De La O (2013); Fearon et al. (2009); Fujiwara and Wantchekon (2013); Humphreys and Weinstein (2009); Hyde (2010, 2015); Gottlieb (2016a); Malesky et al. (2012)",
+    "confidence": "low"
+   }
+  },
+  "W3147319771": {
+   "id": "W3147319771",
+   "doi": "10.1016/j.jdeveco.2021.102665",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Information, get-out-the-vote messages, and peer influence: Causal effects on political behavior in Mozambique",
+   "year": 2021,
+   "venue": "Journal of Development Economics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026and performance, using experiments (Wantchekon, 2003; Banerjee et al., 2011; Humphreys and Weinstein, 2012; Fujiwara and Wantchekon, 2013; Chong et al., 2015; Cruz et al., 2020; Grossman and Michelitch, 2018; Dunning et al., 2019) or other natural settings (Ferraz and Finan, 2008; Casey, 2015)."
+    }
+   ],
+   "s2_intents": [
+    "methodology"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish prior experimental research examining how information affects political behavior and electoral outcomes.",
+    "combined_with": [
+     "Wantchekon, 2003",
+     "Banerjee et al., 2011",
+     "Humphreys and Weinstein, 2012",
+     "Fujiwara and Wantchekon, 2013",
+     "Cruz et al., 2020",
+     "Grossman and Michelitch, 2018",
+     "Dunning et al., 2019",
+     "Ferraz and Finan, 2008",
+     "Casey, 2015"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "\u2026and performance, using experiments (Wantchekon, 2003; Banerjee et al., 2011; Humphreys and Weinstein, 2012; Fujiwara and Wantchekon, 2013; Chong et al., 2015; Cruz et al., 2020; Grossman and Michelitch, 2018; Dunning et al., 2019) or other natural settings",
+    "confidence": "medium"
+   }
+  },
+  "W2808566345": {
+   "id": "W2808566345",
+   "doi": "10.1073/pnas.1722306115",
+   "pmid": "29891688",
+   "pmcid": null,
+   "title": "SMS texts on corruption help Ugandan voters hold elected councillors accountable at the polls",
+   "year": 2018,
+   "venue": "Proceedings of the National Academy of Sciences",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": null,
+     "text": "In many countries, voters lack the information they need to evaluate politician performance. Instead, they vote for their coethnics or in response to patronage (1, 2). These dynamics reduce incentives for politicians to provide public goods and increase the propensity for corruption (3). International organizations and civil-society activists have spent billions of dollars attempting to help voters make better informed choices and to encourage politicians to improve services (4\u20136). However, many studies have questioned whether new political information enables voters to hold politicians accountable in practice (7\u201311). The mixed evidence is especially apparent in contexts where politicians can manipulate or censor information about performance by muzzling the press, repressing civil society, or spinning public disclosures (12\u201314)."
+    },
+    {
+     "source": "epmc",
+     "section": "Findings > Vote Choice.",
+     "text": "Information might not have affected votes for chairs because they represent larger constituencies and, unlike councillors, are not the primary contacts for constituents. Incentives for performance-based voting are often greatest in small constituencies because voters can more easily coordinate (2). Councillors\u2019 smaller constituencies and their role as primary contacts at the district level might be the reason why citizens hold councillors responsible for budget management, despite chairs\u2019 greater role in principle. Thus, our findings on citizens\u2019 reward or punishment of councillors are consistent with literature on attribution in consolidated democracies (34, 35)."
+    },
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "However, we did not find that voters responded to new information when voting for chairs. This unexpected result may indicate that information on corruption is less effective at promoting accountability in higher profile elections, possibly because there is more information available or because factors like ethnicity or party identification are more salient. In keeping with this intuition, some of the most promising findings about information campaigns come from more local elections (2, 5), whereas the effects of information campaigns for higher level offices even in Uganda have been disappointing (13)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "We explore the implications of different exclusion criteria and incumbency definitions in further analyses: (1) the subset of constituencies where incumbents ran as a member of their party from the 2011 elections (SI Appendix, Table S19); (2) all observations, with incumbency defined as the party elected to the relevant office in 2011 (SI Appendix, Table S20); and (3) all observations, with incumbency defined as the potentially updated party of all individuals who ran for re-election in 2016 (SI Appendix, Table S21)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Instead, they vote for their coethnics or in response to patronage (1, 2)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "In keeping with this intuition, some of the most promising findings about information campaigns come from more local elections (2, 5), whereas the"
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Incentives for performance-based voting are often greatest in small constituencies because voters can more easily coordinate (2)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Treatment effects for good news are larger for (1) and (2) and smaller for (3), while treatment effects attenuate slightly for bad news with all alternative definitions of incumbency."
+    }
+   ],
+   "s2_intents": [
+    "methodology",
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that information campaigns are most effective in local, small-constituency elections where voters can coordinate, explaining why SMS texts affected councillor votes but not chair votes.",
+    "combined_with": [
+     "Information campaign studies (ref 5)",
+     "Attribution literature in consolidated democracies (refs 34, 35)",
+     "Studies questioning information effectiveness (refs 7-11)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "some of the most promising findings about information campaigns come from more local elections (2, 5), whereas the effects of information campaigns for higher level offices even in Uganda have been disappointing (13).",
+    "confidence": "medium"
+   }
+  },
+  "W2039944335": {
+   "id": "W2039944335",
+   "doi": "10.1016/j.jpubeco.2014.10.002",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Presidential coattails versus the median voter: Senator selection in US elections",
+   "year": 2014,
+   "venue": "Journal of Public Economics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Recent work has looked at the effects of information on elections in developing countries (Ferraz and Finan, 2008; Banerjee et al., 2010; Casey, 2010; Fujiwara, 2011; Pande, 2011)."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "incidental",
+    "what_for": "The cited paper does not appear in the provided passage.",
+    "combined_with": [
+     "Ferraz and Finan, 2008",
+     "Banerjee et al., 2010",
+     "Casey, 2010",
+     "Fujiwara, 2011",
+     "Pande, 2011"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Recent work has looked at the effects of information on elections in developing countries (Ferraz and Finan, 2008; Banerjee et al., 2010; Casey, 2010; Fujiwara, 2011; Pande, 2011).",
+    "confidence": "low"
+   }
+  },
+  "W2899283167": {
+   "id": "W2899283167",
+   "doi": "10.1086/700199",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Signaling Sophistication: How Social Expectations Can Increase Political Information Acquisition",
+   "year": 2018,
+   "venue": "The Journal of Politics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026represents a trap to the extent that poorly informed voters consequently fail to support parties representing their interests (e.g., Bartels 2008; Casey 2015; Iversen and Soskice 2015), which may be compounded by political parties in turn becoming less responsive to their interests (e.g., Adams\u2026"
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026extent that poorly informed voters consequently fail to support parties representing their interests (e.g., Bartels 2008; Casey 2015; Iversen and Soskice 2015), which may be compounded by political parties in turn becoming less responsive to their interests (e.g., Adams and Ezrow 2009; Casey 2015)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Political information traps may thus harm political accountability and representation in general (Casey 2015; Marshall 2018; World Bank 2016), but especially the representation of disadvantaged groups with lower levels of political engagement (e.g., Adams and Ezrow 2009; Bartels 2008; Casey 2015;\u2026"
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026may thus harm political accountability and representation in general (Casey 2015; Marshall 2018; World Bank 2016), but especially the representation of disadvantaged groups with lower levels of political engagement (e.g., Adams and Ezrow 2009; Bartels 2008; Casey 2015; Iversen and Soskice 2015)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "P"
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses Casey's work to establish that information traps cause poorly informed voters to fail supporting parties in their interests and harm political accountability and representation, especially for disadvantaged groups.",
+    "combined_with": [
+     "Bartels 2008",
+     "Iversen and Soskice 2015",
+     "Adams and Ezrow 2009",
+     "Marshall 2018",
+     "World Bank 2016"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "poorly informed voters consequently fail to support parties representing their interests (e.g., Bartels 2008; Casey 2015; Iversen and Soskice 2015), which may be compounded by political parties in turn becoming less responsive to their interests (e.g., Adams and Ezrow 2009; Casey 2015)",
+    "confidence": "high"
+   }
+  },
+  "W4360618687": {
+   "id": "W4360618687",
+   "doi": "10.1080/21599165.2023.2191951",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Win big, buy more: political parties, competition and electoral clientelism",
+   "year": 2023,
+   "venue": "East European Politics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The few studies on the topic outline that political parties campaign more in competitive areas, but have di \ufb03 culties in targeting resources evenly across electoral areas (Casey 2015)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses Casey 2015 to establish an existing empirical finding that political parties campaign more in competitive areas but struggle with even resource allocation across electoral districts.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "The few studies on the topic outline that political parties campaign more in competitive areas, but have difficulties in targeting resources evenly across electoral areas (Casey 2015).",
+    "confidence": "high"
+   }
+  },
+  "W2902323429": {
+   "id": "W2902323429",
+   "doi": "10.1162/rest_a_00906",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Accountability, Political Capture, and Selection Into Politics: Evidence from Peruvian Municipalities",
+   "year": 2020,
+   "venue": "The Review of Economics and Statistics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026and Case (1995), List and Sturm (2006), Ferraz and Finan (2008, 2011a), Besley and Burgess (2002), Bobonis, C\u00e1mara Fuertes, and Schwabe (2016), and Casey (2015), who study the effects of different accountability mechanisms on government responses and reelection of incumbents.\na politically\u2026"
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper groups Casey (2015) with prior work that studies how accountability mechanisms affect government responses and incumbent reelection, establishing the literature foundation for its own study of accountability in Peru.",
+    "combined_with": [
+     "Case (1995)",
+     "List and Sturm (2006)",
+     "Ferraz and Finan (2008, 2011a)",
+     "Besley and Burgess (2002)",
+     "Bobonis, C\u00e1mara Fuertes, and Schwabe (2016)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "and Case (1995), List and Sturm (2006), Ferraz and Finan (2008, 2011a), Besley and Burgess (2002), Bobonis, C\u00e1mara Fuertes, and Schwabe (2016), and Casey (2015), who study the effects of different accountability mechanisms on government responses and reelection of incumbents.",
+    "confidence": "high"
+   }
+  },
+  "W2464034117": {
+   "id": "W2464034117",
+   "doi": "10.1111/obes.12145",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Size Matters: The Effect of the Size of Ethnic Groups on Development",
+   "year": 2016,
+   "venue": "Oxford Bulletin of Economics and Statistics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Casey (2012) shows that in the 2007 parliamentary elections the Sierra Leone Peoples Party (SLPP), which has close ties with the Mende group, captured 24 of the 25 seats in the South (homeland of the Mende)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses this as evidence that ethnic group affiliation strongly correlates with electoral outcomes and political representation.",
+    "combined_with": [
+     "ethnic politics",
+     "electoral behavior",
+     "African politics"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Casey (2012) shows that in the 2007 parliamentary elections the Sierra Leone Peoples Party (SLPP), which has close ties with the Mende group, captured 24 of the 25 seats in the South (homeland of the Mende).",
+    "confidence": "medium"
+   }
+  },
+  "W2287295592": {
+   "id": "W2287295592",
+   "doi": "10.1007/s11127-016-0312-0",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Tax limits and local elections",
+   "year": 2016,
+   "venue": "Public Choice",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": ", choosing a policy from a set of alternatives over which a distribution of voter preferences is defined) amplifies the importance of candidates\u2019 valences, and is in line with the idea that a decline in voters\u2019 ideological attachment and polarization leads to more cost-efficient policies (Svensson 2005), smaller equilibrium political rents (Banerjee and Pande 2007; Casey 2015; Aldashev 2015), better performance in the provision of local public services (Geys et al."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026attachment and polarization leads to more cost-efficient policies (Svensson 2005), smaller equilibrium political rents (Banerjee and Pande 2007; Casey 2015; Aldashev 2015), better performance in the provision of local public services (Geys et al. 2010), and the creation of a\u2026"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To support the theoretical claim that declining voters' ideological attachment and polarization leads to smaller equilibrium political rents.",
+    "combined_with": [
+     "Svensson 2005",
+     "Banerjee and Pande 2007",
+     "Aldashev 2015",
+     "Geys et al. 2010"
+    ],
+    "stance": "positive",
+    "evidence_quote": "smaller equilibrium political rents (Banerjee and Pande 2007; Casey 2015; Aldashev 2015)",
+    "confidence": "medium"
+   }
+  },
+  "W2999663566": {
+   "id": "W2999663566",
+   "doi": "10.1177/2233865919895862",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Ethno-political favouritism in maternal health care service delivery: Micro-level evidence from sub-Saharan Africa, 1981\u20132014",
+   "year": 2020,
+   "venue": "International Area Studies Review",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Whether it is less rational for leaders to target mixed areas with club goods or if these constitute crucial swing-voter areas that can be persuaded by material goods and therefore are heavily targeted with material goods (Casey, 2015) can therefore not be addressed with our design."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Relatedly, single-country studies from SSA (Banful, 2011; Casey, 2015; Masaki, 2018) have shown that in certain contexts, swing rather than core voters are targeted with patronage."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "See Banful (2011), Masaki (2018) and Casey (2015) for excellent analyses from SSA of this."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "As Posner (2005) argues for Zambia and Casey (2015) shows for Ghana, if voters receive improved information of candidates, the effectiveness of ethnic scapegoating and other mechanisms to ensure co-ethnic loyalty weakens, and hence the salience of ethnicity in electoral contexts."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Conversely, improved information is found to weaken the electoral rewards of ethnic patronage (Casey, 2015) and therefore also the salience of ethnicity (Jablonski, 2014: 305; Posner, 2005)."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses Casey's evidence from Ghana that voter information reduces ethnic scapegoating effectiveness and that swing voters are targeted with patronage to frame their analysis of ethnic favoritism in maternal health service allocation.",
+    "combined_with": [
+     "Banful (2011)",
+     "Masaki (2018)",
+     "Posner (2005)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "As Posner (2005) argues for Zambia and Casey (2015) shows for Ghana, if voters receive improved information of candidates, the effectiveness of ethnic scapegoating and other mechanisms to ensure co-ethnic loyalty weakens, and hence the salience of ethnicity in electoral contexts.",
+    "confidence": "high"
+   }
+  },
+  "W4384558751": {
+   "id": "W4384558751",
+   "doi": "10.1017/asr.2023.9",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Chief or Big-Man Politics in Post-War Sierra Leone?",
+   "year": 2023,
+   "venue": "African Studies Review",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026\ufb01 nd that followers tend to be connected to more than one big-man (Agbiboa 2018) and frequently shift their allegiance when someone better emerges (Casey 2015; Utas & Christensen 2016) or the accumulated debt of the \u201c big-man \u201d to his followers becomes too large (Utas & Christensen 2016;\u2026"
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Cites Casey as empirical evidence that political followers frequently shift allegiance when a better leader emerges.",
+    "combined_with": [
+     "Agbiboa 2018",
+     "Utas & Christensen 2016"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "frequently shift their allegiance when someone better emerges (Casey 2015",
+    "confidence": "high"
+   }
+  },
+  "W4402731063": {
+   "id": "W4402731063",
+   "doi": "10.1080/17449057.2024.2402184",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Party Politics and Change of Ethnic Salience in Post-Conflict Africa: A Comparative Analysis of Sierra Leone and Liberia",
+   "year": 2024,
+   "venue": "Ethnopolitics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Additionally, Casey (2015) predicted ethnicity\u2019s long-term decline, attributing it to improved access to accurate candidate information via mass media, enabling voters to choose based on performance rather than ethnicity."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses Casey's prediction about information-driven decline in ethnicity as a theoretical foundation for examining whether and how ethnic salience changes in post-conflict elections.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "Casey (2015) predicted ethnicity's long-term decline, attributing it to improved access to accurate candidate information via mass media, enabling voters to choose based on performance rather than ethnicity.",
+    "confidence": "high"
+   }
+  },
+  "W4404814257": {
+   "id": "W4404814257",
+   "doi": "10.1057/s41287-024-00671-8",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Political Patronage and the Labour Market Experience of High-Skilled Workers: Mixed Methods Evidence from Sierra Leone",
+   "year": 2024,
+   "venue": "European Journal of Development Research",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "GPA is used as a proxy for having experience based on merit, and ethnicity as a proxy for political affiliation based on existing literature on ethnicity and political affiliation in Sierra Leone (Casey 2015; Kandeh 1992)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The politicisation of ethnic identities in Sierra Leone has long existed (Kandeh 1992), and relatively recent research confirms this is still true (Casey 2015)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Historically, corruption and political patronage have shaped the political and social landscapes (Harris 2014); with a close link existing between political and ethnic identities (Casey 2015; Kandeh 1992)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Casey (2015: 2415\u20132416) estimate loyalty for a political party by taking the share of voters of a given ethnic group who reported voting for a particular party."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses Casey (2015) to establish that ethnicity is linked to political affiliation in Sierra Leone and that ethnic identities are politicized, justifying ethnicity as a proxy variable in the study design.",
+    "combined_with": [
+     "Kandeh 1992",
+     "Harris 2014"
+    ],
+    "stance": "positive",
+    "evidence_quote": "ethnicity as a proxy for political affiliation based on existing literature on ethnicity and political affiliation in Sierra Leone (Casey 2015; Kandeh 1992)",
+    "confidence": "high"
+   }
+  },
+  "W4407587655": {
+   "id": "W4407587655",
+   "doi": "10.1177/09516298241312347",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Distributive politics and asymmetric participation",
+   "year": 2025,
+   "venue": "Journal of Theoretical Politics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "In the literature, cam-paigning is often used to describe all efforts parties make \u2014 clientelistic or not \u2014 to sway voters before elections (e.g. Casey, 2015; Stokes, 2005; Stokes et al., 2013)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites Casey (2015) as an example of prior literature defining \"campaigning\" as all efforts parties make to sway voters before elections, whether clientelistic or not.",
+    "combined_with": [
+     "Stokes (2005)",
+     "Stokes et al. (2013)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "In the literature, campaigning is often used to describe all efforts parties make \u2014 clientelistic or not \u2014 to sway voters before elections (e.g. Casey, 2015; Stokes, 2005; Stokes et al., 2013).",
+    "confidence": "high"
+   }
+  },
+  "W2181225129": {
+   "id": "W2181225129",
+   "doi": "10.3386/w21720",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Insiders and Outsiders: Local Ethnic Politics and Public Goods Provision",
+   "year": 2015,
+   "venue": "National Bureau of Economic Research",
+   "type": "report",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "This allows incompetent and corrupt leaders to win elections (Banerjee and Pande, 2010; Casey, 2015)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites Casey 2015 to support the factual claim that voter information gaps allow incompetent and corrupt leaders to win elections.",
+    "combined_with": [
+     "Banerjee and Pande, 2010"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "This allows incompetent and corrupt leaders to win elections (Banerjee and Pande, 2010; Casey, 2015).",
+    "confidence": "high"
+   }
+  },
+  "W3042176837": {
+   "id": "W3042176837",
+   "doi": "10.21034/sr.605",
+   "pmid": null,
+   "pmcid": null,
+   "title": "How Do Voters Respond to Welfare vis-a-vis Public Good Programs? An Empirical Test for Clientelism",
+   "year": 2020,
+   "venue": null,
+   "type": "preprint",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "7These are comparable to results for Sierra Leone in Casey (2015) who also uses poll survey responses as a proxy for votes."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "nicini (2012) for Brazil, and in Corvalan et al. (2018) for Chile."
+    }
+   ],
+   "s2_intents": [
+    "result",
+    "background"
+   ],
+   "role": {
+    "role": "compares-against",
+    "what_for": "The citing paper benchmarks its empirical results against Casey's findings from Sierra Leone, validating methodological compatibility in using poll survey responses as a proxy for voting behavior.",
+    "combined_with": [
+     "poll survey responses as proxy for votes"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "These are comparable to results for Sierra Leone in Casey (2015) who also uses poll survey responses as a proxy for votes.",
+    "confidence": "high"
+   }
+  },
+  "W2613035524": {
+   "id": "W2613035524",
+   "doi": "10.1111/apce.12242",
+   "pmid": null,
+   "pmcid": null,
+   "title": "INFRASTRUCTURE PROVISION, POLITICS AND RELIGION: INSIGHTS FROM TUNISIA'S NEW DEMOCRACY",
+   "year": 2019,
+   "venue": "Annals of Public and Cooperative Economics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026the focus on the religious commitment of a politician in highly religious countries can be seen as an illustration of the relevance of signals on the quality of politicians for electoral outcomes and from there on the policy outcomes (e.g. Banerjee et al. 2011; Ferraz and Finan 2011; Casey 2015)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Cites the paper as evidence that signals about politician quality affect electoral and policy outcomes.",
+    "combined_with": [
+     "Banerjee et al. 2011",
+     "Ferraz and Finan 2011"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "signals on the quality of politicians for electoral outcomes and from there on the policy outcomes (e.g. Banerjee et al. 2011; Ferraz and Finan 2011; Casey 2015)",
+    "confidence": "high"
+   }
+  },
+  "W7116066471": {
+   "id": "W7116066471",
+   "doi": "10.1017/s153759272510371x",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Unspoken Hierarchies: The Enduring Effects of Caste Discrimination in Africa",
+   "year": 2025,
+   "venue": "Perspectives on Politics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Ethnic identities have been shown to shape public goods distribution, in \ufb02 uencing both access to resources and the trust necessary for collective action (Casey 2015; Lieberman 2009; Miguel 2004)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites this work to support the general claim that ethnic identities shape public goods distribution and influence collective action.",
+    "combined_with": [
+     "Lieberman 2009",
+     "Miguel 2004"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Ethnic identities have been shown to shape public goods distribution, in \ufb02 uencing both access to resources and the trust necessary for collective action (Casey 2015; Lieberman 2009; Miguel 2004).",
+    "confidence": "high"
+   }
+  },
+  "W7165954608": {
+   "id": "W7165954608",
+   "doi": "10.1177/20531680261458109",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Short-lived persuasion from campaign rallies: Evidence from the 2016 U.S. presidential election",
+   "year": 2026,
+   "venue": "Research & Politics",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026(Chiang and Knight, 2011); momentum in sequential elections (Knight and Schiff, 2010); the role of information in voter behavior and the allocation of campaign resources (Casey, 2015); and, more broadly, how office-seeking candidates should optimally deploy campaign effort (Stromberg, 2008)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites Casey (2015) as prior research establishing that information affects voter behavior and how campaigns allocate resources, contextualizing the theoretical foundation for studying campaign rally effects.",
+    "combined_with": [
+     "Chiang and Knight, 2011",
+     "Knight and Schiff, 2010",
+     "Stromberg, 2008"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "the role of information in voter behavior and the allocation of campaign resources (Casey, 2015)",
+    "confidence": "high"
+   }
+  }
+ },
+ "years": [
+  [
+   2015,
+   3
+  ],
+  [
+   2016,
+   13
+  ],
+  [
+   2017,
+   8
+  ],
+  [
+   2018,
+   8
+  ],
+  [
+   2019,
+   7
+  ],
+  [
+   2020,
+   10
+  ],
+  [
+   2021,
+   11
+  ],
+  [
+   2022,
+   8
+  ],
+  [
+   2023,
+   9
+  ],
+  [
+   2024,
+   8
+  ],
+  [
+   2025,
+   4
+  ],
+  [
+   2026,
+   3
+  ]
+ ],
+ "structure": {
+  "question": "Does better voter information about individual candidates make voters more willing to cross ethnic-party lines, and does this lead competitive parties to spread redistributive spending more evenly rather than targeting swing jurisdictions?",
+  "assumptions": [
+   {
+    "text": "**Ethnicity strongly predicts party loyalty** in Sierra Leone, with Mende/Southern groups backing the SLPP and Temne/Northern groups backing the APC.",
+    "kind": "fact",
+    "highlight": true,
+    "evidence": "the two major political parties\u2014the Sierra Leone People\u2019s Party (SLPP) and the All People\u2019s Congress (APC)\u2014have strong, long-standing ties to the Mende and other ethnic groups in the South and the Temne and other groups in the North, respectively.",
+    "section": "I. Institutional Context of Sierra Leone",
+    "sources": [
+     "R31"
+    ]
+   },
+   {
+    "text": "**Ethnic composition is plausibly exogenous** to short-term spending, because it reflects historical settlement patterns.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "This provides support for the exogeneity claim that ethnic composition is determined largely by historical settlement patterns and responds little to short term changes in the redistributive spending of candidates.",
+    "section": "I. Institutional Context of Sierra Leone",
+    "sources": []
+   },
+   {
+    "text": "**Voters know more about local politicians** than national ones in Sierra Leone, roughly twice as much.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "These statistics collectively suggest that voters have roughly twice as much information about candidates competing for local as compared to national office.",
+    "section": "I. Institutional Context of Sierra Leone",
+    "sources": []
+   },
+   {
+    "text": "The model extends the **Lindbeck\u2013Weibull swing voter model**, in which parties target transfers at voters with weak loyalties.",
+    "kind": "fact",
+    "highlight": false,
+    "evidence": "I adapt and extend the LW model to incorporate a candidate quality factor and an information asymmetry that were not explored in their seminal work.",
+    "section": "II. A Model of Redistributive Politics with Information Provision",
+    "sources": [
+     "R36"
+    ]
+   },
+   {
+    "text": "**Campaign budgets are proportional to** the party's planned post-election transfers to each jurisdiction.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "For simplicity, therefore assume that the campaign budget for each candidate is proportional to the transfer earmarked by his party for his jurisdiction.",
+    "section": "A. Jurisdictions and Political Transfers",
+    "sources": [
+     "R46"
+    ]
+   },
+   {
+    "text": "**Candidate quality is unobservable to parties** and normally distributed with mean zero, and voters receive only noisy signals of it.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "I assume that relative candidate quality (\u0394 qj = qbj \u2212 qaj) looking across jurisdictions or within the same jurisdiction over time is normally distributed with mean zero and variance \u03c3q2.",
+    "section": "B. Voter Choice",
+    "sources": []
+   },
+   {
+    "text": "**Community radio covers local politicians more** than nationally syndicated radio does, an assumption the author calls minimally restrictive.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "Under the minimally restrictive assumption that community radio shows devote greater airtime to local politicians than nationally syndicated programs",
+    "section": "D. Information and Voter Choice: Radio Coverage",
+    "sources": []
+   },
+   {
+    "text": "In Sierra Leone, **ethnic diversity is not linked to worse public goods**, unlike in many other countries.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "[R22] find a precisely estimated null relationship between diversity and local public goods provision across a broad range of outcomes.",
+    "section": "I. Institutional Context of Sierra Leone",
+    "sources": [
+     "R22"
+    ]
+   }
+  ],
+  "design": [
+   {
+    "text": "An **extended probabilistic voting model** yields three propositions: parties favor swing jurisdictions, better information makes voters cross party lines, and better information flattens party spending.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "I first show that LW\u2019s swing voter investment case still holds under the extended model, and then derive two new theoretical propositions regarding the effects of information on voting and redistributive spending.",
+    "section": "II. A Model of Redistributive Politics with Information Provision"
+   },
+   {
+    "text": "The first identification strategy is a **local versus national election comparison**, where local elections stand for the better-information case.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "The first is an indicator variable, L, which equals one if the candidate or vote is for local council and zero if for national parliament.",
+    "section": "A. The Data"
+   },
+   {
+    "text": "The second is a **radio triple-difference design**: local vs. national politician, community-only vs. dual radio coverage, and radio owners vs. non-owners.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "compare differences in local versus national political knowledge (and voting behaviors) between those who own and do not own radios, across areas with only community radio versus dual coverage.",
+    "section": "D. Information and Voter Choice: Radio Coverage"
+   },
+   {
+    "text": "A jurisdiction's **expected partisan bias** is the absolute value of its ethnic population shares weighted by each group's national partisan bias.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "the measure takes the absolute value of the sum of the population share of each ethnic group residing in the jurisdiction (\u03c0ej) multiplied by the national partisan bias of that group toward Party A over Party B(\u03b1e)",
+    "section": "A. The Data"
+   },
+   {
+    "text": "Crossing party lines is estimated **within the same voter**, using individual fixed effects to compare each person's local and national votes.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "The voter fixed effects mean that the analysis compares how the same person votes at the two distinct levels of election",
+    "section": "C. Information and Voter Choice: Decentralization"
+   },
+   {
+    "text": "Spending slopes are compared using **pooled local\u2013national regressions**, with district, local-government and, in the strictest version, constituency fixed effects.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "the next specification includes fixed effects for all 112 parliamentary constituencies nationwide (cj) to examine how the responsiveness of campaign spending to bias varies across the level of election for the same constituency",
+    "section": "E. Information and the Allocation of Political Transfers: Decentralization"
+   },
+   {
+    "text": "**Placebo outcomes** (general views of government and the importance of development promises) test whether the radio effect is specific to knowledge about candidates.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "Columns 5 and 6 present placebo tests on outcomes concerning general perceptions of local versus national government that are less likely to respond to marginal changes in the types of radio broadcast received.",
+    "section": "D. Information and Voter Choice: Radio Coverage"
+   }
+  ],
+  "data": [
+   {
+    "text": "Jurisdiction ethnic composition comes from the **2004 Population and Housing Census**.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "Demographic data on ethnic composition comes from the 2004 Population and Housing Census conducted by Statistics Sierra Leone.",
+    "section": "A. The Data"
+   },
+   {
+    "text": "**2008 exit polls (DSS)** surveyed 1,117 voters in 59 randomly selected jurisdictions about both their local and national votes.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "the polls surveyed 1,117 voters in 59 randomly selected local government jurisdictions on Local Council Election Day in 2008.",
+    "section": "A. The Data"
+   },
+   {
+    "text": "The **2008 National Public Services household survey** covered a nationally representative sample of over 6,300 citizens in 634 enumeration areas; its community module recorded radio reception and campaign spending.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "which covered a nationally representative sample of over 6,300 citizens in 634 census enumeration areas",
+    "section": "A. The Data"
+   },
+   {
+    "text": "Campaign spending covers **seven campaign items** reported for each candidate: cash, t-shirts, posters, handbills, food, candidate visits and rallies.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "recorded seven different measures of campaign spending by each local and national candidate in the village: the distribution of cash, t-shirts, posters, handbills, and food; personal candidate visits; and the hosting of a political rally.",
+    "section": "A. The Data"
+   },
+   {
+    "text": "Public investment data come from **Local Government Development Grants** projects funded by the first cohort of local councils (2004\u20132007).",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "Information on the budget and location of funded projects was compiled from the local government finance department and the decentralization secretariat",
+    "section": "A. The Data"
+   },
+   {
+    "text": "A **2014 survey of radio stations** covered 44 stations and described their programming during election periods.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "I conducted a nationwide survey of radio stations in 2014, reaching 6 nationally syndicated and 38 community produced stations, or 73 percent of all non-religious, domestically produced stations.",
+    "section": "I. Institutional Context of Sierra Leone"
+   },
+   {
+    "text": "Exit-poll reports were cross-checked against **official National Electoral Commission returns**, and local councillors ranked their peers' effectiveness.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "we can compare the exit poll data to the official voting returns that were released by the National Electoral Commission (NEC) a few weeks later.",
+    "section": "IV. Robustness Checks and Alternative Explanations"
+   }
+  ],
+  "analysis": [
+   {
+    "text": "Main estimates are **OLS with district fixed effects**, controlling for population density and population per seat.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "Jurisdictional controls include population density to accommodate urban/rural differences, and the population per seat",
+    "section": "B. Investment across Jurisdictions"
+   },
+   {
+    "text": "A **mean effects index** combines the seven campaign items into one equally weighted measure in standard deviation units.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "Following [R34] the index is an equally weighted composite of the individual items expressed in standard deviation units.",
+    "section": "B. Investment across Jurisdictions"
+   },
+   {
+    "text": "Inference uses **standard errors clustered by jurisdiction** plus a two-step bootstrap to account for sampling error in the bias measure.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "I present robust standard errors clustered by jurisdiction and accompanying p-values for all campaign estimates.",
+    "section": "B. Investment across Jurisdictions"
+   },
+   {
+    "text": "**Nonparametric binned regressions** plot spending against 34 bins of partisan bias.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "a regression of money distributed by national candidates on 34 equally sized bins of bias",
+    "section": "B. Investment across Jurisdictions"
+   },
+   {
+    "text": "As a robustness check, a **population-share bias measure** replaces the survey-based one, classifying groups as pro-A, pro-B or unaffiliated.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "results are re-run without reference to reported voting behavior by simply classifying each ethnic group as either pro-party A (bias = +1), pro-party B (bias = \u22121), or unaffiliated (bias = 0)",
+    "section": "A. The Data"
+   },
+   {
+    "text": "Radio regressions add **demographic controls with the same interactions**, and missing demographic values are imputed at enumeration area\u2013gender means.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "missing values are imputed at enumeration area-gender means for the 5.6 percent of respondents missing a demographic term",
+    "section": "D. Information and Voter Choice: Radio Coverage"
+   }
+  ],
+  "results": [
+   {
+    "text": "National candidates' campaign spending **falls 0.89 SD** when moving from the most to the least competitive jurisdiction.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "moving from a maximal to minimally competitive jurisdiction is associated with a 0.89 standard deviation unit (standard error 0.21) decrease on average across the bundle of seven campaign goods",
+    "section": "B. Investment across Jurisdictions"
+   },
+   {
+    "text": "Local candidates' spending also falls with bias, but less steeply (0.47 SD), and local councils invested $19,575 less in public goods in the least competitive jurisdictions.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "results in a $19,575 (standard error 8,757) reduction in public goods investments by the governing district council, which is significant at 95 percent confidence.",
+    "section": "B. Investment across Jurisdictions"
+   },
+   {
+    "text": "Voters are **10.8 percentage points more likely** to cross party lines in local than in national elections.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "voters are 10.8 percentage points (standard error 2.9) more likely to vote for a party not traditionally affiliated with their ethnic group in local as opposed to national elections",
+    "section": "C. Information and Voter Choice: Decentralization"
+   },
+   {
+    "text": "The local crossing effect **holds after excluding incumbent races** (9.8 pp) and after controlling for the local share of rival ethnic groups (6.7 pp).",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "voters remain significantly more likely to cross party lines in local races by 9.8 percentage points (standard error 3.7)",
+    "section": "C. Information and Voter Choice: Decentralization"
+   },
+   {
+    "text": "Voters are **13.1 pp more likely to split their ticket** across parties in local than in national races.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "voters are 13.1 percentage points (standard error 3.1) more likely to split their ticket across parties in local as compared to national races",
+    "section": "C. Information and Voter Choice: Decentralization"
+   },
+   {
+    "text": "The radio triple difference is positive for naming politicians (17.3) and for crossing party lines (7.8 pp), while the placebo outcomes show no effect.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "The positive and significant triple difference coefficient suggests that the knowledge premium translates into a greater willingness to vote across party lines for local candidates, equal to 7.8 percentage points (standard error 3.6).",
+    "section": "D. Information and Voter Choice: Radio Coverage"
+   },
+   {
+    "text": "In the pooled spending regressions, the **local \u00d7 bias interaction is 0.44 SD**, meaning the local spending slope is about half as steep; the interaction remains significant with constituency fixed effects.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "the positive index coefficient on the interaction term (0.44, standard error 0.22) implies that this slope is half as steep in local elections.",
+    "section": "E. Information and the Allocation of Political Transfers: Decentralization"
+   },
+   {
+    "text": "The **radio triple difference for spending slopes** is positive and significant (1.16), driven by areas where many households own radios.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "is positive and highly significant (1.16, standard error 0.38).",
+    "section": "F. Information and the Allocation of Political Transfers: Radio Coverage"
+   },
+   {
+    "text": "Incumbents with **higher peer effectiveness rankings** were more likely to be re-elected (10.82 pp per point).",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "a one point increase in the average peer rank is associated with a 10.82 percentage point (standard error 3.50) increase in the probability of re-election",
+    "section": "D. Information and Voter Choice: Radio Coverage"
+   },
+   {
+    "text": "**Exit polls predict the official returns** (coefficient 0.73), with no difference in accuracy between local and national races.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "The coefficient on the exit poll vote share is 0.73 (standard error 0.05) and highly significant, indicating that the exit polls strongly predict the official returns.",
+    "section": "IV. Robustness Checks and Alternative Explanations"
+   }
+  ],
+  "conclusions": [
+   {
+    "text": "Politicians direct **more resources to competitive jurisdictions**, which in ethnic politics means more diverse areas.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "This paper provides evidence that politicians distribute more campaign goods and invest greater public resources in areas where electoral competition between parties is more intense.",
+    "section": "V. Conclusion",
+    "based_on": [
+     "R1",
+     "R2",
+     "R7"
+    ]
+   },
+   {
+    "text": "**Better candidate information relaxes partisan loyalties**, and the two separate identification strategies agree.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "It further demonstrates how providing voters with better information about individual candidates relaxes their partisan loyalties. Two distinct empirical strategies identify variation in information",
+    "section": "V. Conclusion",
+    "based_on": [
+     "R3",
+     "R4",
+     "R5",
+     "R6",
+     "R10"
+    ]
+   },
+   {
+    "text": "When voters cross party lines, **politicians allocate resources more equitably** across jurisdictions.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "When citizens become willing to cast votes across party lines, politicians respond by attenuating their redistributive strategies in favor of a more equitable allocation of resources across jurisdictions.",
+    "section": "V. Conclusion",
+    "based_on": [
+     "R2",
+     "R7",
+     "R8"
+    ]
+   },
+   {
+    "text": "Voters seem to respond to **productive candidate attributes**, so voting on those attributes is likely welfare enhancing.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "voting choices and political favoritism based on these individual factors is likely welfare enhancing compared to that based on partisan loyalty or ethnic identity.",
+    "section": "V. Conclusion",
+    "based_on": [
+     "R9"
+    ]
+   },
+   {
+    "text": "Alternative explanations (**strategic alignment, turnout, credibility, party strength**) do not appear to fully explain the results.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "Thus strategic alignment between local and national representatives does not appear to fully explain the reduced salience of party affiliation in local voting choices.",
+    "section": "IV. Robustness Checks and Alternative Explanations",
+    "based_on": [
+     "R4",
+     "R6",
+     "R10"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "text": "The expansion of **mass media could reduce the salience of ethnicity** in African politics over time, which the author labels speculative.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "A speculative implication of this result is that the expansion of mass media and communications technology has the potential, over time, to reduce the salience of ethnicity in African politics.",
+    "section": "V. Conclusion"
+   },
+   {
+    "text": "**Decentralization may make patronage less ethnic** and make resource allocation more equitable.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "This information advantage implies that local politics and patronage may be less dominated by ethnicity-or partisan-based swing voter redistribution.",
+    "section": "V. Conclusion"
+   },
+   {
+    "text": "Diversity that creates political competition can **attract resources**, adding a new angle to the fractionalization\u2013public goods literature.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "The idea that diversity creates political competition and thus attracts resources adds a new perspective to the literature linking ethno-linguistic fractionalization to the provision of local public goods.",
+    "section": "V. Conclusion"
+   },
+   {
+    "text": "Voters who respond to competence could push parties toward **recruiting higher quality candidates**.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "Greater voter responsiveness to individual competence could further strengthen incentives for parties to invest in recruiting higher quality candidates.",
+    "section": "V. Conclusion"
+   }
+  ],
+  "limitations": [
+   {
+    "text": "Public investment data exist only for local councils, so they **cannot test the effect of information** on redistribution.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "Without data on a national government counterpart, this public investment data can only be used to test Proposition 1, and cannot directly test the effect of information on redistribution.",
+    "section": "A. The Data"
+   },
+   {
+    "text": "The model **does not include endogenous turnout**, and local turnout is lower.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "Incorporating endogenous turnout into the model is beyond the scope of this paper.",
+    "section": "IV. Robustness Checks and Alternative Explanations"
+   },
+   {
+    "text": "The author cannot conclusively rule out **stronger parties in national politics** as an explanation.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "While thus more difficult to rule out conclusively, differential party strength would not explain why changes in voting behavior track differences in knowledge",
+    "section": "IV. Robustness Checks and Alternative Explanations"
+   },
+   {
+    "text": "The later-fielded NPS survey may have **more reporting error** and covers a different subsample of races.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "Note that the NPS survey covers a different subsample of races and may also suffer greater reporting error due to its later field date.",
+    "section": "D. Information and Voter Choice: Radio Coverage"
+   },
+   {
+    "text": "The radio crossing effect **loses precision with demographic controls**, significant only at 91 percent confidence.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "although the latter diminishes in significance to 91 percent confidence.",
+    "section": "D. Information and Voter Choice: Radio Coverage"
+   },
+   {
+    "text": "Radio programming shares come from **station manager recall in 2014** of elections held years earlier, and this is not validated against broadcast records.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "Station managers detailed hour by hour the typical daily programming schedule for the current week and separately for the weeks leading up to the 2012 general, 2008 local, and 2007 MP elections.",
+    "section": "I. Institutional Context of Sierra Leone"
+   },
+   {
+    "text": "Campaign spending is used as a **proxy for post-election transfers**, and the evidence for this link is indirect.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "For simplicity, therefore assume that the campaign budget for each candidate is proportional to the transfer earmarked by his party for his jurisdiction.",
+    "section": "A. Jurisdictions and Political Transfers"
+   },
+   {
+    "text": "All evidence comes from **one country and one election cycle** (2007\u20132008), which limits external validity.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "not stated",
+    "section": ""
+   }
+  ],
+  "source": "pmc-full-text",
+  "references": {
+   "R22": "GlennersterRachelEdwardMiguelRothenbergAlexander D2013Collective Action in Diverse Sierra Leone CommunitiesEconomic Journal123568285316",
+   "R31": "KandehJimmy D1992Politicization of Ethnic Identities in Sierra LeoneAfrican Studies Review3518199",
+   "R36": "LindbeckAssarWeibullJorgen W1987Balanced-Budget Redistribution as the Outcome of Political CompetitionPublic Choice52327397",
+   "R46": "StrombergDavid2008How the Electoral College Influences Campaigns and Policy: The Probability of Being FloridaAmerican Economic Review983769807"
+  }
+ },
+ "comparison": {
+  "points": [
+   {
+    "kind": "cited-as-claimed",
+    "text": "The central claim is that better information about candidates loosens partisan and ethnic loyalty. Citers use it for exactly that: information weakens ethnic voting (one uses this to study ethnic salience after conflict), and information gaps let incompetent candidates win or trap poorly informed voters. This matches the finding that voters are 10.8 pp more likely to cross party lines in local races and the positive radio triple difference for crossing (7.8 pp)."
+   },
+   {
+    "kind": "cited-as-claimed",
+    "text": "Citers take up the targeting claim that parties campaign more in competitive jurisdictions and spread resources unevenly. One says parties struggle to allocate evenly across districts. Another says that when information reduces ethnic voting, parties find it harder to spot competitive areas, which helps explain inefficient campaign spending. Both fit the 0.89 SD drop in spending from most to least competitive jurisdiction and the local \u00d7 bias interaction."
+   },
+   {
+    "kind": "cited-for-something-else",
+    "text": "Several citers use the paper for background on Sierra Leone rather than its causal findings: that ethnicity lines up with party affiliation, that ethnic identity is politicized, and even as grounds for using ethnicity as a proxy variable. Others use it for the general point that ethnicity shapes public goods and representation. The paper treats ethnic-party alignment as a setting, not a result. One citer also misplaces the evidence in Ghana, though the study is from Sierra Leone."
+   },
+   {
+    "kind": "cited-for-something-else",
+    "text": "Citers use side details and definitions that the paper did not present as its point. One benchmarks against its use of poll responses as a proxy for votes; this relies on the validation check that exit polls predict official returns (coefficient 0.73). Another borrows its broad definition of 'campaigning'. A third cites it for the idea that winner-takes-all versus majoritarian rules shape how politicians allocate benefits."
+   },
+   {
+    "kind": "claimed-but-not-cited",
+    "text": "No sampled citer picks up the welfare conclusion. The paper argues that when voters cross party lines, politicians spread resources more evenly (local spending slope about half as steep, radio triple difference of 1.16 on spending slopes, local councils putting less into public goods where races are least competitive). Citers repeat 'information reduces ethnic voting' but mostly leave out the step from there to fairer redistribution."
+   },
+   {
+    "kind": "claimed-but-not-cited",
+    "text": "Citers ignore the finding that voters respond to productive candidate attributes: incumbents ranked more effective by peers were re-elected more often (10.82 pp per point). They also ignore the checks that rule out strategic alignment, turnout, credibility and party strength. Only one citer loosely touches the idea of signals about politician quality."
+   },
+   {
+    "kind": "cited-for-something-else",
+    "text": "One citer draws limits from the paper that it does not state. It says information campaigns work best in small local races where voters can coordinate. Another says information campaigns alone don't overcome taste-based discrimination. A third turns it into a theory that weaker voter attachment means smaller political rents. The paper's local-versus-national contrast is about how much voters know about candidates, not coordination, discrimination or rents."
+   }
+  ]
+ },
+ "outgoing": {
+  "references": [
+   {
+    "id": "R1",
+    "text": "AlesinaAlbertoBaqirRezaEasterlyWilliam1999Public Goods and Ethnic DivisionsQuarterly Journal of Economics1144124384",
+    "title": "Public Goods and Ethnic Divisions",
+    "year": 1999,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "I find evidence that political investment does indeed favor more ethnically diverse and hence competitive jurisdictions in Sierra Leone. My estimates suggest that moving from a perfectly homogeneous jurisdiction to one that is maximally competitive (where each party\u2019s ethnic loyalists hold a 50 percent population share) results in a 0.89 standard deviation unit (standard error 0.21) increase in the bundle of campaign goods distributed by national candidates and $19,575 (standard error 8,757) increase in public goods investment by elected local politicians. Benefits accruing to more diverse constituencies in this way provide a counterpoint to the literature documenting the negative effects of diversity on public goods. This apparent divergence arises from a difference in perspective. While leading papers explore dynamics internal to communities\u2014like taste differences that reduce contributions to public goods (Alesina, Baqir, and Easterly 1999) or greater difficulties imposing sanctions across as opposed to within ethnic groups (Miguel and Gugerty 2005) \u2014the outcomes here concern patronage bestowed upon communities by external political agents vying for their support."
+     }
+    ],
+    "role": {
+     "role": "compares-against",
+     "what_for": "The citing paper contrasts its findings on political patronage favoring ethnically diverse jurisdictions with Alesina et al.'s findings on how ethnic diversity reduces contributions to public goods within communities.",
+     "combined_with": [
+      "Miguel and Gugerty 2005"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "While leading papers explore dynamics internal to communities\u2014like taste differences that reduce contributions to public goods (Alesina, Baqir, and Easterly 1999) or greater difficulties imposing sanctions across as opposed to within ethnic groups (Miguel and Gugerty 2005)\u2014the outcomes here concern patronage bestowed upon communities by external political agents vying for their support.",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R2",
+    "text": "BanerjeeAbhijit VKumarSelvanPandeRohiniSuFelix2011Do Informed Voters Make Better Choices? Experimental Evidence from Urban Indiahttp://www.hks.harvard.edu/fs/rpande/papers/DoInformedVoters_Nov11.pdf (accessed February 24, 2015)",
+    "title": null,
+    "year": 2011,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The finding that candidate information increases citizen willingness to cross ethnic-party lines adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015). The main contribution of this paper is integrating such voter-side partial effects into a unified model that also incorporates the investment response of parties. The subsequent result that information induces a more equitable allocation of campaign spending is the converse of Str\u00f6mberg (2008), who finds that the increasing availability of opinion poll data in the United States enables parties to more precisely predict vote shares and thereby target their campaign resources more narrowly. The comparison establishes a striking non-monotonicity in the effect of information across the development spectrum: in the United States, information helps parties become more sophisticated and tailor their spending to narrower margins of victory; while in Sierra Leone, information helps voters become more sophisticated and less predictably beholden to ethnic histories, thereby eliciting a wider targeting of party spending.2 With the recent growth in mass media and communications technology across Africa, an optimistic implication of this result is that it may lead to a reduced reliance on ethnic politics in the future."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "The paper cites this study as evidence that supplying better information to voters in developing countries has positive effects, which motivates its own contribution.",
+     "combined_with": [
+      "Ferraz and Finan 2008",
+      "Beamen et al. 2009",
+      "Enikolopov, Petrova, and Zhuravskaya 2011",
+      "Fujiwara and Wantchekon 2013",
+      "Chong et al. 2015"
+     ],
+     "stance": "positive",
+     "evidence_quote": "adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015)",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R3",
+    "text": "BanerjeeAbhijit VPandeRohini2009Parochial Politics: Ethnic Preferences and Politician Corruptionhttp://www.hks.harvard.edu/fs/rpande/papers/Parochial_Politics.pdf (accessed February 25, 2015)",
+    "title": null,
+    "year": 2009,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The discussion contributes to the unsettled question of whether ethnic or caste-based political allegiances pose a threat or benefit to democratic accountability. In India, Munshi and Rosenzweig (2013) argue that sub-caste networks can solve the candidate commitment problem when political parties are weak, facilitating the election of more competent local leaders. By contrast, Banerjee and Pande (2009) posit that ethnic preferences give the numerically dominant group a competitive advantage that enables them to win even when other dimensions (like candidate quality) are weak, enabling more corrupt officials to win. Aligned more closely with the latter, this paper emphasizes how reliance on ethnic loyalties in poor information environments leads citizens to cast suboptimal votes that do not facilitate the election of the most competent individuals. At the same time, the empirical result that voters are willing to cross ethnic lines when they have better information suggests that such deeply entrenched allegiances are not in fact immutable. It further adds a new mechanism to explain the deviations from strictly ethnicity-based voting patterns found in a variety of African countries (see for example, Bratton, Bhavnani, and Chen 2012; Ferree et al. 2009; and Ichino and Nathan 2013)."
+     },
+     {
+      "section": "III. Empirical Application > D. Information and Voter Choice: Radio Coverage",
+      "text": "What types of candidate characteristics are voters responding to when they have better information and choose to cross party lines? While the model places no restrictions on the candidate attributes that voters value, it is natural to ask empirically whether these characteristics correlate with performance in office. To do so, online Appendix Table 3 exploits cross-sectional variation in local incumbent peer rankings, and links these measures of on-the-job effectiveness to subsequent re-election success. Specifically, all sitting local councillors anonymously ranked three randomly selected peers on measures of effectiveness in office (i.e., committee membership, project implementation, and fundraising) before the 2008 elections.These measures were standardized into a seven point scale with respect to three vignettes to account for respondent-specific biases in what constitutes effectiveness (following Banerjee and Pande 2009). The positive and significant coefficients in online Appendix Table 3 suggest that incumbents with higher peer assessments were more likely to win re-election. Regarding magnitude, a one point increase in the average peer rank is associated with a 10.82 percentage point (standard error 3.50) increase in the probability of re-election, suggesting that citizens respond to productive attributes of candidates when making voting decisions. Similar results hold for voting across party lines, where a one point increase in peer rank is associated with a 6.51 percentage point (standard error 3.05) increase in the proportion of respondents from a rival group, i.e., an ethnic group historically associated with the party challenging the incumbent, who voted to re-elect the incumbent. Online Appendix Table 4 validates these peer effectiveness ranks by showing that they robustly negatively correlate with peer corruption ranks and positively correlate with other measures of competence regarding the evaluated councillor."
+     }
+    ],
+    "role": {
+     "role": "uses-tool-or-method",
+     "what_for": "Applies Banerjee and Pande's standardization technique using vignettes to normalize peer effectiveness ratings across respondents and control for response-bias in measuring candidate competence.",
+     "combined_with": [
+      "peer rankings",
+      "vignettes",
+      "effectiveness measures"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "These measures were standardized into a seven point scale with respect to three vignettes to account for respondent-specific biases in what constitutes effectiveness (following Banerjee and Pande 2009).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R4",
+    "text": "BardhanPranab2002Decentralization of Governance and DevelopmentJournal of Economic Perspectives164185205",
+    "title": "Decentralization of Governance and Development",
+    "year": 2002,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "To test the second proposition\u2014that information relaxes partisan loyalties\u2014I exploit the information differences created by Sierra Leone\u2019s decentralization reforms of 2004. While standard decentralization arguments focus on the information advantages held by local politicians (Oates 1999), I instead leverage the information advantages that voters have about politicians who are more proximate both geographically and within social networks. Since media coverage is limited, Sierra Leoneans rely primarily on word of mouth and interpersonal connections for information about government, and these sources tend to be richer with regard to local as compared to national politicians. For example, voters are twice as likely to be able to name and have been visited by their local representative. Using voter fixed effects to control for all other observable and unobservable determinants of individual party choice, I show that the same voters are 10.8 percentage points (standard error 2.9) more likely to cross ethnic-party lines in local elections where they have better information about candidates. Information further encourages voters to split their ticket across different parties when voting for multiple offices simultaneously, which they are 13.1 percentage points (standard error 3.1) more likely to do in local races. Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001)."
+     }
+    ],
+    "role": {
+     "role": "extends-or-modifies",
+     "what_for": "The paper positions its findings about information advantages enabling voters to cross ethnic-party lines as adding a new perspective to the existing decentralization debate that Bardhan's work helped establish.",
+     "combined_with": [
+      "Bardhan and Mookherjee 2000",
+      "Bardhan and Mookherjee 2006",
+      "Besley and Coate 2003",
+      "Khemani 2001"
+     ],
+     "stance": "positive",
+     "evidence_quote": "Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R5",
+    "text": "BardhanPranab KMookherjeeDilip2000Capture and Governance at Local and National LevelsAmerican Economic Review90213539",
+    "title": "Capture and Governance at Local and National Levels",
+    "year": 2000,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "To test the second proposition\u2014that information relaxes partisan loyalties\u2014I exploit the information differences created by Sierra Leone\u2019s decentralization reforms of 2004. While standard decentralization arguments focus on the information advantages held by local politicians (Oates 1999), I instead leverage the information advantages that voters have about politicians who are more proximate both geographically and within social networks. Since media coverage is limited, Sierra Leoneans rely primarily on word of mouth and interpersonal connections for information about government, and these sources tend to be richer with regard to local as compared to national politicians. For example, voters are twice as likely to be able to name and have been visited by their local representative. Using voter fixed effects to control for all other observable and unobservable determinants of individual party choice, I show that the same voters are 10.8 percentage points (standard error 2.9) more likely to cross ethnic-party lines in local elections where they have better information about candidates. Information further encourages voters to split their ticket across different parties when voting for multiple offices simultaneously, which they are 13.1 percentage points (standard error 3.1) more likely to do in local races. Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Cited as part of the established literature on the debate about the relative merits of decentralization, particularly for developing countries, establishing the scholarly context into which the paper's contribution fits.",
+     "combined_with": [
+      "Bardhan 2002",
+      "Bardhan and Mookherjee 2006",
+      "Besley and Coate 2003",
+      "Khemani 2001"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R6",
+    "text": "BardhanPranabMookherjeeDilip2006Decentralisation and Accountability in Infrastructure Delivery in Developing CountriesEconomic Journal11650810127",
+    "title": "Decentralisation and Accountability in Infrastructure Delivery in Developing Countries",
+    "year": 2006,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "To test the second proposition\u2014that information relaxes partisan loyalties\u2014I exploit the information differences created by Sierra Leone\u2019s decentralization reforms of 2004. While standard decentralization arguments focus on the information advantages held by local politicians (Oates 1999), I instead leverage the information advantages that voters have about politicians who are more proximate both geographically and within social networks. Since media coverage is limited, Sierra Leoneans rely primarily on word of mouth and interpersonal connections for information about government, and these sources tend to be richer with regard to local as compared to national politicians. For example, voters are twice as likely to be able to name and have been visited by their local representative. Using voter fixed effects to control for all other observable and unobservable determinants of individual party choice, I show that the same voters are 10.8 percentage points (standard error 2.9) more likely to cross ethnic-party lines in local elections where they have better information about candidates. Information further encourages voters to split their ticket across different parties when voting for multiple offices simultaneously, which they are 13.1 percentage points (standard error 3.1) more likely to do in local races. Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Cites as part of the existing literature on decentralization and information asymmetries that the paper builds upon and extends.",
+     "combined_with": [
+      "Bardhan 2002",
+      "Besley and Coate 2003",
+      "Khemani 2001",
+      "Oates 1999"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R7",
+    "text": "BardhanPranabMookherjeeDilip2010Determinants of Redistributive Politics: An Empirical Analysis of Land Reforms in West Bengal, IndiaAmerican Economic Review100415721600",
+    "title": "Determinants of Redistributive Politics: An Empirical Analysis of Land Reforms in West Bengal, India",
+    "year": 2010,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "See also Dixit and Londregan (1996 Dixit and Londregan (1998); and Bardhan and Mookherjee (2010)."
+     }
+    ],
+    "role": {
+     "role": "incidental",
+     "what_for": "Lists it alongside other related work on redistributive politics as background context.",
+     "combined_with": [
+      "Dixit and Londregan (1996)",
+      "Dixit and Londregan (1998)"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "See also Dixit and Londregan (1996 Dixit and Londregan (1998); and Bardhan and Mookherjee (2010).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R8",
+    "text": "BeamanLoriChattopadhyayRaghabendraDufloEstherPandeRohiniTopalovaPetia2009Powerful Women: Does Exposure Reduce Bias?Quarterly Journal of Economics124414971540",
+    "title": "Powerful Women: Does Exposure Reduce Bias?",
+    "year": 2009,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R9",
+    "text": "BesleyTimothyCoateStephen2003Centralized versus Decentralized Provision of Local Public Goods: A Political Economy ApproachJournal of Public Economics8712261137",
+    "title": "Centralized versus Decentralized Provision of Local Public Goods: A Political Economy Approach",
+    "year": 2003,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "To test the second proposition\u2014that information relaxes partisan loyalties\u2014I exploit the information differences created by Sierra Leone\u2019s decentralization reforms of 2004. While standard decentralization arguments focus on the information advantages held by local politicians (Oates 1999), I instead leverage the information advantages that voters have about politicians who are more proximate both geographically and within social networks. Since media coverage is limited, Sierra Leoneans rely primarily on word of mouth and interpersonal connections for information about government, and these sources tend to be richer with regard to local as compared to national politicians. For example, voters are twice as likely to be able to name and have been visited by their local representative. Using voter fixed effects to control for all other observable and unobservable determinants of individual party choice, I show that the same voters are 10.8 percentage points (standard error 2.9) more likely to cross ethnic-party lines in local elections where they have better information about candidates. Information further encourages voters to split their ticket across different parties when voting for multiple offices simultaneously, which they are 13.1 percentage points (standard error 3.1) more likely to do in local races. Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "The paper cites Besley and Coate 2003 to position its work within the existing scholarly debate about the relative merits of decentralization in developing countries.",
+     "combined_with": [
+      "Bardhan 2002",
+      "Bardhan and Mookherjee 2000, 2006",
+      "Khemani 2001",
+      "Oates 1999"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R10",
+    "text": "BrattonMichaelBhavnaniRaviChenTse-Hsin2012Voting Intentions in Africa: Ethnic, economic or partisan?Commonwealth & Comparative Politics5012752",
+    "title": "Voting Intentions in Africa: Ethnic, economic or partisan?",
+    "year": 2012,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The discussion contributes to the unsettled question of whether ethnic or caste-based political allegiances pose a threat or benefit to democratic accountability. In India, Munshi and Rosenzweig (2013) argue that sub-caste networks can solve the candidate commitment problem when political parties are weak, facilitating the election of more competent local leaders. By contrast, Banerjee and Pande (2009) posit that ethnic preferences give the numerically dominant group a competitive advantage that enables them to win even when other dimensions (like candidate quality) are weak, enabling more corrupt officials to win. Aligned more closely with the latter, this paper emphasizes how reliance on ethnic loyalties in poor information environments leads citizens to cast suboptimal votes that do not facilitate the election of the most competent individuals. At the same time, the empirical result that voters are willing to cross ethnic lines when they have better information suggests that such deeply entrenched allegiances are not in fact immutable. It further adds a new mechanism to explain the deviations from strictly ethnicity-based voting patterns found in a variety of African countries (see for example, Bratton, Bhavnani, and Chen 2012; Ferree et al. 2009; and Ichino and Nathan 2013)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Documents the empirical finding that African countries exhibit deviations from strictly ethnicity-based voting patterns.",
+     "combined_with": [
+      "Ferree et al. 2009",
+      "Ichino and Nathan 2013"
+     ],
+     "stance": "positive",
+     "evidence_quote": "the deviations from strictly ethnicity-based voting patterns found in a variety of African countries (see for example, Bratton, Bhavnani, and Chen 2012; Ferree et al. 2009; and Ichino and Nathan 2013)",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R11",
+    "text": "CameronAColinJonahGelbachBMillerDouglas L2008Bootstrap-Based Improvements for Inference with Clustered ErrorsReview of Economics and Statistics90341427",
+    "title": "Bootstrap-Based Improvements for Inference with Clustered Errors",
+    "year": 2008,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "I first draw 10,000 samples with replacement by ethnic group and survey to compute the \u03b1e^ vector, and merge these estimates into the census data on population shares (\u03c0ej) to construct 10,000 jurisdiction-level bias measures, \u03b1j^. In the second step, I pair the bth replication of \u03b1j^ with a draw from the campaign data, sampling jurisdiction-level clusters with replacement, and estimate the coefficients of interest for each of 10,000 subsamples (following the pairs cluster bootstrap-t procedure in Cameron, Gelbach, and Miller 2008)."
+     }
+    ],
+    "role": {
+     "role": "uses-tool-or-method",
+     "what_for": "The paper applies the pairs cluster bootstrap-t procedure to estimate coefficients of interest from jurisdiction-level clusters of survey and campaign data.",
+     "combined_with": [
+      "survey data",
+      "census data on population shares",
+      "campaign data"
+     ],
+     "stance": "positive",
+     "evidence_quote": "following the pairs cluster bootstrap-t procedure in Cameron, Gelbach, and Miller 2008",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R12",
+    "text": "CaseyKatherine2015Crossing Party Lines: The Effects of Information on Redistributive Politics: DatasetAmerican Economic Reviewhttp://dx.doi.org/10.1257/aer.2013039710.1257/aer.20130397PMC560325028935994",
+    "title": "Crossing Party Lines: The Effects of Information on Redistributive Politics: Dataset",
+    "year": 2015,
+    "doi": "10.1257/aer.20130397",
+    "pmid": "28935994",
+    "mentions": [],
+    "openalex_id": "W1951254933",
+    "cited_by_count": 102,
+    "is_oa": true,
+    "role": null
+   },
+   {
+    "id": "R13",
+    "text": "CaseyKatherine Whiteside2009Decentralization in PracticeDecentralization, Democracy, and Development: Recent Experience from Sierra LeoneYongmeiZhou6072Washington, DCThe World Bank",
+    "title": "Decentralization in Practice",
+    "year": 2009,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": "III. Empirical Application > A. The Data",
+      "text": "Data on party spending concerns two sets of outcomes: (i) campaign spending by national and local candidates during the 2007 and 2008 elections, respectively; and (ii) public investments made by the first cohort of elected local councillors over the period 2004\u20132007. The first set was collected in the community module of the 2008 NPS survey and recorded seven different measures of campaign spending by each local and national candidate in the village: the distribution of cash, t-shirts, posters, handbills, and food; personal candidate visits; and the hosting of a political rally. Table 1, panel B presents summary statistics. The second set connects the spending by candidates on the campaign trail to public investments by elected politicians. For this, the Local Government Development Grants (LGDG) program, financed by the World Bank and Government of Sierra Leone, provided several million US dollars in discretionary grants to the first cohort of local councils to fund development initiatives. LGDG accounts for one-fifth of the total vertical transfer from central to local government, and is by far the most significant source of discretionary spending, as the rest of the transfer is tied to specific functions and allocated in collaboration with line ministries (Casey 2009). These resources are spent primarily on the construction of local public goods, in areas like roads, agriculture, and markets. Information on the budget and location of funded projects was compiled from the local government finance department and the decentralization secretariat, who provide technical assistance to the councils.15 This paper focuses primarily on the allocation of campaign spending. The purpose of the LGDG estimates is to show that a similar pattern of swing voter favoritism exists for public goods expenditures. Without data on a national government counterpart, this public investment data can only be used to test Proposition 1, and cannot directly test the effect of information on redistribution.16"
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "To establish that the LGDG program represents the most significant and discretionary source of local government funding in Sierra Leone",
+     "combined_with": [
+      "Local Government Development Grants (LGDG) program",
+      "World Bank funding",
+      "Sierra Leone government transfers"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "LGDG accounts for one-fifth of the total vertical transfer from central to local government, and is by far the most significant source of discretionary spending, as the rest of the transfer is tied to specific functions and allocated in collaboration with line ministries (Casey 2009).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R14",
+    "text": "ChongAlbertoLaO Ana DeKarlanDeanWantchekonLeonard2015Does Corruption Information Inspire the Fight or Quash the Hope? A Field Experiment in Mexico on Voter Turnout, Choice and Party IdentificationJournal of Politics7715571",
+    "title": "Does Corruption Information Inspire the Fight or Quash the Hope? A Field Experiment in Mexico on Voter Turnout, Choice and Party Identification",
+    "year": 2015,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The finding that candidate information increases citizen willingness to cross ethnic-party lines adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015). The main contribution of this paper is integrating such voter-side partial effects into a unified model that also incorporates the investment response of parties. The subsequent result that information induces a more equitable allocation of campaign spending is the converse of Str\u00f6mberg (2008), who finds that the increasing availability of opinion poll data in the United States enables parties to more precisely predict vote shares and thereby target their campaign resources more narrowly. The comparison establishes a striking non-monotonicity in the effect of information across the development spectrum: in the United States, information helps parties become more sophisticated and tailor their spending to narrower margins of victory; while in Sierra Leone, information helps voters become more sophisticated and less predictably beholden to ethnic histories, thereby eliciting a wider targeting of party spending.2 With the recent growth in mass media and communications technology across Africa, an optimistic implication of this result is that it may lead to a reduced reliance on ethnic politics in the future."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "The paper cites Chong et al. 2015 as evidence for the established literature on positive effects of voter information in developing countries, positioning its own contribution within that context.",
+     "combined_with": [
+      "Ferraz and Finan 2008",
+      "Beamen et al. 2009",
+      "Banerjee et al. 2011",
+      "Enikolopov, Petrova, and Zhuravskaya 2011",
+      "Fujiwara and Wantchekon 2013"
+     ],
+     "stance": "positive",
+     "evidence_quote": "adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015)",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R15",
+    "text": "DixitAvinashLondreganJohn1996The Determinants of Success of Special Interests in Redistributive PoliticsJournal of Politics584113255",
+    "title": "The Determinants of Success of Special Interests in Redistributive Politics",
+    "year": 1996,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "See also Dixit and Londregan (1996 Dixit and Londregan (1998); and Bardhan and Mookherjee (2010)."
+     }
+    ],
+    "role": {
+     "role": "incidental",
+     "what_for": "Listed as related work on special interests and redistributive politics alongside other foundational studies on the topic.",
+     "combined_with": [
+      "Dixit and Londregan (1998)",
+      "Bardhan and Mookherjee (2010)"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "See also Dixit and Londregan (1996 Dixit and Londregan (1998); and Bardhan and Mookherjee (2010).",
+     "confidence": "medium"
+    }
+   },
+   {
+    "id": "R16",
+    "text": "DixitAvinashLondreganJohn1998Ideology, Tactics, and Efficiency in Redistributive PoliticsQuarterly Journal of Economics1132497529",
+    "title": "Ideology, Tactics, and Efficiency in Redistributive Politics",
+    "year": 1998,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "See also Dixit and Londregan (1996 Dixit and Londregan (1998); and Bardhan and Mookherjee (2010)."
+     }
+    ],
+    "role": {
+     "role": "incidental",
+     "what_for": "Listed alongside related theoretical work on redistributive politics and political tactics in a \"See also\" reference.",
+     "combined_with": [
+      "Bardhan and Mookherjee (2010)"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "See also Dixit and Londregan (1996 Dixit and Londregan (1998); and Bardhan and Mookherjee (2010).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R17",
+    "text": "EnikolopovRubenPetrovaMariaZhuravskayaEkaterina2011Media and Political Persuasion: Evidence from RussiaAmerican Economic Review1017325385",
+    "title": "Media and Political Persuasion: Evidence from Russia",
+    "year": 2011,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The finding that candidate information increases citizen willingness to cross ethnic-party lines adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015). The main contribution of this paper is integrating such voter-side partial effects into a unified model that also incorporates the investment response of parties. The subsequent result that information induces a more equitable allocation of campaign spending is the converse of Str\u00f6mberg (2008), who finds that the increasing availability of opinion poll data in the United States enables parties to more precisely predict vote shares and thereby target their campaign resources more narrowly. The comparison establishes a striking non-monotonicity in the effect of information across the development spectrum: in the United States, information helps parties become more sophisticated and tailor their spending to narrower margins of victory; while in Sierra Leone, information helps voters become more sophisticated and less predictably beholden to ethnic histories, thereby eliciting a wider targeting of party spending.2 With the recent growth in mass media and communications technology across Africa, an optimistic implication of this result is that it may lead to a reduced reliance on ethnic politics in the future."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Cites it as evidence that information provision has positive effects on voters in developing countries.",
+     "combined_with": [
+      "Ferraz and Finan 2008",
+      "Beamen et al. 2009",
+      "Banerjee et al. 2011",
+      "Fujiwara and Wantchekon 2013",
+      "Chong et al. 2015"
+     ],
+     "stance": "positive",
+     "evidence_quote": "supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015)",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R18",
+    "text": "FerrazClaudioFinanFrederico2008Exposing Corrupt Politicians: The Effects of Brazil\u2019s Publicly Released Audits on Electoral OutcomesQuarterly Journal of Economics123270345",
+    "title": "Exposing Corrupt Politicians: The Effects of Brazil\u2019s Publicly Released Audits on Electoral Outcomes",
+    "year": 2008,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The finding that candidate information increases citizen willingness to cross ethnic-party lines adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015). The main contribution of this paper is integrating such voter-side partial effects into a unified model that also incorporates the investment response of parties. The subsequent result that information induces a more equitable allocation of campaign spending is the converse of Str\u00f6mberg (2008), who finds that the increasing availability of opinion poll data in the United States enables parties to more precisely predict vote shares and thereby target their campaign resources more narrowly. The comparison establishes a striking non-monotonicity in the effect of information across the development spectrum: in the United States, information helps parties become more sophisticated and tailor their spending to narrower margins of victory; while in Sierra Leone, information helps voters become more sophisticated and less predictably beholden to ethnic histories, thereby eliciting a wider targeting of party spending.2 With the recent growth in mass media and communications technology across Africa, an optimistic implication of this result is that it may lead to a reduced reliance on ethnic politics in the future."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Establishes prior literature showing positive effects of information provision on voter behavior in developing countries, as context for the paper's extension to include party investment responses.",
+     "combined_with": [
+      "Beamen et al. 2009",
+      "Banerjee et al. 2011",
+      "Enikolopov et al. 2011",
+      "Fujiwara and Wantchekon 2013",
+      "Chong et al. 2015"
+     ],
+     "stance": "positive",
+     "evidence_quote": "The finding that candidate information increases citizen willingness to cross ethnic-party lines adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R19",
+    "text": "FerreeKarenGibsonClarkHoffmanBarak DLongJames D2009Explaining the African Votehttp://papers.ssrn.com/sol3/papers.cfm?abstract_id=1450123 (accessed June 3, 2015)",
+    "title": null,
+    "year": 2009,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The discussion contributes to the unsettled question of whether ethnic or caste-based political allegiances pose a threat or benefit to democratic accountability. In India, Munshi and Rosenzweig (2013) argue that sub-caste networks can solve the candidate commitment problem when political parties are weak, facilitating the election of more competent local leaders. By contrast, Banerjee and Pande (2009) posit that ethnic preferences give the numerically dominant group a competitive advantage that enables them to win even when other dimensions (like candidate quality) are weak, enabling more corrupt officials to win. Aligned more closely with the latter, this paper emphasizes how reliance on ethnic loyalties in poor information environments leads citizens to cast suboptimal votes that do not facilitate the election of the most competent individuals. At the same time, the empirical result that voters are willing to cross ethnic lines when they have better information suggests that such deeply entrenched allegiances are not in fact immutable. It further adds a new mechanism to explain the deviations from strictly ethnicity-based voting patterns found in a variety of African countries (see for example, Bratton, Bhavnani, and Chen 2012; Ferree et al. 2009; and Ichino and Nathan 2013)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Cites it as empirical evidence that deviations from strictly ethnicity-based voting patterns occur in African countries, establishing the phenomenon the paper's mechanism explains.",
+     "combined_with": [
+      "Bratton, Bhavnani, and Chen 2012",
+      "Ichino and Nathan 2013"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "It further adds a new mechanism to explain the deviations from strictly ethnicity-based voting patterns found in a variety of African countries (see for example, Bratton, Bhavnani, and Chen 2012; Ferree et al. 2009; and Ichino and Nathan 2013).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R20",
+    "text": "FujiwaraThomasWantchekonLeonard2013Can Informed Public Deliberation Overcome Clientelism? Experimental Evidence from BeninAmerican Economic Journal: Applied Economics5424155",
+    "title": "Can Informed Public Deliberation Overcome Clientelism? Experimental Evidence from Benin",
+    "year": 2013,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The finding that candidate information increases citizen willingness to cross ethnic-party lines adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015). The main contribution of this paper is integrating such voter-side partial effects into a unified model that also incorporates the investment response of parties. The subsequent result that information induces a more equitable allocation of campaign spending is the converse of Str\u00f6mberg (2008), who finds that the increasing availability of opinion poll data in the United States enables parties to more precisely predict vote shares and thereby target their campaign resources more narrowly. The comparison establishes a striking non-monotonicity in the effect of information across the development spectrum: in the United States, information helps parties become more sophisticated and tailor their spending to narrower margins of victory; while in Sierra Leone, information helps voters become more sophisticated and less predictably beholden to ethnic histories, thereby eliciting a wider targeting of party spending.2 With the recent growth in mass media and communications technology across Africa, an optimistic implication of this result is that it may lead to a reduced reliance on ethnic politics in the future."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Cites it as prior evidence that information provision to voters in developing countries produces positive effects, situating their own work as extending this literature.",
+     "combined_with": [
+      "Ferraz and Finan 2008",
+      "Beamen et al. 2009",
+      "Banerjee et al. 2011",
+      "Enikolopov, Petrova, and Zhuravskaya 2011",
+      "Chong et al. 2015",
+      "Str\u00f6mberg 2008"
+     ],
+     "stance": "positive",
+     "evidence_quote": "The finding that candidate information increases citizen willingness to cross ethnic-party lines adds to the literature regarding the positive effects of supplying better information to voters in developing countries (Ferraz and Finan 2008; Beamen et al. 2009; Banerjee et al. 2011; Enikolopov, Petrova, and Zhuravskaya 2011; Fujiwara and Wantchekon 2013; Chong et al. 2015).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R21",
+    "text": "GentzkowMatthewShapiroJesse MSinkinsonMichael2011The Effect of Newspaper Entry and Exit on Electoral PoliticsAmerican Economic Review101729803018",
+    "title": "The Effect of Newspaper Entry and Exit on Electoral Politics",
+    "year": 2011,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "There is a related literature focused specifically on mass media as a conduit of political information, see for example, Gentzkow, Shapiro, and Sinkinson (2011) on voter behavior and Str\u00f6mberg (2004) on government spending. Note also the cautionary example of media manipulation in Yanagizawa-Drott (2014)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "To cite prior research establishing that mass media affects voter behavior as part of the related literature on media's role in politics.",
+     "combined_with": [
+      "Str\u00f6mberg (2004)",
+      "Yanagizawa-Drott (2014)"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "There is a related literature focused specifically on mass media as a conduit of political information, see for example, Gentzkow, Shapiro, and Sinkinson (2011) on voter behavior",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R22",
+    "text": "GlennersterRachelEdwardMiguelRothenbergAlexander D2013Collective Action in Diverse Sierra Leone CommunitiesEconomic Journal123568285316",
+    "title": "Collective Action in Diverse Sierra Leone Communities",
+    "year": 2013,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": "I. Institutional Context of Sierra Leone",
+      "text": "As an example of the contemporary strength of these loyalties, in the 2007 parliamentary elections the APC won 36 of 39 seats in the Northern Province, while the SLPP and its splinter party, the People\u2019s Movement for Democratic Change (PMDC), swept 24 of 25 seats in the South.3 This implies that the ethnic composition of a jurisdiction is a strong predictor of its expected party loyalty, and is observable to both political parties and the econometrician. Regarding external validity, the roughly equal population sizes, language differences and disparate physical locations of these two broad groups form predictable minimum winning coalitions, whose persistence is supported by the first-past-the-post institutional structure (Posner 2005). One key difference between Sierra Leone and other countries is the lack of negative association between greater diversity and public goods. Glennerster, Miguel, and Rothenberg (2013) find a precisely estimated null relationship between diversity and local public goods provision across a broad range of outcomes."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Establishes that Sierra Leone uniquely lacks a negative relationship between ethnic diversity and public goods provision, supporting the study's choice of research setting.",
+     "combined_with": [
+      "Posner 2005"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "Glennerster, Miguel, and Rothenberg (2013) find a precisely estimated null relationship between diversity and local public goods provision across a broad range of outcomes.",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R23",
+    "text": "IchinoNahomiNathanNoah L2013Crossing the Line: Local Ethnic Geography and Voting in GhanaAmerican Political Science Review107234461",
+    "title": "Crossing the Line: Local Ethnic Geography and Voting in Ghana",
+    "year": 2013,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The discussion contributes to the unsettled question of whether ethnic or caste-based political allegiances pose a threat or benefit to democratic accountability. In India, Munshi and Rosenzweig (2013) argue that sub-caste networks can solve the candidate commitment problem when political parties are weak, facilitating the election of more competent local leaders. By contrast, Banerjee and Pande (2009) posit that ethnic preferences give the numerically dominant group a competitive advantage that enables them to win even when other dimensions (like candidate quality) are weak, enabling more corrupt officials to win. Aligned more closely with the latter, this paper emphasizes how reliance on ethnic loyalties in poor information environments leads citizens to cast suboptimal votes that do not facilitate the election of the most competent individuals. At the same time, the empirical result that voters are willing to cross ethnic lines when they have better information suggests that such deeply entrenched allegiances are not in fact immutable. It further adds a new mechanism to explain the deviations from strictly ethnicity-based voting patterns found in a variety of African countries (see for example, Bratton, Bhavnani, and Chen 2012; Ferree et al. 2009; and Ichino and Nathan 2013)."
+     },
+     {
+      "section": "III. Empirical Application > C. Information and Voter Choice: Decentralization",
+      "text": "Column 7 tests a second alternative proposed by Ichino and Nathan (2013) in the context of Ghana. They argue that when politicians provide locally nonexcludable goods and locate them geographically to favor their ethnic loyalists, voters are \u201cmore likely to support a party associated with another group, when the local ethnic geography favors the other group.\u201d Consistent with this rationale, the cross-sectional correlation between voting for rival party candidates and the local population share of rival groups is also positive in Sierra Leone, for both local and national races (0.12 and 0.19 respectively). Yet for this mechanism to explain the differential willingness to cross ethnic lines in local elections, voters would need to view the provision of public goods as more important for local as compared to national politicians and to thus respond more strongly to the ethnic advantage of rival parties in local races. Contrary to this view, the coefficient on the interaction between the local population share of groups associated with the rival party (i.e., the share of the three groups associated with the SLPP if the voter is Temne, or the six associated with the APC if the voter is Mende) is negative and statistically insignificant. Reassuringly, the coefficient on local election remains positive and significant (6.7, standard error 2.1) even after controlling for the rival population share."
+     }
+    ],
+    "role": {
+     "role": "compares-against",
+     "what_for": "Tests whether the Ichino and Nathan mechanism of local ethnic geography affecting voting choices explains voters' willingness to cross ethnic lines and finds it does not.",
+     "combined_with": [
+      "Bratton, Bhavnani, and Chen 2012",
+      "Ferree et al. 2009"
+     ],
+     "stance": "critical",
+     "evidence_quote": "Column 7 tests a second alternative proposed by Ichino and Nathan (2013) in the context of Ghana. They argue that when politicians provide locally nonexcludable goods and locate them geographically to favor their ethnic loyalists, voters are \"more likely to support a party associated with another group, when the local ethnic geography favors the other group.\" ... Contrary to this view, the coefficient on the interaction between the local population share of groups associated with the rival party is negative and statistically insignificant.",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R24",
+    "text": "Institutional Reform and Capacity Building Project2005National Public Services (NPS) Survey\u2014Household Module",
+    "title": null,
+    "year": null,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R25",
+    "text": "Institutional Reform and Capacity Building Project2007National Public Services (NPS) Survey\u2014 Community Module",
+    "title": null,
+    "year": 2007,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R26",
+    "text": "Institutional Reform and Capacity Building Project2007National Public Services (NPS) Survey\u2014 Household Module",
+    "title": null,
+    "year": 2007,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R27",
+    "text": "Institutional Reform and Capacity Building Project2008Decentralization Stakeholder Survey (DSS)\u2013Wave 1 Local Councilors",
+    "title": null,
+    "year": 2008,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R28",
+    "text": "Institutional Reform and Capacity Building Project2008Decentralization Stakeholder Survey (DSS)\u2014Wave 2 Voters",
+    "title": null,
+    "year": 2008,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R29",
+    "text": "Institutional Reform and Capacity Building Project2008National Public Services (NPS) Survey\u2014 Community Module",
+    "title": null,
+    "year": 2008,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R30",
+    "text": "Institutional Reform and Capacity Building Project2008National Public Services (NPS) Survey\u2014 Household Module",
+    "title": null,
+    "year": 2008,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R31",
+    "text": "KandehJimmy D1992Politicization of Ethnic Identities in Sierra LeoneAfrican Studies Review3518199",
+    "title": "Politicization of Ethnic Identities in Sierra Leone",
+    "year": 1992,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": "I. Institutional Context of Sierra Leone",
+      "text": "Beginning with the correlation between ethnicity and party loyalty, the two major political parties\u2014the Sierra Leone People\u2019s Party (SLPP) and the All People\u2019s Congress (APC)\u2014have strong, long-standing ties to the Mende and other ethnic groups in the South and the Temne and other groups in the North, respectively. Kandeh (1992, p. 82) cites ascriptive origins for this divide, including language differences, and instrumental reasons that made ethnicity a \u201cconvenient basis for political\u2026 organization.\u201d After Independence (1961), the first two prime ministers were Mende members of the SLPP, and the APC party was soon established in opposition to the SLPP\u2019s perceived elitism, corruption, and Mende-bias in the composition of the cabinet, as well as in reaction to the relative socioeconomic deprivation of the North. Siaka Stevens, a Limba, defected from the SLPP to lead the APC to power in 1968 on a populist platform identified with the Northern groups. Stevens abolished district-level government in 1972 and declared a one party state in 1978, allowing the APC to retain power nearly until the outbreak of civil war in 1991. After peace was declared in 2002, multi-party democracy was restored with the same two parties again in competition for state control."
+     },
+     {
+      "section": "III. Empirical Application > A. The Data",
+      "text": "Voting data come from two sources. First, the Decentralization Stakeholder Survey (DSS) exit polls were conducted by the Government of Sierra Leone\u2019s Institutional Reform and Capacity Building Project (IRCBP) with financial support from the National Bureau of Economic Research. Designed by the author, the polls surveyed 1,117 voters in 59 randomly selected local government jurisdictions on Local Council Election Day in 2008. The polls collected demographic characteristics and self-reported voting choices for both the local and the earlier national races. Section IV crosschecks the accuracy of these self-reported votes against the official voting returns using data from the National Electoral Commission. Similar voting questions were then included in IRCBP\u2019s 2008 National Public Services (NPS) household survey, which covered a nationally representative sample of over 6,300 citizens in 634 census enumeration areas (slightly larger than village). As each source has its advantages,13 the preferred measure of bias used in (13) takes the average across these two datasets. As a robustness check, results are re-run without reference to reported voting behavior by simply classifying each ethnic group as either pro-party A (bias = +1), pro-party B (bias = \u22121), or unaffiliated (bias = 0), based on historical accounts (Kandeh 1992) and author interviews with government officials (see Table 1, column 3). Expected bias is then calculated as the absolute value of the difference in population shares of groups A and B : |(Shr A \u2212 Shr B)j|. This measure yields similar results in magnitude and significance."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "To establish the historical basis for ethnic-party alignment in Sierra Leone and inform classification of ethnic groups in the robustness check.",
+     "combined_with": [
+      "Sierra Leone People's Party (SLPP)",
+      "All People's Congress (APC)",
+      "Mende ethnic group",
+      "Temne ethnic group",
+      "Decentralization Stakeholder Survey",
+      "National Public Services household survey",
+      "government official interviews"
+     ],
+     "stance": "positive",
+     "evidence_quote": "Kandeh (1992, p. 82) cites ascriptive origins for this divide, including language differences, and instrumental reasons that made ethnicity a \"convenient basis for political\u2026 organization.\"",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R32",
+    "text": "KeeferPhilipKhemaniStuti2011Mass Media and Public Services: the Effects of Radio Access on Public Education in BeninWorld BankPolicy Research Working Paper5559",
+    "title": null,
+    "year": 2011,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "Due, for example, to differential visibility (Mani and Mukand 2007) or project complexity (Keefer and Khemani 2011)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Cites Keefer and Khemani to support the idea that project complexity could explain observed effects or outcomes.",
+     "combined_with": [
+      "Mani and Mukand 2007"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "Due, for example, to differential visibility (Mani and Mukand 2007) or project complexity (Keefer and Khemani 2011).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R33",
+    "text": "KhemaniStuti2001Decentralization and Accountability: Are Voters More Vigilant in Local than in National Elections?World BankPolicy Research Working Paper2557",
+    "title": null,
+    "year": 2001,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "To test the second proposition\u2014that information relaxes partisan loyalties\u2014I exploit the information differences created by Sierra Leone\u2019s decentralization reforms of 2004. While standard decentralization arguments focus on the information advantages held by local politicians (Oates 1999), I instead leverage the information advantages that voters have about politicians who are more proximate both geographically and within social networks. Since media coverage is limited, Sierra Leoneans rely primarily on word of mouth and interpersonal connections for information about government, and these sources tend to be richer with regard to local as compared to national politicians. For example, voters are twice as likely to be able to name and have been visited by their local representative. Using voter fixed effects to control for all other observable and unobservable determinants of individual party choice, I show that the same voters are 10.8 percentage points (standard error 2.9) more likely to cross ethnic-party lines in local elections where they have better information about candidates. Information further encourages voters to split their ticket across different parties when voting for multiple offices simultaneously, which they are 13.1 percentage points (standard error 3.1) more likely to do in local races. Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Establishes the existing scholarly debate on decentralization merits to contextualize their novel finding about citizen information advantages as a relevant contribution to that literature.",
+     "combined_with": [
+      "Bardhan 2002",
+      "Bardhan and Mookherjee 2000, 2006",
+      "Besley and Coate 2003",
+      "Oates 1999"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R34",
+    "text": "KlingJeffrey RLiebmanJeffrey BKatzLawrence F2007Experimental Analysis of Neighborhood EffectsEconometrica75183119",
+    "title": "Experimental Analysis of Neighborhood Effects",
+    "year": 2007,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": "III. Empirical Application > B. Investment across Jurisdictions",
+      "text": "The first theoretical prediction is that political competition, and hence investments by parties, will be decreasing in the expected partisan bias of jurisdictions. Testing this proposition requires estimation of the following equation: (14)Yij=\u03b20+\u03b21|\u03b1j|+X\u2032j\u0393+dj+\u03b5ij, where Yij is the investment on behalf of candidate i in jurisdiction j, | \u03b1j| is the absolute value of the expected bias toward Party A of the jurisdiction, Xj is a vector of jurisdiction-level factors that may also affect transfers, dj is a set of district fixed effects, and \u03b5ij is an idiosyncratic error term. The theoretical model predicts \u03b21 < 0 indicating that campaign spending and public investment are decreasing in the expected local advantage held by either party. I provide estimates for each of seven campaign items individually as well as a mean effects index that summarizes how ethnic composition affects campaign investment overall. Following Kling, Liebman, and Katz (2007) the index is an equally weighted composite of the individual items expressed in standard deviation units."
+     }
+    ],
+    "role": {
+     "role": "uses-tool-or-method",
+     "what_for": "The paper applies Kling, Liebman, and Katz's methodology to construct a mean effects index as an equally weighted composite of campaign items expressed in standard deviation units.",
+     "combined_with": [],
+     "stance": "neutral",
+     "evidence_quote": "Following Kling, Liebman, and Katz (2007) the index is an equally weighted composite of the individual items expressed in standard deviation units.",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R35",
+    "text": "LarcineseValentinoSnyderJamesTestaCecilia2013Testing Models of Distributive Politics using Exit Polls to Measure Voters\u2019 Preferences and PartisanshipBritish Journal of Political Science43484575",
+    "title": "Testing Models of Distributive Politics using Exit Polls to Measure Voters\u2019 Preferences and Partisanship",
+    "year": 2013,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "Any empirical attempt to evaluate whether political spending favors more tightly contested areas confronts the identification challenge of measuring the strength of partisanship, where the most obvious measure\u2014actual vote shares\u2014is endogenous to the strategic investments of parties (Larcinese, Snyder, and Testa 2013). Longstanding ties between ethnic groups and political parties in Sierra Leone offer a plausible solution: they imply that ethnic composition is a strong (and easily observed) predictor of party loyalty; and, since it is largely determined by historical settlement patterns, the measure is exogenous to short term fluctuations in political patronage flows. If politicians favor \u201cswing\u201d jurisdictions in this context, then party investment will be decreasing in the ethnic population advantage (or homogeneity) held by either of the two major parties."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Establish that vote shares are endogenous to party strategic investments and therefore unsuitable as a direct measure of partisan strength in distributive politics research.",
+     "combined_with": [
+      "ethnic composition as exogenous predictor of party loyalty",
+      "argument about measuring partisan strength in Sierra Leone context"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "the most obvious measure\u2014actual vote shares\u2014is endogenous to the strategic investments of parties (Larcinese, Snyder, and Testa 2013)",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R36",
+    "text": "LindbeckAssarWeibullJorgen W1987Balanced-Budget Redistribution as the Outcome of Political CompetitionPublic Choice52327397",
+    "title": "Balanced-Budget Redistribution as the Outcome of Political Competition",
+    "year": 1987,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The formal model is an extension of Lindbeck and Weibull\u2019s (1987)\u2014henceforth, LW\u2014redistributive politics model. I incorporate candidate quality, which is imperfectly observed, to derive three propositions of interest. I first establish that LW\u2019s original \u201cswing\u201d voter result continues to hold under the addition of candidate quality, where voter willingness to trade off ideological preferences for consumption transfers leads parties to invest more resources in areas with weaker underlying party affiliation.1 Second, I show that providing citizens with information about candidates relaxes their partisan loyalty: voters become willing to cross party lines when the rival party fields a sufficiently superior candidate, but only if the information environment is rich enough for them to detect and find the quality advantage credible. Such crossing in turn makes party forecasting of vote shares more uncertain and effectively expands the set of competitive or \u201cswing\u201d jurisdictions. And third, parties optimally respond to increasing uncertainty by smoothing the allocation of campaign spending more equitably across jurisdictions. I then take these three propositions to the data."
+     }
+    ],
+    "role": {
+     "role": "extends-or-modifies",
+     "what_for": "The paper extends the Lindbeck-Weibull redistributive politics model by incorporating candidate quality to derive new propositions and verify that the original swing voter result persists under this addition.",
+     "combined_with": [
+      "candidate quality (imperfectly observed)"
+     ],
+     "stance": "positive",
+     "evidence_quote": "The formal model is an extension of Lindbeck and Weibull's (1987)\u2014henceforth, LW\u2014redistributive politics model. I incorporate candidate quality, which is imperfectly observed, to derive three propositions of interest. I first establish that LW's original \"swing\" voter result continues to hold under the addition of candidate quality",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R37",
+    "text": "ManiAnandiMukandSharun2007Democracy, Visibility and Public Good ProvisionJournal of Development Economics83250629",
+    "title": "Democracy, Visibility and Public Good Provision",
+    "year": 2007,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "Due, for example, to differential visibility (Mani and Mukand 2007) or project complexity (Keefer and Khemani 2011)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "The paper cites Mani and Mukand's concept of differential visibility as one potential explanation for a phenomenon.",
+     "combined_with": [
+      "Keefer and Khemani 2011"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "Due, for example, to differential visibility (Mani and Mukand 2007) or project complexity (Keefer and Khemani 2011).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R38",
+    "text": "MiguelEdwardGugertyMary Kay2005Ethnic Diversity, Social Sanctions, and Public Goods in KenyaJournal of Public Economics891112232568",
+    "title": "Ethnic Diversity, Social Sanctions, and Public Goods in Kenya",
+    "year": 2005,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "I find evidence that political investment does indeed favor more ethnically diverse and hence competitive jurisdictions in Sierra Leone. My estimates suggest that moving from a perfectly homogeneous jurisdiction to one that is maximally competitive (where each party\u2019s ethnic loyalists hold a 50 percent population share) results in a 0.89 standard deviation unit (standard error 0.21) increase in the bundle of campaign goods distributed by national candidates and $19,575 (standard error 8,757) increase in public goods investment by elected local politicians. Benefits accruing to more diverse constituencies in this way provide a counterpoint to the literature documenting the negative effects of diversity on public goods. This apparent divergence arises from a difference in perspective. While leading papers explore dynamics internal to communities\u2014like taste differences that reduce contributions to public goods (Alesina, Baqir, and Easterly 1999) or greater difficulties imposing sanctions across as opposed to within ethnic groups (Miguel and Gugerty 2005) \u2014the outcomes here concern patronage bestowed upon communities by external political agents vying for their support."
+     }
+    ],
+    "role": {
+     "role": "compares-against",
+     "what_for": "The paper contrasts its finding that diversity increases political investment with the literature documenting negative effects of diversity on public goods, positioning the divergence as stemming from studying external political patronage rather than internal community dynamics.",
+     "combined_with": [
+      "Alesina, Baqir, and Easterly 1999"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "While leading papers explore dynamics internal to communities\u2014like taste differences that reduce contributions to public goods (Alesina, Baqir, and Easterly 1999) or greater difficulties imposing sanctions across as opposed to within ethnic groups (Miguel and Gugerty 2005)\u2014the outcomes here concern patronage bestowed upon communities by external political agents vying for their support.",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R39",
+    "text": "MunshiKaivanRosenzweigMark2013Networks, Commitment, and Competence: Caste in Indian Local PoliticsNational Bureau of Economic ResearchWorking Paper19197",
+    "title": null,
+    "year": 2013,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "The discussion contributes to the unsettled question of whether ethnic or caste-based political allegiances pose a threat or benefit to democratic accountability. In India, Munshi and Rosenzweig (2013) argue that sub-caste networks can solve the candidate commitment problem when political parties are weak, facilitating the election of more competent local leaders. By contrast, Banerjee and Pande (2009) posit that ethnic preferences give the numerically dominant group a competitive advantage that enables them to win even when other dimensions (like candidate quality) are weak, enabling more corrupt officials to win. Aligned more closely with the latter, this paper emphasizes how reliance on ethnic loyalties in poor information environments leads citizens to cast suboptimal votes that do not facilitate the election of the most competent individuals. At the same time, the empirical result that voters are willing to cross ethnic lines when they have better information suggests that such deeply entrenched allegiances are not in fact immutable. It further adds a new mechanism to explain the deviations from strictly ethnicity-based voting patterns found in a variety of African countries (see for example, Bratton, Bhavnani, and Chen 2012; Ferree et al. 2009; and Ichino and Nathan 2013)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Establish a prior research finding that caste networks enable better candidate selection in weak party contexts, as one position in a contrasted intellectual landscape.",
+     "combined_with": [
+      "Banerjee and Pande (2009)",
+      "Bratton, Bhavnani, and Chen (2012)",
+      "Ferree et al. (2009)",
+      "Ichino and Nathan (2013)"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "In India, Munshi and Rosenzweig (2013) argue that sub-caste networks can solve the candidate commitment problem when political parties are weak, facilitating the election of more competent local leaders. By contrast, Banerjee and Pande (2009) posit that ethnic preferences give the numerically dominant group a competitive advantage",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R40",
+    "text": "National Electoral Commission Sierra Leone20072007 Parliamentary Election Results by Polling Station",
+    "title": null,
+    "year": 2007,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R41",
+    "text": "National Electoral Commission Sierra Leone20082008 Local Government Election Results\u2014 Councilor Elections",
+    "title": null,
+    "year": 2008,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R42",
+    "text": "OatesWallace E1999An Essay on Fiscal FederalismJournal of Economic Literature373112049",
+    "title": "An Essay on Fiscal Federalism",
+    "year": 1999,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "To test the second proposition\u2014that information relaxes partisan loyalties\u2014I exploit the information differences created by Sierra Leone\u2019s decentralization reforms of 2004. While standard decentralization arguments focus on the information advantages held by local politicians (Oates 1999), I instead leverage the information advantages that voters have about politicians who are more proximate both geographically and within social networks. Since media coverage is limited, Sierra Leoneans rely primarily on word of mouth and interpersonal connections for information about government, and these sources tend to be richer with regard to local as compared to national politicians. For example, voters are twice as likely to be able to name and have been visited by their local representative. Using voter fixed effects to control for all other observable and unobservable determinants of individual party choice, I show that the same voters are 10.8 percentage points (standard error 2.9) more likely to cross ethnic-party lines in local elections where they have better information about candidates. Information further encourages voters to split their ticket across different parties when voting for multiple offices simultaneously, which they are 13.1 percentage points (standard error 3.1) more likely to do in local races. Highlighting citizen information advantages adds a new perspective to the debate about the relative merits of decentralization that is particularly relevant for developing countries (Bardhan 2002; Bardhan and Mookherjee 2000, 2006; Besley and Coate 2003; Khemani 2001)."
+     },
+     {
+      "section": "III. Empirical Application > E. Information and the Allocation of Political Transfers: Decentralization",
+      "text": "Regarding the two sets of fixed effects, the first (dj) captures district-level factors that affect local and national candidates similarly, like higher transport costs in districts with rugged terrain. Their inclusion further eliminates any inter-district targeting by national politicians, thereby limiting analysis to the remaining variation within districts. The second set (Li \u00d7 dj) delineates the distinct local government markets and district-level budgets that apply only to local candidates, where the reference group is the national budget that applies to all national candidates. This distinction is important given that fiscal federalism uses transfers from central to local governments in part to increase the equity of resource allocation across districts (Oates 1999), which would automatically lead to a smoother allocation of spending by local as compared to national government. These local government fixed effects thus allow the intercept for each district-level budget line to shift independently for local candidates, as opposed to fitting a single (falsely flattened) line across all districts. They further absorb any general differences between local and national candidates. The evidence for Proposition 3 thus draws on a comparison of the average slopes of the local versus national intra-district campaign spending lines, and evaluates whether national spending responds more strongly to ethnic diversity net of any differences in targeting across districts."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Establishes the standard decentralization theory (that local politicians have information advantages) and fiscal federalism theory (that transfers aim to equalize resource allocation), which the paper's novel approach contrasts with and builds empirical analysis around.",
+     "combined_with": [],
+     "stance": "positive",
+     "evidence_quote": "While standard decentralization arguments focus on the information advantages held by local politicians (Oates 1999), I instead leverage the information advantages that voters have about politicians who are more proximate both geographically and within social networks. ... fiscal federalism uses transfers from central to local governments in part to increase the equity of resource allocation across districts (Oates 1999)",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R43",
+    "text": "PosnerDaniel N2005Institutions and Ethnic Politics in AfricaNew YorkCambridge University Press",
+    "title": null,
+    "year": 2005,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": "I. Institutional Context of Sierra Leone",
+      "text": "As an example of the contemporary strength of these loyalties, in the 2007 parliamentary elections the APC won 36 of 39 seats in the Northern Province, while the SLPP and its splinter party, the People\u2019s Movement for Democratic Change (PMDC), swept 24 of 25 seats in the South.3 This implies that the ethnic composition of a jurisdiction is a strong predictor of its expected party loyalty, and is observable to both political parties and the econometrician. Regarding external validity, the roughly equal population sizes, language differences and disparate physical locations of these two broad groups form predictable minimum winning coalitions, whose persistence is supported by the first-past-the-post institutional structure (Posner 2005). One key difference between Sierra Leone and other countries is the lack of negative association between greater diversity and public goods. Glennerster, Miguel, and Rothenberg (2013) find a precisely estimated null relationship between diversity and local public goods provision across a broad range of outcomes."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "To explain how first-past-the-post institutional structures support the persistence of ethnic-based political coalitions and minimum winning coalitions.",
+     "combined_with": [
+      "Glennerster, Miguel, and Rothenberg (2013)"
+     ],
+     "stance": "positive",
+     "evidence_quote": "whose persistence is supported by the first-past-the-post institutional structure (Posner 2005)",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R44",
+    "text": "Statistics Sierra Leone2004Population and Housing Census",
+    "title": null,
+    "year": 2004,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R45",
+    "text": "StrombergDavid2004Radio\u2019s Impact on Public SpendingQuarterly Journal of Economics1191189221",
+    "title": "Radio\u2019s Impact on Public Spending",
+    "year": 2004,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R46",
+    "text": "StrombergDavid2008How the Electoral College Influences Campaigns and Policy: The Probability of Being FloridaAmerican Economic Review983769807",
+    "title": "How the Electoral College Influences Campaigns and Policy: The Probability of Being Florida",
+    "year": 2008,
+    "doi": null,
+    "pmid": null,
+    "mentions": [],
+    "role": null
+   },
+   {
+    "id": "R47",
+    "text": "World Bank2007World Development Indicatorshttp://data.worldbank.org (accessed June 3, 2015)",
+    "title": null,
+    "year": 2007,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": "III. Empirical Application > B. Investment across Jurisdictions",
+      "text": "The first two panels of Table 2 present the ordinary least squares results for campaign spending by national candidates only. In panel A the coefficient on the preferred party bias measure is negative for all seven outcome variables and statistically significant for six. Regarding interpretation, the coefficient on absolute expected bias in the first column implies that moving from a perfectly competitive jurisdiction where each party expects to win 50 percent of the votes to one that is expected to vote uniformly for one party is associated with candidates passing out 18.30 fewer US dollars (standard error 6.47) during a typical community visit. This is a significant transfer in a country where gross national income per capita is only $400 and average rural communities contain fewer than 50 households (World Bank 2007). Column 2 suggests that this move translates into candidates making 2.52 fewer visits (standard error 1.50) to communities in the jurisdiction."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Provides economic context (GNI per capita of $400) to help readers interpret the magnitude of the campaign spending effect found in the study.",
+     "combined_with": [],
+     "stance": "neutral",
+     "evidence_quote": "This is a significant transfer in a country where gross national income per capita is only $400 and average rural communities contain fewer than 50 households (World Bank 2007).",
+     "confidence": "high"
+    }
+   },
+   {
+    "id": "R48",
+    "text": "Yanagizawa-DrottDavid2014Propaganda and Conflict: Evidence from the Rwandan GenocideQuarterly Journal of Economics1294194794",
+    "title": "Propaganda and Conflict: Evidence from the Rwandan Genocide",
+    "year": 2014,
+    "doi": null,
+    "pmid": null,
+    "mentions": [
+     {
+      "section": null,
+      "text": "There is a related literature focused specifically on mass media as a conduit of political information, see for example, Gentzkow, Shapiro, and Sinkinson (2011) on voter behavior and Str\u00f6mberg (2004) on government spending. Note also the cautionary example of media manipulation in Yanagizawa-Drott (2014)."
+     }
+    ],
+    "role": {
+     "role": "background-claim",
+     "what_for": "Cites it as a cautionary example demonstrating that media manipulation can distort political information, in a literature review on mass media's role in politics.",
+     "combined_with": [
+      "Gentzkow, Shapiro, and Sinkinson (2011)",
+      "Str\u00f6mberg (2004)"
+     ],
+     "stance": "neutral",
+     "evidence_quote": "Note also the cautionary example of media manipulation in Yanagizawa-Drott (2014).",
+     "confidence": "high"
+    }
+   }
+  ],
+  "roles": {
+   "uses-tool-or-method": 3,
+   "uses-data": 0,
+   "background-claim": 23,
+   "compares-against": 3,
+   "extends-or-modifies": 2,
+   "critiques-or-contradicts": 0,
+   "incidental": 3
+  }
+ },
+ "cost_usd": 49.3792
+}

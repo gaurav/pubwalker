@@ -1,5 +1,47 @@
 [
  {
+  "slug": "10-1371-journal-pone-0001897",
+  "doi": "10.1371/journal.pone.0001897",
+  "title": "Regulation of the Neural Circuitry of Emotion by Compassion Meditation: Effects of Meditative Expertise",
+  "year": 2008,
+  "venue": "PLoS ONE",
+  "cited_by_count": 951,
+  "windows": {
+   "last-12-months": 26,
+   "last-5-years": 211,
+   "all-time": 947
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1039-b814285h",
+  "doi": "10.1039/b814285h",
+  "title": "Modular tissue engineering: engineering biological tissues from the bottom up",
+  "year": 2009,
+  "venue": "Soft Matter",
+  "cited_by_count": 565,
+  "windows": {
+   "last-12-months": 12,
+   "last-5-years": 116,
+   "all-time": 563
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1111-j-1474-9726-2009-00459-x",
+  "doi": "10.1111/j.1474-9726.2009.00459.x",
+  "title": "Different dietary restriction regimens extend lifespan by both independent and overlapping genetic pathways in C. elegans",
+  "year": 2009,
+  "venue": "Aging Cell",
+  "cited_by_count": 588,
+  "windows": {
+   "last-12-months": 16,
+   "last-5-years": 131,
+   "all-time": 588
+  },
+  "generated": "2026-09-17"
+ },
+ {
   "slug": "10-1111-j-1096-0031-2010-00329-x",
   "doi": "10.1111/j.1096-0031.2010.00329.x",
   "title": "SequenceMatrix: concatenation software for the fast assembly of multi-gene datasets with character set and codon information",
@@ -7,7 +49,7 @@
   "venue": "Cladistics",
   "cited_by_count": 2685,
   "windows": {
-   "last-12-months": 208,
+   "last-12-months": 207,
    "last-5-years": 1292,
    "all-time": 2594
   },
@@ -24,6 +66,132 @@
    "last-12-months": 59,
    "last-5-years": 458,
    "all-time": 1687
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1038-nature09565",
+  "doi": "10.1038/nature09565",
+  "title": "Robust multicellular computing using genetically encoded NOR gates and chemical \u2018wires\u2019",
+  "year": 2010,
+  "venue": "Nature",
+  "cited_by_count": 813,
+  "windows": {
+   "last-12-months": 30,
+   "last-5-years": 163,
+   "all-time": 813
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-2215-cjn-00810110",
+  "doi": "10.2215/cjn.00810110",
+  "title": "Serum Phosphate and Mortality in Patients with Chronic Kidney Disease",
+  "year": 2010,
+  "venue": "Clinical Journal of the American Society of Nephrology",
+  "cited_by_count": 244,
+  "windows": {
+   "last-12-months": 6,
+   "last-5-years": 74,
+   "all-time": 235
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1038-nature10489",
+  "doi": "10.1038/nature10489",
+  "title": "Active tactile exploration using a brain\u2013machine\u2013brain interface",
+  "year": 2011,
+  "venue": "Nature",
+  "cited_by_count": 643,
+  "windows": {
+   "last-12-months": 26,
+   "last-5-years": 163,
+   "all-time": 643
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-3399-bjgp11x567054",
+  "doi": "10.3399/bjgp11x567054",
+  "title": "Patients' views of physical activity as treatment for depression: a qualitative study",
+  "year": 2011,
+  "venue": "British Journal of General Practice",
+  "cited_by_count": 118,
+  "windows": {
+   "last-12-months": 6,
+   "last-5-years": 34,
+   "all-time": 116
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1371-journal-pone-0036674",
+  "doi": "10.1371/journal.pone.0036674",
+  "title": "Genomic Selection for Fruit Quality Traits in Apple (Malus\u00d7domestica Borkh.)",
+  "year": 2012,
+  "venue": "PLoS ONE",
+  "cited_by_count": 252,
+  "windows": {
+   "last-12-months": 8,
+   "last-5-years": 73,
+   "all-time": 247
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1257-aer-20130397",
+  "doi": "10.1257/aer.20130397",
+  "title": "Crossing Party Lines: The Effects of Information on Redistributive Politics",
+  "year": 2015,
+  "venue": "American Economic Review",
+  "cited_by_count": 102,
+  "windows": {
+   "last-12-months": 4,
+   "last-5-years": 33,
+   "all-time": 103
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1093-nar-gkx1092",
+  "doi": "10.1093/nar/gkx1092",
+  "title": "ReMap 2018: an updated atlas of regulatory regions from an integrative analysis of DNA-binding ChIP-seq experiments",
+  "year": 2017,
+  "venue": "Nucleic Acids Research",
+  "cited_by_count": 282,
+  "windows": {
+   "last-12-months": 16,
+   "last-5-years": 91,
+   "all-time": 276
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1007-s40273-018-0623-8",
+  "doi": "10.1007/s40273-018-0623-8",
+  "title": "Is EQ-5D-5L Better Than EQ-5D-3L? A Head-to-Head Comparison of Descriptive Systems and Value Sets from Seven Countries",
+  "year": 2018,
+  "venue": "PharmacoEconomics",
+  "cited_by_count": 402,
+  "windows": {
+   "last-12-months": 27,
+   "last-5-years": 224,
+   "all-time": 345
+  },
+  "generated": "2026-09-17"
+ },
+ {
+  "slug": "10-1186-s40168-018-0568-3",
+  "doi": "10.1186/s40168-018-0568-3",
+  "title": "Fecal source identification using random forest",
+  "year": 2018,
+  "venue": "Microbiome",
+  "cited_by_count": 127,
+  "windows": {
+   "last-12-months": 10,
+   "last-5-years": 70,
+   "all-time": 126
   },
   "generated": "2026-09-17"
  }

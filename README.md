@@ -25,7 +25,7 @@ Scholar, Europe PMC, pubmed2db, Claude Code in headless mode, and so on).
 
 ## Demo
 
-`site/` is a static page (no build step) that shows precomputed reports for two papers and a
+`site/` is a static page (no build step) that shows precomputed reports for fourteen papers and a
 keyless live look-up for any DOI. It deploys to GitHub Pages from `main`; locally:
 
 ```sh

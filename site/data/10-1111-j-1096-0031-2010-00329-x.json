@@ -20,49 +20,49 @@
  "generated": "2026-09-17",
  "windows": {
   "last-12-months": {
-   "total": 208,
-   "with_passages": 136,
+   "total": 207,
+   "with_passages": 135,
    "sampled": [
-    "W7124162046",
-    "W4414243583",
-    "W7125681960",
-    "W4415474091",
-    "W7203883691",
-    "W7170219348",
-    "W7172331768",
-    "W7165129834",
-    "W4415431039",
-    "W7123579634",
-    "W7108228162",
-    "W7130195426",
-    "W7170168402",
-    "W7167494174",
-    "W4415283553",
-    "W4415609111",
-    "W7154613291",
-    "W7204244506",
+    "W7133206625",
+    "W4414778736",
+    "W7125791052",
+    "W4416505979",
+    "W7204166635",
+    "W7171812468",
+    "W7197021636",
     "W7165366936",
-    "W7116693006",
-    "W7162504162",
-    "W4416235643",
-    "W7212374379",
-    "W7164182363",
-    "W7165810560",
-    "W4414874547",
-    "W7154468508",
-    "W7125986291",
-    "W4416273932",
-    "W7203445115",
-    "W7126053148",
-    "W7197023610",
-    "W7160887718",
-    "W7127924363",
-    "W4416038148",
-    "W4415279108",
-    "W7161936615",
+    "W7165795773",
     "W7164526651",
-    "W4415476717",
-    "W7168398719"
+    "W7123579634",
+    "W7118651887",
+    "W7130195426",
+    "W7170219348",
+    "W7167498995",
+    "W4415295276",
+    "W4415819867",
+    "W7154741013",
+    "W7204244506",
+    "W7165571345",
+    "W7116693006",
+    "W7162989244",
+    "W4416293329",
+    "W7212374379",
+    "W7164926330",
+    "W7166126299",
+    "W4415474091",
+    "W7154581987",
+    "W7125986291",
+    "W4414284529",
+    "W7201831864",
+    "W7126053148",
+    "W7166799739",
+    "W7161260816",
+    "W7131677090",
+    "W4416038148",
+    "W4415283553",
+    "W7162397763",
+    "W4414556801",
+    "W4415609111"
    ],
    "roles": {
     "uses-tool-or-method": 40,
@@ -76,109 +76,104 @@
    "synthesis": {
     "claims": [
      {
-      "text": "The citation is almost entirely methodological boilerplate: all 40 sampled citing papers use SequenceMatrix as a tool, and none use its data, argue with it, or extend it. Its single job in every case is concatenating separately aligned loci into a combined matrix.",
+      "text": "All 40 sampled citing papers cite SequenceMatrix for the **same single operation: concatenating single-locus alignments** into a combined supermatrix before tree inference; none compares against it, extends it, or criticizes it.",
       "cites": [
-       "W7124162046",
-       "W4414243583",
-       "W7125681960",
-       "W4415474091",
-       "W7203883691",
-       "W7170219348",
-       "W7172331768",
-       "W7165129834",
-       "W4415431039",
-       "W7123579634"
-      ]
+       "W7133206625",
+       "W4414778736",
+       "W7204166635",
+       "W7165795773",
+       "W4416505979",
+       "W7162989244",
+       "W4415609111"
+      ],
+      "highlight": true
      },
      {
-      "text": "The dominant user community is fungal taxonomy, where SequenceMatrix sits in a near-standardized pipeline for describing new species from ITS, LSU, SSU, rpb2 and tef1-\u03b1 alignments \u2014 MycoKeys, IMA Fungus, Journal of Fungi and Mycobiology papers make up a large share of the sample.",
+      "text": "The citation is almost always a **single methods-section sentence** naming a version plus Vaidya et al., with no discussion of the character-set or codon-information features the paper's title advertises.",
       "cites": [
-       "W4414243583",
-       "W7125681960",
-       "W4415474091",
-       "W7154613291",
-       "W7167494174",
-       "W7126053148",
-       "W7130195426",
-       "W7168398719",
-       "W7162504162",
-       "W7160887718"
-      ]
+       "W4415295276",
+       "W7166799739",
+       "W7131677090",
+       "W4414556801",
+       "W7162397763"
+      ],
+      "highlight": false
      },
      {
-      "text": "The recurring workflow is trim-then-concatenate-then-infer: sequences assembled in SeqMan/BioEdit, aligned with MAFFT, trimmed with trimAl or Gblocks, concatenated in SequenceMatrix, then analyzed in RAxML/IQ-TREE and MrBayes with ModelFinder or MrModeltest.",
+      "text": "The dominant workflow is a **MAFFT \u2192 trimAl \u2192 SequenceMatrix \u2192 RAxML/IQ-TREE/MrBayes pipeline**, with FigTree for visualization; the tool is the glue between trimming and inference.",
       "cites": [
-       "W4414243583",
-       "W7125681960",
-       "W7130195426",
+       "W7133206625",
+       "W7164926330",
+       "W7201831864",
        "W7126053148",
-       "W7168398719",
-       "W7170168402",
-       "W7165129834",
+       "W4414284529",
+       "W4415609111"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "Fungal taxonomy, especially in MycoKeys, is the largest user community, where concatenating **ITS, LSU, SSU, tef1-\u03b1 and rpb2** is boilerplate for describing new species and genera.",
+      "cites": [
+       "W7204166635",
+       "W7167498995",
+       "W7154581987",
+       "W7162397763",
+       "W7166126299",
+       "W4415474091",
        "W7164526651"
-      ]
+      ],
+      "highlight": false
      },
      {
-      "text": "Use extends well beyond fungi into animals, plants and even bacteria: primates, pseudoscorpions, tardigrades, crickets, sika deer, freshwater mussels, gastropods, birds, Bromeliaceae, Lamiaceae and Pseudomonas aeruginosa clinical isolates.",
+      "text": "Use has spread well beyond the multi-locus Sanger datasets it was built for, into **genome-scale and organellar phylogenomics**: 13\u201314 mitochondrial protein-coding genes, plastomes, and nuclear-plus-plastid exon sets.",
       "cites": [
-       "W7203883691",
-       "W7170219348",
-       "W7212374379",
-       "W7164182363",
+       "W7125791052",
+       "W7161260816",
        "W4415283553",
-       "W4416235643",
-       "W4415279108",
-       "W7197023610",
-       "W7125986291",
-       "W4416038148",
-       "W7123579634"
-      ]
-     },
-     {
-      "text": "A notable second use is genome-scale rather than multi-locus: several papers concatenate protein-coding genes extracted from whole mitochondrial, chloroplast or organelle genomes, a scale the tool was not originally pitched at.",
-      "cites": [
-       "W4415283553",
-       "W4415609111",
        "W7116693006",
-       "W7108228162",
-       "W7165366936",
-       "W7125986291"
-      ]
-     },
-     {
-      "text": "Stance is overwhelmingly neutral \u2014 a one-clause mention with no evaluation \u2014 and the few positive framings only praise the output (a \"unified dataset\", a \"super matrix\" for inferring relatedness) rather than the software itself. No paper in the sample critiques or benchmarks it.",
-      "cites": [
        "W4416038148",
-       "W7123579634",
-       "W7204244506",
-       "W7168398719"
-      ]
-     },
-     {
-      "text": "Citation practice is loose in ways worth noting: versions span 1.7.6 through 1.9 with no rationale given for the choice, and one paper cites a self-contradictory \"Sequence Matrix 1.9 v1.7.6\", while another cites the paper only for format conversion to NEXUS rather than concatenation.",
-      "cites": [
-       "W7197023610",
-       "W7165366936",
-       "W7164182363",
        "W7125986291",
-       "W7170219348"
-      ]
+       "W7165366936"
+      ],
+      "highlight": true
      },
      {
-      "text": "Despite the paper's emphasis on character-set and codon-position handling, the sampled passages rarely mention those features; where partitioning matters it is described separately, as in a partitioned analysis built from three concatenated single-locus datasets or in a supermatrix where missing sites are simply coded as missing data.",
+      "text": "It also appears outside eukaryote systematics in **bacterial MLSA and clinical microbiology**, concatenating housekeeping loci to infer relatedness among Pseudomonas, Xanthomonas and wheat endophyte isolates.",
       "cites": [
-       "W7162504162",
-       "W7203883691",
-       "W7172331768"
-      ]
+       "W7123579634",
+       "W7171812468",
+       "W7131677090"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "A few uses depart from DNA concatenation entirely \u2014 combining **aligned amino-acid datasets** for sawfly and viral protein phylogenies, or invoking the tool merely for NEXUS format conversion.",
+      "cites": [
+       "W7162989244",
+       "W4414284529",
+       "W7165366936"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Cited versions span **1.7.3 through 1.10** with no stated reason for the choice, and stance is uniformly neutral-to-positive \u2014 the tool is treated as settled infrastructure rather than a methodological decision, even in a Cladistics paper arguing about method sensitivity.",
+      "cites": [
+       "W4415819867",
+       "W4414556801",
+       "W7162989244",
+       "W7161260816",
+       "W7125986291",
+       "W4416293329"
+      ],
+      "highlight": false
      }
     ],
     "follow_ups": [
-     "Do any citing papers actually exploit SequenceMatrix's codon/character-set export, or is it purely used as a concatenator?",
-     "Why is version use so scattered (1.7.6\u20131.9), and are newer versions cited for any functional reason?",
-     "In the genome-scale uses, how does SequenceMatrix compare to PhyloSuite or AMAS, which appear alongside it in some pipelines?",
-     "Is the fungal-taxonomy dominance a real usage pattern or an artifact of the sampling of 40 from 208 citing works?",
-     "How are papers handling missing data and partition files downstream \u2014 does SequenceMatrix's output feed ModelFinder partitions directly?"
+     "Do any citing papers justify supermatrix concatenation over coalescent/species-tree methods, or is the choice left unexamined?",
+     "Are the advertised character-set and codon-position outputs ever actually used downstream, e.g. fed to PartitionFinder or ModelFinder?",
+     "Why do cited versions span 1.7.3\u20131.10 \u2014 is methods text being copy-pasted within taxonomic journal templates?",
+     "In genome-scale studies, how does SequenceMatrix compare with AMAS, catfasta2phyml, or phyx for concatenation at scale?",
+     "Is the MycoKeys concentration real usage or a sampling artifact of that journal's high publication volume?"
     ]
    }
   },
@@ -239,95 +234,100 @@
    "synthesis": {
     "claims": [
      {
-      "text": "Overwhelmingly, SequenceMatrix is cited as a routine utility rather than an object of discussion: 39 of 40 sampled citing works use it as a tool, and nearly all do the same single job \u2014 concatenating per-locus alignments into a combined multi-gene matrix.",
+      "text": "Nearly every citation is **methods-section tool use**: 39 of 40 sampled papers cite SequenceMatrix for concatenating per-locus alignments into a single multi-gene matrix, with no sampled paper comparing against it, extending it, or contradicting it.",
       "cites": [
+       "W4393357106",
+       "W4289993818",
        "W4315648121",
        "W4389341958",
        "W4410785190",
-       "W7124612564",
-       "W4393313173",
+       "W4412416120",
        "W4366829604",
-       "W4312192977",
-       "W4401221028"
-      ]
+       "W4290989970"
+      ],
+      "highlight": true
      },
      {
-      "text": "The heaviest concentration of use is in fungal taxonomy, where SequenceMatrix (usually v1.7.8) is a fixed step in the standard species-description pipeline combining ITS, LSU, SSU, tef1-\u03b1, rpb2 and tub2 alignments.",
+      "text": "The tool is **domain-agnostic in practice**, appearing across fungal taxonomy, insect and mollusc mitogenomics, plant plastomes, reptiles, fish, tardigrades, and even bacterial and influenza virus genomics.",
       "cites": [
-       "W4410785190",
-       "W4387052956",
        "W4406799603",
-       "W4392912293",
-       "W7165640756",
-       "W4393362057",
-       "W7125681960",
-       "W4200210468"
-      ]
+       "W4281479744",
+       "W4366829604",
+       "W4393197805",
+       "W4390701863",
+       "W4312192977",
+       "W4393313173",
+       "W4399916502",
+       "W4401642532"
+      ],
+      "highlight": true
      },
      {
-      "text": "It sits in a stable toolchain: alignment with MAFFT/MUSCLE/ClustalX, trimming with trimAl/Gblocks/BioEdit, then SequenceMatrix, then model selection (ModelFinder, PartitionFinder, MrModeltest) and tree inference in RAxML, IQ-TREE or MrBayes.",
+      "text": "It occupies a **fixed slot in a standard pipeline**, sitting between aligners/trimmers (MAFFT, MUSCLE, ClustalX, trimAl, Gblocks, BioEdit) and tree inference (RAxML, IQ-TREE, MrBayes), often with PartitionFinder or ModelFinder in between.",
       "cites": [
        "W4389341958",
        "W4281479744",
        "W4290989970",
-       "W4410903479",
        "W4391968996",
+       "W4410903479",
        "W4402528487"
-      ]
+      ],
+      "highlight": true
      },
      {
-      "text": "Use extends well beyond the taxonomic workflow it was written for, into mitogenomics and phylogenomics, where it concatenates 13 PCGs plus rRNAs into alternative matrices (PCG12, PCG12R, amino-acid) or dozens of plastid/orthologous genes.",
+      "text": "The **codon/character-set feature** of the title is what several mitogenomic and systematic papers actually exploit, building alternate matrices such as PCG12 and PCG12R or partitioning data by gene and codon position.",
       "cites": [
-       "W4290989970",
        "W4281479744",
-       "W3213905323",
-       "W4386391950",
-       "W4289993818",
-       "W4393197805"
-      ]
-     },
-     {
-      "text": "A few citations fall outside phylogenetic systematics entirely: concatenating influenza A gene segments into codon-complete genomes, and building concatenated bacterial sequences (with 150 bp 'N' spacers) for a study of contamination in ethanol biorefineries.",
-      "cites": [
-       "W4401642532",
-       "W4399916502"
-      ]
-     },
-     {
-      "text": "Beyond concatenation, authors lean on secondary features \u2014 automatic filling of failed amplifications as missing data, gene- and codon-position partitioning, and even scanning matrices for mislabelled sequences as a QC step.",
-      "cites": [
-       "W4282958834",
+       "W4290989970",
        "W4390701863",
-       "W4399443559"
-      ]
+       "W4312204427"
+      ],
+      "highlight": false
      },
      {
-      "text": "Stance is neutral-to-positive with no recorded criticism in the sample: one methods paper for fungal phylogeny explicitly endorses it as \"a good choice\" for multi-locus concatenation, and none of the sampled works compare against or contradict it.",
+      "text": "Stance is **uniformly neutral-to-positive**; the only non-tool citation is a background recommendation in a competing software paper, which calls SequenceMatrix \"a good choice\" for multi-locus concatenation rather than criticising it.",
       "cites": [
        "W4393060565",
        "W4391968996",
-       "W7118651887",
-       "W4412416120"
-      ]
+       "W7118651887"
+      ],
+      "highlight": false
      },
      {
-      "text": "Citation hygiene is sloppy in places: the software is variously named \"Sequence Matrix\", \"SquenceMatrix\" or \"Sequence-Matrix\", attributed as \"Vaidya and Lohman 2011\", and version numbers range from a nonexistent-sounding \"version 7.8\" and \"v16.0\" to 1.7.8, 1.8, 1.9 and 1.10 \u2014 suggesting many authors copy the citation forward without checking.",
+      "text": "A few papers use it **beyond plain concatenation**: as a quality-control step to spot mislabelled sequences before assembly elsewhere, to auto-fill missing data for failed amplifications, and to compute sequence statistics.",
       "cites": [
-       "W4390701863",
-       "W4387052956",
-       "W4392926116",
-       "W4401642532",
-       "W7168357347",
+       "W4399443559",
+       "W4282958834",
        "W4404597642"
-      ]
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Unexpectedly, the tool shows up in **applied non-systematics work**, including an industrial ethanol biorefinery study that inserted 150 bp of 'N' as spacers between concatenated genes, and a fishery survey of edible sea slugs.",
+      "cites": [
+       "W4399916502",
+       "W4410120673"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Citation hygiene is loose: **version numbers and author strings vary** widely (1.7.8, 1.8, 1.8.1, 1.9, 1.10, and an implausible \"v16.0\"), the name is written as both \"SequenceMatrix\" and \"Sequence Matrix\", and authorship is sometimes given as \"Vaidya and Lohman\".",
+      "cites": [
+       "W4401642532",
+       "W4392926116",
+       "W7168357347",
+       "W4387052956",
+       "W4290989970"
+      ],
+      "highlight": false
      }
     ],
     "follow_ups": [
-     "Do any citing works report concrete problems (GUI limits, matrix size ceilings, partition-file format errors) that the sampled passages missed?",
-     "How often is SequenceMatrix chosen over scriptable alternatives like catfasta2phyml, AMAS, or phyluce's concatenation, and do authors give reasons?",
-     "In the mitogenomic and phylogenomic cases, does concatenation with SequenceMatrix coexist with coalescent methods (ASTRAL) or replace them?",
-     "Is the widespread miscitation of version numbers traceable to a few highly copied methods sections in fungal taxonomy journals?",
-     "Has citation volume shifted since 2020 toward or away from concatenation-based supermatrix approaches?"
+     "Do any citing papers justify concatenation over coalescent/summary methods like ASTRAL, or use both?",
+     "Does the use of SequenceMatrix's codon/character-set output actually feed partitioning tools, or is the partition scheme re-derived downstream?",
+     "How often is the concatenation step reported as testing for topological incongruence among single-locus trees first?",
+     "Are competing concatenators (FASconCAT, AMAS, catfasta2phyml, Geneious) cited alongside or instead of SequenceMatrix in the same literature?",
+     "What accounts for the mismatched version strings, and does the cited 2010/2011 paper correspond to the versions actually run?"
     ]
    }
   },
@@ -345,7 +345,7 @@
     "W4407264926",
     "W7165129834",
     "W7119515538",
-    "W4308145220",
+    "W4297542436",
     "W3136811729",
     "W2587440376",
     "W2113188331",
@@ -388,88 +388,97 @@
    "synthesis": {
     "claims": [
      {
-      "text": "Overwhelmingly, SequenceMatrix is cited as a utility tool: 39 of 40 sampled citing works use it, and essentially all of them for one job \u2014 concatenating separately aligned loci into a combined supermatrix for phylogenetic analysis.",
+      "text": "Of 40 sampled citing works, 39 cite SequenceMatrix as a **tool they ran, not read**: it is the step that concatenates separately aligned loci into a supermatrix before tree inference.",
       "cites": [
        "W2909844982",
        "W2999940060",
        "W4205526992",
+       "W2587440376",
        "W2981966786",
-       "W4327614621",
-       "W7164926330",
+       "W4408290847",
        "W4412000678"
-      ]
+      ],
+      "highlight": true
      },
      {
-      "text": "The citation is typically a single methods-section sentence with no evaluation, often naming only the version (1.7.8, 1.8, or 1.9), which suggests the tool is treated as infrastructure rather than something to justify.",
+      "text": "The citation is almost always a **single methods-section sentence** naming a version (1.7.8, 1.8, 1.9) with no discussion of the software's design or alternatives.",
       "cites": [
+       "W3086171914",
        "W3133887212",
        "W4376484924",
-       "W2786429383",
        "W4393357106",
+       "W4327614621",
        "W3171788168"
-      ]
+      ],
+      "highlight": false
      },
      {
-      "text": "It sits in a highly stereotyped pipeline: alignment with MAFFT or MUSCLE, trimming with GBlocks or trimAl, concatenation in SequenceMatrix, partitioning with PartitionFinder or ModelFinder, then RAxML/IQ-TREE/MrBayes.",
+      "text": "It sits in a **stable alignment-to-tree pipeline**: MAFFT or MUSCLE for alignment, GBlocks or trimAl for trimming, SequenceMatrix for concatenation, then PartitionFinder/ModelFinder and RAxML, IQ-TREE or MrBayes.",
       "cites": [
        "W2113188331",
-       "W4407264926",
+       "W2999940060",
+       "W7165129834",
+       "W7164926330",
        "W4408290847",
-       "W4406966207",
-       "W2611219129",
+       "W2529227846",
        "W4309784641"
-      ]
+      ],
+      "highlight": true
      },
      {
-      "text": "Taxonomic breadth is striking and far beyond the insect-systematics context of the original paper \u2014 fungi, oomycetes, orchid and Vicia plastomes, primates, rodents, centipedes, copepods, spiders, nudibranchs, and marsupials all appear in the sample.",
+      "text": "Uptake is **taxonomically indiscriminate**, spanning fungal systematics, fish and primate phylogenetics, insect mitogenomes, plant plastomes, centipedes, spiders, copepods and marsupials.",
       "cites": [
        "W4387972803",
-       "W4308145220",
-       "W2611219129",
-       "W7133508878",
        "W1989350663",
-       "W3136811729",
+       "W2909844982",
+       "W2611219129",
        "W2587440376",
        "W3171788168",
        "W2786429383"
-      ]
+      ],
+      "highlight": false
      },
      {
-      "text": "Several uses are microbial or genomic rather than classical multi-gene barcoding: concatenating MLST housekeeping genes for phytoplasma typing, building a ~1.09 Mb per-strain sequence from core-genome gene alignments in Xanthomonas, and stitching protein alignments from mitogenomes.",
-      "cites": [
-       "W4308630756",
-       "W2921470906",
-       "W3169801531",
-       "W2529227846"
-      ]
-     },
-     {
-      "text": "Its character-set and codon-partition features are exercised explicitly by some users \u2014 e.g. treating four mitochondrial protein-coding genes as one gene with three codon partitions, or exporting Nexus files for downstream partitioned analyses.",
+      "text": "The paper's advertised extras \u2014 **codon and character-set export** in Nexus/TNT format \u2014 are only occasionally invoked explicitly, as when authors define three codon partitions for concatenated mitochondrial genes or export directly to Nexus.",
       "cites": [
        "W2909844982",
-       "W4404288208",
-       "W3136811729"
-      ]
+       "W4404288208"
+      ],
+      "highlight": true
      },
      {
-      "text": "No sampled paper critiques or benchmarks against SequenceMatrix; the only non-use citation is BAD2matrix, which lists it among existing multilocus concatenators and argues such tools do not scale to phylogenomic-sized eukaryote datasets \u2014 an implicit scope limitation rather than a direct complaint.",
+      "text": "Scale of use ranges from **two barcode loci to 79 partitions**, and even to megabase-length concatenations of core genomes assembled from comparative-genomics pipelines.",
+      "cites": [
+       "W2180283144",
+       "W1989350663",
+       "W2921470906"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Unexpectedly, the tool crosses out of classical phylogenetics into **bacterial MLST and genetic-code studies**, concatenating housekeeping-gene schemes for phytoplasma typing, experimental-evolution ancestry reconstruction and protein-level multi-locus alignments.",
+      "cites": [
+       "W4308630756",
+       "W2113188331",
+       "W2588638903",
+       "W3169801531"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "No sampled paper critiques or benchmarks it; the only non-tool citation is a **background listing among concatenation programs** by BAD2matrix, which argues such multilocus tools do not scale to phylogenomic input.",
       "cites": [
        "W4402765962"
-      ]
-     },
-     {
-      "text": "One caveat for anyone tracing impact: at least one heavily cited user of the tool, a copepod order-level phylogeny, has been retracted, so citation counts include work whose conclusions were withdrawn even though the concatenation step itself was not at issue.",
-      "cites": [
-       "W2749951673"
-      ]
+      ],
+      "highlight": true
      }
     ],
     "follow_ups": [
-     "Do citing papers that use SequenceMatrix's indel/character-set coding features differ systematically from those using it only as a plain concatenator?",
-     "Has the citation rate shifted toward BAD2matrix, AMAS, or catfasta2phyml as datasets moved to phylogenomic scale after ~2020?",
-     "How many citing works report the version, and does version reporting correlate with journal or field?",
-     "In mycology specifically, has SequenceMatrix become a de facto requirement of the multi-locus species-description template?",
-     "Are there documented cases where concatenation-order or missing-data handling in SequenceMatrix affected published topologies?"
+     "Do citing papers that use codon or character-set output differ systematically from those using SequenceMatrix as a plain concatenator?",
+     "How do later phylogenomic tools (BAD2matrix, AMAS, Phyx) split the citation share over time?",
+     "Are the reported version numbers (1.7.8 vs 1.8 vs 1.9) associated with different publication years or fields?",
+     "Does the retracted copepod phylogeny citing SequenceMatrix indicate any methodological issue in the concatenation step itself?",
+     "How often do citing papers deposit the concatenated matrix, and does SequenceMatrix use correlate with data availability?"
     ]
    }
   }
@@ -477,114 +486,139 @@
  "overall": {
   "claims": [
    {
-    "text": "Across all three windows the citation does one thing: SequenceMatrix is named in a methods sentence as the tool that concatenated separately aligned loci into a combined supermatrix. Sampling is consistent \u2014 39-40 of 40 citers in each window are tool uses, with no data reuse, no benchmarking, and no extension.",
+    "text": "Across all three windows, 39-40 of every 40 sampled citers use SequenceMatrix as **a tool they ran, not read**: the step that concatenates separately aligned single-locus alignments into a supermatrix before tree inference.",
     "cites": [
      "W2909844982",
+     "W2999940060",
      "W4205526992",
-     "W4315648121",
-     "W7124162046",
-     "W4414243583",
-     "W4412000678"
-    ]
+     "W4393357106",
+     "W4289993818",
+     "W7133206625",
+     "W4414778736",
+     "W7204166635"
+    ],
+    "highlight": true
    },
    {
-    "text": "It is treated as infrastructure rather than a choice to justify: the typical passage gives only a version number and no evaluation, and the version cited drifts from 1.7.6 through 1.7.8, 1.8, 1.9 and 1.10 with no stated rationale.",
+    "text": "The citation form is stable over fifteen years: **one methods-section sentence** naming a version and Vaidya et al., with no discussion of design, alternatives or trade-offs.",
     "cites": [
+     "W3086171914",
      "W3133887212",
      "W4376484924",
-     "W2786429383",
-     "W7197023610",
-     "W7165366936",
-     "W4404597642"
-    ]
+     "W4415295276",
+     "W7166799739",
+     "W7131677090",
+     "W4414556801"
+    ],
+    "highlight": false
    },
    {
-    "text": "The surrounding toolchain has been stable for over a decade: MAFFT or MUSCLE for alignment, trimAl/Gblocks/BioEdit for trimming, SequenceMatrix for concatenation, then PartitionFinder/ModelFinder/MrModeltest and RAxML, IQ-TREE or MrBayes.",
+    "text": "It holds a **fixed slot in an alignment-to-tree pipeline** \u2014 MAFFT/MUSCLE/ClustalX, then GBlocks or trimAl, then SequenceMatrix, then PartitionFinder or ModelFinder, then RAxML, IQ-TREE or MrBayes, with FigTree at the end. The surrounding tools have churned; the concatenation slot has not.",
     "cites": [
      "W2113188331",
-     "W2611219129",
+     "W2999940060",
      "W4389341958",
-     "W4290989970",
-     "W4414243583",
-     "W7130195426",
-     "W7165129834"
-    ]
-   },
-   {
-    "text": "What changed over time is the user base, not the usage. Earlier citation spans broad systematics (primates, rodents, centipedes, copepods, spiders, nudibranchs, orchid and Vicia plastomes), while the recent window is dominated by fungal taxonomy, where the tool is a fixed step in describing new species from ITS, LSU, SSU, tef1-\u03b1 and rpb2 alignments in MycoKeys, IMA Fungus and Journal of Fungi.",
-    "cites": [
-     "W7133508878",
-     "W1989350663",
-     "W3136811729",
-     "W3171788168",
-     "W4410785190",
-     "W4387052956",
-     "W4414243583",
-     "W7125681960",
-     "W7154613291",
-     "W7162504162"
-    ]
-   },
-   {
-    "text": "A second drift is upward in scale: authors increasingly use it on genome-derived data \u2014 13 mitochondrial PCGs in PCG12/PCG12R/amino-acid matrices, dozens of plastid or orthologous genes, core-genome alignments yielding ~1.09 Mb per Xanthomonas strain \u2014 well past the multi-gene barcoding scale the paper was pitched at.",
-    "cites": [
-     "W4290989970",
      "W4281479744",
-     "W3213905323",
+     "W7133206625",
+     "W7164926330",
+     "W7201831864",
+     "W4410903479"
+    ],
+    "highlight": true
+   },
+   {
+    "text": "Uptake is **taxonomically indiscriminate** \u2014 fungi, fish, primates, insects, molluscs, plants, centipedes, spiders, copepods, tardigrades, marsupials \u2014 and in the most recent year fungal taxonomy in MycoKeys is the single largest community, where concatenating ITS, LSU, SSU, tef1-\u03b1 and rpb2 is boilerplate for describing new taxa.",
+    "cites": [
+     "W4387972803",
+     "W1989350663",
+     "W2611219129",
+     "W4406799603",
+     "W7204166635",
+     "W7167498995",
+     "W7154581987",
+     "W7162397763"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "The main drift over time is **scale and data type**: early citations are multi-locus Sanger matrices, while recent ones run it on 13-14 mitochondrial protein-coding genes, whole plastomes, nuclear-plus-plastid exon sets, 79 partitions, and megabase core-genome alignments \u2014 well past the Sanger-era use case it was designed for.",
+    "cites": [
+     "W2180283144",
+     "W1989350663",
      "W2921470906",
+     "W7125791052",
+     "W7161260816",
      "W4415283553",
      "W7116693006",
-     "W7125986291"
-    ]
+     "W4416038148"
+    ],
+    "highlight": true
    },
    {
-    "text": "Some citers exercise features beyond plain concatenation \u2014 automatic coding of failed amplifications as missing data, gene and codon-position character sets (e.g. four mitochondrial PCGs as one gene with three codon partitions), Nexus export, and even scanning matrices for mislabelled sequences as a QC step \u2014 but in the most recent window these features are rarely mentioned, despite being the paper's selling point.",
+    "text": "The **codon and character-set export** in the title is used but rarely named: mitogenomic and systematic papers exploit it to build PCG12 / PCG12R matrices or three-codon partitions, yet most citers never mention the feature at all.",
     "cites": [
-     "W4282958834",
-     "W4390701863",
-     "W4399443559",
      "W2909844982",
      "W4404288208",
-     "W7162504162",
-     "W7172331768"
-    ]
+     "W4281479744",
+     "W4290989970",
+     "W4390701863",
+     "W4312204427"
+    ],
+    "highlight": false
    },
    {
-    "text": "Stance is neutral to mildly positive with essentially no criticism: one fungal-phylogeny methods paper calls it \"a good choice\" for multi-locus concatenation, and the few other evaluative phrases praise the output (\"unified dataset\", \"super matrix\") rather than the software. The closest thing to a complaint is BAD2matrix, which lists it among existing concatenators and argues such tools do not scale to phylogenomic-sized eukaryote datasets \u2014 a scope limit, not a defect claim.",
+    "text": "Stance is uniformly neutral-to-positive with no benchmarks: no sampled paper critiques, compares against or extends it. The two non-tool citations are a competing software paper calling it \"a good choice\" for multi-locus concatenation, and BAD2matrix listing it among concatenation programs that do not scale to phylogenomic input \u2014 the only note of dissent anywhere in the sample.",
     "cites": [
      "W4393060565",
-     "W4416038148",
-     "W7123579634",
-     "W7204244506",
+     "W7118651887",
      "W4402765962"
-    ]
+    ],
+    "highlight": false
    },
    {
-    "text": "Citation hygiene is poor and worth watching: the name appears as \"Sequence Matrix\", \"SquenceMatrix\" and \"Sequence-Matrix\", the attribution is sometimes flipped to \"Vaidya and Lohman 2011\", versions like \"version 7.8\", \"v16.0\" and the self-contradictory \"Sequence Matrix 1.9 v1.7.6\" appear, and at least one paper cites it only for NEXUS format conversion \u2014 signs the citation is being copied forward unchecked.",
+    "text": "Some uses depart from DNA concatenation entirely: **aligned amino-acid matrices** for sawfly and viral proteins, bacterial MLSA/MLST housekeeping schemes, experimental-evolution ancestry reconstruction, quality control to spot mislabelled sequences, auto-filling missing data for failed amplifications, plain NEXUS conversion, and an ethanol biorefinery study that inserted 150 bp of 'N' as inter-gene spacers.",
     "cites": [
-     "W4390701863",
+     "W7162989244",
+     "W4414284529",
+     "W7165366936",
+     "W4308630756",
+     "W2113188331",
+     "W2588638903",
+     "W4399443559",
+     "W4282958834",
+     "W4399916502"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "**Citation hygiene is loose**: versions from 1.7.3 to 1.10 are cited with no stated reason for the choice, plus an implausible \"v16.0\", the name appears as both \"SequenceMatrix\" and \"Sequence Matrix\", and authorship is sometimes truncated to \"Vaidya and Lohman\".",
+    "cites": [
+     "W4401642532",
      "W4392926116",
-     "W4401642532",
      "W7168357347",
-     "W7197023610",
-     "W7170219348"
-    ]
+     "W4387052956",
+     "W4415819867",
+     "W4414556801",
+     "W7125986291"
+    ],
+    "highlight": false
    },
    {
-    "text": "Two edge cases show the citation escaping phylogenetic systematics entirely: concatenating influenza A gene segments into codon-complete genomes, and joining bacterial sequences with 150 bp 'N' spacers to study contamination in ethanol biorefineries. A separate caveat for impact tracing is that at least one prominent user, a copepod order-level phylogeny, has been retracted.",
+    "text": "The takeaway for a maintainer: the paper is cited as **settled infrastructure, not a methodological decision** \u2014 even a Cladistics paper arguing about method sensitivity names it in passing \u2014 so the risk is not competition but silent use at scales the scaling critique targets.",
     "cites": [
-     "W4401642532",
-     "W4399916502",
-     "W2749951673"
-    ]
+     "W4416293329",
+     "W4402765962",
+     "W7161260816"
+    ],
+    "highlight": false
    }
   ],
   "follow_ups": [
-   "Does the shift toward fungal taxonomy reflect real growth in that field's output, or displacement of SequenceMatrix by other concatenators (AMAS, catfasta2phyml, phyluce) in animal phylogenomics?",
-   "How many citers actually use the character-set/codon-partition output versus just the concatenated FASTA \u2014 can that be measured from deposited supplementary matrices?",
-   "Do the genome-scale users hit the practical limits BAD2matrix's scaling critique predicts, and do any report workarounds?",
-   "Where did the malformed version strings ('version 7.8', 'v16.0', '1.9 v1.7.6') originate \u2014 is a widely copied methods template propagating them?",
-   "Is there any published benchmark comparing SequenceMatrix against newer tools for correctness on missing data and partition bookkeeping?"
+   "Do the genome-scale citers (plastomes, 13-14 PCG mitogenomes, core-genome alignments) report runtime or memory problems, or is BAD2matrix's scaling critique untested in practice?",
+   "Among papers that build PCG12/PCG12R or codon-partitioned matrices, how many credit SequenceMatrix's character-set export versus PartitionFinder or manual NEXUS blocks?",
+   "Has the share of fungal-taxonomy (MycoKeys-style) citations actually grown over time, or does it only look dominant in the last-12-months sample?",
+   "What did the competing software paper (W7118651887) and BAD2matrix (W4402765962) each propose instead, and did any later citer switch?",
+   "Which SequenceMatrix version is most cited per year, and do the odd strings (\"v16.0\", \"Vaidya and Lohman\") trace back to a single miscopied methods template?"
   ]
  },
  "citers": {
@@ -1396,40 +1430,36 @@
     "confidence": "high"
    }
   },
-  "W4308145220": {
-   "id": "W4308145220",
-   "doi": "10.1080/12298093.2022.2121496",
-   "pmid": "36404897",
+  "W4297542436": {
+   "id": "W4297542436",
+   "doi": "10.3897/bdj.10.e90709",
+   "pmid": "36761578",
    "pmcid": null,
-   "title": "Uncharted Diversity and Ecology of Saprolegniaceae (Oomycota) in Freshwater Environments",
+   "title": "Additions to Neopestalotiopsis (Amphisphaeriales, Sporocadaceae) fungi: two new species and one new host record from China",
    "year": 2022,
-   "venue": "Mycobiology",
+   "venue": "Biodiversity Data Journal",
    "type": "article",
    "passages": [
     {
      "source": "epmc",
-     "section": "Materials and methods > Molecular phylogenetic analysis",
-     "text": "Genomic DNA was extracted from the mycelia using the MagListo 5M plant Genomic DNA Extraction Kit (Bioneer, Daejeon, South Korea), according to the manufacturer\u2019s instructions. The ITS rDNA, cytochrome c oxidase subunit I (cox1), and cytochrome c oxidase subunit II (cox2) mtDNA regions were amplified by PCR (polymerase chain reaction) with the following primer pairs ITS1/ITS4 [45], OomCox1-levup/OomCox1-levlo [46], and cox2-F [47]/cox2-RC4 [48], respectively. PCR amplicons were sequenced by Macrogen Inc. (Seoul, South Korea). They were subjected to the NCBI BLAST search to identify related sequences in GenBank; sequences similar to those of the PCR amplicons were downloaded. In addition, previously published sequences of authentic isolates of Geolegnia, Leptolegnia, and Saprolegnia species were retrieved from GenBank. All sequences were aligned using the Q-INS-i algorithm [49] of MAFFT 7 [50]. Phylogenetic analysis was performed using MEGA X [51] for minimum evolution (ME) and maximum-likelihood (ML) inferences using the Tamura\u2013Nei model with 1000 bootstrap (BS) replicates. For multilocus phylogenetic analysis based on a combined dataset of cox1 and cox2, SequenceMatrix v1.7.8 [52] was used to concatenate the sequences of individual markers. Subsequently, a multilocus phylogenetic tree was constructed as described above."
-    },
-    {
-     "source": "s2",
-     "section": null,
-     "text": "8 [52] was used to concatenate the sequences of individual markers."
+     "section": "Materials and methods > Phylogenetic analyses",
+     "text": "The phylogeny was constructed by analyses from sequences of ITS, TEF1 and TUB2 sequence data. The fungal sequences were aligned by using the online version of MAFFT v. 7.307 (Katoh and Standley 2016) and edited by using the BioEdit programme (Hall 1999), using the SequenceMatrix 1.7.8 (Vaidya et al. 2011) to multi-source data merging. Ambiguous regions were excluded from analyses using AliView (Larsson 2014), gaps were treated as missing data and optimised manually with Pestalotiopsisdiversiseta Maharachch. & K.D. Hyde (MFLUCC 12\u20130287) as the outgroup (Table 2). Combined analyses of ITS, TUB2 and TEF1 sequence data were performed. Phylogenetic analyses were constructed by Maximum Likelihood (ML), Maximum Parsimony (MP) and Bayesian Posterior Probability (BYPP) methods; they were carried out as detailed in Dissanayake et al. (2020)."
     }
    ],
-   "s2_intents": [
-    "methodology"
-   ],
+   "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "The authors use SequenceMatrix software to concatenate cox1 and cox2 gene sequence datasets for multilocus phylogenetic analysis.",
+    "what_for": "The citing paper used SequenceMatrix 1.7.8 to merge multi-source sequence data (ITS, TEF1, and TUB2 sequences) before phylogenetic analysis.",
     "combined_with": [
-     "MAFFT 7",
-     "MEGA X",
-     "NCBI BLAST"
+     "MAFFT v. 7.307",
+     "BioEdit",
+     "AliView",
+     "Maximum Likelihood",
+     "Maximum Parsimony",
+     "Bayesian Posterior Probability"
     ],
-    "stance": "positive",
-    "evidence_quote": "SequenceMatrix v1.7.8 [52] was used to concatenate the sequences of individual markers.",
+    "stance": "neutral",
+    "evidence_quote": "using the SequenceMatrix 1.7.8 (Vaidya et al. 2011) to multi-source data merging",
     "confidence": "high"
    }
   },
@@ -2463,40 +2493,42 @@
     "confidence": "high"
    }
   },
-  "W4414243583": {
-   "id": "W4414243583",
-   "doi": "10.3897/mycokeys.122.164339",
-   "pmid": "41001581",
+  "W4414778736": {
+   "id": "W4414778736",
+   "doi": "10.1038/s41598-025-17679-7",
+   "pmid": "41044180",
    "pmcid": null,
-   "title": "Two novel species of Neomonodictys and Phaeoisaria (Pleurotheciaceae, Pleurotheciales) from freshwater habitats in China",
+   "title": "Integrative taxonomy elucidates phylogenetic position of a clawless African eutardigrade (Tardigrada) supporting the erection of a new genus",
    "year": 2025,
-   "venue": "MycoKeys",
+   "venue": "Scientific Reports",
    "type": "article",
    "passages": [
     {
      "source": "epmc",
-     "section": "\ufeffMaterials and methods > \ufeffPhylogenetic analyses",
-     "text": "BioEdit v. 7.0.5.3 (Hall 1999) and SeqMan v. 7.0.0 (Swindell and Plasterer 1997) were used to check and assemble the newly generated sequences. The sequences incorporated in this study were downloaded from GenBank (Table 1; https://www.ncbi.nlm.nih.gov/). Multiple sequence alignments for each locus dataset were performed using MAFFT v. 7.473 (https://mafft.cbrc.jp/alignment/server/, Katoh et al. 2019) and visually inspected in AliView (Larsson 2014). The ITS, LSU, SSU, and rpb2 alignments were trimmed using trimAl v. 1.2rev59 (Capella-Guti\u00e9rrez et al. 2009) and subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)."
+     "section": "Materials and methods > Phylogenetic analysis and genetic comparisons",
+     "text": "To determine the phyletic position of the new genus, a phylogenetic tree was constructed based on the dataset used by Tumanov et al., 202453, incorporating sequences obtained in this study, as well as, sequences published by Dabert et al., 201442 and G\u0105siorek et al., 201931. However, we decided to limit the number of taxa by removing those with unpublished or uncertain status: Eremobiotus sp54,55. GenBank code: FJ435722, and Doryphoribius sp. GenBank code: MT872215 used previously in Tumanov et al., 202453. The list of all sequences used in the analysis is provided in SM.04. The DNA sequences from the superfamily Macrobiotoidea were used as the outgroup. Sequence alignments were performed using the Q-INS-I method for both ribosomal markers (18 S rRNA and 28 S rRNA) in MAFFT version 756,57. The alignments were then manually verified for non-conserved regions in BioEdit. After alignment, sequences were trimmed to lengths of 1008 bp (18S rRNA), 1317 bp (28S rRNA) and subsequently concatenated with SequenceMatrix58. Prior to partitioning, the concatenated alignment was divided into two blocks (one for each marker). PartitionFinder59 using the Akaike Information Criterion (AIC), was employed and as the optimal partitioning scheme retained two predefined partitions with the best model GTR + I + G for both markers. Maximum-likelihood (ML) reconstruction was conducted using W-IQ-TREE60,61 with a GTR + I + G model. One thousand ultrafast bootstrap (UFBoot) replicates were applied to provide support values for branches62. Bayesian inference (BI) was performed on the concatenated dataset (18 S rRNA + 28 S rRNA) using MrBayes v3.263, with random starting trees. The analysis was run for 10 million generations, sampling every 1000 generations, and convergence was confirmed by an average standard deviation of split frequencies below 0.01. Tracer v1.664 was used to ensure the Markov chains had reached stationarity and to determine the appropriate \u2018burn-in\u2019 period, which was the first 10% of generations. Effective Sample Size (ESS) values exceeded 200, and the consensus tree was obtained by summarizing the topologies after discarding the burn-in phase. The final tree was visualized using FigTree v1.4.3, available at http://tree.bio.ed.ac.uk/software/figtree (accessed on 10 August 2018). The raw trees are included in Supplementary Materials (SM.05)."
     },
     {
      "source": "s2",
      "section": null,
-     "text": "The ITS, LSU, SSU, and rpb2 alignments were trimmed using trimAl v. 1.2rev59 (Capella-Guti\u00e9rrez et al. 2009) and subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)."
+     "text": "After alignment, sequences were trimmed to lengths of 1008 bp (18S rRNA), 1317 bp (28S rRNA) and subsequently concatenated with SequenceMatrix 58 ."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "Merges trimmed sequence alignments (ITS, LSU, SSU, and rpb2) for phylogenetic analysis.",
+    "what_for": "The citing paper uses SequenceMatrix to concatenate trimmed DNA sequence alignments from two ribosomal markers (18S and 28S rRNA) into a single dataset for phylogenetic analysis.",
     "combined_with": [
-     "BioEdit",
-     "SeqMan",
-     "MAFFT",
-     "AliView",
-     "trimAl"
+     "MAFFT (sequence alignment)",
+     "BioEdit (alignment verification)",
+     "PartitionFinder (model partitioning)",
+     "W-IQ-TREE (maximum-likelihood tree inference)",
+     "MrBayes (Bayesian phylogenetic inference)",
+     "Tracer (chain diagnostics)",
+     "FigTree (tree visualization)"
     ],
     "stance": "neutral",
-    "evidence_quote": "subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)",
+    "evidence_quote": "After alignment, sequences were trimmed to lengths of 1008 bp (18S rRNA), 1317 bp (28S rRNA) and subsequently concatenated with SequenceMatrix58.",
     "confidence": "high"
    }
   },
@@ -2885,29 +2917,31 @@
     "confidence": "high"
    }
   },
-  "W4414874547": {
-   "id": "W4414874547",
-   "doi": "10.1080/24750263.2025.2548265",
-   "pmid": null,
+  "W4414556801": {
+   "id": "W4414556801",
+   "doi": "10.1186/s12864-025-12018-6",
+   "pmid": "41013178",
    "pmcid": null,
-   "title": "A new Diaforobiotus species (Tardigrada: eutardigrada: richtersiusidae) from the Mexican transition zone, described based on multiple lines of evidence",
+   "title": "Genomic analyses of Purpureocillium lilacinum reveal unique DNA regions for developing isolate-specific molecular markers",
    "year": 2025,
-   "venue": "The European Zoological Journal",
+   "venue": "BMC Genomics",
    "type": "article",
    "passages": [
     {
      "source": "s2",
      "section": null,
-     "text": "The sequences were concatenated using SequenceMatrix (Vaidya et al. 2011)."
+     "text": "The nucleotide sequences of the 14 core genes were individually aligned using MAFFT (v.7.453), and multiple sequence alignments were concatenated via SequenceMatrix (v.1.7.8) [43]."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "To concatenate DNA sequences from multiple genes into a unified dataset for phylogenetic analysis.",
-    "combined_with": [],
+    "what_for": "To concatenate multiple sequence alignments from 14 core genes into a combined dataset for genomic analysis.",
+    "combined_with": [
+     "MAFFT"
+    ],
     "stance": "neutral",
-    "evidence_quote": "The sequences were concatenated using SequenceMatrix (Vaidya et al. 2011).",
+    "evidence_quote": "multiple sequence alignments were concatenated via SequenceMatrix (v.1.7.8)",
     "confidence": "high"
    }
   },
@@ -2947,29 +2981,65 @@
     "confidence": "high"
    }
   },
-  "W7124162046": {
-   "id": "W7124162046",
-   "doi": "10.3897/imafungus.17.177411",
-   "pmid": "41584736",
+  "W4416505979": {
+   "id": "W4416505979",
+   "doi": "10.3897/vz.75.e167366",
+   "pmid": null,
    "pmcid": null,
-   "title": "New sordarialean lineage Garciamycella chlamydospora (Sordariales, Schizotheciaceae) produces rare antifungal papulacandins",
-   "year": 2026,
-   "venue": "IMA Fungus",
+   "title": "Systematics of African rough-scaled lizards, with description of two new species from eastern Angola (Squamata: Lacertidae: Ichnotropis Peters, 1854)",
+   "year": 2025,
+   "venue": "Vertebrate Zoology",
    "type": "article",
    "passages": [
     {
      "source": "s2",
      "section": null,
-     "text": "The four loci were subsequently concatenated after confirming the absence of topological conflicts, using SequenceMatrix (Vaidya 2011)."
+     "text": "All gene-tree combinations were congruent, allowing for the creation of a concatenated dataset of 2128 base pairs for further phylogenetic analyses, with the individual gene alignments joined using SequenceMatrix v.1.8.2 (Vaidya et al. 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "The authors applied SequenceMatrix software to concatenate four molecular loci sequences for their phylogenetic dataset assembly.",
-    "combined_with": [],
+    "what_for": "To concatenate individual gene alignments into a single dataset for phylogenetic analyses.",
+    "combined_with": [
+     "phylogenetic analyses"
+    ],
     "stance": "neutral",
-    "evidence_quote": "using SequenceMatrix (Vaidya 2011)",
+    "evidence_quote": "the individual gene alignments joined using SequenceMatrix v.1.8.2 (Vaidya et al. 2011)",
+    "confidence": "high"
+   }
+  },
+  "W7133206625": {
+   "id": "W7133206625",
+   "doi": "10.3897/mycokeys.129.178173",
+   "pmid": "41816261",
+   "pmcid": null,
+   "title": "Two novel species of Neohelicomyces (Tubeufiaceae, Tubeufiales) from Guizhou Province, China",
+   "year": 2026,
+   "venue": "MycoKeys",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Materials and methods > Phylogenetic analyses",
+     "text": "The sequence data of the newly obtained taxa were checked using BioEdit Sequence Alignment software. Forward and reverse sequence data were assembled with SeqMan v.7.0.0 (DNASTAR, Madison, WI, USA) (Clewley 1995). Sequences listed in Table 1 were downloaded from GenBank (https://www.ncbi.nlm.nih.gov/) based on BLASTn search results and recently published articles. The single-gene datasets were aligned using the online MAFFT version 7 (https://mafft.cbrc.jp/alignment/server/) (Katoh and Standley 2013), followed by trimming with trimAl v.1.2 (Capella-Guti\u00e9rrez et al. 2009). The concatenation of single-gene alignments was performed using Sequence Matrix v.1.7.8 (Vaidya et al. 2011). Maximum Likelihood (ML) analyses were conducted on the CIPRES Science Gateway platform (Miller et al. 2012) (https://www.phylo.org/portal2/home.action) using RAxML-HPC2 8.2.12 on XSEDE with the GTRGAMMA model. Bayesian Inference (BI) was carried out using MrBayes v.3.2.7a on XSEDE, which employs the Markov chain Monte Carlo (MCMC) algorithm (Ronquist et al. 2012). Maximum likelihood bootstrap support (ML-BS) and Bayesian posterior probabilities (BYPP) are shown above each branch. Phylogenetic trees were visualized using FigTree v.1.4.4, and the final layout of figures was edited in Adobe Illustrator CC 2019 (version 23.1.0; Adobe Systems, USA)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "The authors use SequenceMatrix to concatenate single-gene alignments for their phylogenetic analysis of newly described Neohelicomyces species.",
+    "combined_with": [
+     "BioEdit",
+     "SeqMan v.7.0.0",
+     "MAFFT version 7",
+     "trimAl v.1.2",
+     "RAxML-HPC2 8.2.12",
+     "MrBayes v.3.2.7a",
+     "FigTree v.1.4.4"
+    ],
+    "stance": "positive",
+    "evidence_quote": "The concatenation of single-gene alignments was performed using Sequence Matrix v.1.7.8 (Vaidya et al. 2011).",
     "confidence": "high"
    }
   },
@@ -3115,32 +3185,6 @@
     ],
     "stance": "positive",
     "evidence_quote": "Sequences of all genes were combined using Sequence Matrix v. 1.7.8 (Vaidya et al. 2011).",
-    "confidence": "high"
-   }
-  },
-  "W4416273932": {
-   "id": "W4416273932",
-   "doi": "10.1007/s11557-025-02105-z",
-   "pmid": null,
-   "pmcid": null,
-   "title": "Two novel species of Hermatomyces (Dothideomycetes) from Fagales in China",
-   "year": 2025,
-   "venue": "Mycological Progress",
-   "type": "article",
-   "passages": [
-    {
-     "source": "s2",
-     "section": null,
-     "text": "The sequence dataset was combined using SequenceMatrix 1.7.8 (Vaidya et al. 2011)."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "The authors use SequenceMatrix software to combine multi-gene sequence data into a single concatenated dataset.",
-    "combined_with": [],
-    "stance": "neutral",
-    "evidence_quote": "The sequence dataset was combined using SequenceMatrix 1.7.8 (Vaidya et al. 2011).",
     "confidence": "high"
    }
   },
@@ -3362,29 +3406,39 @@
     "confidence": "high"
    }
   },
-  "W4415279108": {
-   "id": "W4415279108",
-   "doi": "10.1111/jbi.70074",
-   "pmid": null,
+  "W4414284529": {
+   "id": "W4414284529",
+   "doi": "10.1128/jvi.01178-25",
+   "pmid": "40960313",
    "pmcid": null,
-   "title": "Historical Drainage Evolution and Water Level Fluctuations in the African Great Lakes Shaped Phylogeny and Biogeography of Freshwater Gastropods",
+   "title": "Discovery of a novel double-stranded DNA virus associated with ant labial gland disease reveals its long-term interaction with ants",
    "year": 2025,
-   "venue": "Journal of Biogeography",
+   "venue": "Journal of Virology",
    "type": "article",
    "passages": [
     {
+     "source": "epmc",
+     "section": "MATERIALS AND METHODS > Phylogenetic analysis",
+     "text": "The phylogenetic position of CjLGDV within Naldaviricetes was inferred by a maximum likelihood tree based on 12 conserved genes (p74, pif1, pif2, pif3, pif5, lef4, lef5, lef8, lef9, DNApol, p33, and ac81). Sequence accession numbers for the conserved genes used in the analysis are provided in Table S5. Specifically, amino acid sequences were aligned using MAFFT with the E-INS-I mode. These alignments were subsequently trimmed by trimAl version 1.4 (96) and concatenated into a single protein alignment by SequenceMatrix (97). Phylogenetic trees were then constructed using the maximum-likelihood method implemented in IQ-TREE version 2.2 (98). ModelFinder (99) was employed within IQ-TREE to identify the best models for each partition. White spot syndrome virus was selected as the outgroup. Node supports in the ML trees were determined using Ultra-fast bootstrap (100) and SH-aLRT (options -bb 1,000 and -alrt 1,000). The patristic distances within and between viral families were performed by the ape R package (101)."
+    },
+    {
      "source": "s2",
      "section": null,
-     "text": "A concatenated dataset was created using SequenceMatrix version 1.7.8 (Vaidya et al. 2011), resulting in a dataset composed of 66 taxa with a total length of 2179 bp."
+     "text": "These alignments were subsequently trimmed by trimAl version 1.4 (96) and concatenated into a single protein alignment by Sequence\u00ad Matrix (97)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "Used SequenceMatrix software to concatenate multi-gene sequences into a single phylogenetic dataset for analysis.",
-    "combined_with": [],
+    "what_for": "Concatenating trimmed multi-gene sequence alignments into a single protein alignment for downstream phylogenetic tree construction.",
+    "combined_with": [
+     "MAFFT",
+     "trimAl",
+     "IQ-TREE",
+     "ModelFinder"
+    ],
     "stance": "neutral",
-    "evidence_quote": "A concatenated dataset was created using SequenceMatrix version 1.7.8 (Vaidya et al. 2011), resulting in a dataset composed of 66 taxa with a total length of 2179 bp.",
+    "evidence_quote": "These alignments were subsequently trimmed by trimAl version 1.4 (96) and concatenated into a single protein alignment by SequenceMatrix (97).",
     "confidence": "high"
    }
   },
@@ -3422,65 +3476,29 @@
     "confidence": "high"
    }
   },
-  "W4415431039": {
-   "id": "W4415431039",
-   "doi": "10.1111/cla.70007",
-   "pmid": "41123374",
+  "W4415295276": {
+   "id": "W4415295276",
+   "doi": "10.3897/vz.75.e159878",
+   "pmid": null,
    "pmcid": null,
-   "title": "New evidence for an old acquaintance: Neoprocoela edentata from the Oligocene of central Patagonia is the oldest species of Nannophryne (Anura: Bufonidae)",
+   "title": "Unearthing the names of burrowing frogs: The taxonomic status of the Chacoan populations of Leptodactylus fuscus (Schneider, 1799) (Anura: Leptodactylidae)",
    "year": 2025,
-   "venue": "Cladistics",
+   "venue": "Vertebrate Zoology",
    "type": "article",
    "passages": [
     {
      "source": "s2",
      "section": null,
-     "text": "8 (Vaidya et al., 2011)."
+     "text": "Sequence files were merged with SequenceMatrix (Vaidya et al. 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "Applied SequenceMatrix software for concatenating multi-gene sequence datasets in phylogenetic analysis.",
+    "what_for": "The authors use SequenceMatrix to merge sequence files for their phylogenetic analysis.",
     "combined_with": [],
     "stance": "neutral",
-    "evidence_quote": "8 (Vaidya et al., 2011).",
-    "confidence": "low"
-   }
-  },
-  "W4415476717": {
-   "id": "W4415476717",
-   "doi": "10.3897/mycokeys.124.168385",
-   "pmid": "41179844",
-   "pmcid": null,
-   "title": "Morphological and phylogenetic analyses reveal two new species of Camporesiomyces (Tubeufiaceae, Tubeufiales) from terrestrial habitats in China",
-   "year": 2025,
-   "venue": "MycoKeys",
-   "type": "article",
-   "passages": [
-    {
-     "source": "epmc",
-     "section": "\ufeffMaterials and methods > \ufeffPhylogenetic analyses",
-     "text": "The newly-obtained sequences were quality-checked and assembled using BioEdit v.7.0.5.3 (Hall 1999) and SeqMan v.7.0.0 (DNASTAR, Madison, WI, USA; Swindell and Plasterer 1997), respectively. The sequences used in this study were retrieved from GenBank (Table 1; https://www.ncbi.nlm.nih.gov/). Sequence matrices for each gene were aligned using MAFFT v.7.473 (https://mafft.cbrc.jp/alignment/server/; Katoh et al. (2019)). Each gene dataset was trimmed using trimAl v.1.2rev59 software (Capella-Guti\u00e9rrez et al. 2009). A concatenated sequence dataset was generated using SequenceMatrix-Windows-1.7.8 software (Vaidya et al. 2011)."
-    },
-    {
-     "source": "s2",
-     "section": null,
-     "text": "7.8 software (Vaidya et al. 2011)."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "To generate a concatenated sequence dataset from multiple aligned gene sequences for phylogenetic analysis of the fungal specimens.",
-    "combined_with": [
-     "BioEdit v.7.0.5.3",
-     "SeqMan v.7.0.0",
-     "MAFFT v.7.473",
-     "trimAl v.1.2rev59"
-    ],
-    "stance": "neutral",
-    "evidence_quote": "A concatenated sequence dataset was generated using SequenceMatrix-Windows-1.7.8 software (Vaidya et al. 2011).",
+    "evidence_quote": "Sequence files were merged with SequenceMatrix (Vaidya et al. 2011).",
     "confidence": "high"
    }
   },
@@ -3519,56 +3537,58 @@
     "confidence": "high"
    }
   },
-  "W4416235643": {
-   "id": "W4416235643",
-   "doi": "10.1007/s10592-025-01732-z",
+  "W4415819867": {
+   "id": "W4415819867",
+   "doi": "10.3390/d17110762",
    "pmid": null,
    "pmcid": null,
-   "title": "Saving what\u2019s left: conservation genomics of Plethobasus, a critically endangered genus of freshwater mussel",
+   "title": "Cordyceps biarmica sp. nov., an Entomopathogenic Fungus from Boreal Forests of North European Russia",
    "year": 2025,
-   "venue": "Conservation Genetics",
+   "venue": "Diversity",
    "type": "article",
    "passages": [
     {
      "source": "s2",
      "section": null,
-     "text": "To conduct a phylogenetic analysis, we first concatenated both mtDNA genes, excluding any samples that were only sequenced for a single gene, using SequenceMatrix (Vaidya et al. 2011)."
+     "text": "Loci were concatenated using SequenceMatrix 1.7.3 [27] to construct a dataset for multilocus phylogenetic analysis."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "To concatenate mtDNA genes from multiple samples for phylogenetic analysis, excluding samples sequenced for only a single gene.",
+    "what_for": "They used SequenceMatrix to concatenate genetic loci into a single dataset for multilocus phylogenetic analysis.",
     "combined_with": [],
-    "stance": "neutral",
-    "evidence_quote": "using SequenceMatrix (Vaidya et al. 2011)",
+    "stance": "positive",
+    "evidence_quote": "Loci were concatenated using SequenceMatrix 1.7.3 [27] to construct a dataset for multilocus phylogenetic analysis.",
     "confidence": "high"
    }
   },
-  "W7108228162": {
-   "id": "W7108228162",
-   "doi": "10.1007/s12041-025-01517-w",
-   "pmid": null,
+  "W4416293329": {
+   "id": "W4416293329",
+   "doi": "10.1111/cla.70018",
+   "pmid": "41243423",
    "pmcid": null,
-   "title": "Characterization and phylogenetic analysis of the mitochondrial genome of Amatitlania nigrofasciata (G\u00fcnther, 1867)",
+   "title": "On a recent phylogenetic reanalysis of Sphaenorhynchini (Anura: Hylidae: Hylinae): Does it all come down to the method?",
    "year": 2025,
-   "venue": "Journal of Genetics",
+   "venue": "Cladistics",
    "type": "article",
    "passages": [
     {
      "source": "s2",
      "section": null,
-     "text": "SequenceMatrix software (Vaidya et al ."
+     "text": "The alignments were visualized in BioEdit (Hall, 1999) and concatenated with SequenceMatrix (Vaidya et al., 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "Used SequenceMatrix software to assemble or concatenate multi-gene sequence data for phylogenetic analysis of the mitochondrial genome.",
-    "combined_with": [],
+    "what_for": "The authors used SequenceMatrix to concatenate their aligned sequence data for phylogenetic analysis.",
+    "combined_with": [
+     "BioEdit"
+    ],
     "stance": "neutral",
-    "evidence_quote": "SequenceMatrix software (Vaidya et al .",
-    "confidence": "medium"
+    "evidence_quote": "concatenated with SequenceMatrix (Vaidya et al., 2011)",
+    "confidence": "high"
    }
   },
   "W7118651887": {
@@ -3645,20 +3665,115 @@
     "confidence": "high"
    }
   },
-  "W7127924363": {
-   "id": "W7127924363",
-   "doi": "10.3897/mycokeys.128.180553",
-   "pmid": "41693913",
+  "W7125791052": {
+   "id": "W7125791052",
+   "doi": "10.3389/fmicb.2025.1740728",
+   "pmid": "41674907",
    "pmcid": null,
-   "title": "Morpho-phylogenetic evidence uncovers new taxa of lignicolous freshwater Sordariomycetes from Yunnan and Guizhou provinces, China",
+   "title": "Comprehensive analysis of the mitochondrial genome in lichen genus Xanthoparmelia: genetic diversity, intron dynamics, and evolutionary dynamics",
+   "year": 2026,
+   "venue": "Frontiers in Microbiology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Materials and methods > Phylogenetic analysis",
+     "text": "In this study, maximum likelihood (ML) and Bayesian inference (BI) methods were used to construct a phylogenetic tree of Parmeliaceae based on 14 PCGs. Lecanora saxigena (NC_042183) was used as the outgroup. The specific workflow was as follows: Sequences were aligned using MAFFT V7.313 (Katoh et al., 2019). Conserved sequences were filtered using Gblocks V0.91 (Castresana, 2000). The 14 PCGs were concatenated using Sequence Matrix (Vaidya et al., 2011). The most suitable evolutionary model for the dataset was selected using Model Finder (Kalyaanamoorthy et al., 2017). ML analysis was performed using IQ-tree V1.6.8 (Nguyen et al., 2015) with the parameters: -m MFP -bb 1,000 -nt AUTO. Bayesian phylogenetic inference was conducted using MrBayes V3.2.7a (Ronquist et al., 2012) with 2 parallel runs (1,000,000 generations). The initial 25% of run results were discarded (burn-in = 0.25) to construct the BI tree. The phylogenetic trees were visualized and edited using Figtree v1.4.4. (http://tree.bio.ed.ac.uk/software/figtree/)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "The citing paper uses SequenceMatrix to concatenate 14 protein-coding genes from their mitochondrial genome dataset as part of their phylogenetic analysis workflow.",
+    "combined_with": [
+     "MAFFT",
+     "Gblocks",
+     "Model Finder",
+     "IQ-tree",
+     "MrBayes",
+     "Figtree"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "The 14 PCGs were concatenated using Sequence Matrix (Vaidya et al., 2011).",
+    "confidence": "high"
+   }
+  },
+  "W7131677090": {
+   "id": "W7131677090",
+   "doi": "10.1007/s40858-026-00789-6",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Comprehensive pangenomic, phylogenetic, and genome comparison analyses demonstrate that the causal agent of castor bean (Ricinus communis L.) bacterial blight is a pathovar of the Xanthomonas euvesicatoria species",
+   "year": 2026,
+   "venue": "Tropical Plant Pathology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The resulting Nexus files of each locus were then concatenated using Sequence Matrix v. 1.9 (Vaidya et al. 2011)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "Concatenate Nexus files from multiple loci into a single dataset for phylogenetic analysis.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "The resulting Nexus files of each locus were then concatenated using Sequence Matrix v. 1.9 (Vaidya et al. 2011).",
+    "confidence": "high"
+   }
+  },
+  "W7154581987": {
+   "id": "W7154581987",
+   "doi": "10.3897/mycokeys.131.175264",
+   "pmid": "42038939",
+   "pmcid": null,
+   "title": "Pleopunctum xizangense sp. nov. (Pleosporales, Phaeoseptaceae) and Pseudolophiostoma yunnanense sp. nov. (Pleosporales, Lophiostomataceae), and a new record of Pleopunctum pseudoellipsoideum on Fagales",
    "year": 2026,
    "venue": "MycoKeys",
    "type": "article",
    "passages": [
     {
      "source": "epmc",
+     "section": "Materials and methods > Sequence alignment and phylogenetic analyses",
+     "text": "The newly generated sequences were assembled with Sequencing Project Management (SeqMan) (Clewley 1995). BLAST searches are performed on the resulting sequences to check for contamination and to identify relevant taxa for analysis (http://blast.ncbi.nlm.nih.gov/). Sequence data were downloaded from GenBank in accordance with recent publications (Table 1). Each gene locus was automatically aligned with MAFFT (http://mafft.cbrc.jp/alignment/server/, Katoh et al. 2019) and trimmed with trimAl v1.2rev59 (Castresana 2000; Talavera and Castresana 2007). Single-gene alignments were combined using Sequence Matrix 1.7.8 (Vaidya et al. 2011)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Single-gene alignments were combined using Sequence Matrix 1.7.8 (Vaidya et al. 2011)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "The citing paper uses Sequence Matrix v1.7.8 to combine single-gene sequence alignments into a concatenated dataset for phylogenetic analysis.",
+    "combined_with": [
+     "MAFFT",
+     "trimAl",
+     "SeqMan",
+     "BLAST"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Single-gene alignments were combined using Sequence Matrix 1.7.8 (Vaidya et al. 2011).",
+    "confidence": "high"
+   }
+  },
+  "W7154741013": {
+   "id": "W7154741013",
+   "doi": "10.1080/23802359.2026.2654106",
+   "pmid": "42016610",
+   "pmcid": null,
+   "title": "Characterization and phylogenetic analysis of the complete mitochondrial genome of Catathelasma laorentou Z.W. Ge et al. 2020",
+   "year": 2026,
+   "venue": "Mitochondrial DNA Part B",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
      "section": "Materials and methods > Phylogenetic analysis",
-     "text": "BLAST searches were conducted using the BLASTn algorithm to retrieve closely related sequences from GenBank (http://www.ncbi.nlm.nih.gov). Multiple sequence alignments were performed using the MAFFT online service (version 7) with default settings (Kuraku et al. 2013; Katoh et al. 2019; http://mafft.cbrc.jp/alignment/server/index.html, accessed on 20 September 2025), and poorly aligned regions were trimmed using trimAl version 1.2 with default parameters (http://trimal.cgenomics.org for specific operation steps; Capella-Guti\u00e9rrez et al. 2009). Aligned sequences from different loci were concatenated using SequenceMatrix v1.7.8 (Vaidya et al. 2011). The resulting concatenated dataset in FASTA format was converted into PHYLIP and NEXUS formats using the ALignment Transformation EnviRonment (ALTER) online platform (http://sing.ei.uvigo.es/ALTER/, accessed on 20 September 2025)."
+     "text": "Phylogenetic reconstruction was carried out according to previously described methods (Li et al., 2020; Li et al. 2021). Ganoderma leucocontextum (Polyporales) was selected as the outgroup (Li et al., 2019). Fourteen conserved mitochondrial protein-coding genes (atp6, atp8, atp9, cob, cox1, cox2, cox3, nad1, nad2, nad3, nad4, nad4L, nad5, and nad6) were extracted from the mitochondrial genome of C. laorentou and 14 other fungal species (see Figure 3 for list). Intron regions, if present, were excluded. Each gene was individually aligned using MAFFT v7.037 (Katoh et al. 2019). The aligned sequences were then concatenated into a single dataset using SequenceMatrix v1.7.8 (Vaidya et al. 2011). A partition homogeneity test was performed to assess potential conflicts among genes. The optimal partitioning scheme and corresponding nucleotide substitution models for the concatenated dataset were determined using PartitionFinder 2.1.1 (Lanfear et al. 2017). Phylogenetic trees were inferred using both Bayesian Inference (BI) and Maximum Likelihood (ML) methods. BI analysis was conducted with MrBayes v3.2.6 (Ronquist et al. 2012). ML analysis was performed with RAxML v8.0.0 (Stamatakis 2014), conducting 10,000 rapid bootstrap replicates to assess nodal support."
     },
     {
      "source": "s2",
@@ -3669,24 +3784,58 @@
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "Concatenate aligned sequences from different loci into a combined dataset for phylogenetic analysis",
+    "what_for": "The citing paper used SequenceMatrix v1.7.8 to concatenate aligned mitochondrial protein-coding gene sequences from multiple fungal species into a single dataset for phylogenetic analysis.",
     "combined_with": [
-     "BLAST",
-     "MAFFT",
-     "trimAl",
-     "ALTER"
+     "MAFFT v7.037",
+     "PartitionFinder 2.1.1",
+     "MrBayes v3.2.6",
+     "RAxML v8.0.0"
     ],
-    "stance": "neutral",
-    "evidence_quote": "Aligned sequences from different loci were concatenated using SequenceMatrix v1.7.8 (Vaidya et al. 2011).",
+    "stance": "positive",
+    "evidence_quote": "The aligned sequences were then concatenated into a single dataset using SequenceMatrix v1.7.8 (Vaidya et al. 2011).",
     "confidence": "high"
    }
   },
-  "W7154468508": {
-   "id": "W7154468508",
-   "doi": "10.3897/mycokeys.131.182322",
-   "pmid": "42038940",
+  "W7161260816": {
+   "id": "W7161260816",
+   "doi": "10.1590/1678-4685-gmb-2025-0240",
+   "pmid": "42207144",
    "pmcid": null,
-   "title": "Morpho-phylogenetic analyses reveal Elliptolagenoidisporium gen. nov. and a new species associated with the medicinal plant Paris sp. from Guizhou Province, China (Helotiales, Lachnaceae)",
+   "title": "Comparative synthesis of tandem repeats in the control region of Epinephelus mitogenomes (Peciformes: Epinephelidae)",
+   "year": 2026,
+   "venue": "Genetics and Molecular Biology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Material and Methods > Phylogenetic analyses",
+     "text": "Phylogenetic analyses were conducted on the basis of the sequences of 13 protein-coding genes from 41 species of Epinephelus, along with three species of the genus Hyporthodus. Additionally, Cephalopholis sonnerati, Variola louti, Plectropomus areolatus and Grammistes sexlineatus were included as outgroup taxa (Table 1; Table S1). The sequences were aligned via MAFFT v7.313 software (Katoh and Standley, 2013) and then concatenated via SequenceMatrix v1.10 (Vaidya et al., 2011). The database was used for the production of a maximum likelihood tree in IQTREE v3.0.1 software (Nguyen et al., 2015), and ultrafast bootstrap analysis, with 1,000 pseudoreplicates, was used to determine the statistical support for each node. The IQTREE automatic substitution model options were used to select the evolutionary model for each partition."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "10 (Vaidya et al ., 2011)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "Used SequenceMatrix v1.10 to concatenate aligned sequences from 13 protein-coding genes of Epinephelus species for phylogenetic analysis.",
+    "combined_with": [
+     "MAFFT v7.313 (sequence alignment)",
+     "IQTREE v3.0.1 (phylogenetic tree inference)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "and then concatenated via SequenceMatrix v1.10 (Vaidya et al., 2011)",
+    "confidence": "high"
+   }
+  },
+  "W7162397763": {
+   "id": "W7162397763",
+   "doi": "10.3897/mycokeys.132.182249",
+   "pmid": "42245221",
+   "pmcid": null,
+   "title": "Taxonomic novelties in Helminthosphaeriaceae: morphological and phylogenetic evidence for Obovatispora gen. nov. and a new species from Polygonatum in Guizhou Province, China",
    "year": 2026,
    "venue": "MycoKeys",
    "type": "article",
@@ -3694,7 +3843,7 @@
     {
      "source": "epmc",
      "section": "Materials and methods > Phylogenetic analyses",
-     "text": "Forward and reverse sequences from the newly generated sequence were assembled using Contig Express v3.0.0. Additional reference sequences used in this study (Table 1) were downloaded from the NCBI GenBank database (https://blast.ncbi.nlm.nih.gov/Blast.cgi). Individual sequences were aligned using the online version of MAFFT v. 7 (https://mafft.cbrc.jp/alignment/server/index.html) (Katoh et al. 2017). The LSU and ITS alignments were trimmed with trimAl v1.2rev59 (Capella-Guti\u00e9rrez et al. 2009) and subsequently merged with SequenceMatrix v1.7.8 (Vaidya et al. 2011)."
+     "text": "The forward and reverse sequences from the newly generated sequences were assembled using the Contig Express v3.0.0 application. Reference sequences used in this study (Table 1) were downloaded from the NCBI GenBank database (https://blast.ncbi.nlm.nih.gov/Blast.cgi). Each individual dataset was aligned using the online version of MAFFT v. 7 (https://mafft.cbrc.jp/alignment/server/index.html) (Katoh et al. 2017). The LSU, ITS, and tef1-\u03b1 alignments were trimmed using trimAl v1.2rev59 (Capella-Guti\u00e9rrez et al. 2009) and subsequently concatenated using SequenceMatrix v1.7.8 (Vaidya et al. 2011)."
     },
     {
      "source": "s2",
@@ -3705,183 +3854,52 @@
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "They used SequenceMatrix v1.7.8 to merge their trimmed LSU and ITS sequence alignments during phylogenetic analysis workflow.",
+    "what_for": "Concatenated their trimmed multi-gene sequence alignments (LSU, ITS, and tef1-\u03b1) into a combined phylogenetic dataset.",
     "combined_with": [
-     "Contig Express v3.0.0",
-     "MAFFT v7",
-     "trimAl v1.2rev59",
-     "NCBI GenBank"
-    ],
-    "stance": "neutral",
-    "evidence_quote": "subsequently merged with SequenceMatrix v1.7.8 (Vaidya et al. 2011)",
-    "confidence": "high"
-   }
-  },
-  "W7154613291": {
-   "id": "W7154613291",
-   "doi": "10.3897/mycokeys.131.187694",
-   "pmid": "42038938",
-   "pmcid": null,
-   "title": "Morphological and phylogenetic analyses reveal three new species of Chaetosphaeriaceae from China",
-   "year": 2026,
-   "venue": "MycoKeys",
-   "type": "article",
-   "passages": [
-    {
-     "source": "epmc",
-     "section": "Material and methods > Phylogenetic analyses",
-     "text": "Raw sequence chromatograms were checked by BioEdit v. 7.1.3.0 (Hall 1999). SeqMan v. 7.0.0 (DNASTAR, Madison, WI, USA) were used to assemble forward and reverse sequences. BLASTn searches in NCBI GenBank (https://blast.ncbi.nlm.nih.gov/Blast.cgi) were used to determine closely related strains to our new taxa. Consequently, representative sequence data from Chaetosphaeriaceae were obtained from GenBank, referring to previous studies (R\u00e9blov\u00e1 et al. 2021b; Zhang et al. 2022, 2025b; Wu and Diao 2022). The sequences were aligned using the online multiple alignment program MAFFT v.7 (http://mafft.cbrc.jp/alignment/server/, accessed January 2026; Katoh et al. 2019). Trimal v1.2 (Capella-Guti\u00e9rrez et al. 2009) was used to remove ambiguously aligned regions and uninformative positions with the \u201cgt = 0.6\u201d option. ITS, LSU and tef1-\u03b1 sequences were combined using SequenceMatrix 1.7.8 (Vaidya et al. 2011). Sequences derived in this study were deposited in GenBank (Table 1)."
-    },
-    {
-     "source": "s2",
-     "section": null,
-     "text": "ITS, LSU and tef 1-\u03b1 sequences were combined using SequenceMatrix 1.7.8 (Vaidya et al. 2011)."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "The authors used SequenceMatrix 1.7.8 to combine multiple gene sequences (ITS, LSU, and tef1-\u03b1) into a concatenated dataset for phylogenetic analysis.",
-    "combined_with": [
-     "BioEdit",
-     "SeqMan",
-     "BLASTn",
      "MAFFT",
-     "Trimal"
+     "trimAl",
+     "Contig Express"
     ],
     "stance": "neutral",
-    "evidence_quote": "ITS, LSU and tef1-\u03b1 sequences were combined using SequenceMatrix 1.7.8 (Vaidya et al. 2011).",
+    "evidence_quote": "subsequently concatenated using SequenceMatrix v1.7.8 (Vaidya et al. 2011)",
     "confidence": "high"
    }
   },
-  "W7160887718": {
-   "id": "W7160887718",
-   "doi": "10.3897/mycokeys.132.176986",
-   "pmid": "42169785",
+  "W7162989244": {
+   "id": "W7162989244",
+   "doi": "10.1002/ece3.73748",
+   "pmid": "42256132",
    "pmcid": null,
-   "title": "New species of Hymenogaster (Agaricales, Hymenogastraceae) from North China",
+   "title": "Evolutionary Patterns of the Genes Involved in the Integrity and Segregation of Chromosomes in Sawflies (Hymenoptera: Symphyta)",
    "year": 2026,
-   "venue": "MycoKeys",
+   "venue": "Ecology and Evolution",
    "type": "article",
    "passages": [
     {
      "source": "epmc",
-     "section": "Materials and methods > Molecular methods",
-     "text": "A concatenated ITS-LSU dataset was used to investigate the phylogenetic placement of the Hymenogaster species. Hebeloma species were selected as the outgroup. The sequences of each marker were independently aligned in MAFFT (Katoh and Standley 2013) under default parameters, and manually adjusted for maximum sequence similarity in Se-Al v. 2.03a (Rambaut 2000). Ambiguously aligned regions and gaps in the alignment were excluded before the analyses. For the concatenated dataset, alignments were constructed separately for each of the gene fragments using MAFFT (Katoh and Standley 2013), optimized using BioEdit v. 7.0.9 (Hall 1999), then concatenated using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011). Maximum Likelihood (ML) and Bayesian Inference (BI) analyses were conducted on the resulting concatenated dataset. Maximum likelihood (ML) analyses on datasets in this study were conducted with RAxML v. 8.0.14 (Stamatakis 2014) and the GTRGAMMAI substitution model with parameters unlinked. The ML bootstrap replicates (1000) were computed in RAxML with a rapid bootstrap analysis and search for the best-scoring ML tree. Bayesian inference (BI) was performed with MrBayes v. 3.2.2 (Ronquist and Huelsenbeck 2003). The best substitution model that fit the data at each locus was evaluated using MrModeltest v. 2.3 (Nylander 2004). For the concatenated analyses, each locus was considered a partition and assigned its own best-fitting substitution model, that was GTR+I+G for all partitions. We used two independent runs with four Markov chains Monte Carlo (MCMC) for 5 155 000 generations under the default settings. Average standard deviations of split frequency (ASDSF) values were far lower than 0.01 at the end of the generations. Trees were sampled every 100 generations after burn-in (25% of trees were discarded as the burn-in phase of the analyses, set up well after convergence), and 50% majority-rule consensus trees were constructed."
+     "section": "Experimental Procedures > Phylogenetic Reconstruction",
+     "text": "Phylogenetic analyses were used to assess the usefulness of a dataset including 12 gene to reconstruct the phylogeny of sawflies. Additionally, further phylogenetic analyses were conducted to explore the duplication patterns and evolutionary relationships of the genes within each gene group (SMC, CAPD, CAPH, CAPG, and RAD21\u2010SA). Ricinus marginatus (Psocodea) was selected as an outgroup (Soffan et al. 2018). A range of amino acid datasets were created containing both alignment of each gene, each group and concatenation of all genes. The amino acid dataset for each gene was individually aligned using the MAFFT algorithm under the \u201c\u2010auto\u201d option and then manually edited (Katoh and Standley 2013). In order to obtain the aligned files for each gene group and all genes, the individually aligned amino acid datasets were then combined using SequenceMatrix v1.10 (Vaidya et al. 2011). The optimal partitioning strategy and the optimal evolutionary model of each partition were selected using PartitionFinder v2.1.1 (Lanfear et al. 2017) by applying a \u201cgreedy\u201d algorithm based on \u201cunlinked\u201d estimated branch lengths and Bayesian information criterion. Phylogenetic analyses were conducted under the VT + G and BLOSUM62 substitution models. ML (Maximum Likelihood) analyses were performed in IQ\u2010TREE v2.1.4 (Minh et al. 2020) using default parameters and allowing it to automatically select the evolutionary model. BI (Bayes Inference) analyses were performed using MrBayes v3.2.7a (Ronquist et al. 2012) with two independent runs of ten million generations with four Markov chains, sampling every 1000 generations, under the associated model and unlinked branch lengths of each partition scheme. Stability was assessed using Tracer v1.7 (Rambaut et al. 2018). The first 25% of trees in each run were discarded as burn\u2010in, and the remaining trees were used to create a consensus BI tree. Finally, the ML and BI trees were visualized with FigTree v1.4.4 (Rambaut 2018)."
     },
     {
      "source": "s2",
      "section": null,
-     "text": "For the concatenated dataset, alignments were constructed separately for each of the gene fragments using MAFFT (Katoh and Standley 2013), optimized using BioEdit v. 7.0.9 (Hall 1999), then concatenated using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)."
+     "text": "10 (Vaidya et al. 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "Concatenate separately aligned gene fragments (ITS and LSU) into a single phylogenetic dataset.",
+    "what_for": "Used SequenceMatrix v1.10 to combine individually aligned amino acid datasets to create concatenated alignments for each gene group and all genes for phylogenetic reconstruction.",
     "combined_with": [
-     "MAFFT (sequence alignment)",
-     "BioEdit (alignment optimization)",
-     "RAxML (phylogenetic analysis)",
-     "MrBayes (phylogenetic analysis)"
+     "MAFFT",
+     "PartitionFinder v2.1.1",
+     "IQ-TREE v2.1.4",
+     "MrBayes v3.2.7a",
+     "Tracer v1.7",
+     "FigTree v1.4.4"
     ],
-    "stance": "neutral",
-    "evidence_quote": "alignments were constructed separately for each of the gene fragments using MAFFT (Katoh and Standley 2013), optimized using BioEdit v. 7.0.9 (Hall 1999), then concatenated using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)",
-    "confidence": "high"
-   }
-  },
-  "W7161936615": {
-   "id": "W7161936615",
-   "doi": "10.1111/ppa.70178",
-   "pmid": null,
-   "pmcid": null,
-   "title": "Four Novel Colletotrichum Species Associated With Anthracnose of Ornamental Araceae in Brazil With Insights Into Their Host Range",
-   "year": 2026,
-   "venue": "Plant Pathology",
-   "type": "article",
-   "passages": [
-    {
-     "source": "s2",
-     "section": null,
-     "text": "Then, SequenceMatrix v. 1.8 software (Vaidya et al. 2011) was used to generate a combined dataset of the seven loci."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "To concatenate and generate a combined dataset from sequence data across seven loci",
-    "combined_with": [],
-    "stance": "neutral",
-    "evidence_quote": "SequenceMatrix v. 1.8 software (Vaidya et al. 2011) was used to generate a combined dataset of the seven loci.",
-    "confidence": "high"
-   }
-  },
-  "W7162504162": {
-   "id": "W7162504162",
-   "doi": "10.3390/jof12060385",
-   "pmid": "42346516",
-   "pmcid": null,
-   "title": "Three New Species and One New Record of Termitomyces from China",
-   "year": 2026,
-   "venue": "Journal of Fungi",
-   "type": "article",
-   "passages": [
-    {
-     "source": "epmc",
-     "section": "2. Materials and Methods > 2.4. Sequence Alignment and Phylogenetic Analyses",
-     "text": "Phylogenies and node support values were first inferred by Maximum Likelihood (ML) from the three single-locus datasets separately, using RAxMLGUI 2.0.10 [55] with the GTRGAMMAI model and 1000 bootstrap replicates, in combination with an ML search. Since no conflicts (BS \u2265 70%) were detected among the topologies, the three single-locus datasets were concatenated using Sequence Matrix [56]. Partitioned ML analysis was performed on the concatenated dataset, as described above. The Bayesian inference (BI) analysis was performed with MrBayes 3.2 [57]. The best-fit model for the ITS-mtSSU-nrLSU dataset was GTR + F + G4+ I, determined by the Akaike Information Criterion (AIC) and ModelFinder (PhyloSuite version 1.2.3) [58,59,60]. Two runs of six chains each and sampled every 1000 generations were stopped after 9,065,000 generations, when the average standard deviation of split frequencies went below 0.01. The first 25% of the generations were discarded as burn-in, and Bayesian PPs were then calculated from the posterior distribution of the retained Bayesian trees. A clade was considered to be strongly supported if it showed a bootstrap support value (BS) \u2265 70% and a posterior probability (PP) \u2265 0.90. Phylogenetic trees were displayed in FigTree v. 1.4.0 (https://tree.bio.ed.ac.uk/software/figtree/, accessed on 6 February 2026). Genetic distances and sequence alignment statistics for each gene fragment and the concatenated dataset were calculated using the p-distance model in MEGA 12 [61]."
-    },
-    {
-     "source": "s2",
-     "section": null,
-     "text": "%) were detected among the topologies, the three single-locus datasets were concatenated using Sequence Matrix [56]."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "Concatenate three single-locus datasets into a combined dataset for partitioned phylogenetic analysis.",
-    "combined_with": [
-     "RAxMLGUI 2.0.10",
-     "MrBayes 3.2",
-     "MEGA 12",
-     "PhyloSuite"
-    ],
-    "stance": "neutral",
-    "evidence_quote": "the three single-locus datasets were concatenated using Sequence Matrix [56]",
-    "confidence": "high"
-   }
-  },
-  "W7164182363": {
-   "id": "W7164182363",
-   "doi": "10.7717/peerj.21036",
-   "pmid": "42291437",
-   "pmcid": null,
-   "title": "Behaviour-structure interplay drives acoustic signal divergence: emergence of multiple mechanisms in closely related crickets",
-   "year": 2026,
-   "venue": "PeerJ",
-   "type": "article",
-   "passages": [
-    {
-     "source": "epmc",
-     "section": "Materials and Methods > Phylogenetic reconstruction > Molecular data",
-     "text": "We used the molecular data previously published in Nattier et al. (2012), consisting of 10 molecular markers (ca. 6.8 kb). We concatenated the mitochondrial (five markers) and nuclear data (five markers) using the software Sequence Matrix v.1.7.7 (Vaidya, Lohman & Meier, 2011). The concatenated dataset was then pruned to keep one specimen per species to reconstruct the species tree and run dating analyses."
-    },
-    {
-     "source": "s2",
-     "section": null,
-     "text": "We concatenated the mitochondrial (five markers) and nuclear data (five markers) using the software Sequence Matrix v.1.7.7 ( Vaidya, Lohman & Meier, 2011 )."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "Uses Sequence Matrix software to concatenate multiple mitochondrial and nuclear molecular markers for phylogenetic reconstruction.",
-    "combined_with": [
-     "Nattier et al. (2012)"
-    ],
-    "stance": "neutral",
-    "evidence_quote": "We concatenated the mitochondrial (five markers) and nuclear data (five markers) using the software Sequence Matrix v.1.7.7 (Vaidya, Lohman & Meier, 2011).",
+    "stance": "positive",
+    "evidence_quote": "In order to obtain the aligned files for each gene group and all genes, the individually aligned amino acid datasets were then combined using SequenceMatrix v1.10 (Vaidya et al. 2011).",
     "confidence": "high"
    }
   },
@@ -3986,6 +4004,43 @@
     "confidence": "medium"
    }
   },
+  "W7165571345": {
+   "id": "W7165571345",
+   "doi": "10.3897/mycokeys.134.192749",
+   "pmid": "42382310",
+   "pmcid": null,
+   "title": "Morphological and molecular evidence reveal two new species of Sutorius (Boletaceae, Basidiomycota) from Guizhou Province, China",
+   "year": 2026,
+   "venue": "MycoKeys",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Materials and methods > Sequence alignment and phylogenetic analyses",
+     "text": "After quality assessment, sequences with obvious background peaks or contamination were excluded. Forward and reverse sequences were assembled using SEQMAN software and the assembled sequences were then submitted to GenBank for BLAST homology searches to obtain closely-related reference sequences (Table 1). Subsequently, the sequences generated in this study and the retrieved reference sequences were aligned using the online version of MAFFT 7.0 (http://mafft.cbrc.jp/alignment/server/) (Katoh and Standley 2013), with manual adjustments made in BIOEDIT v.7.0.9 (Hall 1999) as needed. SequenceMatrix (Vaidya et al. 2011) was used to assemble the sequences of the four genes. The Maximum Likelihood phylogenetic tree was constructed using RAxML\u2013HPC2 on ACCESS (8.2.12) of the CIPRES Science Gateway platform, applying the GTRCAT nucleotide substitution model with 1,000 bootstrap replicates (Miller et al. 2010). For Bayesian Inference (BI), MrBayes version ACCESS (3.2.7a) was selected for execution on the CIPRES portal. Optimal model selection for each data partition was performed using MrModelTest v. 2.0.1 (Nylander 2004), estimating the optimal phylogenetic model for each subset. Phylogenetic trees were constructed using the Akaike Information Criterion (AIC), ultimately selecting the GTR+I+G model for all gene regions. Three Markov chains were run, each undergoing 5 million generations of evolution, with sampling every 100 generations until the mean standard deviation reached 0.01. After discarding the top 20% of the evolved trees, the remaining trees were aggregated to calculate posterior probabilities (PP) for each branch. The final phylogenetic tree was visualised and optimised using FigTree v.1.4.0 software (Rambaut et al. 2014)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Se-quenceMatrix (Vaidya et al. 2011) was used to assemble the sequences of the four genes."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "To assemble sequences of four genes for phylogenetic analysis.",
+    "combined_with": [
+     "SEQMAN",
+     "MAFFT 7.0",
+     "BIOEDIT",
+     "RAxML",
+     "MrBayes"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "SequenceMatrix (Vaidya et al. 2011) was used to assemble the sequences of the four genes.",
+    "confidence": "high"
+   }
+  },
   "W7165640756": {
    "id": "W7165640756",
    "doi": "10.3897/imafungus.17.195753",
@@ -4021,12 +4076,47 @@
     "confidence": "high"
    }
   },
-  "W7165810560": {
-   "id": "W7165810560",
-   "doi": "10.3897/mycokeys.134.197559",
-   "pmid": "42395892",
+  "W7165795773": {
+   "id": "W7165795773",
+   "doi": "10.3390/microorganisms14071394",
+   "pmid": "42513900",
    "pmcid": null,
-   "title": "Morphology and multi-locus phylogeny reveal three new Cortinarius (Cortinariaceae, Agaricales) species from northwestern Yunnan, China",
+   "title": "Occurrence and Characterization of Verticillium alfalfae Causing Alfalfa Verticillium Wilt in Inner Mongolia, China, with Preliminary Fungicide Sensitivity Assessment",
+   "year": 2026,
+   "venue": "Microorganisms",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "2. Materials and Methods > 2.2. DNA Extraction, Amplification, Sequencing, and Phylogenetic Analyses",
+     "text": "PCR amplifications targeting four nuclear loci\u2014Actin (ACT), Glyceraldehyde-3-phosphate dehydrogenase (GPD), Tryptophan synthase (TS), and elongation factor 1-\u03b1 (EF)\u2014were conducted in 25 \u03bcL reaction volumes. Each reaction contained 12.5 \u03bcL of 2\u00d7 Taq PCR Mix (TIANGEN Biotech, Beijing, China), 1 \u03bcL of genomic DNA, 1 \u03bcL each of the forward and reverse primers (10 \u03bcM), and 9.5 \u03bcL of sterile double-distilled H2O. The primer pairs and their respective annealing temperatures are detailed in Table 2. The PCR thermal cycling program consisted of an initial denaturation step at 94 \u00b0C for 5 min, followed by 35 cycles of denaturation at 94 \u00b0C for 40 s, annealing at 48\u201360 \u00b0C (optimized for each gene as specified in Table 2) for 40 s, and extension at 72 \u00b0C for 40 s, with a final extension step at 72 \u00b0C for 10 min. The specificity and yield of the amplified products were verified by electrophoresis on 1.5% (w/v) agarose gels in 1 \u00d7 TAE buffer, stained with ethidium bromide, and visualized under UV illumination using a QI G5000 gel imaging system (Daoyi, Guangzhou, China). The amplicons were sequenced by Tsingke Biotechnology Co., Ltd., to ascertain the fungal species present. All newly generated sequences of the act, tef1-\u03b1, gapdh, and ts gene regions have been deposited into the NCBI GenBank database. For phylogenetic analyses, the newly generated sequences were compared against the NCBI GenBank nucleotide database using the BLASTn (NCBI, https://blast.ncbi.nlm.nih.gov/Blast.cgi, accessed on 15 December 2024) algorithm to retrieve closely related reference sequences from taxonomically verified Verticillium species. Sequences of representative Verticillium spp., including V. dahliae, V. albo-atrum, V. tricorpus, V. longisporum, V. klebahnii, V. nubilum, V. zaregamsianum, and V. nonalfalfae, as well as the outgroup taxon Gibellulopsis nigrescens, were downloaded from GenBank. Individual sequence alignments for each of the four gene regions were performed using the MAFFT v.7 online server employing the L-INS-i iterative refinement algorithm [18]. The resulting alignments were manually inspected and trimmed at both ends to remove ambiguous regions using MEGA 11.0 [19]. The four single-gene alignments were subsequently concatenated into a combined multi-locus dataset using SequenceMatrix v.1.8 [20]. A Maximum Likelihood (ML) phylogenetic tree was constructed using MEGA 11.0 with 1000 bootstrap pseudo-replicates to assess branch support."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The four single-gene alignments were subsequently concatenated into a combined multi-locus dataset using SequenceMatrix v.1.8 [20]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "Uses SequenceMatrix v.1.8 to concatenate four individually aligned gene sequences into a combined multi-locus dataset for phylogenetic analysis.",
+    "combined_with": [
+     "MAFFT v.7 (sequence alignment)",
+     "MEGA 11.0 (sequence trimming and phylogenetic tree construction)",
+     "BLASTn (sequence similarity search)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "The four single-gene alignments were subsequently concatenated into a combined multi-locus dataset using SequenceMatrix v.1.8 [20].",
+    "confidence": "high"
+   }
+  },
+  "W7166126299": {
+   "id": "W7166126299",
+   "doi": "10.3897/mycokeys.136.193238",
+   "pmid": "42405168",
+   "pmcid": null,
+   "title": "Species diversity of edible mushrooms IV: Morphology and phylogenetic analysis reveal two new species of Lyophyllum (Lyophyllaceae, Basidiomycota) from Yunnan Province, Southwestern China",
    "year": 2026,
    "venue": "MycoKeys",
    "type": "article",
@@ -4034,34 +4124,61 @@
     {
      "source": "epmc",
      "section": "Materials and methods > Sequence alignment and phylogenetic analyses",
-     "text": "Newly generated sequences were verified and assembled using DNAMAN v.9.0.1.116 (Lynnon BioSoft). To construct phylogenetic trees, these sequences were combined with those of closely related species retrieved from GenBank (Tables 1, 2). Multiple sequence alignment was performed using MAFFT v.7 (Katoh and Standley 2013; Katoh et al. 2019) and trimmed with TrimAl v.1.3 (Capella-Guti\u00e9rrez et al. 2009), with a gap threshold of 0.5 for both the ITS and nrLSU regions. The trimmed sequences were concatenated into a combined dataset using Sequence Matrix v.1.8 (Vaidya et al. 2011)."
+     "text": "The newly generated sequences in this study have been deposited in GenBank (https://www.ncbi.nlm.nih.gov/genbank/), along with other similar sequences downloaded from the NCBI (https://www.ncbi.nlm.nih.gov/) datasets, Calocybe carnea K\u00fchner, C. persicolor (Fr.) Singer and C. ionides (Bull.) K\u00fchner were selected as the outgroup taxa (Hofstetter et al. 2002). Clusters of closely related sequences were analyzed for comparison (see Table 1). Gene sequences were aligned using MAFFT v.7 (Katoh and Standley 2013) and manually trimmed and quality-checked with BioEdit v.7 (Hall 2011). Subsequently, maximum likelihood (ML) analysis was performed for each gene using RAxML-HPC2 v.8.2.3 (Stamatakis 2014) on CIPRES (Miller et al. 2010), under the GTR+G+I model with 1,000 rapid bootstrap replicates. The four single-gene alignments were concatenated into a combined dataset using Sequence Matrix (Vaidya et al. 2011)."
     },
     {
      "source": "s2",
      "section": null,
-     "text": "The trimmed sequences were concatenated into a combined dataset using Sequence Matrix v.1.8 ( Vaidya et al. 2011)."
+     "text": "The four single-gene alignments were concat - enated into a combined dataset using Sequence Matrix (Vaidya et al. 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "The citing paper applies SequenceMatrix v.1.8 to concatenate trimmed sequence alignments into a single combined dataset for phylogenetic analysis.",
+    "what_for": "The citing paper applied SequenceMatrix software to concatenate four single-gene alignments into a combined dataset for phylogenetic analysis.",
     "combined_with": [
-     "DNAMAN v.9.0.1.116",
-     "MAFFT v.7",
-     "TrimAl v.1.3"
+     "MAFFT",
+     "BioEdit",
+     "RAxML-HPC2",
+     "CIPRES"
     ],
     "stance": "neutral",
-    "evidence_quote": "The trimmed sequences were concatenated into a combined dataset using Sequence Matrix v.1.8 (Vaidya et al. 2011).",
+    "evidence_quote": "The four single-gene alignments were concatenated into a combined dataset using Sequence Matrix (Vaidya et al. 2011).",
     "confidence": "high"
    }
   },
-  "W7167494174": {
-   "id": "W7167494174",
-   "doi": "10.3897/mycokeys.136.195917",
-   "pmid": "42453997",
+  "W7166799739": {
+   "id": "W7166799739",
+   "doi": "10.1007/s00425-026-05052-5",
+   "pmid": "42384224",
    "pmcid": null,
-   "title": "Hyalosympodium gen. et sp. nov. (Pararamichloridiales, Diaporthomycetidae) from freshwater habitats in Guizhou, China",
+   "title": "Comparative plastome analysis reveals structural variation, selection, and phylogenetic relationships in Verbascum species",
+   "year": 2026,
+   "venue": "Planta",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The curated alignments were concatenated into a supermatrix using SequenceMatrix (Vaidya et al. 2011)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "The citing paper used SequenceMatrix software to concatenate their curated sequence alignments into a phylogenetic supermatrix.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "The curated alignments were concatenated into a supermatrix using SequenceMatrix (Vaidya et al. 2011).",
+    "confidence": "high"
+   }
+  },
+  "W7167498995": {
+   "id": "W7167498995",
+   "doi": "10.3897/mycokeys.136.195305",
+   "pmid": "42453996",
+   "pmcid": null,
+   "title": "Morpho-phylogenetic analyses reveal Dentisympodium fusiforme gen. et sp. nov. in Pleurotheciaceae (Pleurotheciales, Savoryellomycetidae) from China",
    "year": 2026,
    "venue": "MycoKeys",
    "type": "article",
@@ -4069,27 +4186,28 @@
     {
      "source": "epmc",
      "section": "Materials and methods > Phylogenetic analyses",
-     "text": "The forward and reverse primers of the newly generated sequences were checked and assembled using BioEdit v. 7.0.5.3 (Hall 1999) and SeqMan v. 7.0.0 (Swindell and Plasterer 1997). Similar taxa were identified through BLASTn searches conducted on the NCBI website (https://blast.ncbi.nlm.nih.gov/Blast.cgi). Multiple sequence alignments for each locus dataset were performed using MAFFT v. 7.473 (Katoh et al. 2019) and visually inspected in AliView (Larsson 2014). The LSU, ITS, SSU, and rpb2 alignments were trimmed using trimAl v. 1.2rev59 (Capella-Guti\u00e9rrez et al. 2009) and subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)."
+     "text": "The forward and reverse primers of the newly generated sequences were checked and assembled using BioEdit v. 7.0.5.3 (Hall 1999) and SeqMan v. 7.0.0 (Swindell and Plasterer 1997). Similar taxa were identified through BLASTn searches conducted on the NCBI website (Table 1, https://blast.ncbi.nlm.nih.gov/Blast.cgi). Multiple sequence alignments for each locus dataset were performed using MAFFT v.7.473 (https://mafft.cbrc.jp/alignment/server/, Katoh et al. 2019) and visually inspected in AliView (Larsson 2014). The ITS, LSU, SSU, and rpb2 alignments were trimmed using trimAl v1.2rev59 (Capella-Guti\u00e9rrez et al. 2009), and subsequently merged using SequenceMatrix v1.7.8 (Vaidya et al. 2011)."
     },
     {
      "source": "s2",
      "section": null,
-     "text": "The LSU, ITS, SSU, and rpb2 alignments were trimmed us-ing trimAl v. 1.2rev59 (Capella-Guti\u00e9rrez et al. 2009) and subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)."
+     "text": "7.8 (Vaidya et al. 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "To merge multiple sequence alignment datasets (LSU, ITS, SSU, and rpb2) in their phylogenetic analysis pipeline.",
+    "what_for": "They use SequenceMatrix v1.7.8 to merge trimmed multiple sequence alignments for the ITS, LSU, SSU, and rpb2 loci in their phylogenetic analysis.",
     "combined_with": [
-     "BioEdit v. 7.0.5.3",
-     "SeqMan v. 7.0.0",
-     "MAFFT v. 7.473",
+     "BioEdit",
+     "SeqMan",
+     "BLASTn",
+     "MAFFT",
      "AliView",
-     "trimAl v. 1.2rev59"
+     "trimAl"
     ],
     "stance": "neutral",
-    "evidence_quote": "subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)",
+    "evidence_quote": "subsequently merged using SequenceMatrix v1.7.8 (Vaidya et al. 2011)",
     "confidence": "high"
    }
   },
@@ -4117,83 +4235,6 @@
     "stance": "neutral",
     "evidence_quote": "1.10 (Vaidya et al. 2011)",
     "confidence": "medium"
-   }
-  },
-  "W7168398719": {
-   "id": "W7168398719",
-   "doi": "10.3897/mycokeys.136.199476",
-   "pmid": "42494558",
-   "pmcid": null,
-   "title": "Morphological examination and phylogenetic analyses reveal two new species in Pleurotheciaceae from China",
-   "year": 2026,
-   "venue": "MycoKeys",
-   "type": "article",
-   "passages": [
-    {
-     "source": "epmc",
-     "section": "Materials and methods > Phylogenetic analyses",
-     "text": "Newly generated sequences were checked in BioEdit v.7.0.5.3 (Hall 1999) and assembled using SeqMan v.7.0.0 (DNASTAR, Madison, WI, USA). Closely related taxa for phylogenetic analyses were selected based on BLASTn searches in NCBI GenBank (https://blast.ncbi.nlm.nih.gov/Blast.cgi) and relevant publications. Sequence alignments for each locus were generated using the online version of MAFFT v.7.307 (https://mafft.cbrc.jp/alignment/server/; Katoh et al. 2019). Ambiguously aligned regions and uninformative positions were trimmed using TrimAl v.1.2 with the \u201cgt 0.6\u201d option (Capella-Guti\u00e9rrez et al. 2009). Multi-gene datasets were concatenated using SequenceMatrix v.1.7.8 (Vaidya et al. 2011) and analyzed using maximum likelihood (ML) and Bayesian inference (BI). Newly generated sequences were deposited in GenBank (Table 1). ML and BI analyses were performed through the CIPRES Science Gateway V.3.3 (https://www.phylo.org/portal2/home.action; Miller et al. 2010). ML analysis was conducted using RAxML-HPC v.8.2.12 under the GTRGAMMA substitution model with rapid bootstrap analysis and 1000 bootstrap replicates (Stamatakis 2014). BI analysis was performed using MrBayes v.3.2.7a on XSEDE. The best-fit substitution model was determined using MrModeltest v.2.3 (Nylander 2004). Four Markov chains were run simultaneously for 50,000,000 generations, with trees sampled every 100 generations until the average standard deviation of split frequencies fell below 0.01. The first 25% of sampled trees were discarded as burn-in, and the remaining trees were used to calculate posterior probabilities (Larget and Simon 1999). Phylogenetic trees were visualized using FigTree v.1.4.4 (Rambaut 2014), and the final layouts were edited in Adobe Illustrator CS6 (Adobe Systems, San Jose, CA, USA)."
-    },
-    {
-     "source": "s2",
-     "section": null,
-     "text": "Multi-gene datasets were concatenated using SequenceMatrix v.1.7.8 (Vaidya et al. 2011) and analyzed using maximum likelihood (ML) and Bayesian inference (BI)."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "The citing paper used SequenceMatrix software to concatenate multi-gene datasets for phylogenetic analysis.",
-    "combined_with": [
-     "BioEdit",
-     "SeqMan",
-     "MAFFT",
-     "TrimAl",
-     "RAxML",
-     "MrBayes",
-     "FigTree"
-    ],
-    "stance": "positive",
-    "evidence_quote": "Multi-gene datasets were concatenated using SequenceMatrix v.1.7.8 (Vaidya et al. 2011) and analyzed using maximum likelihood (ML) and Bayesian inference (BI).",
-    "confidence": "high"
-   }
-  },
-  "W7170168402": {
-   "id": "W7170168402",
-   "doi": "10.3390/jof12080548",
-   "pmid": "42646075",
-   "pmcid": null,
-   "title": "Phylogenetic and Phylogenomic Analyses Reveal New Taxa in Clitocybaceae, with Notes on Poisonous Species and Spore Evolution",
-   "year": 2026,
-   "venue": "Journal of Fungi",
-   "type": "article",
-   "passages": [
-    {
-     "source": "epmc",
-     "section": "2. Materials and Methods > 2.4. Phylogenetic Analysis",
-     "text": "Sequences were aligned using MAFFT v7.511 [54]. Sequence concatenation was performed using SequenceMatrix 1.7.8 [55]. In Dataset II, the intronic regions of TEF1, RPB1, and RPB2 were manually excised (except for the conserved RPB1-intron 2), and the ambiguously aligned regions of ITS, LSU, and RPB1 were removed using Gblocks v0.91b [56]. According to the AIC criterion in MrModeltest v2.4 [57], the GTR + I + G model was selected as the best-fit model for all partitions of Datasets I and II. Bayesian inference (BI) analysis was performed in MrBayes v3.2.7 [58] with the selected model, two simultaneous runs, four Markov Chain Monte Carlo (MCMC) chains, sampling every 100 generations, and a total of three or five million generations to ensure a standard deviation of split frequencies below the 0.01 threshold. The first 25% of generations were discarded as burn-in, and the convergence of runs was visually assessed using the trace function in Tracer v1.7.2 [59]. Maximum likelihood (ML) analysis with 1000 bootstrap replicates was computed in RAxML v8.0.20 [60], using the GTR + I + G model."
-    },
-    {
-     "source": "s2",
-     "section": null,
-     "text": "Sequence concatenation was performed using SequenceMatrix 1.7.8 [55]."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "To concatenate multiple gene sequence datasets into single alignments for phylogenetic analysis.",
-    "combined_with": [
-     "MAFFT v7.511",
-     "Gblocks v0.91b",
-     "MrModeltest v2.4",
-     "MrBayes v3.2.7",
-     "Tracer v1.7.2",
-     "RAxML v8.0.20"
-    ],
-    "stance": "neutral",
-    "evidence_quote": "Sequence concatenation was performed using SequenceMatrix 1.7.8 [55].",
-    "confidence": "high"
    }
   },
   "W7170219348": {
@@ -4224,140 +4265,147 @@
     "confidence": "high"
    }
   },
-  "W7172331768": {
-   "id": "W7172331768",
-   "doi": "10.1080/12298093.2026.2705054",
-   "pmid": "42553618",
+  "W7171812468": {
+   "id": "W7171812468",
+   "doi": "10.3389/fmicb.2026.1913855",
+   "pmid": "42597849",
    "pmcid": null,
-   "title": "Morphological and Multilocus Phylogenetic Characterization of Septoria Species from Dioscorea , Eclipta , and Taraxacum in East Asia",
+   "title": "Wheat native endophytic bacteria isolated from Mediterranean and Atlantic agroecosystems: identification, functional profiling and seedling bioassays",
    "year": 2026,
-   "venue": "Mycobiology",
+   "venue": "Frontiers in Microbiology",
    "type": "article",
    "passages": [
     {
      "source": "epmc",
-     "section": "Materials and methods > Molecular phylogenetic analysis",
-     "text": "Multilocus phylogenetic analyses were conducted using a concatenated dataset consisting of ITS, ACT, Btub, CAL, EF1-\u03b1, and RPB2 sequences. Reference sequences of Septoria species were retrieved from GenBank based on previously published phylogenetic studies (Table 1). Sequences of each locus were aligned individually using MAFFT v7 [28] with the default algorithm and manually inspected for alignment errors. The individual alignments were concatenated using SequenceMatrix v1.8 [29] to produce a combined dataset of the six markers. Maximum-likelihood (ML) phylogenetic analyses were performed using the IQ-TREE v1.6.12 [30] with a partitioned dataset. The best-fit nucleotide substitution models for each partition were selected using ModelFinder [31]. Branch support was assessed using the ultrafast bootstrap method with 1000 replicates [32]. Sphaerulina aceris (CBS 183.97) was selected as the outgroup based on its placement outside Septoria sensu stricto in a previous phylogenetic study [12]. The inferred phylogenetic tree was visualized using iTOL v7 [33]."
+     "section": "Material and methods > Identification and phylogenetic analysis",
+     "text": "The nucleotide sequences were analyzed with FinchTV v.1.4.0 (Geospiza, Inc. Seattle, Washington, USA; www.geospiza.com/finchtv). The 16S rRNA sequences obtained were compared against the Standard Nucleotide BLAST (https://blast.ncbi.nlm.nih.gov/) for identification at the genus level. Although the initial 16S rRNA BLAST screening revealed the presence of isolates tentatively assigned to other bacterial families, only those belonging to Pseudomonadaceae, Bacillaceae, and Paenibacillaceae were retained for in-depth species-level identification and functional characterization. This decision was based on three criteria: (i) their numerical dominance within the collection, collectively accounting for the majority of recovered isolates (57.1%); (ii) their well-documented plant growth-promoting potential and biotechnological relevance in cereal crops; and (iii) the scope of the present study, which was designed to focus on these taxa within the broader WHEATBIOME project framework. Isolates assigned to other families were deposited in the UPORTO microbial stock collection for future investigation. Clade assignments were initially assessed through an initial 16S rRNA phylogenetic tree containing all validly published species of Bacillus, Peribacillus, Paenibacillus, Terribacillus, Solibacillus, Psychrobacillus, Pseudomonas and Phytopseudomonas according to the List of Prokaryotic names with Standing in Nomenclature (LPSN, August 2025) (https://lpsn.dsmz.de/). To refine species-level assignments, multilocus sequence analysis was performed using housekeeping genes: 16S rRNA and gyrB for Bacillus, Peribacillus, Paenibacillus, Terribacillus, Solibacillus and Psychrobacillus, and 16S rRNA, gyrB and rpoD for Pseudomonas and Phytopseudomonas. Annotated genomes of closely related representative strains from the NCBI database were used to retrieve their corresponding 16S rRNA, gyrB, and rpoD sequences (Supplementary Table S2). Sequences were aligned using ClustalX v.2.1 software (Larkin et al., 2007) with pairwise and multiple alignment set as default. Alignments were optimized and manually edited using BioEdit Alignment Editor v.7.0.5. (Hall, 1999) and concatenated using Sequence Matrix (Vaidya et al., 2011). Maximum likelihood (ML) analyses were conducted in MEGA v.11.0 (Tamura et al., 2021) starting from a Neighbor-Joining tree automatically generated by the software. Nearest Neighbor Interchange (NNI) was used as the heuristic method for tree inference and 1,000 bootstrap replicates were performed. MEGA v.11.0 was also used to determine the best nucleotide substitution model for constructing the ML trees. Phylogenetic trees were edited in Inkscape Vector software v.1.1 (https://www.inkscape.org) (Adobe Systems Inc, San Jose, CA, USA). Sequences generated in this study were deposited in GenBank (Supplementary Table S3)."
     },
     {
      "source": "s2",
      "section": null,
-     "text": "8 [29] to produce a combined dataset of the six markers."
+     "text": "(Hall, 1999) and concatenated using Sequence Matrix (Vaidya et al., 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "The citing paper uses SequenceMatrix v1.8 to concatenate individual sequence alignments from six genetic loci into a combined dataset for phylogenetic analysis.",
+    "what_for": "The authors used SequenceMatrix to concatenate multilocus sequence alignments (16S rRNA, gyrB, and rpoD) prior to phylogenetic analysis.",
     "combined_with": [
-     "MAFFT v7",
-     "IQ-TREE v1.6.12",
-     "ModelFinder",
-     "iTOL v7"
+     "ClustalX",
+     "BioEdit Alignment Editor",
+     "MEGA"
     ],
-    "stance": "neutral",
-    "evidence_quote": "The individual alignments were concatenated using SequenceMatrix v1.8 [29] to produce a combined dataset of the six markers.",
+    "stance": "positive",
+    "evidence_quote": "Alignments were optimized and manually edited using BioEdit Alignment Editor v.7.0.5. (Hall, 1999) and concatenated using Sequence Matrix (Vaidya et al., 2011).",
     "confidence": "high"
    }
   },
-  "W7197023610": {
-   "id": "W7197023610",
-   "doi": "10.1007/s11033-026-12530-2",
-   "pmid": "42560383",
+  "W7197021636": {
+   "id": "W7197021636",
+   "doi": "10.3897/mycokeys.138.186765",
+   "pmid": "42602383",
    "pmcid": null,
-   "title": "DNA barcode markers for birds of the genus Sporophila: advances in species identification",
-   "year": 2026,
-   "venue": "Molecular Biology Reports",
-   "type": "article",
-   "passages": [
-    {
-     "source": "epmc",
-     "section": "Materials and methods > Data analysis",
-     "text": "Multiple sequence alignment was conducted using ClustalW in BioEdit 7.2.5 [31]. Manual editing to remove primer and standardize lengths. The CYTB, ND2, and COI gene sequences were then concatenated using Sequence Matrix 1.9 v1.7.6 software [32]."
-    }
-   ],
-   "s2_intents": [],
-   "role": {
-    "role": "uses-tool-or-method",
-    "what_for": "Concatenated multiple gene sequences (CYTB, ND2, and COI) to assemble them into a multi-gene dataset for phylogenetic analysis.",
-    "combined_with": [
-     "ClustalW",
-     "BioEdit 7.2.5"
-    ],
-    "stance": "neutral",
-    "evidence_quote": "The CYTB, ND2, and COI gene sequences were then concatenated using Sequence Matrix 1.9 v1.7.6 software [32].",
-    "confidence": "high"
-   }
-  },
-  "W7203445115": {
-   "id": "W7203445115",
-   "doi": "10.3897/mycokeys.138.198399",
-   "pmid": "42633043",
-   "pmcid": null,
-   "title": "Three new entomopathogenic fungi (Hypocreales, Cordycipitaceae) in Fodingshan Nature Reserve, Guizhou, China",
+   "title": "Integrative taxonomy reveals two new species of Cortinarius section Telamonia (Cortinariaceae, Agaricales) from southwestern China",
    "year": 2026,
    "venue": "MycoKeys",
    "type": "article",
    "passages": [
     {
      "source": "epmc",
-     "section": "Materials and methods > Sequence alignments and phylogenetic analyses",
-     "text": "Both concatenated datasets were assembled using SequenceMatrix v.1.7.8 (Vaidya et al. 2011), and the optimal substitution models for Bayesian analysis were determined using ModelFinder (Kalyaanamoorthy et al. 2017) implemented in PhyloSuite v.1.2.2 (Zhang et al. 2020). The two datasets were then subjected to identical phylogenetic analyses using both Bayesian inference (BI) and maximum likelihood (ML) methods. For BI, MrBayes v.3.2 (Ronquist et al. 2012) was run for 10,000,000 generations under a Markov chain Monte Carlo (MCMC) algorithm, sampling every 500th tree to yield 20,001 trees; the first 4,000 trees were discarded as burn-in, and the remaining 16,001 trees were used to compute posterior probabilities on the 50% majority-rule consensus tree. After the analysis was finished, Tracer v.1.5 (Drummond and Rambaut 2007) was used to verify that the effective sample size (ESS) for all parameters was greater than 200, confirming the convergence of both runs and the adequacy of the burn-in."
+     "section": "Materials and methods > Phylogenetic analyses",
+     "text": "The forward and reverse sequences were assembled using DNASTAR Lasergene SeqMan Pro v.7.1.0. This study used newly generated sequence data and data from the literature to construct a phylogenetic tree (Table 1), primarily based on the research results of Liimatainen et al. (2020) and Zhou et al. (2026). Multiple sequence alignments were aligned using MAFFT v.7 (https://mafft.cbrc.jp/alignment/server/index.html, Katoh and Standley 2013; Katoh et al. 2019) and trimmed using TrimAl v.1.3 (Capella-Guti\u00e9rrez et al. 2009). The \u201cgapthreshold\u201d parameters for the ITS and nrLSU regions were set to 0.2 and 0.5, respectively. The trimmed sequences were assembled into a combined dataset in the order of ITS and nrLSU using SequenceMatrix v.1.8 (Vaidya et al. 2011)."
     },
     {
      "source": "s2",
      "section": null,
-     "text": "Both concatenated datasets were assembled using SequenceMatrix v.1.7.8 (Vaidya et al. 2011), and the optimal substitution models for Bayesian analy - sis were determined using ModelFinder (Kalyaanamoorthy et al. 2017) imple - mented in PhyloSuite v.1.2.2 (Zhang et al. 2020)."
+     "text": "The trimmed sequences were assembled into a combined dataset in the order of ITS and nrLSU using SequenceMatrix v.1.8 (Vaidya et al. 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "The citing paper uses SequenceMatrix v.1.7.8 to assemble concatenated multi-gene datasets for phylogenetic analysis.",
+    "what_for": "Concatenates trimmed sequence alignments (ITS and nrLSU regions) into a single combined dataset for phylogenetic tree construction.",
     "combined_with": [
-     "ModelFinder",
-     "PhyloSuite",
-     "MrBayes",
-     "Tracer"
+     "MAFFT v.7",
+     "TrimAl v.1.3",
+     "DNASTAR Lasergene SeqMan Pro v.7.1.0"
     ],
-    "stance": "neutral",
-    "evidence_quote": "Both concatenated datasets were assembled using SequenceMatrix v.1.7.8 (Vaidya et al. 2011)",
+    "stance": "positive",
+    "evidence_quote": "The trimmed sequences were assembled into a combined dataset in the order of ITS and nrLSU using SequenceMatrix v.1.8 (Vaidya et al. 2011).",
     "confidence": "high"
    }
   },
-  "W7203883691": {
-   "id": "W7203883691",
-   "doi": "10.1126/sciadv.aeg0031",
-   "pmid": "42627898",
+  "W7201831864": {
+   "id": "W7201831864",
+   "doi": "10.3897/mycokeys.138.189855",
+   "pmid": "42604079",
    "pmcid": null,
-   "title": "Modeling the effects of climate risk on primates globally: New perspectives on conservation priorities",
+   "title": "Two new species of Pleosporales from northern Thailand: Anastomitrabeculia chiangraiensis sp. nov. (Anastomitrabeculiaceae) and Roussoella chiangraiensis sp. nov. (Roussoellaceae)",
    "year": 2026,
-   "venue": "Science Advances",
+   "venue": "MycoKeys",
    "type": "article",
    "passages": [
     {
      "source": "epmc",
-     "section": "MATERIALS AND METHODS > Phylogenetic reconstruction and divergence time estimation",
-     "text": "Next, we used MAFFT software (93) with default parameters to align and assemble the gene coding sequences, trimming sites with poor alignment quality at the ends. Then, the aligned sequences of these five gene sets were imported into the SequenceMatrix software (94) to construct a supermatrix, treating missing sites as missing data. Phylogenetic analysis of this supermatrix was performed using the maximum likelihood method in RAxML 8.2.12 (95), using the GTR + GAMMA model with 1000 bootstrap replicates. Each gene was treated as an independent partition, with the Sunda flying lemur (Galeopterus variegatus) and the Chinese tree shrew (Tupaia belangeri) serving as outgroups (61). On the basis of this phylogenetic tree, we estimated the divergence times of primate species using the penalized likelihood method implemented in TreePL software (96). Forty known divergence dates from the TimeTree database and literature (97) were selected as calibration points for the dating analysis (table S2). Calculations were performed under optimal parameter conditions using the \u201cprime\u201d option and the \u201cthrough\u201d analysis method."
+     "section": "Material and methods > Phylogenetic analyses",
+     "text": "Single-gene alignments were generated in MAFFT v.7 (Katoh et al. 2019) using default settings and trimmed with trimAl (Capella-Guti\u00e9rrez et al. 2009). The trimmed alignments were concatenated in SequenceMatrix (Vaidya et al. 2011). Maximum Likelihood analyses were performed on the IQ-TREE webserver with default parameters and 1000 ultrafast bootstrap replicates (Nguyen et al. 2015). Substitution models for each locus were selected independently using jModelTest v.2.1.6 under the Akaike Information Criterion (AIC)."
     },
     {
      "source": "s2",
      "section": null,
-     "text": "Then, the aligned sequences of these five gene sets were imported into the SequenceMatrix software ( 94 ) to construct a supermatrix, treating missing sites as missing data."
+     "text": "The trimmed alignments were concatenated in SequenceMatrix (Vaidya et al. 2011)."
     }
    ],
    "s2_intents": [],
    "role": {
     "role": "uses-tool-or-method",
-    "what_for": "Uses SequenceMatrix software to construct a supermatrix from aligned gene sequences for phylogenetic analysis of primates.",
+    "what_for": "The citing paper applies SequenceMatrix software to concatenate trimmed sequence alignments as part of their phylogenetic analysis pipeline for identifying two new fungal species.",
     "combined_with": [
-     "MAFFT",
-     "RAxML 8.2.12",
-     "TreePL",
-     "TimeTree database"
+     "MAFFT v.7",
+     "trimAl",
+     "IQ-TREE",
+     "jModelTest v.2.1.6"
     ],
     "stance": "neutral",
-    "evidence_quote": "Then, the aligned sequences of these five gene sets were imported into the SequenceMatrix software (94) to construct a supermatrix, treating missing sites as missing data.",
+    "evidence_quote": "The trimmed alignments were concatenated in SequenceMatrix (Vaidya et al. 2011).",
+    "confidence": "high"
+   }
+  },
+  "W7204166635": {
+   "id": "W7204166635",
+   "doi": "10.3897/mycokeys.139.206673",
+   "pmid": "42688444",
+   "pmcid": null,
+   "title": "Two new species of Veronaea (Herpotrichiellaceae, Chaetothyriales) from Guizhou Province, China",
+   "year": 2026,
+   "venue": "MycoKeys",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Materials and methods > Phylogenetic analyses",
+     "text": "The forward and reverse sequences generated in this study were checked and assembled using BioEdit v. 7.0.5.3 (Hall 1999) and SeqMan v. 7.0.0 (Swindell and Plasterer 1997). Similar taxa were identified through BLASTn searches conducted on the NCBI website (https://blast.ncbi.nlm.nih.gov/Blast.cgi). Multiple sequence alignments for each locus dataset were performed using MAFFT v. 7.473 (https://mafft.cbrc.jp/alignment/server/, Katoh et al. 2019) and visually inspected in AliView (Larsson 2014). The ITS, LSU, SSU, and tub2 alignments were trimmed using trimAl v. 1.2rev59 (Capella-Guti\u00e9rrez et al. 2009) and subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011) (Table 1)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The ITS, LSU, SSU, and tub2 alignments were trimmed using trimAl v. 1.2rev59 (Capella-Guti\u00e9rrez et al. 2009) and subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011) (Table 1)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-tool-or-method",
+    "what_for": "The authors use SequenceMatrix to merge multiple trimmed sequence alignments (ITS, LSU, SSU, and tub2) into a concatenated dataset for subsequent phylogenetic analysis.",
+    "combined_with": [
+     "BioEdit v. 7.0.5.3",
+     "SeqMan v. 7.0.0",
+     "BLASTn",
+     "MAFFT v. 7.473",
+     "AliView",
+     "trimAl v. 1.2rev59"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "subsequently merged using SequenceMatrix v. 1.7.8 (Vaidya et al. 2011)",
     "confidence": "high"
    }
   },
@@ -4800,33 +4848,34 @@
   "points": [
    {
     "kind": "cited-as-claimed",
-    "text": "The core claim \u2014 that SequenceMatrix assembles multi-gene datasets from separately aligned loci \u2014 is exactly what 39 of 40 citers use it for: concatenating anywhere from two barcoding regions (ITS2 + rbcLa) to 67 plastid protein-coding genes or 79 nuclear/mitochondrial partitions into a supermatrix for phylogenetic inference."
+    "text": "39 of 40 citers use SequenceMatrix exactly as pitched: assembling individually aligned loci into a combined supermatrix before phylogenetic inference (79 nuclear+mitochondrial partitions, 67 plastid protein-coding genes, seven housekeeping genes across 105 phytoplasma strains)."
    },
    {
     "kind": "cited-as-claimed",
-    "text": "Preservation of character set and codon information on export is cited in practice, though rarely named: one citer specifies codon partitions in the exported supermatrix, another exports to NEXUS for downstream analysis, and several feed output directly into partitioned model selection and Bayesian inference."
+    "text": "The partition-metadata result survives in a thin slice: a few citers mention exporting NEXUS or specifying codon partitions from the concatenated output. Most say only 'concatenated' and never mention character sets at all."
    },
    {
     "kind": "cited-for-something-else",
-    "text": "Citers use the program well outside the insect/multi-gene systematics context it was built for \u2014 MLST typing of 105 phytoplasma strains with seven housekeeping genes, concatenation of 14 protein sequences, and comparative genomic analysis \u2014 treating it as a generic sequence-joining utility rather than a phylogenetic dataset-assembly workbench."
+    "text": "Citers use it as general alignment plumbing rather than a scale concatenator: editing sequence names, 'manually combining' trimmed alignments, merging ITS/TEF1/TUB2 from multiple sources, and generating input files for Bayesian inference \u2014 conveniences the paper did not headline."
    },
    {
     "kind": "cited-for-something-else",
-    "text": "At least one citer uses it for sequence-name editing and manual combination of trimmed alignments, i.e. as a matrix text editor for housekeeping tasks, not for the scale-and-metadata argument the paper makes."
+    "text": "Many uses sit far below the benchmarked scale \u2014 ITS2+rbcLa barcoding pairs, CO1+EF1\u03b1, SSU+cox1 from copepods, four nuclear markers. The 'hundreds of genes and taxa in minutes' speed claim is irrelevant to these; adoption is for format handling, not throughput."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "The two error-detection tools for flagging compromised sequences (contamination and specimen/sequence management errors) \u2014 a headline result and half the paper's stated question \u2014 appear in none of the 40 citing uses. Quality control at the concatenation step is silently dropped."
+    "text": "The two error-detection tools for contaminated or mislabelled sequences are invisible: not one sampled paper reports using SequenceMatrix to flag suspect sequences, leaving the 'quality control integrated into concatenation' conclusion uncorroborated by uptake."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "Taxon-set generation for assessing preliminary datasets by minimum data thresholds is never invoked; citers arrive with a fixed taxon list and only want the matrix out the other end."
+    "text": "Taxon-set generation by minimum-data thresholds goes unmentioned. Citers arrive with a fixed locus set and leave with a matrix; nobody cites it for deciding which taxa clear a data-completeness bar."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "The speed claim (hundreds of genes and taxa in minutes) and the cross-platform Java argument go unremarked: no citer benchmarks it, reports dataset size as a reason for choosing it, or mentions the operating system. The one non-tool citation, from BAD2matrix, uses it only as a landscape marker of existing concatenation programs."
+    "text": "Cross-platform Java portability is never the stated reason for citing. The single non-tool citation is background, positioning SequenceMatrix as prior art motivating BAD2matrix \u2014 not as the OS-agnostic option."
    }
   ]
  },
- "cost_usd": 8.9088
+ "outgoing": null,
+ "cost_usd": 44.9737
 }

@@ -1,0 +1,2943 @@
+{
+ "slug": "10-2215-cjn-00810110",
+ "anchor": {
+  "id": "W2103572684",
+  "doi": "10.2215/cjn.00810110",
+  "pmid": "20688884",
+  "pmcid": "PMC2994087",
+  "title": "Serum Phosphate and Mortality in Patients with Chronic Kidney Disease",
+  "year": 2010,
+  "date": "2010-08-05",
+  "type": "article",
+  "venue": "Clinical Journal of the American Society of Nephrology",
+  "is_oa": true,
+  "topics": [
+   "Parathyroid Disorders and Treatments",
+   "Dialysis and Renal Disease Management"
+  ],
+  "cited_by_count": 244
+ },
+ "generated": "2026-09-17",
+ "windows": {
+  "last-12-months": {
+   "total": 6,
+   "with_passages": 3,
+   "sampled": [
+    "W4416690795",
+    "W7161981413",
+    "W7131886115"
+   ],
+   "roles": {
+    "uses-tool-or-method": 0,
+    "uses-data": 0,
+    "background-claim": 3,
+    "compares-against": 0,
+    "extends-or-modifies": 0,
+    "critiques-or-contradicts": 0,
+    "incidental": 0
+   },
+   "synthesis": {
+    "claims": [
+     {
+      "text": "All three sampled citing papers use Kestenbaum-style CKD phosphate-mortality evidence purely as a **background claim**, never as a method or data source \u2014 role counts are 3/3 background-claim, 0 for tool, data, comparison or critique.",
+      "cites": [
+       "W4416690795",
+       "W7161981413",
+       "W7131886115"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "The most common move is a **one-sentence risk premise** opening a clinical rationale: \"Hyperphosphatemia increases mortality in patients with CKD [12]\" is the whole of the citation in the ketoanalogue study, which then pivots to PTH and bone turnover.",
+      "cites": [
+       "W7161981413"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "**Stance is uniformly positive** across the window; no citing paper questions the association, the confounding by kidney function, or whether lowering phosphate improves outcomes.",
+      "cites": [
+       "W4416690795",
+       "W7161981413",
+       "W7131886115"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "The FAERS sevelamer safety analysis cites the **specific effect size** \u2014 a 62% relative mortality increase at 4.71 \u00b1 1.16 mg/dL in stage 5 non-dialysis CKD (mean eGFR 13 \u00b1 5.4) \u2014 as clinical justification for studying phosphate binders in pharmacovigilance data.",
+      "cites": [
+       "W7131886115"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "Citations are **bundled with parallel cohort evidence** rather than standing alone: the FAERS paper stacks it against non-CKD population studies, another stage 5 CKD study and a VA cohort, and the Nefrolog\u00eda cohort pairs it with vascular calcification and LVH/myocardial fibrosis mechanism references.",
+      "cites": [
+       "W4416690795",
+       "W7131886115"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "It appears in **methodologically unrelated workflows** \u2014 a five-year prospective cohort, a retrospective single-center dietary study alongside low-protein diet, ketoanalogues, RASi and SGLT2 inhibitors, and an FDA adverse-event disproportionality analysis \u2014 suggesting it functions as a generic citable warrant for phosphate mattering.",
+      "cites": [
+       "W4416690795",
+       "W7161981413",
+       "W7131886115"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Somewhat unexpectedly, the Nefrolog\u00eda cohort cites it **for mechanism rather than epidemiology**, attaching it to osteoblastic transformation of vascular smooth muscle cells and calcium phosphate deposition \u2014 claims the original observational study does not itself establish.",
+      "cites": [
+       "W4416690795"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "The strongest extension in the window is the finding that **within-normal-range phosphate** still predicts all-cause mortality in non-dialysis CKD, pushing the risk boundary below conventional hyperphosphatemia thresholds, though it is framed as consistent rather than contradictory.",
+      "cites": [
+       "W4416690795"
+      ],
+      "highlight": false
+     }
+    ],
+    "follow_ups": [
+     "Do any citing works actually test whether lowering serum phosphate reduces mortality, or only assume it?",
+     "How do the reported effect sizes (e.g. the 62% relative risk) compare with what the cited paper reports at those phosphate levels?",
+     "Are the vascular calcification and LVH mechanisms attributed here supported by the cited paper or imported from the co-cited references?",
+     "Does the older citation record (beyond the 12-month window) contain any critiques or null replications absent from this sample?",
+     "Is the within-normal-range phosphate finding replicated in other non-dialysis CKD cohorts?"
+    ]
+   }
+  },
+  "last-5-years": {
+   "total": 74,
+   "with_passages": 43,
+   "sampled": [
+    "W4389516475",
+    "W4402019497",
+    "W4403595468",
+    "W4377148579",
+    "W4308059661",
+    "W4389624542",
+    "W4220685651",
+    "W4360850251",
+    "W3215440883",
+    "W4409838714",
+    "W3206817994",
+    "W4379799975",
+    "W4224222526",
+    "W7131886115",
+    "W4401368963",
+    "W4399043799",
+    "W4311184273",
+    "W4383887999",
+    "W4312957776",
+    "W4284968006",
+    "W4392520344",
+    "W7161981413",
+    "W4391954162",
+    "W4408956654",
+    "W4390706117",
+    "W4408348255",
+    "W4200408247",
+    "W4220972762",
+    "W4408292763",
+    "W4411275310",
+    "W3203178256",
+    "W4410873192",
+    "W4376891238",
+    "W4382403413",
+    "W4404843591",
+    "W4404038373",
+    "W4406253148",
+    "W4416690795"
+   ],
+   "roles": {
+    "uses-tool-or-method": 0,
+    "uses-data": 1,
+    "background-claim": 34,
+    "compares-against": 2,
+    "extends-or-modifies": 0,
+    "critiques-or-contradicts": 0,
+    "incidental": 1
+   },
+   "synthesis": {
+    "claims": [
+     {
+      "text": "Almost all citations are **background-claim boilerplate** (34 of 38): the paper is invoked as settled evidence that higher serum phosphate predicts all-cause and cardiovascular mortality in non-dialysis CKD, usually in an introduction's first paragraph.",
+      "cites": [
+       "W4403595468",
+       "W4377148579",
+       "W4389624542",
+       "W4399043799",
+       "W4390706117",
+       "W4382403413",
+       "W4410873192"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "The single most reused detail is the **effect size per 1 mg/dl**, quoted as a 26% rise in all-cause and 50% rise in cardiovascular mortality, sometimes recast as a 62% relative risk in stage 5 CKD.",
+      "cites": [
+       "W3206817994",
+       "W4376891238",
+       "W7131886115"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "It is rarely used as a method or data source; the one genuine **data reuse is a meta-analysis** pooling it with 10 other cohort studies on phosphate and mortality in pre-dialysis and dialysis patients.",
+      "cites": [
+       "W4402019497"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "The paper travels in a fixed **citation bundle with Kestenbaum**, CRIC and other epidemiological cohorts, cited as an undifferentiated block (\"[3\u20137]\", \"[2,3,5,7,19,20]\") rather than for anything specific to CRISIS.",
+      "cites": [
+       "W4220685651",
+       "W4389624542",
+       "W4408348255",
+       "W4224222526"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "The dominant downstream workflow is **justifying phosphate-lowering interventions** \u2014 sevelamer, tenapanor, phosphate binders, ketoanalogue low-protein diets, FGF23\u2013Klotho targeting \u2014 where the association supplies the clinical rationale.",
+      "cites": [
+       "W4389624542",
+       "W4399043799",
+       "W4392520344",
+       "W4408292763",
+       "W7161981413",
+       "W4408956654"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "A second cluster is **mechanistic bench work** on vascular calcification: calciprotein particle assays, endothelial\u2013smooth muscle paracrine signalling and miR-145 transdifferentiation cite it to tie in vitro phosphate doses to a human mortality endpoint.",
+      "cites": [
+       "W4308059661",
+       "W4409838714",
+       "W4382403413"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Stance is uniformly **positive or neutral with no critiques**, but several citations drift well beyond CKD stage 3\u20134 \u2014 into septic shock, ventilated ICU patients, rhabdomyolysis prognosis, hemodialysis depression and mitochondrial polyphosphate signalling.",
+      "cites": [
+       "W4389516475",
+       "W4220972762",
+       "W4406253148",
+       "W4360850251",
+       "W4404843591",
+       "W4311184273"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "The two comparison uses are **quantitative benchmarking**, not disagreement: matching a phosphate cut-off to the Fukushima cohort, and checking a baseline mean of 4.2 \u00b1 0.4 mg/dl; separately the SKS/CRISIS lineage is cited only for cohort provenance.",
+      "cites": [
+       "W3215440883",
+       "W4312957776",
+       "W3203178256"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Some citing work reports a **U-shaped rather than linear** phosphate\u2013mortality curve in dialysis and ICU populations, an implicit qualification of the monotonic association the paper is invoked to support.",
+      "cites": [
+       "W4401368963",
+       "W4220972762"
+      ],
+      "highlight": false
+     }
+    ],
+    "follow_ups": [
+     "Do citing papers that quote the 26%/50% figures reproduce them accurately, or has the number drifted through secondary citation?",
+     "How did the 2024 meta-analysis weight this study, and did pooling change the direction of the pre-dialysis estimate?",
+     "In the non-CKD extensions (sepsis, ICU, rhabdomyolysis), is the cited paper's CKD-specific population ever acknowledged as a limitation?",
+     "Which citing papers pair it with Kestenbaum 2005 versus cite it alone, and does the pairing track journal or subfield?",
+     "Do the interventional phosphate-lowering trials that cite it report outcomes consistent with the observational association?"
+    ]
+   }
+  },
+  "all-time": {
+   "total": 235,
+   "with_passages": 111,
+   "sampled": [
+    "W2475300806",
+    "W4408292763",
+    "W4416690795",
+    "W3127066146",
+    "W4312957776",
+    "W2984256244",
+    "W2785094682",
+    "W4403595468",
+    "W4220972762",
+    "W4391954162",
+    "W2977982268",
+    "W4406253148",
+    "W2055301708",
+    "W3206817994",
+    "W3095808469",
+    "W2021803445",
+    "W2061981992",
+    "W2754590385",
+    "W4211140718",
+    "W4402019497",
+    "W3196220468",
+    "W1748130702",
+    "W4387798584",
+    "W4404843591",
+    "W4376891238",
+    "W2885620269",
+    "W4401368963",
+    "W4408956654",
+    "W2121435915",
+    "W2954526263",
+    "W3041533797",
+    "W2183736481",
+    "W4323652033",
+    "W1876576706",
+    "W3006011688"
+   ],
+   "roles": {
+    "uses-tool-or-method": 0,
+    "uses-data": 1,
+    "background-claim": 32,
+    "compares-against": 2,
+    "extends-or-modifies": 0,
+    "critiques-or-contradicts": 0,
+    "incidental": 0
+   },
+   "synthesis": {
+    "claims": [
+     {
+      "text": "Across 35 classified citing papers, 32 cite Eddington 2010 as a **background claim**, almost never as a method or data source \u2014 it functions as a standard citation that elevated serum phosphate predicts mortality in CKD.",
+      "cites": [
+       "W2475300806",
+       "W4408292763",
+       "W3127066146",
+       "W2984256244",
+       "W2885620269",
+       "W4403595468",
+       "W3196220468"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "The most-reused specific detail is the effect size: several papers quote that **each 1 mg/dl phosphate rise** was associated with a 26% higher all-cause and 50% higher cardiovascular mortality.",
+      "cites": [
+       "W3206817994",
+       "W4376891238"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "It typically appears **bundled into reference strings** of 5-10 epidemiological studies (DOPPS, ArMORR, COSMOS, CRIC, Isakova) rather than discussed on its own, including in the KDIGO 2017 CKD-MBD guideline update's evidence base for phosphate-lowering recommendations.",
+      "cites": [
+       "W4211140718",
+       "W2984256244",
+       "W4408292763",
+       "W4403595468"
+      ],
+      "highlight": true
+     },
+     {
+      "text": "The dominant downstream workflow is **justifying phosphate-lowering interventions**: dietary phosphate restriction, hidden-phosphate awareness campaigns, phosphate binders, NaPi-IIb inhibition, and FGF23-Klotho targeting all open with this association as rationale.",
+      "cites": [
+       "W2475300806",
+       "W2021803445",
+       "W2055301708",
+       "W2061981992",
+       "W1748130702",
+       "W3127066146",
+       "W4408956654"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Stance is **uniformly positive or neutral** with zero critiques in the sample, but two papers push back indirectly: the GCKD cohort benchmarks its own null phosphate-mortality finding against this work, and an ICU study found a linear rather than the expected U-shaped relationship.",
+      "cites": [
+       "W4387798584",
+       "W4220972762"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Only one paper **reuses the underlying data**, pooling it as 1 of 11 studies in a meta-analysis of phosphate and mortality across pre-dialysis and dialysis patients.",
+      "cites": [
+       "W4402019497"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "Citation reach extends well beyond nephrology into **non-renal and non-human contexts**: stroke prognosis, ICU rhabdomyolysis prediction models, metabolic syndrome in elderly Taiwanese, veterinary FGF23 pathology, and even mitochondrial polyphosphate\u2013AMPK signaling.",
+      "cites": [
+       "W2183736481",
+       "W4406253148",
+       "W2977982268",
+       "W1876576706",
+       "W4404843591"
+      ],
+      "highlight": false
+     },
+     {
+      "text": "A few citations look **loosely attached to the source**: one paper credits it for the BMI\u2013serum phosphate relationship, another attributes a NHANES-III hypertension finding to \"Vart et al.\", and one uses it as a benchmark that its own cohort's baseline phosphorus (4.2 \u00b1 0.4 mg/dl) was comparable.",
+      "cites": [
+       "W2121435915",
+       "W2977982268",
+       "W4312957776"
+      ],
+      "highlight": false
+     }
+    ],
+    "follow_ups": [
+     "Do the papers reporting null phosphate-mortality associations (e.g. GCKD) differ systematically in CKD stage or phosphate range from this cohort?",
+     "How often is the 26%/50% per-mg/dl effect size quoted accurately versus drifting across citing papers?",
+     "Did the KDIGO 2017 guideline's use of this study change its citation rate or framing in later papers?",
+     "Has any interventional trial of phosphate lowering in non-dialysis CKD confirmed the causal direction these citations assume?",
+     "Why does a mitochondrial polyphosphate signaling paper cite a clinical CKD cohort \u2014 is that a citation-chain artifact?"
+    ]
+   }
+  }
+ },
+ "overall": {
+  "claims": [
+   {
+    "text": "Across all three windows the paper is cited almost exclusively as a **background claim** \u2014 32 of 35 all-time, 34 of 38 in the last five years, 3 of 3 recently \u2014 supplying the premise that higher serum phosphate predicts mortality in non-dialysis CKD, typically in an introduction's opening paragraph.",
+    "cites": [
+     "W2475300806",
+     "W4408292763",
+     "W3127066146",
+     "W2984256244",
+     "W4403595468",
+     "W4377148579",
+     "W4389624542",
+     "W7161981413"
+    ],
+    "highlight": true
+   },
+   {
+    "text": "The one detail that actually gets read out of the paper is its **effect size per 1 mg/dl** \u2014 26% higher all-cause and 50% higher cardiovascular mortality, recast by some as a 62% relative risk in stage 5 CKD \u2014 which is the closest thing to substantive engagement in the whole citing set.",
+    "cites": [
+     "W3206817994",
+     "W4376891238",
+     "W7131886115"
+    ],
+    "highlight": true
+   },
+   {
+    "text": "Otherwise it travels as part of a **fixed citation bundle** with Kestenbaum, CRIC, DOPPS, ArMORR and COSMOS, cited as an undifferentiated block (\"[3\u20137]\", \"[2,3,5,7,19,20]\") including in the KDIGO 2017 CKD-MBD guideline's evidence base, rather than for anything specific to the CRISIS cohort.",
+    "cites": [
+     "W4211140718",
+     "W2984256244",
+     "W4220685651",
+     "W4389624542",
+     "W4408348255",
+     "W4224222526"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "The dominant downstream workflow is stable over fifteen years: **justifying phosphate-lowering interventions** \u2014 dietary restriction, hidden-phosphate campaigns, binders, sevelamer, tenapanor, NaPi-IIb inhibition, ketoanalogue low-protein diets and FGF23\u2013Klotho targeting.",
+    "cites": [
+     "W2475300806",
+     "W2021803445",
+     "W2055301708",
+     "W1748130702",
+     "W3127066146",
+     "W4389624542",
+     "W4399043799",
+     "W4392520344",
+     "W4408956654",
+     "W7161981413"
+    ],
+    "highlight": true
+   },
+   {
+    "text": "A second, more recent cluster is **mechanistic bench work** on vascular calcification \u2014 calciprotein particle assays, endothelial\u2013smooth muscle paracrine signalling, miR-145 transdifferentiation \u2014 citing it to anchor in vitro phosphate doses to a human mortality endpoint.",
+    "cites": [
+     "W4308059661",
+     "W4409838714",
+     "W4382403413"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "Only one citing paper **reuses the underlying data**, pooling it as 1 of 11 cohorts in a meta-analysis of phosphate and mortality across pre-dialysis and dialysis patients; nothing uses it as a tool or method.",
+    "cites": [
+     "W4402019497"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "Stance is **uniformly positive with no explicit critiques**, but pushback surfaces indirectly: the GCKD cohort benchmarks its own null phosphate\u2013mortality finding against it, and dialysis and ICU studies report U-shaped rather than monotonic curves.",
+    "cites": [
+     "W4387798584",
+     "W4220972762",
+     "W4401368963"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "Citation reach drifts far outside CKD stage 3\u20134 into **septic shock, stroke prognosis, ICU rhabdomyolysis models, elderly metabolic syndrome, veterinary FGF23 pathology and mitochondrial polyphosphate\u2013AMPK signalling**, where the association functions as a generic warrant that phosphate matters.",
+    "cites": [
+     "W2183736481",
+     "W4406253148",
+     "W2977982268",
+     "W1876576706",
+     "W4404843591",
+     "W4389516475",
+     "W4360850251"
+    ],
+    "highlight": false
+   },
+   {
+    "text": "Some attributions are **loosely attached to the source**: one paper credits it for a BMI\u2013phosphate relationship, another for a NHANES-III hypertension finding, and the most recent Nefrolog\u00eda cohort cites it for osteoblastic transdifferentiation mechanisms the observational study never established.",
+    "cites": [
+     "W2121435915",
+     "W2977982268",
+     "W4416690795"
+    ],
+    "highlight": false
+   }
+  ],
+  "follow_ups": [
+   "Does the 26%/50% per-mg/dl figure quoted by citing papers actually match the published CRISIS estimates, or has it drifted through second-hand citation?",
+   "Why does the GCKD cohort's null phosphate-mortality result not propagate into later citing introductions?",
+   "How do the U-shaped dialysis and ICU findings reconcile with the monotonic association cited in CKD stage 3-4 settings?",
+   "Has any interventional trial of phosphate lowering cited this paper and then reported a null outcome effect?",
+   "What distinguishes citations to this paper from citations to Kestenbaum 2005, given they are almost always bundled together?"
+  ]
+ },
+ "citers": {
+  "W4211140718": {
+   "id": "W4211140718",
+   "doi": "10.1016/j.kisu.2017.04.001",
+   "pmid": "30675420",
+   "pmcid": null,
+   "title": "KDIGO 2017 Clinical Practice Guideline Update for the Diagnosis, Evaluation, Prevention, and Treatment of Chronic Kidney Disease\u2013Mineral and Bone Disorder (CKD-MBD)",
+   "year": 2017,
+   "venue": "Kidney International Supplements",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Chapter 4.1: Treatment of CKD-MBD targeted at lowering high serum phosphate and maintaining serum calcium > Rationale",
+     "text": "As outlined above, since publication of the 2009 KDIGO CKD-MBD Guideline, additional high-quality evidence now links higher concentrations of phosphate with mortality among patients with CKD G3a to G5 or after transplantation39, 40, 41, 42, 43, 44, 45, 46, 47, 48 (Supplementary Tables S49\u2013S51, S53\u2013S55), although some studies did not confirm this association.49, 50 However, trial data demonstrating that treatments that lower serum phosphate will improve patient-centered outcomes are still lacking, and therefore the strength of this recommendation remains weak (2C). The rationale of interventions, therefore, is still only based on epidemiological evidence as described above and biological plausibility pointing to possible phosphorus toxicity as recently summarized.51 Three recent historical cohort analyses from DOPPS, ArMORR, and COSMOS were not eligible for this evidence-based review; however, it is noteworthy that these analyses suggested that those dialysis patients who had been prescribed phosphate-binder therapy showed improved survival.52, 53, 54 It is important to note that phosphate-binder prescription was associated with better nutritional status. Indeed, correction for markers of nutritional status in the DOPPS study did mitigate the strength of the association, yet a statistically significant benefit persisted. In addition, propensity scoring attempting to correct for selection bias and subgroup analysis applied by Isakova et al.53 in the ArMORR cohort suggested robustness of the beneficial findings for those treated with phosphate binders. However, residual confounding still cannot be completely ruled out, and due to the nature of the observational data, these studies did not affect the current recommendation."
+    },
+    {
+     "source": "epmc",
+     "section": "Chapter 4.1: Treatment of CKD-MBD targeted at lowering high serum phosphate and maintaining serum calcium > Rationale",
+     "text": "The previous recommendation suggested that clinicians \u201cmaintain serum phosphate in the normal range\u201d for patients with CKD G3a to G3b and G4. The Work Group reevaluated the evidence underlying this assumption. The majority of studies (Supplementary Table S49) found phosphate to be consistently associated with excess mortality at levels above and below the limits of normal, but not in the normal range.40, 41, 42, 43, 47, 48, 56, 57 This finding is in line with the previously found U-shaped relation of phosphate with mortality risk in dialysis patients.58 However, a recent trial comparing placebo with active phosphate-binder therapy in predialysis patients (CKD G3b\u2013G4) with a mean baseline phosphate concentration of 4.2 mg/dl (1.36 mmol/l), found a minimal decline in serum phosphate, no effect on FGF23, and increases in coronary calcification scores for the active treatment group59\u2014calling into question the efficacy and safety of phosphate binding in this population, with normal phosphate concentration prior to initiation of binder treatment (Supplementary Tables S19\u201324). In this analysis, all phosphate binders were analyzed collectively, and the study was underpowered to detect differences between phosphate binders. Although the data suggested that the observed increase in coronary artery calcification (CAC) was mainly driven by the group treated with calcium-containing phosphate binders, those treated with calcium-free binders had no advantage over placebo in terms of progression of CAC. In addition, a well-executed mineral balance study in predialysis patients using calcium-containing phosphate binders demonstrated the absence of any effect on phosphate balance (while showing in the short term a positive calcium balance).60"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The guideline cites this study as part of the evidence base establishing that higher serum phosphate concentrations are associated with increased mortality in CKD patients, to support the rationale for phosphate-lowering treatment recommendations.",
+    "combined_with": [
+     "DOPPS",
+     "ArMORR",
+     "COSMOS",
+     "Isakova et al.",
+     "other epidemiological and observational studies on phosphate and CKD mortality"
+    ],
+    "stance": "positive",
+    "evidence_quote": "additional high-quality evidence now links higher concentrations of phosphate with mortality among patients with CKD G3a to G5 or after transplantation39, 40, 41, 42, 43, 44, 45, 46, 47, 48 (Supplementary Tables S49\u2013S51, S53\u2013S55)",
+    "confidence": "high"
+   }
+  },
+  "W2121435915": {
+   "id": "W2121435915",
+   "doi": "10.2215/cjn.13281211",
+   "pmid": "22554719",
+   "pmcid": null,
+   "title": "Fibroblast Growth Factor 23 and Inflammation in CKD",
+   "year": 2012,
+   "venue": "Clinical Journal of the American Society of Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "In CKD, elevated BMI is associated with reduced serum phosphate levels (18) and elevated FGF23 levels (19)."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Citing paper uses the 2010 serum phosphate study to support the known association between elevated BMI and reduced serum phosphate levels in CKD patients.",
+    "combined_with": [
+     "Reference 19 (on elevated FGF23 levels)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "elevated BMI is associated with reduced serum phosphate levels (18)",
+    "confidence": "high"
+   }
+  },
+  "W2885620269": {
+   "id": "W2885620269",
+   "doi": "10.1152/physrev.00022.2017",
+   "pmid": "30109818",
+   "pmcid": null,
+   "title": "Phosphate as a Signaling Molecule and Its Sensing Mechanism",
+   "year": 2018,
+   "venue": "Physiological Reviews",
+   "type": "review",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Moreover, phosphate load increased oxidative stress and inflammation in the aorta, heart, and kidney of a mouse model for CKD (347)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Moreover, in humans, epidemiologic studies have suggested that hyperphosphatemia is a risk factor for cardiovascular diseases and higher mortality in both dialysis and nondialysis patients with chronic kidney disease (CKD) (37, 79, 93, 143, 228, 294)."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Supports the epidemiological evidence that hyperphosphatemia is a risk factor for cardiovascular disease and increased mortality in CKD patients.",
+    "combined_with": [
+     "other epidemiological studies on hyperphosphatemia in CKD"
+    ],
+    "stance": "positive",
+    "evidence_quote": "in humans, epidemiologic studies have suggested that hyperphosphatemia is a risk factor for cardiovascular diseases and higher mortality in both dialysis and nondialysis patients with chronic kidney disease (CKD)",
+    "confidence": "high"
+   }
+  },
+  "W2021803445": {
+   "id": "W2021803445",
+   "doi": "10.1016/j.semnephrol.2012.12.018",
+   "pmid": "23465504",
+   "pmcid": null,
+   "title": "Management of Natural and Added Dietary Phosphorus Burden in Kidney Disease",
+   "year": 2013,
+   "venue": "Seminars in Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The foregoing mechanisms explain the need for early dietary control of phosphorus load [12]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Uses the cited paper's findings on serum phosphate and mortality to establish mechanistic justification for early dietary phosphorus control in kidney disease.",
+    "combined_with": [],
+    "stance": "positive",
+    "evidence_quote": "The foregoing mechanisms explain the need for early dietary control of phosphorus load [12].",
+    "confidence": "high"
+   }
+  },
+  "W2984256244": {
+   "id": "W2984256244",
+   "doi": "10.3390/toxins11110647",
+   "pmid": "31698866",
+   "pmcid": null,
+   "title": "FGF23 and Phosphate\u2013Cardiovascular Toxins in CKD",
+   "year": 2019,
+   "venue": "Toxins",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "4. The Role of FGF23 and Phosphate in CKD-Associated Cardiovascular Diseases",
+     "text": "High levels of serum FGF23 and phosphate are independently associated with an increase in all-cause and cardiovascular mortality in CKD patients [29,30,31,39,40,41,42,43]. Both contribute to the development of cardiovascular disease by distinct mechanisms. Therefore, FGF23 and phosphate are considered as therapeutic targets to improve CKD-associated cardiovascular morbidity. As discussed earlier, targeting FGF23 alone deteriorates the cardiovascular outcome owing to the detrimental effects of hyperphosphatemia. Thus, a detailed understanding of the molecular insights of FGF23 and hyperphosphatemia in the development of cardiovascular disease is essential to develop successful therapeutic strategies."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Provide evidence that high serum phosphate levels are independently associated with increased all-cause and cardiovascular mortality in CKD patients.",
+    "combined_with": [
+     "Other studies on phosphate and cardiovascular outcomes in CKD (references 29,30,31,39,40,41,42,43)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "High levels of serum FGF23 and phosphate are independently associated with an increase in all-cause and cardiovascular mortality in CKD patients [29,30,31,39,40,41,42,43].",
+    "confidence": "high"
+   }
+  },
+  "W4224222526": {
+   "id": "W4224222526",
+   "doi": "10.3390/toxins14040280",
+   "pmid": "35448889",
+   "pmcid": null,
+   "title": "Uremic Toxins and Cardiovascular Risk in Chronic Kidney Disease: What Have We Learned Recently beyond the Past Findings?",
+   "year": 2022,
+   "venue": "Toxins",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "3. Uremic Toxins and Risk for Cardiovascular Diseases > 3.3. Observational Studies > 3.3.1. Atheromatous Cardiovascular Diseases",
+     "text": "The toxic effect of PCS on ATH CVDs dates back to a study conducted in 2010 on 202 stable angina patients with early stage of CKD, presenting that an elevated plasma level of PCS was associated with CAD and it was correlated with the severity of the disease [160]. The association between hyperphosphatemia and atherosclerotic diseases was reported from 2002 onwards [161] and again recently [162]. In 1203 non-dialyzed CKD patients, high serum phosphate levels were associated with an increased risk of fatal ATH CVD [163]. Hyperphosphatemia was associated with MI in a representative study of 3490 patients with CKD [164]. TMAO is the UT most frequently studied in animal models with regard to its link to ATH CVDs. Many cohorts from 2016 onwards have confirmed these findings. High TMAO concentrations were positively correlated with coronary atherosclerosis in one study [165] and with ischemic cardiovascular events in a study of 2529 stage 3b or 4 patients with CKD [166]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses this study to support the finding that elevated serum phosphate levels are associated with increased risk of fatal atherosclerotic cardiovascular disease in non-dialyzed CKD patients.",
+    "combined_with": [
+     "PCS study (2010) on stable angina patients [160]",
+     "Studies on hyperphosphatemia (2002 onwards) [161, 162]",
+     "Hyperphosphatemia and MI study (3490 CKD patients) [164]",
+     "TMAO studies (2016 onwards) [165, 166]"
+    ],
+    "stance": "positive",
+    "evidence_quote": "In 1203 non-dialyzed CKD patients, high serum phosphate levels were associated with an increased risk of fatal ATH CVD [163].",
+    "confidence": "high"
+   }
+  },
+  "W4387798584": {
+   "id": "W4387798584",
+   "doi": "10.1038/s41413-023-00291-8",
+   "pmid": "37857629",
+   "pmcid": null,
+   "title": "Association of mineral and bone biomarkers with adverse cardiovascular outcomes and mortality in the German Chronic Kidney Disease (GCKD) cohort",
+   "year": 2023,
+   "venue": "Bone Research",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "Previous studies showed U-shaped hazard ratio estimates for iPTH and mortality in dialysis patients.13 Similarly, high iPTH levels were previously associated with mortality in nondialysis-dependent CKD patients.26 Consistent with these reports, we found iPTH to be independently associated with non-CV death. Phosphate homeostasis is mainly regulated by FGF-23, its coreceptor klotho, vitamin D, and iPTH. Poor management of hyperphosphatemia in dialysis patients is associated with fatal CV events and mortality.13,27 As expected from patients with moderately impaired kidney function, only very few participants in our cohort had hyperphosphatemia (>1.45 mmol\u00b7L\u20131 or >4.5 mg\u00b7dL\u20131). Nevertheless, a few studies have shown that even in nondialysis-dependent CKD patients with serum phosphate levels in the normal ranges, higher phosphate is associated with CV events and mortality.28,29 However, other studies could not validate this association in individuals with nondialysis-dependent CKD.30,31 Similarly, we found no association between phosphate levels and mortality, but higher phosphate levels were associated with MACEs. Of note, patients from the earlier negative studies30,31 had fairly well-preserved kidney function; thus, differences in baseline characteristics may explain the divergent observations."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "28,29 However, other studies could not validate this association in individuals with nondialysis-dependent CKD. 30,31 Similarly, we found no association between phosphate levels and mortality, but higher phosphate levels were associated with MACEs."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "compares-against",
+    "what_for": "The 2023 paper benchmarks its own null finding on phosphate-mortality association against earlier studies (including the 2010 work) that reported positive associations, contextualizing their divergent results in nondialysis CKD populations.",
+    "stance": "neutral",
+    "evidence_quote": "Nevertheless, a few studies have shown that even in nondialysis-dependent CKD patients with serum phosphate levels in the normal ranges, higher phosphate is associated with CV events and mortality.28,29 However, other studies could not validate this association in individuals with nondialysis-dependent CKD.30,31 Similarly, we found no association between phosphate levels and mortality, but higher phosphate levels were associated with MACEs.",
+    "combined_with": [
+     "Other serum phosphate studies in nondialysis CKD (refs 30,31 showing negative associations)",
+     "iPTH and mineral biomarkers in phosphate homeostasis",
+     "CV events and mortality as outcomes in CKD cohorts"
+    ],
+    "confidence": "medium"
+   }
+  },
+  "W4390706117": {
+   "id": "W4390706117",
+   "doi": "10.1007/s11914-023-00858-8",
+   "pmid": "38195897",
+   "pmcid": null,
+   "title": "The Bone-Vascular Axis in Chronic Kidney Disease: From Pathophysiology to Treatment",
+   "year": 2024,
+   "venue": "Current Osteoporosis Reports",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Hyperphosphatemia is associated with an increased cardio-vascular and global mortality in CKD [15]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that hyperphosphatemia is associated with increased cardiovascular and global mortality in CKD patients.",
+    "combined_with": [],
+    "stance": "positive",
+    "evidence_quote": "Hyperphosphatemia is associated with an increased cardio-vascular and global mortality in CKD [15].",
+    "confidence": "high"
+   }
+  },
+  "W4403595468": {
+   "id": "W4403595468",
+   "doi": "10.1111/nep.14407",
+   "pmid": "39433296",
+   "pmcid": null,
+   "title": "Phosphorous metabolism and manipulation in chronic kidney disease",
+   "year": 2024,
+   "venue": "Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "PHOSPHORUS METABOLISM IN CHRONIC KIDNEY DISEASE",
+     "text": "Phosphorus metabolism has gained so much attention in the recent past because most of the epidemiological and clinical observations have reported an association between the progressive increase of phosphorus in CKD with adverse outcomes in both pre\u2010dialysis 41 , 42 , 43 and dialysis\u2010dependent (DD) patients. 44 , 45 , 46 , 47 , 48 , 49 , 50 The cardiovascular system seems particularly involved as the kidney function decreases. 51 , 52 , 53 Interestingly, even in patients with normal kidney function, there is an association between phosphate levels and all\u2010cause mortality, cardiovascular mortality, and morbidity. 54 , 55 , 56 , 57 , 58"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Provides epidemiological evidence supporting the association between elevated serum phosphate levels and increased mortality risk in patients with chronic kidney disease.",
+    "combined_with": [
+     "references 54-58 (other sources establishing phosphate-mortality associations)",
+     "references 41-50 (evidence from pre-dialysis and dialysis-dependent patient studies)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "even in patients with normal kidney function, there is an association between phosphate levels and all\u2010cause mortality, cardiovascular mortality, and morbidity.",
+    "confidence": "high"
+   }
+  },
+  "W4404038373": {
+   "id": "W4404038373",
+   "doi": "10.1039/d4va00304g",
+   "pmid": null,
+   "pmcid": null,
+   "title": "A critical review of a hidden epidemic: examining the occupational and environmental risk factors of chronic kidney disease of unknown etiology (CKDu)",
+   "year": 2024,
+   "venue": "Environmental Science Advances",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "99 The study also found that TDS ( R = 0.271) and As ( R = 0.304) concentrations were signi \ue103 cantly positively correlated with creatinine levels ( p   0.05)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "incidental",
+    "what_for": "The cited paper does not appear in this passage; no citation relationship can be established.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "The passage [s2] discusses correlations between TDS, As, and creatinine levels but contains no reference to the cited 2010 paper on serum phosphate and mortality.",
+    "confidence": "low"
+   }
+  },
+  "W2475300806": {
+   "id": "W2475300806",
+   "doi": "10.1186/s12882-016-0283-x",
+   "pmid": "27401192",
+   "pmcid": null,
+   "title": "Diets for patients with chronic kidney disease, should we reconsider?",
+   "year": 2016,
+   "venue": "BMC Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Dietary changes ameliorate mineral bone disorders of CKD",
+     "text": "Chronic kidney disease-mineral and bone disorder (CKD-MBD) is a systemic dysfunction of mineral and bone metabolism in patients with CKD. It results from abnormalities in calcium, phosphorous, parathyroid hormone and/or vitamin D metabolism as well as abnormalities in bone turnover, mineralization, volume, linear growth or strength, in addition to vascular or other soft tissue calcification [24]. Phosphate retention plays a crucial role in the development of CKD-MBD and it also increases the risk of cardiovascular events and mortality in patients with CKD [25, 26]. In the early stages of CKD serum phosphate levels are maintained in the normal range through phosphaturia induced by increase in parathyroid hormone actions and fibroblast growth factor-23 (FGF-23) production. However, as kidney disease progresses the compensatory rise in FGF-23 levels fails to sustain phosphate clearance sufficiently and hyperphosphatemia ensues. Notably, increased FGF-23 levels by itself has been associated with increases in both cardiovascular events and mortality [27, 28], suggesting that control of phosphate homeostasis early in CKD may help reducing the clinical consequences of mineral and bone disorders. Strategies to manage elevated serum phosphorus levels include reduction of dietary phosphate intake, as well as the use of phosphate binding agents. Clinical studies have assessed the effects of dietary phosphate and protein restriction in CKD patients. For example, patients with advanced CKD (stages 4 and 5) who had a reduction in dietary phosphates and protein intake also had improved short-term control of secondary hyperparathyroidism [29\u201332]. In the long term, altering the diet allowed some patients to achieve a normal rate of bone formation [33]. Recent evidence suggests that in addition to the absolute amount of phosphate in the diet, its source (i.e., plant versus animal food) should be considered [34]. Indeed, dietary phosphates from plant-derived proteins are mostly in the form of phytates, which are less digestible in humans. Consequently, phosphates are ultimately less bioavailable compared to phosphates derived from animal sources [34]. Moe et al. addressed this issue in nine patients who had established CKD (mean eGFR 32 mL/min/1.73 m2) by comparing their responses to vegetarian- or meat-based diets with equivalent contents of protein and phosphates. After one week of the dietary intervention in their crossover study, the vegetarian diet led to lower serum levels of phosphorus and FGF-23 than the meat-based diet [35]. Moreover, 13 patients with stages 3\u20135 CKD converted their food choices from an animal protein-based diet to a 70 % plant-protein diet for four weeks. The result was a significant reduction of urinary phosphorous excretion [36] even though there were no significant changes in serum phosphorous or FGF-23 levels. The urinary sodium and titratable acid contents significantly decreased with the change to plant-based foods [36]. Overall, the combination of phosphate-restricted diets plus oral phosphate binders has become a well established approach to controlling serum phosphorus levels in patients with CKD stages 3\u20135 (including CKD stage 5D) [24]. For example, a randomized controlled trial showed that dual intervention with a low-phosphorous diet and the addition of phosphate binders was more effective than either approach alone in reducing serum FGF-23 concentrations in 39 patients with CKD stages 3\u20134 and normal serum phosphate levels [37]. Taken together, the results we have discussed suggest that restriction of dietary phosphate intake may improve the control of mineral and bone metabolism in CKD patients. Nevertheless, the prescription of low phosphate diets can be challenging in that the bioavailability of phosphates in foods (see above) needs to be considered."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Phosphate retention plays a crucial role in the development of CKD-MBD and it also increases the risk of cardiovascular events and mortality in patients with CKD [25, 26]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that phosphate retention increases cardiovascular events and mortality risk in CKD patients, providing clinical rationale for subsequent discussion of dietary phosphate reduction interventions.",
+    "combined_with": [
+     "FGF-23 studies on cardiovascular events",
+     "Dietary phosphate restriction trials (stages 4-5 CKD)",
+     "Plant vs. animal protein bioavailability studies"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Phosphate retention plays a crucial role in the development of CKD-MBD and it also increases the risk of cardiovascular events and mortality in patients with CKD [25, 26].",
+    "confidence": "high"
+   }
+  },
+  "W3206817994": {
+   "id": "W3206817994",
+   "doi": "10.1681/asn.2021040554",
+   "pmid": "34645696",
+   "pmcid": null,
+   "title": "Systematic Review and Meta-Analyses of the Effects of Phosphate-Lowering Agents in Nondialysis CKD",
+   "year": 2021,
+   "venue": "Journal of the American Society of Nephrology",
+   "type": "review",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "37 mg/dl with noncalcium binders compared with placebo in our meta-analysis may not be clinically significant, although a previous study in patients with nondialysis CKD did report that a 1 mg/dl increase in serum phosphate was associated with a 26% and 50% increase in all-cause and cardiovascular mortality, respectively.(55) A previous systematic review and meta-analysis which evaluated evidence for correlation between the effects of CKD-MBD medications, such as phosphate binders, on biochemical parameters and on patient-level end points of cardiovascular disease and mortality in patients with CKD (28 studies, 6999 participants), reported that effects on serum phosphate levels were weakly and imprecisely correlated with all-cause and cardiovascular death."
+    }
+   ],
+   "s2_intents": [
+    "result"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Cite a prior finding establishing that serum phosphate levels are associated with mortality outcomes to contextualize the clinical significance of their own meta-analysis findings.",
+    "combined_with": [
+     "systematic review and meta-analysis on CKD-MBD medications (28 studies, 6999 participants)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "a previous study in patients with nondialysis CKD did report that a 1 mg/dl increase in serum phosphate was associated with a 26% and 50% increase in all-cause and cardiovascular mortality, respectively.(55)",
+    "confidence": "high"
+   }
+  },
+  "W3041533797": {
+   "id": "W3041533797",
+   "doi": "10.3390/ph13070148",
+   "pmid": "32664308",
+   "pmcid": null,
+   "title": "A Pilot Study of a Natural Food Supplement as New Possible Therapeutic Approach in Chronic Kidney Disease Patients",
+   "year": 2020,
+   "venue": "Pharmaceuticals",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "1. Introduction",
+     "text": "CKD is directly related with cardiovascular (CV) mortality and morbidity. The latter displayed a 10 to 20-fold increase respect to general population [3,4]. This phenomenon cannot only be explained with CV traditional risk factors, but it needs a more accurate assessment that takes into consideration the uremic CV risk factors. Uremic CV risk factors that exert a key role are chronic low-grade inflammatory status [5], alteration of calcium-phosphorus metabolism [6,7,8,9], hyperhomocysteinemia [10], malnutrition [11], uremic sarcopenia [12,13,14], and oxidative stress (OS) [15,16]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The latter displayed a 10 to 20-fold increase respect to general population [3,4]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establish that alteration of calcium-phosphorus metabolism, including serum phosphate changes, is a key uremic cardiovascular risk factor in CKD patients.",
+    "combined_with": [
+     "references 3,4 on elevated CV mortality in CKD",
+     "other uremic risk factors listed (inflammatory status, hyperhomocysteinemia, malnutrition, sarcopenia, oxidative stress)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Uremic CV risk factors that exert a key role are chronic low-grade inflammatory status [5], alteration of calcium-phosphorus metabolism [6,7,8,9], hyperhomocysteinemia [10], malnutrition [11], uremic sarcopenia [12,13,14], and oxidative stress (OS) [15,16].",
+    "confidence": "high"
+   }
+  },
+  "W1876576706": {
+   "id": "W1876576706",
+   "doi": "10.1177/0300985815586222",
+   "pmid": "26018436",
+   "pmcid": null,
+   "title": "Fibroblast Growth Factor 23",
+   "year": 2015,
+   "venue": "Veterinary Pathology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Hyperphosphatemia is also a risk factor for cardiovascular disease and mortality in chronic kidney disease.(39,48,72,193) Excessive FGF23 results in left ventricular hypertrophy via a klotho-independent mechanism, likely via the calcineurinNFAT pathway."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establishes that hyperphosphatemia is a recognized risk factor for cardiovascular disease and mortality in chronic kidney disease patients.",
+    "combined_with": [
+     "reference 48",
+     "reference 72",
+     "reference 193"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Hyperphosphatemia is also a risk factor for cardiovascular disease and mortality in chronic kidney disease.(39,48,72,193)",
+    "confidence": "high"
+   }
+  },
+  "W2785094682": {
+   "id": "W2785094682",
+   "doi": "10.3164/jcbn.17-97",
+   "pmid": "29610557",
+   "pmcid": null,
+   "title": "Dietary intake of inorganic phosphorus has a stronger influence on vascular-endothelium function than organic phosphorus",
+   "year": 2018,
+   "venue": "Journal of Clinical Biochemistry and Nutrition",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Elevated serum phosphorus (P) levels have been associated with cardiovascular disease (CVD) and cardiovascular mortality in chronic kidney disease (CKD) patients.(1\u20134) Serum P level is mainly regulated by 1,25(OH)2D, a parathyroid hormone (PTH), and fibroblast growth factor 23 (FGF23), and is maintained at 2.5\u20134.5 mg/dl in healthy populations.(5\u20137) The major cause of elevated serum P is excessive P intake under the condition of kidney dysfunction."
+    },
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Hyperphosphatemia has been associated with arteriosclerosis and vascular calcification, and is an important factor in the onset of CVD in dialysis patients.(1\u20134) Therefore, P management through dietetic therapy is important for dialysis patients.(11) However, the high amounts of inorganic P found in food additives make P management difficult. In addition, there are no standardized criteria for inorganic P on food packaging labels in Japan and food manufacturers are under no obligation to provide this information, making it very difficult to ascertain the amount of P intake."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that elevated serum phosphate is associated with cardiovascular disease and mortality in CKD patients, motivating the need for dietary phosphorus management.",
+    "combined_with": [],
+    "stance": "positive",
+    "evidence_quote": "Elevated serum phosphorus (P) levels have been associated with cardiovascular disease (CVD) and cardiovascular mortality in chronic kidney disease (CKD) patients.(1\u20134) ... Hyperphosphatemia has been associated with arteriosclerosis and vascular calcification, and is an important factor in the onset of CVD in dialysis patients.(1\u20134)",
+    "confidence": "high"
+   }
+  },
+  "W3196220468": {
+   "id": "W3196220468",
+   "doi": "10.1016/j.xkme.2021.07.003",
+   "pmid": "34939015",
+   "pmcid": null,
+   "title": "Phosphate Absorption and Hyperphosphatemia Management in Kidney Disease: A Physiology-Based Review",
+   "year": 2021,
+   "venue": "Kidney Medicine",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Association of Phosphate with CV Disease in CKD",
+     "text": "Declining kidney function causes disruptions in mineral homeostasis (eg, calcium and phosphate) in addition to changes in hormone concentrations (eg, PTH and FGF-23).20,63 Phosphate retention is an initiating factor and driving force for CKD mineral and bone disorder.20 CKD mineral and bone disorder is a broad clinical syndrome that describes systemic laboratory abnormalities, bone abnormality, and vascular calcification, which are directly associated with increased risk for CVD, fractures, and mortality.64 Interactions between increasing phosphate, increasing PTH, and decreasing calcium concentrations drive feedback loops that create a worsening cycle,65,66 causing mineral and hormone homeostasis to deteriorate as CKD progresses.66 Calcium-phosphate deposition in the media of the arterial wall leads to increased media thickness and vascular stiffening,67,68 and high serum phosphorus concentrations induce calcification of vascular smooth muscle cells.69 Serum phosphorus concentration increases, even within the normal range, are known to be associated with the risk for death, CV events, and vascular calcification even in individuals without CKD.47,70, 71, 72, 73"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites the 2010 paper as epidemiological evidence that serum phosphate elevation is associated with increased mortality risk in CKD patients.",
+    "combined_with": [
+     "CKD-MBD pathophysiology",
+     "vascular calcification mechanisms",
+     "cardiovascular disease associations"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Serum phosphorus concentration increases, even within the normal range, are known to be associated with the risk for death, CV events, and vascular calcification even in individuals without CKD.",
+    "confidence": "medium"
+   }
+  },
+  "W4308059661": {
+   "id": "W4308059661",
+   "doi": "10.1007/s00223-022-01036-1",
+   "pmid": "36326853",
+   "pmcid": null,
+   "title": "Calciprotein Particle Synthesis Strategy Determines In Vitro Calcification Potential",
+   "year": 2022,
+   "venue": "Calcified Tissue International",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Cardiovascular complications are the main cause of death in patients with chronic kidney disease (CKD) [1]. As a result of renal failure, serum phosphate (Pi) concentrations are elevated in CKD patients. Pi is a strong promotor of vascular calcification and is associated with an increased risk for cardiovascular mortality [2\u20134]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that serum phosphate is associated with increased cardiovascular mortality risk in patients with chronic kidney disease.",
+    "combined_with": [
+     "[2-4]",
+     "other papers establishing phosphate-cardiovascular mortality association"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Pi is a strong promotor of vascular calcification and is associated with an increased risk for cardiovascular mortality [2\u20134].",
+    "confidence": "high"
+   }
+  },
+  "W4389516475": {
+   "id": "W4389516475",
+   "doi": "10.1038/s41598-023-49170-6",
+   "pmid": "38072848",
+   "pmcid": null,
+   "title": "Association of serum phosphate and changes in serum phosphate with 28-day mortality in septic shock from MIMIC-IV database",
+   "year": 2023,
+   "venue": "Scientific Reports",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "In recent years, a series of risk factors have been identified as predictors of death from septic shock, including old age, serum lactate level, red blood cell distribution width, blood urea nitrogen level, creatinine level, and SOFA score25\u201330. Despite the development of therapeutic agents and strategies for treating septic shock, the mortality rate remains consistently high among critically ill patients4,31\u201334. Therefore, there is an urgent need to identify more effective indicators for evaluating outcomes of septic shock. Serum phosphate level is an easily accessible parameter in clinical setting35\u201337. Several studies have demonstrated that abnormal serum phosphate levels contribute to adverse outcomes in patients with various diseases. In the Chronic Renal Insufficiency Standards Implementation Study (CRISIS), Eddington et al. demonstrated that higher phosphate levels were associated with increased mortality in non-dialysis patients with CKD stages 3 and 412. Similarly, Campos-Obando et al. reported that hyperphosphatemia was related to increased all-cause mortality and COPD mortality in men based on the Rotterdam Study14. An observational study by Kim et al. showed that hyperphosphatemia was a strong predictor of 30-day mortality in patient with blunt trauma 11. Zhong et al. observed a U-shaped association between serum phosphate levels and all-cause mortality in a retrospective cohort study of 2944 patients with acute ischemic stroke13. Accumulating evidence has indicated that higher serum phosphate levels are significantly associated with worse outcomes in patients with sepsis16,38,39. However, no relevant studies have focused on the relationship between serum phosphate levels and the prognosis of septic shock. In the present study, we found that the serum phosphate level was positively and independently associated with the 28-day mortality of patients with septic shock after adjusting for potential confounders. Therefore, the serum phosphate level is a high-risk factor for death due to septic shock."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establish that serum phosphate is an important clinical parameter associated with increased mortality across multiple disease states, providing evidence to support studying phosphate in septic shock.",
+    "combined_with": [
+     "Campos-Obando et al. Rotterdam Study",
+     "Kim et al. trauma study",
+     "Zhong et al. acute ischemic stroke study"
+    ],
+    "stance": "positive",
+    "evidence_quote": "In the Chronic Renal Insufficiency Standards Implementation Study (CRISIS), Eddington et al. demonstrated that higher phosphate levels were associated with increased mortality in non-dialysis patients with CKD stages 3 and 4",
+    "confidence": "high"
+   }
+  },
+  "W4404843591": {
+   "id": "W4404843591",
+   "doi": "10.1016/j.molmet.2024.102077",
+   "pmid": "39617267",
+   "pmcid": null,
+   "title": "Mammalian mitochondrial inorganic polyphosphate (polyP) and cell signaling: Crosstalk between polyP and the activity of AMPK",
+   "year": 2024,
+   "venue": "Molecular Metabolism",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "The degradation of mitochondrial polyP impairs AMPK activity in SH-SY5Y cells, as determined by the reduced cellular levels of pAMPK\u03b1T172 (please, note that our studies were conducted including AMPK from all sub-cellular locations). AMPK is a main regulator of mammalian cellular metabolism and mitochondrial homeostasis [46], via sensing variations in the ATP, ADP, and AMP levels, which results in conformational changes and its activation through phosphorylation [98]. Mitochondrial dysfunction deleteriously affects cellular bioenergetics, thus triggering the activation of AMPK to restore energy homeostasis [99]. Interestingly, Pi, which can be stored as polyP [100], is crucially involved in the regulation of the kinase activity of AMPK [101,102], and changes in its levels affect cell physiology [[103], [104], [105], [106], [107]]. Moreover, the hydrolysis of polyP by the PPX enzyme releases orthophosphates [60], which can alter the amount of intracellular Pi, closing the regulatory feedback. The molecular mechanisms involved in the efflux of Pi from mitochondria to cytosol still remain poorly understood, even though the role of the DIC/SLC25A10 carrier has already been proposed in this process [108]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper invokes the cited work as evidence that changes in inorganic phosphate (Pi) levels have physiological consequences, supporting the broader argument that Pi regulation is crucial to cellular processes beyond AMPK signaling.",
+    "combined_with": [
+     "AMPK",
+     "polyP hydrolysis",
+     "mitochondrial dysfunction"
+    ],
+    "stance": "positive",
+    "evidence_quote": "changes in its levels affect cell physiology [[103], [104], [105], [106], [107]]",
+    "confidence": "medium"
+   }
+  },
+  "W4408348255": {
+   "id": "W4408348255",
+   "doi": "10.1093/ckj/sfae434",
+   "pmid": "40083951",
+   "pmcid": null,
+   "title": "The true cost of phosphate control in chronic kidney disease",
+   "year": 2025,
+   "venue": "Clinical Kidney Journal",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "HYPERPHOSPHATAEMIA AND OTHER COMPLICATIONS OF CKD > Hyperphosphataemia and mortality",
+     "text": "Hyperphosphataemia has also been linked to mortality in the earlier stages of CKD. In a prospective study, Eddington et al. examined the risk of death in patients with CKD stages 3\u20134 according to quartiles of baseline serum phosphate. Their findings revealed that patients in the highest quartile exhibited an elevated risk of all-cause and cardiovascular mortality compared with those in the lowest quartile [111]. Likewise, Kestenbaum and colleagues identified a 23% elevated risk of mortality (95% confidence interval 1.12 to 1.36) for each 1 mg/dL increase in serum phosphate in a survival model adjusted for age, renal function, comorbidities, race, gender, haemoglobin and calcium in a large cohort of CKD patients. It is noteworthy that the authors observed a pronounced elevation in serum phosphate levels in the presence of creatinine clearance below 40 mL/min despite phosphate levels remaining within the normal range [112]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Their findings revealed that patients in the highest quartile exhibited an elevated risk of all-cause and cardiovascular mortality compared with those in the lowest quartile [111 ]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that CKD patients with serum phosphate levels in the highest quartile face elevated all-cause and cardiovascular mortality compared to those in the lowest quartile.",
+    "combined_with": [
+     "Kestenbaum et al."
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Their findings revealed that patients in the highest quartile exhibited an elevated risk of all-cause and cardiovascular mortality compared with those in the lowest quartile",
+    "confidence": "high"
+   }
+  },
+  "W4399043799": {
+   "id": "W4399043799",
+   "doi": "10.2147/ijnrd.s385826",
+   "pmid": "38831770",
+   "pmcid": null,
+   "title": "Hyperphosphatemia in Chronic Kidney Disease: The Search for New Treatment Paradigms and the Role of Tenapanor",
+   "year": 2024,
+   "venue": "International Journal of Nephrology and Renovascular Disease",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Pathophysiology and Effects of Hyperphosphataemia in Chronic Kidney Disease",
+     "text": "Hyperphosphataemia rises mortality also in non-dialysis dependent CKD patients. A large prospective longitudinal study including 1203 patients found that higher serum phosphate was independently associated with an increased risk for all-cause and cardiovascular death in patients with CKD stages 3 to 4.23 Similarly, an association of calcium, phosphate and intact PTH serum levels with mortality was observed among patients with stage 4 and 5 CKD in the PECERA study, a prospective open-cohort study evaluating data from 966 subjects.24 Among kidney transplant recipients acute phosphate nephropathy is a described cause of graft failure.25"
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "23 Similarly, an association of calcium, phosphate and intact PTH serum levels with mortality was observed among patients with stage 4 and 5 CKD in the PECERA study, a prospective open-cohort study evaluating data from 966 subjects."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establishes that higher serum phosphate is independently associated with increased risk of all-cause and cardiovascular death in non-dialysis dependent CKD patients.",
+    "combined_with": [
+     "PECERA study"
+    ],
+    "stance": "positive",
+    "evidence_quote": "A large prospective longitudinal study including 1203 patients found that higher serum phosphate was independently associated with an increased risk for all-cause and cardiovascular death in patients with CKD stages 3 to 4.",
+    "confidence": "high"
+   }
+  },
+  "W4409838714": {
+   "id": "W4409838714",
+   "doi": "10.1007/s00018-025-05702-z",
+   "pmid": "40287595",
+   "pmcid": null,
+   "title": "Calciprotein particle-activated endothelial cells aggravate smooth muscle cell calcification via paracrine signalling",
+   "year": 2025,
+   "venue": "Cellular and Molecular Life Sciences",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Vascular calcification (VC) is associated with cardiovascular morbidity and mortality in chronic kidney disease (CKD) [1, 2]. VC occurs in two forms; intimal and medial calcification, depending on the layer in the vessel wall where calcification occurs. While both forms of VC can be present in CKD, medial calcification (also known as M\u00f6nckeberg's sclerosis) is more common in CKD patients [3]. The medial layer of the vasculature consists of vascular smooth muscle cells (VSMCs), and therefore most factors involved in medial VC are studied for their effect on VSMCs. Uremic toxins, hyperphosphatemia, hypercalcemia, hyperparathyroidism, inflammation and oxidative stress are all known factors to be involved in VSMC calcification in CKD [4]. The effects of high serum phosphate levels on VC have been extensively studied as serum phosphate levels are associated with all-cause and cardiovascular mortality in CKD patients [5\u20137]. High phosphate levels participate in the VC process via the formation of calciprotein particles (CPP), which contain, amongst others, phosphate, calcium and serum proteins. CPP can be present in two forms: small and round primary CPP (CPP1), which spontaneously mature over time into more crystalline and larger secondary CPP (CPP2), which have been suggested to drive the development of VC [8]. In vitro, CPP2 are found to induce VSMC calcification directly [9, 10]. Additionally, CPP2 have been associated with aortic stiffness in predialysis patients as well as increased risk of worse cardiovascular outcomes in patients on dialysis [11, 12]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The effects of high serum phosphate levels on VC have been extensively studied as serum phosphate levels are associated with all-cause and cardiovascular mortality in CKD patients [5\u20137]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establish that serum phosphate levels are associated with mortality in CKD, motivating investigation of the mechanisms (like calciprotein particle formation) by which phosphate drives vascular calcification.",
+    "combined_with": [
+     "vascular calcification",
+     "calciprotein particles",
+     "VSMC calcification"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "serum phosphate levels are associated with all-cause and cardiovascular mortality in CKD patients",
+    "confidence": "high"
+   }
+  },
+  "W2055301708": {
+   "id": "W2055301708",
+   "doi": "10.1371/journal.pone.0029105",
+   "pmid": "22220204",
+   "pmcid": null,
+   "title": "Lack of Awareness among Future Medical Professionals about the Risk of Consuming Hidden Phosphate-Containing Processed Food and Drinks",
+   "year": 2011,
+   "venue": "PLoS ONE",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Recent experimental studies have convincingly demonstrated the risk of increase serum phosphate levels in the development of premature ageing to reno-vascular diseases [8], [9], [10], [11]. Particularly in patients with CKD, hyperphosphatemia is the single most important determinant of mortality [12], [13] perhaps by inducing cardiovascular complications [14], [15], [16]. Since reducing hyperphosphatemia in patients with CKD is one of the main therapeutic priorities, the patients are often advised to consume a low phosphate-containing diet and additionally prescribed with phosphate-lowering drugs. Therefore, healthcare providers, who will be dealing with CKD patients, should be especially aware of the dangers of commercially processed food and drinks, which are often rich in phosphate content."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Particularly in patients with CKD, hyperphosphatemia is the single most important determinant of mortality [12,13] perhaps by inducing cardiovascular complications [14,15,16]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establishes that hyperphosphatemia is a critical determinant of mortality in CKD patients, providing scientific justification for why healthcare providers need awareness about hidden phosphate in processed foods.",
+    "combined_with": [
+     "[8] experimental studies on serum phosphate and premature aging/reno-vascular diseases",
+     "[9] similar experimental evidence",
+     "[10] similar experimental evidence",
+     "[11] similar experimental evidence",
+     "[14] cardiovascular complication mechanisms",
+     "[15] cardiovascular complication mechanisms",
+     "[16] cardiovascular complication mechanisms"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Particularly in patients with CKD, hyperphosphatemia is the single most important determinant of mortality [12], [13] perhaps by inducing cardiovascular complications [14], [15], [16].",
+    "confidence": "high"
+   }
+  },
+  "W2061981992": {
+   "id": "W2061981992",
+   "doi": "10.1371/journal.pone.0078660",
+   "pmid": "24236030",
+   "pmcid": null,
+   "title": "Inadequate Awareness among Chronic Kidney Disease Patients Regarding Food and Drinks Containing Artificially Added Phosphate",
+   "year": 2013,
+   "venue": "PLoS ONE",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Dysregulation of phosphate balance can affect the functionality of most organ systems [1], [2], [3], [4], [5], [6], [7], [8], [9]. Several studies have shown that hyperphosphatemia is the single most important determinant of mortality in CKD patients undergoing hemodialysis [10], [11], perhaps due to cardiovascular damage [12], [13], [14]. Excessive retention of phosphate can cause extensive cellular and tissue damage, and a higher incidence of vascular calcification related to hyperphosphatemia is found in patients with CKD [1], [9], [15]. Phosphate toxicity has been associated with cardiovascular calcification in various genetically modified mouse models [16], [17], [18], [19]. More importantly, reduction of serum phosphate levels in these models can markedly suppress vascular calcification, despite the presence of significantly higher serum calcium and 1,25- dihydroxyvitamin D levels [9], [16]. In patients with CKD, hyperphosphatemia and low serum vitamin D levels are independent risk factors for high mortality [20], [21], [22]. Therefore, reducing serum phosphate in patients with CKD is a therapeutic priority, and these patients are often asked to consume a low-phosphate diet, in addition to taking phosphate-lowering drugs. Hence, it is important for CKD patients to be aware of food items and beverages that are rich in artificially added phosphates."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Several studies have shown that hyperphosphatemia is the single most important determinant of mortality in CKD patients undergoing hemodialysis [10,11], perhaps due to cardiovascular damage [12,13,14]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites the 2010 study to establish that hyperphosphatemia is a critical mortality risk factor in CKD patients, justifying the need for patient awareness of phosphate-containing foods.",
+    "combined_with": [
+     "references [1-9], [12-22]"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Several studies have shown that hyperphosphatemia is the single most important determinant of mortality in CKD patients undergoing hemodialysis [10], [11]",
+    "confidence": "high"
+   }
+  },
+  "W2183736481": {
+   "id": "W2183736481",
+   "doi": "10.7860/jcdr/2014/8350.4649",
+   "pmid": "25300293",
+   "pmcid": null,
+   "title": "Increased Serum Alkaline Phosphatase and Serum Phosphate as Predictors of Mortality after Stroke",
+   "year": 2014,
+   "venue": "JOURNAL OF CLINICAL AND DIAGNOSTIC RESEARCH",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Serum phosphate has been known to be associated with cardiovascular mortality in both uremic [17] and non-uremic patients [18]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "[17] Eddington H, Hoefield R, Sinha S, Chrysochou C, Lane B, Foley RN, et al."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establish that serum phosphate is associated with cardiovascular mortality in uremic patients as foundational evidence for examining phosphate as a mortality predictor in stroke.",
+    "combined_with": [
+     "[18] \u2014 non-uremic phosphate-mortality association"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Serum phosphate has been known to be associated with cardiovascular mortality in both uremic [17] and non-uremic patients [18].",
+    "confidence": "high"
+   }
+  },
+  "W2754590385": {
+   "id": "W2754590385",
+   "doi": "10.1002/jbmr.3294",
+   "pmid": "28914962",
+   "pmcid": null,
+   "title": "Impaired Phosphate Tolerance Revealed With an Acute Oral Challenge",
+   "year": 2017,
+   "venue": "Journal of Bone and Mineral Research",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Higher serum phosphate, even within the normal range, is associated with incremental risk of cardiovascular disease (CVD) events and mortality in people with and without chronic kidney disease (CKD).((1,2)) Although declining kidney function contributes to dysregulated phosphate homeostasis, levels of serum phosphate do not typically become abnormal until estimated glomerular filtration rate (eGFR) falls below 30mL/ min/m."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Although declining kidney function contributes to dysregulated phosphate homeostasis, levels of serum phosphate do not typically become abnormal until estimated glomerular filtration rate (eGFR) falls below 30mL/ min/m.((2,3)) To maintain serum phosphate in the normal range, regulatory hormones (parathyroid hormone [PTH], fibroblast growth factor-23 [FGF-23]) involved in phosphate excretion are elevated atmuch higher levels of GFR."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper establishes baseline evidence that higher serum phosphate\u2014even within normal ranges\u2014is associated with cardiovascular disease events and mortality in CKD patients, and documents the eGFR threshold below which phosphate becomes dysregulated.",
+    "combined_with": [
+     "Reference (1)",
+     "Reference (3)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Higher serum phosphate, even within the normal range, is associated with incremental risk of cardiovascular disease (CVD) events and mortality in people with and without chronic kidney disease (CKD)...levels of serum phosphate do not typically become abnormal until estimated glomerular filtration rate (eGFR) falls below 30mL/min/m.",
+    "confidence": "high"
+   }
+  },
+  "W3006011688": {
+   "id": "W3006011688",
+   "doi": "10.1177/0300060519895844",
+   "pmid": "32054360",
+   "pmcid": null,
+   "title": "Effect of CKD\u2013MBD phenotype on health-related quality of life in patients receiving maintenance hemodialysis: A cross-sectional study",
+   "year": 2020,
+   "venue": "Journal of International Medical Research",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "Hyperphosphatemia showed a strong correlation with mortality in patients who were undergoing MHD. Different studies suggested different targets for serum phosphate control.18\u201320 Two large-scale RCTs have been conducted on this topic. Floege et al.5 collected data from 7970 patients who were undergoing MHD at the Fresenius Hemodialysis Center in Europe. The results showed the correlations among iPTH, serum Ca, and serum P levels with the relative risk of mortality, which revealed that the baseline serum P levels increased the risk of mortality, except for the group with levels of 1.13 to 1.78 mmol/L. The correlation between serum P levels and the risk of mortality was analyzed over time. The risk of mortality showed a significant increase when the serum P level was >2.25 mmol/L. Fouque et al.6 studied the correlations between iPTH, serum Ca, and serum P levels with the relative risk of mortality among 8377 patients undergoing MHD, and a significantly increased risk of mortality was observed among patients with a serum P level <0.71 mmol/L or >1.98 mmol/L. Based on the pathophysiology, an increase in serum P levels in patients with CKD within a certain range is shown to be a compensatory mechanism for disease.10 When the disease progresses to decompensation, the increase in serum P levels exceeds a certain threshold before affecting the patient prognosis. Moreover, this threshold may vary in patients with different iPHT and serum Ca levels. The 2017 update of the Kidney Disease: Improving Global Outcomes (KDIGO) CKD\u2013MBD guidelines also recommended the initiation of phosphate-lowering therapy in patients with severe and persistent elevation of serum P concentrations.21 Plasma ALB levels in the high-score group were also higher compared with the low-score group, which suggested that the plasma ALB level showed a positive correlation with SF-36 score (Table 6). The plasma ALB level is considered to be a strong linear prognostic factor for nutritional status and the survival rate of patients undergoing MHD,22,23 and the serum P level is also considered to be a marker of malnutrition.24 Statistical analysis of serum P and plasma ALB levels in the included patients revealed a positive correlation (Table 7). In addition, serum creatinine levels were higher in the group with higher serum P. The K/DOQI Nutrition Clinical Practice Guidelines also indicate that serum creatinine levels are too low and nutritional status needs to be assessed.25 Thus, a better nutritional status might be an explanation for high HRQoL in the high serum P group."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish the established relationship between serum phosphate levels and mortality risk in hemodialysis patients, providing foundational context for discussing how phosphate control affects patient outcomes.",
+    "combined_with": [
+     "Floege et al. (reference 5)",
+     "Fouque et al. (reference 6)",
+     "KDIGO CKD-MBD guidelines"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Hyperphosphatemia showed a strong correlation with mortality in patients who were undergoing MHD. Different studies suggested different targets for serum phosphate control. Two large-scale RCTs have been conducted on this topic.",
+    "confidence": "medium"
+   }
+  },
+  "W2977982268": {
+   "id": "W2977982268",
+   "doi": "10.3390/nu11102340",
+   "pmid": "31581608",
+   "pmcid": null,
+   "title": "Serum Phosphorus as a Risk Factor of Metabolic Syndrome in the Elderly in Taiwan: A Large-Population Cohort Study",
+   "year": 2019,
+   "venue": "Nutrients",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "1. Introduction",
+     "text": "Numerous studies have indicated that serum phosphorus was a risk factor in cardiovascular outcome and related mortality [5,6,7]. The mechanisms are endothelial dysfunction [8,9,10], vascular stiffness [11,12], and vascular calcification [13,14]. Furthermore, Vart et al. also demonstrated that people with hypertension and elevated serum phosphorus were at the higher risk of cardiovascular mortality in NHANES-III. In Taiwan, according to the National Health Promotion Administration, the prevalence of metabolic syndrome increased up to 19.7% in grown-up people in 2007. Moreover, cardiovascular disease (CVD), type 2 diabetes mellitus (T2DM), and hypertension (HTN) might be related with metabolic syndrome, which have been a public health issue and the prominent cause of death in Taiwan. Meanwhile, our country has entered the aging society in recent decades. However, researches investigating the association between serum phosphorus and metabolic syndrome had not shown consistent results [15]. The purpose of our study was to investigate the association between serum phosphorus and incident metabolic disease in the elderly in the large cohort study in Taiwan."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Cites Vart et al. to establish prior evidence that elevated serum phosphorus is associated with increased cardiovascular mortality risk, particularly in people with hypertension, to support the rationale for investigating serum phosphorus as a metabolic syndrome risk factor.",
+    "combined_with": [
+     "mechanisms of vascular dysfunction (endothelial dysfunction, vascular stiffness, vascular calcification)",
+     "Taiwan metabolic syndrome epidemiology"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Vart et al. also demonstrated that people with hypertension and elevated serum phosphorus were at the higher risk of cardiovascular mortality in NHANES-III.",
+    "confidence": "high"
+   }
+  },
+  "W3095808469": {
+   "id": "W3095808469",
+   "doi": "10.4239/wjd.v11.i10.416",
+   "pmid": "33133389",
+   "pmcid": null,
+   "title": "Importance of serum phosphate in elderly patients with diabetes mellitus",
+   "year": 2020,
+   "venue": "World Journal of Diabetes",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "INTRODUCTION",
+     "text": "Serum P levels are dependent on the absorption in the gut from dietary P, the excretion and reabsorption of P in the kidneys, and the movement of P between the extracellular and skeletal pools. Parathyroid hormone and fibroblast growth factor 23 play an important role in the regulation of serum P by mediating urinary P removal[5]. Elevated serum P is recognized as an independent predictor for advanced vascular disease in chronic kidney disease (CKD)[6]. However, epidemiological studies showed that all-cause mortality was independently related to increased serum P in all populations, even without CKD and serum P levels in the upper normal reference range[7,8]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establishes the epidemiological evidence that elevated serum phosphate is independently associated with all-cause mortality in various patient populations, providing motivation for investigating phosphate in elderly diabetic patients.",
+    "combined_with": [
+     "parathyroid hormone",
+     "fibroblast growth factor 23",
+     "epidemiological studies on phosphate and mortality"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "epidemiological studies showed that all-cause mortality was independently related to increased serum P in all populations, even without CKD and serum P levels in the upper normal reference range[7,8]",
+    "confidence": "high"
+   }
+  },
+  "W4220972762": {
+   "id": "W4220972762",
+   "doi": "10.3390/jcm11071897",
+   "pmid": "35407502",
+   "pmcid": null,
+   "title": "Associations between Phosphate Concentrations and Hospital Mortality in Critically Ill Patients Receiving Mechanical Ventilation",
+   "year": 2022,
+   "venue": "Journal of Clinical Medicine",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "4. Discussion",
+     "text": "When evaluating Pmean values, a U-shaped graph was expected based on previous results (similar to the result seen for iP in the current investigation) showing increased mortality rates in the presence of hypophosphatemia and hyperphosphatemia [19,22]. However, contrary to our expectations, up to 2 mg/dL, it seemed to remain constantly in a slightly decreasing trend, and then increased linearly at concentrations above 2 mg/dL. Previous findings, similar to our result, showed linear associations between phosphate concentrations and mortality [23,24]. Thus, additional research is required to confirm these results in future intensive investigations."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Previous findings, similar to our result, showed linear associations between phosphate concentrations and mortality [23,24]."
+    }
+   ],
+   "s2_intents": [
+    "result"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To provide context on previously reported phosphate-mortality relationship patterns (U-shaped and linear) that informed the citing paper's expectations and interpretation of their findings.",
+    "combined_with": [
+     "references [19,22,23,24] on phosphate-mortality associations"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "When evaluating Pmean values, a U-shaped graph was expected based on previous results (similar to the result seen for iP in the current investigation) showing increased mortality rates in the presence of hypophosphatemia and hyperphosphatemia [19,22]. However, contrary to our expectations, up to 2 mg/dL, it seemed to remain constantly in a slightly decreasing trend, and then increased linearly at concentrations above 2 mg/dL. Previous findings, similar to our result, showed linear associations between phosphate concentrations and mortality [23,24].",
+    "confidence": "medium"
+   }
+  },
+  "W4377148579": {
+   "id": "W4377148579",
+   "doi": "10.3390/medicina59050959",
+   "pmid": "37241191",
+   "pmcid": null,
+   "title": "Understudied Hyperphosphatemia (Chronic Kidney Disease) Treatment Targets and New Biological Approaches",
+   "year": 2023,
+   "venue": "Medicina",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "2. Phosphate-Associated Toxicities",
+     "text": "It is evident from the literature that high serum phosphate levels are linked to cardiovascular adverse events among non-CKD and CKD populations [4]. Among CKD populations, mortalities in stages 3 and 4 are linked to high serum phosphate concentrations [5], whereas stage 5 (no dialysis) is linked to a high risk of mortality due to increased serum phosphate levels of 4.71 mg/dL [6]. In the largest study reported at the Veterans Affairs Medical Centers (n 1/4 3490) by Kestenbaum et al., the mortality risk for patients with CKD was linearly associated with the serum phosphate threshold of 3.5 mg/dL (1.13 mmoL/L) [7]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Among CKD populations, mortalities in stages 3 and 4 are linked to high serum phosphate concentrations [5], whereas stage 5 (no dialysis) is linked to a high risk of mortality due to increased serum phosphate levels of 4."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The 2023 paper cites the 2010 study to establish the factual finding that high serum phosphate concentrations are linked to increased mortality in CKD patients at stages 3 and 4.",
+    "combined_with": [
+     "Kestenbaum et al. Veterans Affairs study",
+     "Other related toxicity evidence [4, 6, 7]"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Among CKD populations, mortalities in stages 3 and 4 are linked to high serum phosphate concentrations [5]",
+    "confidence": "high"
+   }
+  },
+  "W4382403413": {
+   "id": "W4382403413",
+   "doi": "10.3390/nu15132918",
+   "pmid": "37447244",
+   "pmcid": null,
+   "title": "Phosphorus May Induce Phenotypic Transdifferentiation of Vascular Smooth Muscle Cells through the Reduction of microRNA-145",
+   "year": 2023,
+   "venue": "Nutrients",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "In CKD, the progressive reduction of glomerular filtration rate triggers the main compensatory mechanisms that involves an early and highly significant increase in serum FGF23, before the increments in serum PTH are observed."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The sequence and magnitude of changes in FGF23 and PTH observed in CKD seem to be different to what\nNutrients 2023, 15, 2918 9 of 13\nhappens with normal renal function."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Previous studies in rats with CKD [21,39], showed severe arterial calcification and a decrease in the aortic and serum levels of miR-145, which paralleled the transdifferentiation of VSMCs and the decrease in \u03b1-actin expression."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The seminal knowledge of the potential risks related to high P intake is based on studies in patients with chronic kidney disease (CKD) who display elevated serum P levels in the late stages\nNutrients 2023, 15, 2918. https://doi.org/10.3390/nu15132918 https://www.mdpi.com/journal/nutrients\nNutrients 2023, 15, 2918 2 of 13\nof CKD, resulting in a potent stimulus that triggers secondary hyperparathyroidism [2], increases vascular calcification, aggravates left ventricular fibrotic hypertrophy leading to heart failure, accelerates kidney damage and increases the risk of mortality [3\u20138]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The observed dissociation between PTH and FGF23 levels suggests that with normal renal function, PTH is the main regulator of P excretion, and FGF23 may play a secondary role, in contrast with what would happen in the CKD setting."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The toxic effects of P in several organs were first observed in patients with CKD, in whom the kidney removal of P is insufficient, and as a result, P accumulates."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The comparison between the kidney handling of P in CKD and in the presence of normal renal function is still a matter of debate; unfortunately, studies in healthy individuals or normal rats and mice are scarce."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "High serum P has been also associated with increased vascular calcification, and most of this knowledge came from studies carried out in CKD patients or in experimental CKD [4,33,34]."
+    }
+   ],
+   "s2_intents": [
+    "result"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites the 2010 phosphate-mortality study as foundational evidence that elevated serum phosphate in late-stage CKD patients is associated with increased mortality risk.",
+    "combined_with": [
+     "secondary hyperparathyroidism",
+     "vascular calcification",
+     "left ventricular fibrotic hypertrophy",
+     "heart failure"
+    ],
+    "stance": "positive",
+    "evidence_quote": "elevated serum P levels in the late stages of CKD, resulting in a potent stimulus that triggers secondary hyperparathyroidism [2], increases vascular calcification, aggravates left ventricular fibrotic hypertrophy leading to heart failure, accelerates kidney damage and increases the risk of mortality [3\u20138]",
+    "confidence": "medium"
+   }
+  },
+  "W4408956654": {
+   "id": "W4408956654",
+   "doi": "10.1080/14728222.2025.2482552",
+   "pmid": "40152642",
+   "pmcid": null,
+   "title": "Can targeting the FGF23-\u03b1Klotho signaling system delay phosphate-driven organ damage?",
+   "year": 2025,
+   "venue": "Expert Opinion on Therapeutic Targets",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "In the Chronic Renal Insufficiency Cohort (CRIC) study, which included patients with CKD stages 3 and 4 (average age approximately 65 years), there was a stepwise increase in mortality risk with increasing serum phosphate concentrations [26]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites the CRIC study's finding that serum phosphate concentrations correlate stepwise with mortality risk in CKD patients as established evidence supporting the biological rationale for targeting phosphate-related pathways.",
+    "combined_with": [
+     "Chronic Renal Insufficiency Cohort (CRIC) study"
+    ],
+    "stance": "positive",
+    "evidence_quote": "there was a stepwise increase in mortality risk with increasing serum phosphate concentrations [26]",
+    "confidence": "high"
+   }
+  },
+  "W4383887999": {
+   "id": "W4383887999",
+   "doi": "10.3389/fnut.2023.1094256",
+   "pmid": "37497059",
+   "pmcid": null,
+   "title": "Reduced phosphorus is associated with older age and hypoalbuminemia. Risk factors for all-cause mortality in peritoneal dialysis patients",
+   "year": 2023,
+   "venue": "Frontiers in Nutrition",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "1. Introduction",
+     "text": "The elevated concentration of phosphorus has been related to a more rapid progression of renal disease (4), but even more critical, with all-cause mortality and cardiovascular mortality in particular (5, 6). Therefore, efforts to reduce intestinal absorption through the use of binders, increase clearance through dialysis, and limit secondary hyperparathyroidism, have been the source of abundant literature in nephrology (7)."
+    },
+    {
+     "source": "epmc",
+     "section": "4. Discussion",
+     "text": "The value of hyperphosphatemia as a risk factor for all-cause and cardiovascular mortality has been previously found (2, 4\u20136). However, the association between serum phosphorus and mortality is not linear; various studies have shown a U-shaped association with greater risk at both ends, (29) but mortality has different characteristics. While high phosphorus levels have been related to all-cause and cardiovascular death, low levels have been associated with malnutrition-inflammation and, in consequence, death by infections and all-cause mortality (30). In our study, this situation was demonstrated clearly in Figure 2. Mortality was higher in Q1 and Q4 than in Q2\u2013Q3."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The elevated concentration of phosphorus has been related to a more rapid progression of renal disease (4), but even more critical, with all-cause mortality and cardiovascular mortality in particular (5, 6)."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establishes the known association between elevated serum phosphorus and all-cause and cardiovascular mortality in kidney disease patients.",
+    "combined_with": [
+     "dialysis",
+     "phosphate binders",
+     "secondary hyperparathyroidism"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "The elevated concentration of phosphorus has been related to a more rapid progression of renal disease (4), but even more critical, with all-cause mortality and cardiovascular mortality in particular (5, 6).",
+    "confidence": "high"
+   }
+  },
+  "W3203178256": {
+   "id": "W3203178256",
+   "doi": "10.1186/s12882-021-02528-2",
+   "pmid": "34600515",
+   "pmcid": null,
+   "title": "Longitudinal change in c-terminal fibroblast growth factor 23 and outcomes in patients with advanced chronic kidney disease",
+   "year": 2021,
+   "venue": "BMC Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Methods > Patient population",
+     "text": "The Salford kidney study (SKS), Salford, UK is a prospective observational study to investigate outcomes in kidney disease. Three hundred eighty-eight subjects recruited between 2004 and 2013 who had sufficient stored baseline and serial plasma samples were selected for this analysis. Details of the SKS cohort (previously known as the chronic renal insufficiency standards implementation study, CRISIS) have been published previously [32\u201335]. In brief, patients aged 18 years or older who are referred to our renal center for management of CKD and have an eGFR\u226460mls/min/1.73m2 are eligible for recruitment. Patients are managed in accordance with standard clinical practice guidelines and are followed up until death or initiation of renal replacement therapy (dialysis or transplantation). Demographic data are recorded at baseline and annually during study follow up. Blood samples are drawn for standard clinical tests and additional samples stored for subsequent biomarker analyses. Three hundred eighty-eight patients had repeated measurements of cFGF23, with a mean of 4.2 measurements per individual. Time zero was defined as the baseline sample date and follow-up was until death, initiation of renal replacement therapy, or April 2014. Date and cause of death was obtained from the Office of National Statistics (ONS), date of initiation of renal replacement therapy (RRT) was obtained from the electronic patient records. Major adverse cardiovascular events were recorded during study follow-up and defined as myocardial infarction, coronary angiogram plus angioplasty or stenting, coronary artery bypass graft surgery or stroke. Any patient reported events were verified against primary care and hospital records to ensure accuracy of reporting."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish the previously published characterization of the SKS cohort and prior investigations of biomarkers and outcomes in this patient population.",
+    "combined_with": [
+     "References [32-35]",
+     "SKS (Salford Kidney Study) cohort documentation"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Details of the SKS cohort (previously known as the chronic renal insufficiency standards implementation study, CRISIS) have been published previously [32\u201335].",
+    "confidence": "medium"
+   }
+  },
+  "W4408292763": {
+   "id": "W4408292763",
+   "doi": "10.1186/s12882-025-04058-7",
+   "pmid": "40065267",
+   "pmcid": null,
+   "title": "Effectiveness of phosphate binders on mortality and cardiovascular disease in end-stage renal disease patients with hyperphosphatemia: a multicenter real-world cohort study",
+   "year": 2025,
+   "venue": "BMC Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Background",
+     "text": "End-stage renal disease (ESRD) commonly leads to hyperphosphatemia, with estimates [1\u20136]; in turn, untreated hyperphosphatemia leads to increased risk of bone disorders (such as osteoporosis or fractures), secondary hyperparathyroidism, vascular calcification, cardiovascular events (CVD) and premature mortality [7\u201313]. Clinical practice guidelines [10, 14, 15] recommend the use of phosphate binders (PBs) for ESRD patients where serum phosphate levels exceed 4.5 mg/dl. Calcium-based PBs (CBPBs) are the recommended primary treatment option [10, 14, 15], and if ineffective or contraindicated, non-calcium-based PBs (NCBPBs, such as sevelamer, lanthanum carbonate), or aluminum hydroxide can be considered as potential secondary treatments [10, 14, 15]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "\u2026(ESRD) commonly leads to hyperphosphatemia, with estimates [1\u20136]; in turn, untreated hyperphosphatemia leads to increased risk of bone disorders (such as osteoporosis or fractures), secondary hyperparathyroidism, vascular calcification, cardiovascular events (CVD) and premature mortality [7\u201313]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that untreated hyperphosphatemia increases the risk of cardiovascular events and premature mortality, justifying why phosphate binder effectiveness on these outcomes warrants study.",
+    "combined_with": [
+     "references [1\u20136] for hyperphosphatemia prevalence estimates",
+     "references [7\u201313] collectively for the hyperphosphatemia-to-mortality causal chain"
+    ],
+    "stance": "positive",
+    "evidence_quote": "untreated hyperphosphatemia leads to increased risk of bone disorders (such as osteoporosis or fractures), secondary hyperparathyroidism, vascular calcification, cardiovascular events (CVD) and premature mortality [7\u201313]",
+    "confidence": "high"
+   }
+  },
+  "W4392520344": {
+   "id": "W4392520344",
+   "doi": "10.1155/2024/1386980",
+   "pmid": "38481823",
+   "pmcid": null,
+   "title": "Pharmacokinetics, Safety, and Tolerability of Tenapanor in Healthy Chinese and Caucasian Volunteers: A Randomized, Open-Label, Single-Center, Placebo-Controlled Phase 1 Study",
+   "year": 2024,
+   "venue": "International Journal of Clinical Practice",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "1. Background",
+     "text": "Hyperphosphatemia is known to be associated with vascular calcification, cardiovascular events, and mortality among patients with CKD, especially in those receiving maintenance hemodialysis [2\u20134]. Therefore, practice guidelines recommend that serum phosphate levels should be maintained within the normal range, i.e., 3.5 to 5.5 mg/dL [5, 6]. However, due to the complexity of phosphate metabolism regulation and the practical challenges of currently available therapeutic modalities, the management of hyperphosphatemia remains unsuccessful in many patients [7, 8]. The development of oral phosphorus-lowering drugs that possess novel mechanisms of action which allow for easier delivery and improved benefit-risk profiles is needed urgently."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Hyperphosphatemia is known to be associated with vascular calcifcation, cardiovascular events, and mortality among patients with CKD, especially in those receiving maintenance hemodialysis [2\u20134]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establishes that hyperphosphatemia is associated with mortality and cardiovascular events in CKD patients, providing clinical rationale for developing phosphorus-lowering treatments like tenapanor.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "Hyperphosphatemia is known to be associated with vascular calcification, cardiovascular events, and mortality among patients with CKD, especially in those receiving maintenance hemodialysis [2\u20134].",
+    "confidence": "high"
+   }
+  },
+  "W1748130702": {
+   "id": "W1748130702",
+   "doi": "10.1517/14656566.2015.1079622",
+   "pmid": "26293683",
+   "pmcid": null,
+   "title": "Novel iron-containing phosphate binders for treatment of hyperphosphatemia",
+   "year": 2015,
+   "venue": "Expert Opinion on Pharmacotherapy",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Although some studies have demonstrated that hyperphosphatemia is linked to increased morbidity and mortality [5,6], the KEEP trial, including 10,672 patients with early-stage CKD failed to establish an independent association [7]."
+    }
+   ],
+   "s2_intents": [
+    "result"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establishes the clinical context that hyperphosphatemia is associated with increased morbidity and mortality in CKD patients.",
+    "combined_with": [
+     "other studies on hyperphosphatemia and mortality",
+     "KEEP trial (referenced as [7])"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Although some studies have demonstrated that hyperphosphatemia is linked to increased morbidity and mortality [5,6]",
+    "confidence": "high"
+   }
+  },
+  "W4200408247": {
+   "id": "W4200408247",
+   "doi": "10.3390/medicina57121352",
+   "pmid": "34946298",
+   "pmcid": null,
+   "title": "Different Effects of Empagliflozin on Markers of Mineral-Bone Metabolism in Diabetic and Non-Diabetic Patients with Stage 3 Chronic Kidney Disease",
+   "year": 2021,
+   "venue": "Medicina",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "4. Discussion",
+     "text": "SGLT2 inhibitors have had an excellent safety record also in the mild-to-moderate CKD population [28]. The effect of these drugs on the increase of serum phosphate in CKD is important as higher serum phosphate concentrations were associated with higher mortality in CKD [59,60]. DKD patients are particularly susceptible to the toxicity of phosphate [59]. Increased serum FGF-23, which is the principal regulator of phosphate homeostasis in CKD, was also associated with worse kidney and cardiovascular outcomes [61]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The effect of these drugs on the increase of serum phosphate in CKD is important as higher serum phosphate concentrations were associated with higher mortality in CKD [59,60]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites the established finding that higher serum phosphate concentrations are associated with higher mortality in CKD to justify why SGLT2 inhibitors' effects on serum phosphate are clinically important.",
+    "combined_with": [
+     "[60]"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "higher serum phosphate concentrations were associated with higher mortality in CKD [59,60]",
+    "confidence": "high"
+   }
+  },
+  "W3215440883": {
+   "id": "W3215440883",
+   "doi": "10.2169/internalmedicine.7870-21",
+   "pmid": "34803092",
+   "pmcid": null,
+   "title": "Association between Serum Inorganic Phosphorus Levels and Adverse Outcomes in Chronic Kidney Disease: The Fukushima CKD Cohort Study",
+   "year": 2021,
+   "venue": "Internal Medicine",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "Previous studies have identified a relationship between serum inorganic phosphorus levels and cardiovascular events, kidney events, and all-cause mortality in NDD-CKD patients (6,7,11,20,21). These studies reported that serum inorganic phosphorus levels of \u22653.5 mg/dL were associated with these adverse outcomes. Although the serum inorganic phosphorus levels that contributed to this increased risk for these adverse outcomes have varied among studies, the cut-off values of serum inorganic phosphorus reported in the studies were similar to that found in the present study. In addition, the results of the present study were similar to those reported in prior studies."
+    },
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "The present study found that there were marginal significant associations observed between serum inorganic phosphorus levels at baseline and the risk of cardiovascular events only in men, with no significant associations with the risk of cardiovascular events or all-cause mortality noted in the whole cohort. Other studies have reported detecting associations between higher serum inorganic phosphorus levels and the risk of CVD events and all-cause death in NDD-CKD patients (5,7,11,13,20,21,23). However, since the incidence of cardiovascular events or all-cause death is reportedly lower in Japanese NDD-CKD patients than in their Western counterparts (14), the low frequency of these events may have been a factor contributing to this lack of a significant association. In fact, the incidence rate of CVD events (22.0 per 1,000 person-years) and all-cause death (19.8 per 1,000 person-years) in the present study were much lower than expected, possibly due to the small number of participants and the relatively short observation period. Further clinical studies with a larger sample size and longer follow-up period may reveal the association between serum inorganic phosphorus levels and these events in Japanese NDD-CKD patients."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Other studies have reported detecting associations between higher serum inorganic phosphorus levels and the risk of CVD events and all-cause death in NDDCKD patients (5, 7, 11, 13, 20, 21, 23)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Recent studies have demonstrated that elevated serum levels of inorganic phosphorus were an independent risk factor for all-cause death, cardiovascular events, and CKD progression even among patients with nondialysis-dependent CKD (NDD-CKD) (5-9)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Previous studies have identified a relationship between serum inorganic phosphorus levels and cardiovascular events, kidney events, and all-cause mortality in NDD-CKD patients (6, 7, 11, 20, 21)."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "compares-against",
+    "what_for": "To benchmark the 2021 study's serum phosphate cut-off findings against prior evidence of serum phosphate's association with adverse outcomes in CKD.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "the cut-off values of serum inorganic phosphorus reported in the studies were similar to that found in the present study",
+    "confidence": "high"
+   }
+  },
+  "W4323652033": {
+   "id": "W4323652033",
+   "doi": "10.1038/s41598-023-31048-2",
+   "pmid": "36890290",
+   "pmcid": null,
+   "title": "Comparison of the association intensity of creatinine and cystatin C with hyperphosphatemia and hyperparathyroidism in patients with chronic kidney disease",
+   "year": 2023,
+   "venue": "Scientific Reports",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Hyperphosphatemia and secondary hyperparathyroidism are common clinical features of chronic kidney disease (CKD)14. As CKD gradually progresses to an advanced stage, the prevalence of hyperphosphatemia and secondary hyperparathyroidism is increased via various mechanisms, including a decrease in renal phosphorus excretion and increase in bone resorption. In other words, hyperphosphatemia and secondary hyperparathyroidism are considered to be physiological changes following CKD progression, and are associated with cardiovascular complications and mortality in CKD15\u201317."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that hyperphosphatemia and secondary hyperparathyroidism are associated with cardiovascular complications and mortality in patients with chronic kidney disease.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "are associated with cardiovascular complications and mortality in CKD15\u201317",
+    "confidence": "high"
+   }
+  },
+  "W4401368963": {
+   "id": "W4401368963",
+   "doi": "10.1177/20543581241267163",
+   "pmid": "39114646",
+   "pmcid": null,
+   "title": "Assessment of the Correlation Between Serum Phosphate Level and Muscle Strength as Measured by Handgrip Strength in Patients Treated With Hemodialysis",
+   "year": 2024,
+   "venue": "Canadian Journal of Kidney Health and Disease",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Abnormal phosphate metabolism and retention is common among patients with chronic kidney disease (CKD), aggravated as glomerular filtration rate (GFR) decreases.6,7 Hyperphosphatemia is considered a major risk factor for cardiovascular mortality in patients with CKD.8-10 However, the interaction between serum phosphate level and survival in patients receiving dialysis has a U-shaped configuration, with increased mortality either with low phosphate level (<4.0 mg/dL) or high phosphate level (>5.5 mg/dL). 11 Phosphate level of 4.4 mg/dL was associated with the lowest mortality risk in a multicenter observational study in patients treated with hemodialysis (HD). 12 Many efforts are made to normalize serum phosphate in patients with CKD, using phosphate-restricted diet, phosphorus binders, longer or more frequent dialysis sessions to facilitate phosphate removal, and novel drug therapies.13,14 However, in daily practice, dietary phosphate restriction is difficult to achieve and may result in undesirable protein restriction, leading to PEW. 15 In fact, a more liberal phosphate diet can assist in reaching sufficient protein requirements. It may also be associated with improved survival in specific patient groups. 16"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that serum phosphate has a U-shaped relationship with mortality in dialysis patients, with both low and high phosphate levels associated with increased mortality risk.",
+    "combined_with": [
+     "refs 8-10 on hyperphosphatemia as cardiovascular risk",
+     "ref 12 on optimal phosphate level of 4.4 mg/dL",
+     "refs 13-16 on phosphate management strategies"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "However, the interaction between serum phosphate level and survival in patients receiving dialysis has a U-shaped configuration, with increased mortality either with low phosphate level (<4.0 mg/dL) or high phosphate level (>5.5 mg/dL).",
+    "confidence": "medium"
+   }
+  },
+  "W4406253148": {
+   "id": "W4406253148",
+   "doi": "10.3389/fmed.2024.1518129",
+   "pmid": "39867923",
+   "pmcid": null,
+   "title": "Predictive model for assessing the prognosis of rhabdomyolysis patients in the intensive care unit",
+   "year": 2025,
+   "venue": "Frontiers in Medicine",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "Using multivariate Cox regression analysis, we identified four variables independently associated with patient mortality: age, phosphate levels, respiratory rate, and SOFA (Sequential Organ Failure Assessment) score. These variables were ultimately utilized to develop a clinical prognostic model. Age, as a demographic factor, has shown significant importance in most medical contexts, consistent with our findings. With advancing age, patients experience gradual physiological decline and decreased resistance, posing threats to their survival (29). In RM patients, extensive muscle cell damage leads to the massive release of intracellular phosphate into the bloodstream (12). Hyperphosphatemia not only increases the risk of acute kidney injury among hospitalized patients but also serves as an independent risk factor for mortality in critically ill patients (30\u201333). Our results indicate a linear association between phosphate levels and mortality, aligning with previous research (34, 35). Respiratory rate serves as a sentinel, one of the most vital signs, as its normal range is often breached before other vital signs in nearly all cases of clinical deterioration (36). Despite ample evidence suggesting that abnormal respiratory rates are early predictors of patient deterioration, they have not received the attention they deserve (37\u201339, 41, 42). Our study also demonstrates a correlation between respiratory rate and early mortality in RM patients, further confirming its significance. The SOFA scoring system is a tool for predicting patient prognosis by assessing the functional status of six major organ systems (respiratory, coagulation, liver, cardiovascular, central nervous system, and renal functions) (40). It provides a comprehensive evaluation of various physiological indicators in critically ill patients, with higher scores indicating more severe organ failure and poorer prognosis."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that hyperphosphatemia is an independent risk factor for mortality in critically ill patients, supporting the authors' inclusion of phosphate levels in their prognostic model for rhabdomyolysis patients.",
+    "combined_with": [
+     "age as a demographic risk factor",
+     "SOFA scoring system",
+     "respiratory rate as a mortality predictor",
+     "other phosphate-mortality studies (34, 35)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Hyperphosphatemia not only increases the risk of acute kidney injury among hospitalized patients but also serves as an independent risk factor for mortality in critically ill patients (30\u201333). Our results indicate a linear association between phosphate levels and mortality, aligning with previous research (34, 35).",
+    "confidence": "high"
+   }
+  },
+  "W4220685651": {
+   "id": "W4220685651",
+   "doi": "10.1097/mnh.0000000000000796",
+   "pmid": "35266882",
+   "pmcid": null,
+   "title": "Non calcium phosphate binders - Is there any evidence of benefit",
+   "year": 2022,
+   "venue": "Current Opinion in Nephrology & Hypertension",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Epidemiological studies have consistently shown positive correlation of phosphorus levels with cardiovascular events and all-cause mortality [2,3,5,7,19,20]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Cites the 2010 serum phosphate study as part of the evidence base for the established epidemiological finding that elevated phosphorus levels correlate with cardiovascular events and mortality.",
+    "combined_with": [
+     "Multiple epidemiological studies (references 2,3,5,7,19,20)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Epidemiological studies have consistently shown positive correlation of phosphorus levels with cardiovascular events and all-cause mortality [2,3,5,7,19,20].",
+    "confidence": "high"
+   }
+  },
+  "W4410873192": {
+   "id": "W4410873192",
+   "doi": "10.3389/fendo.2025.1584602",
+   "pmid": "40510469",
+   "pmcid": null,
+   "title": "Construction and validation of a predictive model for the serum phosphorus reduction after total parathyroidectomy in patients with secondary hyperparathyroidism",
+   "year": 2025,
+   "venue": "Frontiers in Endocrinology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Hyperphosphatemia is a common complication in patients with CKD and a common cause of SHPT. In the general population, the incidence of hyperphosphatemia is about 12% (20), while in patients with end-stage renal disease, it can be as high as 50% to 74% (21). The internal homeostasis of phosphates is mainly maintained through gastrointestinal absorption, bone metabolism, and urine excretion. As CKD progresses, the function of the kidney to excrete phosphorus and to reabsorb calcium declines, leading to the loss of calcium salts and the retention of phosphate salts in the body, which further stimulates the proliferation of parathyroid cells and the secretion of large amounts of PTH, ultimately leading to the development of SHPT. Hyperphosphatemia is capable of inducing the transformation of vascular smooth muscle cells into osteoblasts, promoting calcification of the inner wall of blood vessels, augmenting the risk of coronary artery plaque formation, and resulting in a reduction in the elasticity of peripheral vessels (22, 23). Consequently, it can trigger arteriosclerosis, hypertension, coronary heart disease, left ventricular hypertrophy, and even heart failure (24), and elevate the risk of all-cause mortality and cardiovascular mortality in patients at CKD stage 3 and CKD stage 4 (25). Additionally, hyperphosphatemia can also cause central nervous system reflex hyperactivity, muscle spasms, neuromuscular excitability, even delirium, coma, and tetany symptoms. Research indicates that hyperphosphatemia is an independent risk factor for the progression of chronic kidney disease. Moreover, it can induce renal failure again in patients who have received kidney transplants, imposing a significant economic burden on patients and severely affecting the quality of life of patients with SHPT (26)."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Consequently, it can trigger arteriosclerosis, hypertension, coronary heart disease, left ventricular hypertrophy, and even heart failure (24), and elevate the risk of all-cause mortality and cardiovascular mortality in patients at CKD stage 3 and CKD stage 4 (25)."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that hyperphosphatemia increases the risk of all-cause and cardiovascular mortality in CKD patients at stages 3-4.",
+    "combined_with": [],
+    "stance": "positive",
+    "evidence_quote": "elevate the risk of all-cause mortality and cardiovascular mortality in patients at CKD stage 3 and CKD stage 4 (25)",
+    "confidence": "high"
+   }
+  },
+  "W4360850251": {
+   "id": "W4360850251",
+   "doi": "10.3390/healthcare11070941",
+   "pmid": "37046867",
+   "pmcid": null,
+   "title": "The Situation and Influencing Factors of Depression and Anxiety in Patients of Hemodialysis during the COVID-19 Pandemic in China",
+   "year": 2023,
+   "venue": "Healthcare",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "4. Discussion > 4.2. The Influencing Factors of Anxiety and Depression in the MHD Patients during the COVID-19",
+     "text": "Studies have shown that the prevalence of hyperphosphatemia in MHD patients in China is as high as 76%, but the compliance rate is only 38.5% [34].The patients with uremia are often accompanied with hyperphosphatemia, and if it is not well managed, it would cause a metabolic disorder of calcium and phosphorus, which in turn might induce osteoporosis, renal bone disease, pathological fractures and other complications, and more seriously, it could also lead to vascular calcification and cardiac attack. There is an independent correlation between serum phosphorus levels, renal failure and mortality [35]. High serum phosphorus levels could increase the risk of all-cause mortality (20%), renal failure (36%), and renal transplant failure (36%) [36]. The reports indicated that cardiovascular death among patients increase by 50% for every 0.3 mmol/L increase in serum phosphorus levels in patients with CKD [37]. The present study also showed that serum phosphorus was associated with the incidence of depression in the MHD patients. This might be explained as the high level of phosphorus induced itching and joint pain, which caused discomfort and insomnia in the patients."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "3 mmol/L increase in serum phosphorus levels in patients with CKD [37]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses findings about the relationship between serum phosphorus levels and mortality in CKD patients to establish the clinical significance of phosphorus management and as context for explaining how elevated phosphorus might contribute to depression and anxiety in hemodialysis patients.",
+    "combined_with": [
+     "[34]",
+     "[36]",
+     "[37]"
+    ],
+    "stance": "positive",
+    "evidence_quote": "There is an independent correlation between serum phosphorus levels, renal failure and mortality. High serum phosphorus levels could increase the risk of all-cause mortality (20%), renal failure (36%), and renal transplant failure (36%). The reports indicated that cardiovascular death among patients increase by 50% for every 0.3 mmol/L increase in serum phosphorus levels in patients with CKD.",
+    "confidence": "high"
+   }
+  },
+  "W4389624542": {
+   "id": "W4389624542",
+   "doi": "10.3390/jcm12247631",
+   "pmid": "38137700",
+   "pmcid": null,
+   "title": "Sevelamer Use and Mortality in People with Chronic Kidney Disease Stages 4 and 5 Not on Dialysis",
+   "year": 2023,
+   "venue": "Journal of Clinical Medicine",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "1. Introduction",
+     "text": "As chronic kidney disease (CKD) progresses, phosphaturic mechanisms such as fibroblast growth factor 23 (FGF23) and parathyroid hormone (PTH) secretion gradually become unable to overcome the continuous supply of phosphate from dietary intake, leading to a positive phosphate balance and hyperphosphatemia [1,2]. Elevations in serum phosphate concentration occur in patients with advanced CKD, especially after progression to stages 4 and 5, representing a risk factor for mortality in people with non-dialysis-dependent CKD (NDD-CKD) [3,4,5,6,7]. Therefore, it is possible, although not yet fully proven, that interventions aimed at reducing serum phosphate levels may improve survival in this population [8,9,10]."
+    },
+    {
+     "source": "epmc",
+     "section": "4. Discussion",
+     "text": "In the PECERA study, treatment with sevelamer was associated with lower all-cause and cardiovascular mortality in Spanish stage 4\u20135 NDD-CKD patients. The better survival rate was observed despite higher percentages of stage 5 CKD, higher serum levels of Caalb, phosphate and PTH, and lower eGFR and albumin levels, factors that have all been associated with higher mortality risk in NDD-CKD [1,3,4,5,6,7,25,26,27,28]. Conversely, other factors related to lower mortality risk, such as lower levels of CRP and more use of vitamin D compounds, were also observed in the sevelamer-treated group [26,29,30]. Due to the awareness of the known effects of all these confounding factors and their potential interactions, appropriate multivariate adjustments were performed [31]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper uses the cited paper to establish that elevated serum phosphate is an established risk factor for mortality in patients with non-dialysis-dependent chronic kidney disease.",
+    "combined_with": [
+     "References [1,3,4,5,6,7]"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Elevations in serum phosphate concentration occur in patients with advanced CKD, especially after progression to stages 4 and 5, representing a risk factor for mortality in people with non-dialysis-dependent CKD (NDD-CKD) [3,4,5,6,7].",
+    "confidence": "high"
+   }
+  },
+  "W4376891238": {
+   "id": "W4376891238",
+   "doi": "10.12669/pjms.39.4.6988",
+   "pmid": "37492290",
+   "pmcid": null,
+   "title": "Correlation between GAL-3, Klotho, Calcium and Phosphorus Metabolism Indexes and Cardiovascular Complications in patients with Chronic Kidney Disease",
+   "year": 2023,
+   "venue": "Pakistan Journal of Medical Sciences",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "DISCUSSION",
+     "text": "According to a prospective study of 1203 chronic kidney disease patients before dialysis by Eddington et al.17, each one mg/dl increase in serum phosphorus was associated with a 26% increase in mortality and a 50% increase in mortality from cardiovascular events. Since then, calcium and phosphorus metabolism disorders have received more and more attention from scholars."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establish the established quantitative relationship between serum phosphorus elevation and mortality risk in chronic kidney disease to contextualize their investigation of phosphorus metabolism indexes and cardiovascular complications.",
+    "combined_with": [],
+    "stance": "neutral",
+    "evidence_quote": "According to a prospective study of 1203 chronic kidney disease patients before dialysis by Eddington et al.17, each one mg/dl increase in serum phosphorus was associated with a 26% increase in mortality and a 50% increase in mortality from cardiovascular events.",
+    "confidence": "high"
+   }
+  },
+  "W4311184273": {
+   "id": "W4311184273",
+   "doi": "10.1016/j.crmeth.2022.100356",
+   "pmid": "36590696",
+   "pmcid": null,
+   "title": "Joint inference of physiological network and survival analysis identifies factors associated with aging rate",
+   "year": 2022,
+   "venue": "Cell Reports Methods",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Results > Variables associated with the aging rate (\u03b2)",
+     "text": "The decline in the robustness of the physiological system can be observed as an increased hazard of mortality as a function of time, which reads as characteristic latent parameter beta in the Gompertz equation. By definition, factors that affect the aging rate (\u03b2) change the slope of the hazard trajectory (Figure 1A). In the MrOS cohort, the strongest association we see with the aging rate is the protective effect of high RBC counts. According to our model, maintenance of high RBC counts can slow the aging rate by \u223c6% per SD increase in RBCs. Previous reports have established that loss of ability to maintain steady production of RBC is strongly associated with a variety of disease outcomes, but the effects of RBC on aging rate were not analyzed (Weiss and Goodnough, 2005). On the other hand, an increase in creatinine and serum phosphate levels, which are associated with reduced kidney function and bone maintenance respectively, accelerate the aging process by \u223c3%. High levels of serum phosphate and creatinine are known to be associated with adverse outcomes (Eddington et al., 2010; Kestenbaum et al., 2005; Wannamethee et al., 1997), but were previously not linked to an increase in the aging rate. In addition, the concentration of serum phosphate is well known to be a predictor of lifespan across different species even after taking body size into consideration (Kuro-o, 2010). To our knowledge, this is the first time that these biomarkers were directly linked to the aging rate of our species."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that high serum phosphate levels are known to be associated with adverse health outcomes.",
+    "combined_with": [
+     "Kestenbaum et al., 2005",
+     "Wannamethee et al., 1997"
+    ],
+    "stance": "positive",
+    "evidence_quote": "High levels of serum phosphate and creatinine are known to be associated with adverse outcomes (Eddington et al., 2010; Kestenbaum et al., 2005; Wannamethee et al., 1997)",
+    "confidence": "high"
+   }
+  },
+  "W4312957776": {
+   "id": "W4312957776",
+   "doi": "10.4103/ijn.ijn_591_20",
+   "pmid": "36704588",
+   "pmcid": null,
+   "title": "Longitudinal study to find the association of serum phosphorus level with FGF23 in three different hyperphosphatemia management groups of stage 3 and 4 chronic kidney disease (CKD) patients",
+   "year": 2022,
+   "venue": "Indian Journal of Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Discussion",
+     "text": "The present study comprised middle-aged patients with slight male predominance. Age and gender did not show any correlation with FGF23 as per the literature, which also showed no age-related changes in intact FGF23 or in C-terminal FGF23.[10] Here, eGFR was on higher side (34.38 \u00b1 11.84ml/min) compared to the Chronic renal Insufficiency Cohort (CRIC) study population's eGFR (32 \u00b1 15 ml/min/1.73 m2).[11] Whether FGF23 contributes to CKD progression or is only a marker of its risk remains an important and unresolved question. However, some authors believe that FGF23 can be a novel predictor for the progression of CKD.[12] Similar to the previous study, the diabetic population formed 35.8% of the patients in our study.[11] It has been suggested by Titan et al.[13] that serum FGF23 is related to the risk of CKD progression in macroalbuminuric diabetic nephropathy (DN). But it is still unclear whether this relationship is causal. The baseline mean serum phosphorus levels were similar to a previous study in which the serum phosphorus was 4.2 \u00b1 0.4 mg/dl.[14] Researchers are of the opinion that phosphate retention, and not FGF23, is the pathologic mechanism majorly involved in aging, glucose metabolism, insulin sensitivity disturbances, and oxidative stress.[15]"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "compares-against",
+    "what_for": "The 2022 study compares their baseline serum phosphorus levels to values reported in the 2010 study to validate the similarity of their patient cohort's phosphate profiles.",
+    "combined_with": [
+     "CRIC study",
+     "Titan et al. diabetic nephropathy studies"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "The baseline mean serum phosphorus levels were similar to a previous study in which the serum phosphorus was 4.2 \u00b1 0.4 mg/dl.[14]",
+    "confidence": "medium"
+   }
+  },
+  "W4284968006": {
+   "id": "W4284968006",
+   "doi": "10.5371/hp.2022.34.2.122",
+   "pmid": "35800127",
+   "pmcid": null,
+   "title": "Pathologic Fracture of Femoral Neck in a Patient with Tumoral Calcinosis",
+   "year": 2022,
+   "venue": "Hip & Pelvis",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "DISCUSSION",
+     "text": "Medical therapy is one of the options for treatment of tumoral calcinosis. The method of therapy can differ with regard to etiologies of tumoral calcinosis. In cases involving tumoral calcinosis that occurred due to uremic calcinosis, elevation of calcium phosphate can occur due to hyperphosphatemia8,17). Therefore, treatment of chronic hyperphosphatemia in patients with CKD includes a low calcium diet, low phosphate diet, and phosphate binders9,18). Also, administration of acetazolamide is required to increase excretion of urinary phosphate19). If the medical treatment fails, subtotal parathyroidectomy and surgical resection can be performed20). In the current report, total hip arthroplasty was selected as a treatment for pathologic fractures of the femoral neck. Because the calcified mass of tumoral calcinosis was huge, and loss of soft tissue and increased bleeding could have occurred if a resection was performed, we did not resect the entire mass of tumoral calcinosis. And the patient did not have pain from the calcified mass prior to occurrence of the pathologic fracture. There was concern that accessing the hip joint would be difficult due to the mass; however, it was possible to reach the hip joint without problems."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish the clinical relationship between hyperphosphatemia in chronic kidney disease and calcium-phosphate elevation as an etiologic factor in tumoral calcinosis.",
+    "combined_with": [
+     "references on phosphate binder therapy",
+     "acetazolamide treatment",
+     "parathyroidectomy options"
+    ],
+    "stance": "positive",
+    "evidence_quote": "In cases involving tumoral calcinosis that occurred due to uremic calcinosis, elevation of calcium phosphate can occur due to hyperphosphatemia. Therefore, treatment of chronic hyperphosphatemia in patients with CKD includes a low calcium diet, low phosphate diet, and phosphate binders.",
+    "confidence": "high"
+   }
+  },
+  "W4402019497": {
+   "id": "W4402019497",
+   "doi": "10.25259/ijn_398_23",
+   "pmid": "40896627",
+   "pmcid": null,
+   "title": "The Association Between the Levels of Serum Phosphate and Mortality Rates in Pre-Dialysis and Dialysis Patients",
+   "year": 2024,
+   "venue": "Indian Journal of Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Introduction",
+     "text": "Previous studies researching the association between serum phosphate and CKD progression and mortality had several limitations. For example, the findings did not apply to CKD patients of other ethnicities.9\u201311"
+    },
+    {
+     "source": "epmc",
+     "section": "Results",
+     "text": "Our study included 11 original studies1,9,11,13-20 evaluating the association between serum phosphate levels and mortality rates in pre-dialysis CKD and dialysis patients [Table 1]. The process of selecting studies is illustrated in Figure 1. In total, 297 studies were found through a systematic search of the literature. Then, after removing 84 studies due to duplication, 213 studies were included for the initial screen. Following a review of titles and abstracts, a total of 177 articles were excluded due to incompatibility with the inclusion criteria, leaving 36 for further examination. Finally, 14 articles were included, of which 11 qualified for meta-analyses. All studies were conducted between 2005 to 2021. The total sample size was 60,022, with a mean age of 62.46 (59.26\u201365.66) years. The pooled sample had a 65.34% male and 34.66% female gender distribution. The prevalence of diabetes was also reported in 44.44% of the total sample size. The duration of follow-up varied across the studies, but the mean follow-up duration among the studies was 47.16 months. Among 60,022 participants, 15,809 deaths were observed with an average mortality event of 14.83%. The average serum phosphate level and the average GFR were determined to be 4.24 mg/dL and 46.68 mL/min, respectively. The outcomes of our meta-analysis revealed the overall estimate of unadjusted HR of all-cause mortality per 1 mg/dL rise in the concentration of serum phosphate using the random-effects model in pre-dialysis CKD, and dialysis patients were 1.33 (95% CI: 0.97, 1.82, I2 = 99.1%, P < 0.001). After accounting for adjustments, every 1 mg/dL increase in serum phosphate level was associated with a 27% elevated risk of mortality (1.27 [95% CI: 1.15, 1.39, I2 = 75.4%, P < 0.001]) [Figure 2]. According to Begg\u2019s funnel plots and Egger\u2019s test, there is no significant publication bias among the included studies [Figure 3]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "9\u201311 Due to the scarcity of studies in association with predictors such as serum phosphate levels in CKD and dialysis patients as well as the contradictory findings in previous studies, the purpose of this article is to clarify and meta-analyze the exact relationship between serum phosphate levels\u2026"
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Our study included 11 original studies 1,9,11,13-20 evaluating the association between serum phosphate levels and mortality rates in pre-dialysis CKD and dialysis patients [Table 1]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "uses-data",
+    "what_for": "The 2024 meta-analysis includes the 2010 paper as one of 11 original studies to reanalyze the association between serum phosphate levels and mortality in CKD patients.",
+    "combined_with": [
+     "10 other original studies from the systematic review and meta-analysis"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "Our study included 11 original studies1,9,11,13-20 evaluating the association between serum phosphate levels and mortality rates in pre-dialysis CKD and dialysis patients [Table 1].",
+    "confidence": "high"
+   }
+  },
+  "W2954526263": {
+   "id": "W2954526263",
+   "doi": "10.1155/2019/6430947",
+   "pmid": "31354995",
+   "pmcid": null,
+   "title": "Comparison of Chronic Hemodialysis Patients under Strict Volume Control with respect to Cardiovascular Disease",
+   "year": 2019,
+   "venue": "International Journal of Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "4. Discussion",
+     "text": "The most important finding of this study is that nondipping pattern is associated with cardiac hypertrophy and lower LVEF in dialysis of patients with no HT. The findings also suggest that a salt-restricted diet and a strict volume control are very effective to control the blood pressure of chronic HD patients. According to our results, a normal blood pressure (normotensive) of a patient is not enough to reduce the risks of cardiovascular diseases, but a dipper nocturnal blood pressure profile is also needed. The present study was set up to use an established method for determining body composition, hydration, and blood pressure status in chronic HD patients. Demographic data of patients and some laboratory findings are shown in Table 1. Hemoglobin, calcium, and albumin values were significantly higher in the dipper group than in the nondipper group. However, hsCRP and phosphorus levels were higher in the nondipper group. As commonly known, low levels of calcium are associated with poor renal outcome in chronic kidney disease (CKD) [20], and high levels of phosphorus are associated with mortality in CKD [21]. Volumetric control in nondipper patients is worse according to BIA results (Table 3), suggesting that tight volume control may regulate disease and thus prognosis may well affect the direction. Another major underlying factor that plays a role in atherogenesis and pathogenesis of major cardiovascular complications in the general population is chronic inflammation [22]. High hsCRP is indicative of inflammation, suggesting that the inflammatory process continues in nondipper patients. Therefore, nondipper patients may be more likely to have a cardiovascular disease risk."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "As\ncommonly known, low levels of calcium are associated with poor renal outcome in chronic kidney disease (CKD) [20], and high levels of phosphorus are associated with mortality in CKD [21]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "commonly known, low levels of calcium are associated with poor renal outcome in chronic kidney disease (CKD) [20], and high levels of phosphorus are associated with mortality in CKD [21]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that elevated phosphorus levels are an established risk factor for mortality in chronic kidney disease when interpreting the authors' findings of higher phosphorus in nondipper dialysis patients.",
+    "combined_with": [
+     "calcium and renal outcomes in CKD (reference [20])"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "high levels of phosphorus are associated with mortality in CKD [21]",
+    "confidence": "high"
+   }
+  },
+  "W3127066146": {
+   "id": "W3127066146",
+   "doi": "10.1016/j.ekir.2021.01.017",
+   "pmid": "33735330",
+   "pmcid": null,
+   "title": "Targeting NaPi-IIb for Hyperphosphatemia in Chronic Kidney Disease Patients - The Dead End?",
+   "year": 2021,
+   "venue": "Kidney International Reports",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": null,
+     "text": "Phosphate serves as a structural component of nucleic acids, cell membranes and bones, and is important for enzymatic interactions, ATP synthesis and plays a critical role in cellular signalling through phosphorylation reactions. Therefore, the maintenance of phosphate balance is essential for life being tightly regulated by a sophisticated system in humans, involving intestinal uptake of dietary inorganic phosphate (Pi), storage in bone and excretion of excess Pi in the kidney. However, due to the dependence of phosphate elimination on urinary excretion by the kidneys, patients with decreased kidney function are likely to be in a positive phosphate balance. The resulting hyperphosphatemia has been well recognized as a crucial factor in the pathogenesis of mineral and bone disorders associated with chronic kidney disease, being also associated with increased risks of death and cardiovascular complications.1,2"
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "The resulting hyperphosphatemia has been well recognized as a crucial factor in the pathogenesis of mineral and bone disorders associated with chronic kidney disease, being also associated with increased risks of death and cardiovascular complications.(1,2)"
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper establishes that hyperphosphatemia is associated with increased mortality and cardiovascular complications in CKD patients, citing the 2010 study to support this foundational fact.",
+    "combined_with": [
+     "Reference 2 (unnamed coauthor reference)"
+    ],
+    "stance": "neutral",
+    "evidence_quote": "The resulting hyperphosphatemia has been well recognized as a crucial factor in the pathogenesis of mineral and bone disorders associated with chronic kidney disease, being also associated with increased risks of death and cardiovascular complications.",
+    "confidence": "high"
+   }
+  },
+  "W4379799975": {
+   "id": "W4379799975",
+   "doi": "10.7739/jkafn.2022.30.2.247",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Factors Affecting Hyperphosphatemia in Patients with Chronic Renal Failure Undergoing Hemodialysis",
+   "year": 2023,
+   "venue": "Journal of Korean Academy of Fundamentals of Nursing",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Hyperphosphatemia increases the mortality rate of CRF patients due to cardiovascular disease that results from the calcification of blood vessels and causes other major health problems such as secondary hyperparathyroidism and renal bone disease [3-5]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Hyperphosphatemia can cause renal osteodystrophy, cardiovascular calcification, and secondary hyperparathyroidism [3-5]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites the phosphate-mortality paper as evidence that hyperphosphatemia is a clinically significant condition linked to increased mortality through cardiovascular complications.",
+    "combined_with": [
+     "References [3-5]"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Hyperphosphatemia increases the mortality rate of CRF patients due to cardiovascular disease that results from the calcification of blood vessels and causes other major health problems such as secondary hyperparathyroidism and renal bone disease [3-5].",
+    "confidence": "high"
+   }
+  },
+  "W4391954162": {
+   "id": "W4391954162",
+   "doi": "10.1186/s12882-024-03497-y",
+   "pmid": "38378456",
+   "pmcid": null,
+   "title": "Identifying individuals at risk of needing CKD associated medications in a European kidney disease cohort",
+   "year": 2024,
+   "venue": "BMC Nephrology",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "Background",
+     "text": "Chronic kidney disease (CKD) is a major public health problem associated with poor quality of life, and high morbidity and mortality rate [1]. Despite improvements in dialysis care, the mortality of patients treated by dialysis remains unacceptably high. Suboptimal care during CKD stages G4/CKD G5ND may contribute to this, as it has been shown that longer duration of specialized nephrology care prior to transition to chronic dialysis, is associated with significantly better outcomes [2, 3]. CKD care includes management for anemia and disturbances of bone mineral metabolism (CKD associated bone mineral disease; CKD-MBD). These conditions are common in patients with advanced CKD and are associated with adverse clinical outcomes, including cardiovascular events, protein energy wasting and death [4\u20139]. As anemia and CKD-MBD represent modifiable risk factors for cardiovascular and renal disease progression, early recognition and treatment represent a key task for nephrologists [10\u201314]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "These conditions are common in patients with advanced CKD and are associated with adverse clinical outcomes, including cardiovascular events, protein energy wasting and death [4\u20139]."
+    }
+   ],
+   "s2_intents": [
+    "background"
+   ],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that bone mineral metabolism disturbances (CKD-MBD) are associated with adverse clinical outcomes including mortality in advanced CKD patients.",
+    "combined_with": [
+     "References 4-9 (collective evidence on CKD-MBD and adverse outcomes)"
+    ],
+    "stance": "positive",
+    "evidence_quote": "These conditions are common in patients with advanced CKD and are associated with adverse clinical outcomes, including cardiovascular events, protein energy wasting and death [4\u20139].",
+    "confidence": "high"
+   }
+  },
+  "W4411275310": {
+   "id": "W4411275310",
+   "doi": "10.1016/j.nefro.2025.501352",
+   "pmid": null,
+   "pmcid": null,
+   "title": "Increased serum phosphate concentration within the normal reference levels is associated with all-cause mortality in non-dialysis CKD patients: A five-year prospective cohort study",
+   "year": 2025,
+   "venue": "Nefrolog\u00eda",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "20 Several mechanisms may underlie the pathogenicity of elevated serum Pi in CKD, including promotion of vascular calcification via osteoblastic transformation of vascular smooth muscle cells and calcium phosphate deposition, 21,22 LVH and myocardial fibrosis 23 and statin-resistance due to altered\u2026"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "The citing paper cites the 2010 study to establish the known biological mechanisms by which elevated serum phosphate causes harm in CKD patients.",
+    "combined_with": [
+     "Reference 21",
+     "Reference 22",
+     "Reference 23"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Several mechanisms may underlie the pathogenicity of elevated serum Pi in CKD, including promotion of vascular calcification via osteoblastic transformation of vascular smooth muscle cells and calcium phosphate deposition",
+    "confidence": "medium"
+   }
+  },
+  "W4416690795": {
+   "id": "W4416690795",
+   "doi": "10.1016/j.nefroe.2025.501352",
+   "pmid": "41276382",
+   "pmcid": null,
+   "title": "Increased serum phosphate concentration within the normal reference levels is associated with all-cause mortality in non-dialysis CKD patients: A five-year prospective cohort study",
+   "year": 2025,
+   "venue": "Nefrolog\u00eda (English Edition)",
+   "type": "article",
+   "passages": [
+    {
+     "source": "s2",
+     "section": null,
+     "text": "20 Several mechanisms may underlie the pathogenicity of elevated serum Pi in CKD, including promotion of vascular calcification via osteoblastic transformation of vascular smooth muscle cells and calcium phosphate deposition, 21,22 LVH and myocardial fibrosis 23 and statin-resistance due to altered\u2026"
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish the known mechanisms by which elevated serum phosphate is pathogenic in CKD patients, including vascular calcification and effects on cardiac function",
+    "combined_with": [
+     "Reference 21",
+     "Reference 22",
+     "Reference 23"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Several mechanisms may underlie the pathogenicity of elevated serum Pi in CKD, including promotion of vascular calcification via osteoblastic transformation of vascular smooth muscle cells and calcium phosphate deposition, 21,22 LVH and myocardial fibrosis 23",
+    "confidence": "medium"
+   }
+  },
+  "W7131886115": {
+   "id": "W7131886115",
+   "doi": "10.1097/md.0000000000047807",
+   "pmid": "41760019",
+   "pmcid": null,
+   "title": "Assessing the real-world drug safety of sevelamer for hyperphosphatemia: Insights from a comprehensive analysis of the FDA adverse event reporting system (FAERS) database",
+   "year": 2026,
+   "venue": "Medicine",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "1. Introduction",
+     "text": "Hyperphosphatemia is a pathological condition characterized by an excessive level of phosphate in the blood, surpassing the normal range. It can be triggered by 3 main factors: impaired renal phosphate excretion due to acute or chronic kidney dysfunction, excessive phosphate load, and increased renal phosphate reabsorption.[1] Among these, renal insufficiency is the most common cause. While hyperphosphatemia itself often presents without noticeable symptoms, its secondary effects on the body\u2019s structure and function are of significant concern. These include ectopic calcification, vascular calcification, and secondary hyperparathyroidism.[2] Furthermore, in patients with chronic kidney disease (CKD), hyperphosphatemia is strongly linked to an increased risk of cardiovascular morbidity and mortality.[1] Studies have shown that even within the normal range, elevated serum phosphate levels in non-CKD populations remain significantly associated with adverse clinical outcomes. Multiple large-scale studies (encompassing over 39,000 participants in total) demonstrated that higher phosphate levels increase the risk of cardiovascular events, cardiovascular mortality and all-cause mortality.[3\u20135] The association between phosphate and poor prognosis is similarly evident in CKD patients. An analysis by Eddington et al of 1203 patients with CKD stages 3 to 4 revealed a stepwise increase in mortality with rising serum phosphate concentrations, though this trend was not observed in stage 5 CKD patients.[6] Another study focusing on stage 5 (non-dialysis) CKD patients (mean eGFR 13 \u00b1 5.4 mL/min/1.73m2) found that when serum phosphate reached 4.71 \u00b1 1.16 mg/dL, the relative risk of mortality increased significantly by 62%.[7] Furthermore, a large-scale study of 3490 CKD patients from Veterans Affairs Medical Centers demonstrated that once serum phosphate exceeded the threshold of 3.5 mg/dL (1.13 mmol/L), mortality risk rose linearly with increasing phosphate levels, further underscoring the importance of phosphate management in CKD patients.[8] As a result, individuals with hyperphosphatemia not only face kidney-related complications but also an elevated risk of cardiovascular and skeletal disorders, ultimately leading to a significant decline in their quality of life."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "[6] Another study focusing on stage 5 (non-dialysis) CKD patients (mean eGFR 13 \u00b1 5.4 mL/min/1.73m 2 ) found that when serum phosphate reached 4.71 \u00b1 1.16 mg/dL, the relative risk of mortality increased significantly by 62%."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "To establish that elevated serum phosphate levels significantly increase mortality risk in stage 5 CKD patients, providing clinical justification for studying phosphate management strategies.",
+    "combined_with": [
+     "ref [1]: causes of hyperphosphatemia",
+     "ref [2]: secondary effects",
+     "ref [3-5]: phosphate-mortality in non-CKD populations",
+     "ref [7]: another stage 5 CKD study",
+     "ref [8]: VA study on CKD phosphate and mortality"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Another study focusing on stage 5 (non-dialysis) CKD patients (mean eGFR 13 \u00b1 5.4 mL/min/1.73m2) found that when serum phosphate reached 4.71 \u00b1 1.16 mg/dL, the relative risk of mortality increased significantly by 62%.",
+    "confidence": "high"
+   }
+  },
+  "W7161981413": {
+   "id": "W7161981413",
+   "doi": "10.3390/jcm15103986",
+   "pmid": "42194946",
+   "pmcid": null,
+   "title": "Phosphate Excretion Differentiates the Amount of Nephroprotective Effect of Amino Acid Ketoanalogues Treatment with Low Protein Diet in Chronic Kidney Disease\u2014A Retrospective Single-Center Cohort Study",
+   "year": 2026,
+   "venue": "Journal of Clinical Medicine",
+   "type": "article",
+   "passages": [
+    {
+     "source": "epmc",
+     "section": "1. Introduction",
+     "text": "The nephroprotective effects of renin-angiotensin system inhibitors (RASi) and SGLT2i are primarily manifested by reductions in intraglomerular pressure, proteinuria, inflammation, and fibrosis. In contrast, excessive protein intake increases intraglomerular pressure, leading to hyperfiltration, glomerulosclerosis, and tubulointerstitial damage. Restrictions on dietary protein intake enhance the nephroprotective potential of pharmacotherapy. The results of previous studies validate the use of LPD in patients with CKD as a method to slow down the disease progression and extend the time to renal replacement therapy [6]. Additional supplementation with amino acid ketoanalogues (KAA) prevents muscle mass loss and malnutrition in these patients [7,8]. In studies, LPD combined with KAA treatment proved safe and demonstrated the ability to limit the degradation of muscle proteins while fully reusing the recycled amino acids [6,7,8,9]. Supplementing a low-protein diet with KAA reduces the risk of protein deficiency without nitrogen overload [6,10]. A reduced supply of nitrogen compounds prevents high urea concentrations and uremic symptoms, which are a clear indication for initiating RRT. Research data suggest that LPD alone reduces the phosphate supply. At the same time, calcium salts of amino acid ketoanalogues further reduce serum phosphate concentrations by forming insoluble calcium phosphate complexes in the intestines [11]. Hyperphosphatemia increases mortality in patients with CKD [12]. On the other hand, lowering and normalizing phosphate concentrations decreases parathyroid hormone (PTH) production, thereby limiting the development of secondary hyperparathyroidism, which has a positive effect on bone turnover and reduces the risk of osteoporosis [12]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "Hyperphosphatemia increases mortality in patients with CKD [12]."
+    },
+    {
+     "source": "s2",
+     "section": null,
+     "text": "On the other hand, lowering and normalizing phosphate concentrations decreases parathyroid hormone (PTH) production, thereby limiting the development of secondary hyperparathyroidism, which has a positive effect on bone turnover and reduces the risk of osteoporosis [12]."
+    }
+   ],
+   "s2_intents": [],
+   "role": {
+    "role": "background-claim",
+    "what_for": "Establish that hyperphosphatemia increases mortality in CKD patients and that normalizing phosphate concentrations provides protective metabolic effects on PTH and bone turnover.",
+    "combined_with": [
+     "low-protein diet (LPD)",
+     "amino acid ketoanalogues (KAA)",
+     "renin-angiotensin system inhibitors (RASi)",
+     "SGLT2 inhibitors"
+    ],
+    "stance": "positive",
+    "evidence_quote": "Hyperphosphatemia increases mortality in patients with CKD [12]. On the other hand, lowering and normalizing phosphate concentrations decreases parathyroid hormone (PTH) production, thereby limiting the development of secondary hyperparathyroidism, which has a positive effect on bone turnover and reduces the risk of osteoporosis [12].",
+    "confidence": "high"
+   }
+  }
+ },
+ "years": [
+  [
+   2011,
+   8
+  ],
+  [
+   2012,
+   8
+  ],
+  [
+   2013,
+   20
+  ],
+  [
+   2014,
+   15
+  ],
+  [
+   2015,
+   20
+  ],
+  [
+   2016,
+   12
+  ],
+  [
+   2017,
+   17
+  ],
+  [
+   2018,
+   16
+  ],
+  [
+   2019,
+   18
+  ],
+  [
+   2020,
+   16
+  ],
+  [
+   2021,
+   18
+  ],
+  [
+   2022,
+   21
+  ],
+  [
+   2023,
+   17
+  ],
+  [
+   2024,
+   13
+  ],
+  [
+   2025,
+   13
+  ],
+  [
+   2026,
+   3
+  ]
+ ],
+ "structure": {
+  "analysis": [
+   {
+    "text": "**Cox multivariate adjusted regression** was used to estimate mortality risk by phosphate quartile.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "Cox multivariate adjusted regression in CKD stages 3 to 4 patients showed an increased risk of all-cause and cardiovascular mortality",
+    "section": "abstract"
+   },
+   {
+    "text": "**Survival analyses by quartile** of baseline phosphate were performed relative to GFR.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "Survival analyses were performed for quartiles of baseline phosphate relative to GFR",
+    "section": "abstract"
+   },
+   {
+    "text": "Analyses were **stratified by CKD stage** (3 to 4 versus 5).",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "No association was found in CKD stage 5 patients.",
+    "section": "abstract"
+   },
+   {
+    "text": "A separate analysis classified patients **above versus below published targets**.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "baseline phosphate according to published phosphate targets",
+    "section": "abstract"
+   },
+   {
+    "text": "**Time-averaged phosphate over 12 months** was analyzed as an alternative exposure.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "12-month time-averaged phosphate",
+    "section": "abstract"
+   },
+   {
+    "text": "Outcomes analyzed were **all-cause and cardiovascular mortality**.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "increased risk of all-cause and cardiovascular mortality",
+    "section": "abstract"
+   },
+   {
+    "text": "**Specific covariates, software and test statistics** are not reported in the abstract.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "not stated",
+    "section": "abstract"
+   }
+  ],
+  "assumptions": [
+   {
+    "text": "Higher phosphate is an **established mortality risk in dialysis** patients.",
+    "kind": "fact",
+    "highlight": true,
+    "evidence": "Higher phosphate is associated with mortality in dialysis patients",
+    "section": "abstract",
+    "sources": []
+   },
+   {
+    "text": "**Published phosphate targets** exist and can be used to classify patients.",
+    "kind": "fact",
+    "highlight": true,
+    "evidence": "baseline phosphate according to published phosphate targets",
+    "section": "abstract",
+    "sources": []
+   },
+   {
+    "text": "Phosphate must be interpreted **relative to GFR/CKD stage**.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "Survival analyses were performed for quartiles of baseline phosphate relative to GFR",
+    "section": "abstract",
+    "sources": []
+   },
+   {
+    "text": "A **referred outpatient nephrology population** is an informative setting for this question.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "This prospective longitudinal study examined whether phosphate level was associated with death in a referred population.",
+    "section": "abstract",
+    "sources": []
+   },
+   {
+    "text": "**Time-averaged phosphate** better reflects chronic exposure than a single baseline value.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "The highest quartile compared with the lowest quartile of 12-month time-averaged phosphate was associated with an increased risk of mortality.",
+    "section": "abstract",
+    "sources": []
+   }
+  ],
+  "conclusions": [
+   {
+    "text": "In CKD stages 3 to 4, higher phosphate carries a **stepwise increase in mortality**.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "In CKD stages 3 to 4 patients, higher phosphate was associated with a stepwise increase in mortality.",
+    "section": "abstract",
+    "based_on": [
+     "R1",
+     "R4"
+    ]
+   },
+   {
+    "text": "Because survival is better **below rather than within targets**, guidelines should be re-examined.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "As phosphate levels below published targets (as opposed to within them) are associated with better survival, guidelines for phosphate in nondialysis CKD patients should be re-examined.",
+    "section": "abstract",
+    "based_on": [
+     "R3"
+    ]
+   },
+   {
+    "text": "Whether **lowering phosphate improves survival** remains undetermined by this observational study.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "Intervention trials are required to determine whether lowering phosphate will improve survival.",
+    "section": "abstract",
+    "based_on": [
+     "R1",
+     "R3",
+     "R4"
+    ]
+   }
+  ],
+  "data": [
+   {
+    "text": "**1203 nondialysis CKD patients** from the Chronic Renal Insufficiency Standards Implementation Study were assessed.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "Patients (1203) of nondialysis chronic kidney disease (CKD) in the Chronic Renal Insufficiency Standards Implementation Study were assessed.",
+    "section": "abstract"
+   },
+   {
+    "text": "Baseline **eGFR averaged 32 (15) ml/min** per 1.73 m2.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "Mean (SD) eGFR was 32 (15) ml/min per 1.73 m(2)",
+    "section": "abstract"
+   },
+   {
+    "text": "Mean **age was 64 (14) years** in the cohort.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "age 64 (14) years",
+    "section": "abstract"
+   },
+   {
+    "text": "Mean **phosphate was 1.2 (0.30) mmol/L**.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "phosphate 1.2 (0.30) mmol/L",
+    "section": "abstract"
+   },
+   {
+    "text": "Repeated phosphate measures over **12 months of follow-up** were collected.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "12-month time-averaged phosphate",
+    "section": "abstract"
+   },
+   {
+    "text": "**Number of deaths and follow-up duration** are not reported in the abstract.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "not stated",
+    "section": "abstract"
+   }
+  ],
+  "design": [
+   {
+    "text": "A **prospective longitudinal cohort study** of a referred nephrology population.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "This prospective longitudinal study examined whether phosphate level was associated with death in a referred population.",
+    "section": "abstract"
+   },
+   {
+    "text": "Comparison groups were **quartiles of baseline phosphate** assessed relative to GFR.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "Survival analyses were performed for quartiles of baseline phosphate relative to GFR",
+    "section": "abstract"
+   },
+   {
+    "text": "A second exposure was **12-month time-averaged phosphate** in quartiles.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "12-month time-averaged phosphate",
+    "section": "abstract"
+   },
+   {
+    "text": "A third comparison was **above versus below published targets** for phosphate control.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "baseline phosphate according to published phosphate targets",
+    "section": "abstract"
+   },
+   {
+    "text": "The outcomes measured were **all-cause and cardiovascular death**.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "increased risk of all-cause and cardiovascular death",
+    "section": "abstract"
+   },
+   {
+    "text": "The setting was an **outpatient nephrology clinic**, not dialysis.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "few prospective studies assess this in nondialysis patients managed in an outpatient nephrology clinic",
+    "section": "abstract"
+   }
+  ],
+  "implications": [
+   {
+    "text": "**Phosphate guidelines for nondialysis CKD** may need lower targets than currently published.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "guidelines for phosphate in nondialysis CKD patients should be re-examined",
+    "section": "abstract"
+   },
+   {
+    "text": "**Intervention trials of phosphate lowering** are the proposed next step.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "Intervention trials are required to determine whether lowering phosphate will improve survival.",
+    "section": "abstract"
+   },
+   {
+    "text": "Risk stratification by phosphate may be **stage-specific, useful mainly in CKD 3 to 4**.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "No association was found in CKD stage 5 patients.",
+    "section": "abstract"
+   }
+  ],
+  "limitations": [
+   {
+    "text": "The study is **observational and cannot establish causality**, as the authors concede by calling for trials.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "Intervention trials are required to determine whether lowering phosphate will improve survival.",
+    "section": "abstract"
+   },
+   {
+    "text": "The **null result in CKD stage 5** is unexplained, possibly reflecting limited power in that subgroup.",
+    "kind": "gap",
+    "highlight": true,
+    "evidence": "No association was found in CKD stage 5 patients.",
+    "section": "abstract"
+   },
+   {
+    "text": "Findings come from a **single referred cohort**, limiting generalizability to unreferred CKD.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "whether phosphate level was associated with death in a referred population",
+    "section": "abstract"
+   },
+   {
+    "text": "**Residual confounding and the covariate set** used for adjustment are not addressed in the abstract.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "not stated",
+    "section": "abstract"
+   }
+  ],
+  "question": "Is serum phosphate level associated with all-cause and cardiovascular mortality in nondialysis chronic kidney disease patients managed in an outpatient nephrology clinic?",
+  "results": [
+   {
+    "text": "In CKD stages 3 to 4, the **highest phosphate quartile had increased** all-cause and cardiovascular mortality versus the lowest.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "Cox multivariate adjusted regression in CKD stages 3 to 4 patients showed an increased risk of all-cause and cardiovascular mortality in the highest quartile compared with that in the lowest quartile of phosphate.",
+    "section": "abstract"
+   },
+   {
+    "text": "**No association was found in CKD stage 5** patients.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "No association was found in CKD stage 5 patients.",
+    "section": "abstract"
+   },
+   {
+    "text": "Patients **above recommended phosphate targets** had increased all-cause and cardiovascular death versus those below target.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "Patients who had values above recommended targets for phosphate control had increased risk of all-cause and cardiovascular death compared with patients below target.",
+    "section": "abstract"
+   },
+   {
+    "text": "The highest quartile of **12-month time-averaged phosphate** was associated with increased mortality.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "The highest quartile compared with the lowest quartile of 12-month time-averaged phosphate was associated with an increased risk of mortality.",
+    "section": "abstract"
+   },
+   {
+    "text": "**No effect sizes or confidence intervals** are given in the abstract.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "not stated",
+    "section": "abstract"
+   }
+  ],
+  "source": "abstract-only",
+  "abstract": "BACKGROUND AND OBJECTIVES: Higher phosphate is associated with mortality in dialysis patients but few prospective studies assess this in nondialysis patients managed in an outpatient nephrology clinic. This prospective longitudinal study examined whether phosphate level was associated with death in a referred population. DESIGN, SETTING, PARTICIPANTS & MEASUREMENTS: Patients (1203) of nondialysis chronic kidney disease (CKD) in the Chronic Renal Insufficiency Standards Implementation Study were assessed. Survival analyses were performed for quartiles of baseline phosphate relative to GFR, 12-month time-averaged phosphate, and baseline phosphate according to published phosphate targets. RESULTS: Mean (SD) eGFR was 32 (15) ml/min per 1.73 m(2), age 64 (14) years, and phosphate 1.2 (0.30) mmol/L. Cox multivariate adjusted regression in CKD stages 3 to 4 patients showed an increased risk of all-cause and cardiovascular mortality in the highest quartile compared with that in the lowest quartile of phosphate. No association was found in CKD stage 5 patients. Patients who had values above recommended targets for phosphate control had increased risk of all-cause and cardiovascular death compared with patients below target. The highest quartile compared with the lowest quartile of 12-month time-averaged phosphate was associated with an increased risk of mortality. CONCLUSIONS: In CKD stages 3 to 4 patients, higher phosphate was associated with a stepwise increase in mortality. As phosphate levels below published targets (as opposed to within them) are associated with better survival, guidelines for phosphate in nondialysis CKD patients should be re-examined. Intervention trials are required to determine whether lowering phosphate will improve survival.",
+  "references": {}
+ },
+ "comparison": {
+  "points": [
+   {
+    "kind": "cited-as-claimed",
+    "text": "The core result \u2014 higher serum phosphate is independently associated with all-cause and cardiovascular mortality in nondialysis CKD \u2014 is what the large majority of the 35 citers (32 background-claim) invoke, usually as a one-line premise that hyperphosphatemia is a mortality risk factor in CKD. A few even echo the stepwise/graded framing from the conclusion."
+   },
+   {
+    "kind": "cited-as-claimed",
+    "text": "Two citers engage the paper as evidence rather than wallpaper: a 2024 meta-analysis re-uses its cohort as one of 11 studies pooling phosphate\u2013mortality associations, and a 2023 nondialysis CKD study benchmarks its own null result against this paper's positive association. This is the paper being used for exactly the question it asked."
+   },
+   {
+    "kind": "cited-for-something-else",
+    "text": "Several citers transplant the finding into populations the study never enrolled: hemodialysis and dialysis patients (including a U-shaped phosphate\u2013mortality curve the paper did not report), critically ill/rhabdomyolysis prognostic modelling, stroke patients, elderly diabetics, and metabolic syndrome in hypertension. The cohort was outpatient nondialysis CKD only."
+   },
+   {
+    "kind": "cited-for-something-else",
+    "text": "Some citations attach findings the paper never made: an association between elevated BMI and lower serum phosphate in CKD, an eGFR threshold below which phosphate becomes dysregulated, and mechanistic claims about vascular calcification and cardiac function. The paper is an observational survival analysis with no mechanistic arm."
+   },
+   {
+    "kind": "cited-for-something-else",
+    "text": "Descriptive cohort characteristics are borrowed as a reference standard \u2014 a 2022 study compares its own baseline serum phosphorus values against this paper's to argue cohort comparability. Baseline table values, not the survival result, are doing the work."
+   },
+   {
+    "kind": "cited-for-something-else",
+    "text": "At least two citations misattribute the work \u2014 to Vart et al. and to the CRIC study \u2014 while still using it as generic support for phosphate\u2013mortality. The identity of the cohort has become irrelevant to the citing use."
+   },
+   {
+    "kind": "claimed-but-not-cited",
+    "text": "The null result in CKD stage 5 is invisible in the citing literature. No sampled citer notes that the association did not hold in the most advanced predialysis stage, even among those extending the claim to dialysis populations \u2014 where the paper's own data argue against extrapolation."
+   },
+   {
+    "kind": "claimed-but-not-cited",
+    "text": "The provocative conclusion \u2014 survival was better *below* guideline phosphate targets than within them, so targets should be re-examined \u2014 is dropped entirely. A clinical guideline cites the paper to support phosphate-lowering recommendations, i.e. as evidence for the target framework the paper questioned."
+   },
+   {
+    "kind": "claimed-but-not-cited",
+    "text": "The explicit caveat that this observational design cannot establish whether lowering phosphate improves survival is ignored. Citers routinely use the paper as rationale for interventions \u2014 dietary phosphorus restriction, phosphate binders, hidden-phosphate patient education \u2014 that it deliberately declined to endorse."
+   }
+  ]
+ },
+ "outgoing": null,
+ "cost_usd": 50.6684
+}
