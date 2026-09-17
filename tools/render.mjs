@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import vm from 'node:vm';
 const doi = process.argv[2];
 const els = {};
-const el = (id) => (els[id] ??= { id, innerHTML: '', querySelector: () => el('x'), querySelectorAll: () => [], addEventListener() {}, classList: { toggle() {} } });
+const el = (id) => (els[id] ??= { id, innerHTML: '', querySelector: () => el('x'), querySelectorAll: () => [], addEventListener() {}, insertAdjacentHTML() {}, classList: { toggle() {} } });
 const g = {
   document: { getElementById: el, title: '' },
   window: {}, history: { replaceState() {} }, navigator: {},
