@@ -318,5 +318,32 @@ class YearChart(unittest.TestCase):
         self.assertEqual(self.chart([]), "")
 
 
+@unittest.skipUnless(shutil.which("node"), "node is not installed")
+class AnatomyLede(unittest.TestCase):
+    """The Anatomy tab's split: Question and Conclusions lead, the rest is how the paper got there."""
+
+    def test_conclusions_leave_the_section_list_without_renumbering_anything(self):
+        S = {"question": "?", "conclusions": [{}], "assumptions": [{}, {}], "results": [{}], "limitations": [{}]}
+        got = call_js("anatomySections", S)
+        self.assertEqual(got["lede"], [["conclusions", "C"]])
+        self.assertEqual(got["body"], [["assumptions", "A"], ["results", "R"], ["limitations", "L"]])
+        # The letters are per-section, so pulling conclusions out of the body leaves C1 and R1 meaning what they meant.
+        self.assertEqual([L for _, L in got["lede"] + got["body"]], ["C", "A", "R", "L"])
+
+    def test_an_empty_section_is_dropped_from_both_halves(self):
+        S = {"question": "?", "conclusions": [], "design": [{}], "data": []}
+        got = call_js("anatomySections", S)
+        self.assertEqual(got["lede"], [])  # no conclusions extracted: the lede is the question alone
+        self.assertEqual(got["body"], [["design", "D"]])
+        self.assertEqual(call_js("anatomySections", None), {"lede": [], "body": []})
+
+    def test_a_conclusions_link_can_name_the_result_it_rests_on(self):
+        S = {"results": [{"text": "Colonies **switched cleanly** at 6 h."}, {"text": "No text markers here."}]}
+        self.assertEqual(call_js("resultText", S),
+                         {"R1": "Colonies switched cleanly at 6 h.", "R2": "No text markers here."})  # R2 is results[1]
+        self.assertEqual(call_js("resultText", {"results": [{}]}), {"R1": ""})  # a result with no text still gets an id
+        self.assertEqual(call_js("resultText", None), {})
+
+
 if __name__ == "__main__":
     unittest.main()

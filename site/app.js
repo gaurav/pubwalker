@@ -16,8 +16,9 @@ const INTRO = {
   backscatter: `<p class="small muted">How the literature uses this paper. Every citing passage we could retrieve was given a role
     (a tool run, data reused, a background claim, a comparison, an extension, a critique, or incidental), then synthesised per
     time window; each claim links to the citing papers it rests on.</p>`,
-  anatomy: `<p class="small muted">The paper taken apart: the question it asks, the assumptions it borrows, its
-    design, data, analysis, results, conclusions, implications and stated limitations, each with the span of text it was read from.</p>`,
+  anatomy: `<p class="small muted">The paper taken apart. The question it asks and what it concludes lead; below them, how it got
+    there — the assumptions it borrows, its design, data, analysis, results, implications and stated limitations, each with the
+    span of text it was read from.</p>`,
   outgoing: `<p class="small muted">The paper's own reference list, read the same way its citers are read: every reference was
     given a role from the passages that cite it (a tool run, data reused, a background claim, a comparison, an extension, a critique,
     or incidental), so what this paper leans on can be set against what others lean on it for.</p>`,
@@ -157,6 +158,22 @@ const citerDetails = (c, open = false) => `
   </details>`;
 
 const emph = (text) => esc(text).replace(/\*\*(.+?)\*\*/, '<b>$1</b>');  // the model marks each item's key phrase with **…**
+// Anatomy's two halves. The Question frames what the paper is for and the Conclusions say what it found, so the two
+// lead the tab in a lede of their own; every other section is how the paper got from one to the other, and only those
+// sections reach the floating TOC, the highlight toggle and the kind filter. Numbering is untouched by the split, so
+// C1 still means the first conclusion and a conclusion's "rests on" chips still land on R2 down in the body.
+const anatomySections = (S) => {
+  const LETTERS = [['conclusions', 'C'], ['assumptions', 'A'], ['design', 'D'], ['data', 'T'], ['analysis', 'N'], ['results', 'R'], ['implications', 'I'], ['limitations', 'L']];
+  const present = LETTERS.filter(([k]) => S && S[k] && S[k].length);
+  return { lede: present.filter(([k]) => k === 'conclusions'), body: present.filter(([k]) => k !== 'conclusions') };
+};
+// A conclusion's `based_on` ids number the results list from 1, so R2 is results[1]. Resolving them here lets the link
+// out of a conclusion say what it points at rather than just "R2"; the **…** key-phrase markers come off for the tooltip.
+const resultText = (S) => {
+  const out = {};
+  ((S && S.results) || []).forEach((r, i) => { out[`R${i + 1}`] = String((r && r.text) || '').replace(/\*\*/g, ''); });
+  return out;
+};
 const claims = (s, citers) => s ? `
   <ol class="claims">${s.claims.map((cl) => `<li class="${cl.highlight ? 'hi' : ''}">${emph(cl.text)} ${cl.cites.map((id) => `<a class="chip" href="#c-${esc(id)}" title="${esc(citers[id]?.title || id)}" onclick="show('c-${esc(id)}')">${esc(id)}</a>`).join('')}</li>`).join('')}</ol>
   ${s.follow_ups?.length ? `<h3>Follow-up questions</h3><ul>${s.follow_ups.map((q) => `<li>${esc(q)}</li>`).join('')}</ul>` : ''}` : '<p class="muted">Not synthesised.</p>';
@@ -301,31 +318,38 @@ function report(d, index) {
       ${sampled.sort((x, y) => (y.year || 0) - (x.year || 0)).map((c) => citerDetails(c)).join('')}`;
   };
   const S = d.structure;
-  // Conclusions sit right under the question: the two together are the paper in a glance. The rest is how it got there.
-  const SECTIONS = [['conclusions', 'C'], ['assumptions', 'A'], ['design', 'D'], ['data', 'T'], ['analysis', 'N'], ['results', 'R'], ['implications', 'I'], ['limitations', 'L']];
+  const { lede, body } = anatomySections(S);
+  const RESULT = resultText(S);
   const KINDS = { fact: ['◆', 'fact: established knowledge taken as given'], method: ['⚙', 'method: how something was done'], finding: ['▲', 'finding: observed or measured in this work'], claim: ['✦', 'claim: the authors’ interpretation, argument or proposal'], gap: ['○', 'gap: a caveat or something not addressed'] };
   const cap = (k) => k[0].toUpperCase() + k.slice(1);
   const structItem = (it, id) => `<li id="${id}" class="${it.highlight ? 'hi' : ''}" data-kind="${esc(it.kind || '')}">
       ${it.kind ? `<span class="k k-${it.kind}" title="${esc(KINDS[it.kind]?.[1] || it.kind)}">${KINDS[it.kind]?.[0] || '•'}</span>` : ''}<span class="n">${id}</span>
-      ${emph(it.text)}${it.sources?.length ? ` <span class="muted small">[${it.sources.map((s) => `<abbr title="${esc(S.references?.[s] || s)}">${esc(s)}</abbr>`).join(', ')}]</span>` : ''}${it.based_on?.length ? ` <span class="small muted">rests on</span> ${it.based_on.map((r) => `<a class="chip" href="#${esc(r)}">${esc(r)}</a>`).join('')}` : ''}${it.evidence && it.evidence !== 'not stated' ? `<div class="ev">${it.section ? `<span class="sec">${a.pmcid ? `<a href="https://pmc.ncbi.nlm.nih.gov/articles/${esc(a.pmcid)}/">${esc(it.section)}</a>` : esc(it.section)}</span> ` : ''}“${esc(it.evidence)}”</div>` : ''}</li>`;
-  const present = SECTIONS.filter(([k]) => S?.[k]?.length);
+      ${emph(it.text)}${it.sources?.length ? ` <span class="muted small">[${it.sources.map((s) => `<abbr title="${esc(S.references?.[s] || s)}">${esc(s)}</abbr>`).join(', ')}]</span>` : ''}${it.based_on?.length ? ` <span class="small muted">rests on</span> ${it.based_on.map((r) => `<a class="chip" href="#${esc(r)}" title="${esc(RESULT[r] || r)}">${esc(r)}</a>`).join('')}` : ''}${it.evidence && it.evidence !== 'not stated' ? `<div class="ev">${it.section ? `<span class="sec">${a.pmcid ? `<a href="https://pmc.ncbi.nlm.nih.gov/articles/${esc(a.pmcid)}/">${esc(it.section)}</a>` : esc(it.section)}</span> ` : ''}“${esc(it.evidence)}”</div>` : ''}</li>`;
   const structure = S ? `
     ${S.source === 'pmc-full-text' ? '<p class="small muted">Extracted from the PMC full text; each item carries the span it was read from.</p>' : `
     <div class="flash"><b>No full text was available for this paper.</b> Everything below was extracted from the title and abstract alone,
     so design, data, analysis and limitations are thin or guessed, and no assumption can be tied to a cited reference. Treat this tab as a sketch.
     ${S.abstract ? `<p><b>The abstract, in full, as the model saw it:</b></p><p>${esc(S.abstract)}</p>` : ''}</div>`}
     <div class="struct">
+      <div class="lede" id="s-lede">
+        <h2>Question</h2>
+        <p class="q">${esc(S.question)}</p>
+        ${lede.map(([k, L]) => `<h2 id="s-${k}">${cap(k)}</h2>
+        <p class="small muted">What the authors say the results show. Each links to the results it rests on, below.</p>
+        <ul class="items lede-items">${S[k].map((it, i) => structItem(it, `${L}${i + 1}`)).join('')}</ul>`).join('')}
+      </div>
       <nav class="toc">
-        <ul>${present.map(([k]) => `<li><a href="#s-${k}">${cap(k)}</a> <span class="muted">${S[k].length}</span></li>`).join('')}</ul>
+        <p class="small back"><a href="#s-lede">↑ Question &amp; conclusions</a></p>
+        <h4>How it got there</h4>
+        <ul>${body.map(([k]) => `<li><a href="#s-${k}">${cap(k)}</a> <span class="muted">${S[k].length}</span></li>`).join('')}</ul>
         <label><input type="checkbox" id="hi-only"> highlights only</label>
         <label><input type="checkbox" id="ev-on"> show evidence spans</label>
         <h4>Kinds of statement</h4>
-        <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => [k, g, t, present.reduce((n, [s]) => n + S[s].filter((it) => it.kind === k).length, 0)]).filter(([, , , n]) => n).sort((a, b) => b[3] - a[3])
+        <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => [k, g, t, body.reduce((n, [s]) => n + S[s].filter((it) => it.kind === k).length, 0)]).filter(([, , , n]) => n).sort((a, b) => b[3] - a[3])
           .map(([k, g, t, n]) => `<label class="k k-${k}" title="${esc(t)}"><input type="checkbox" id="kind-${k}"> ${g} ${k} <span class="muted">${n}</span></label>`).join('')}</div>
       </nav>
       <div class="body">
-      <h3>Question</h3><p class="q">${esc(S.question)}</p>
-      ${present.map(([k, L]) => `<section id="s-${k}"><h3>${cap(k)}</h3><ul class="items">${S[k].map((it, i) => structItem(it, `${L}${i + 1}`)).join('')}</ul></section>`).join('')}
+      ${body.map(([k, L]) => `<section id="s-${k}"><h3>${cap(k)}</h3><ul class="items">${S[k].map((it, i) => structItem(it, `${L}${i + 1}`)).join('')}</ul></section>`).join('')}
       </div>
     </div>` : '<p class="muted">Not extracted.</p>';
   const KIND = { 'cited-as-claimed': ['a', 'Cited as claimed'], 'cited-for-something-else': ['b', 'Cited for something else'], 'claimed-but-not-cited': ['c', 'Claimed but not cited'] };
