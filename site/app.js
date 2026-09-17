@@ -1,20 +1,23 @@
-// pubwalker site. No build step, no dependencies. Two modes:
-//   #/paper/<slug>  precomputed report from data/<slug>.json (pipeline output)
-//   #/live/<doi>    keyless live look-up: OpenAlex citers + Semantic Scholar contexts, no LLM
+// pubwalker site. No build step, no dependencies. One route:
+//   /?doi=<doi>[&tab=backscatter|argument|comparison]
+// shows the precomputed report from data/<slug>.json when the pipeline has produced one, otherwise a
+// keyless live look-up (OpenAlex citers + Semantic Scholar contexts, no LLM). The tabs are the two
+// approaches (how the paper is cited; what it argues) and the comparison that needs both.
 const app = document.getElementById('app');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const ROLES = ['uses-tool-or-method', 'uses-data', 'background-claim', 'compares-against', 'extends-or-modifies', 'critiques-or-contradicts', 'incidental'];
 const WINDOW_LABEL = { 'last-12-months': 'Last 12 months', 'last-5-years': 'Last 5 years', 'all-time': 'All time' };
 const fmt = (n) => (n ?? 0).toLocaleString();
-
-const route = () => {
-  const [, kind, ...rest] = location.hash.split('/');
-  if (kind === 'paper' && rest[0]) return paper(rest[0]);
-  if (kind === 'live' && rest.length) return live(decodeURIComponent(rest.join('/')));
-  return home();
+const TABS = { backscatter: 'Backscatter', argument: 'Argument', comparison: 'Claimed vs cited' };
+const INTRO = {
+  backscatter: `<p class="small muted">How the literature uses this paper. Every citing passage we could retrieve was given a role
+    (a tool run, data reused, a background claim, a comparison, an extension, a critique, or incidental), then synthesised per
+    time window; each claim links to the citing papers it rests on.</p>`,
+  argument: `<p class="small muted">What the paper's own argument rests on: the question it asks, the assumptions it borrows, its
+    design, data, analysis, results, conclusions, implications and stated limitations, each with the span of text it was read from.</p>`,
+  comparison: `<p class="small muted">Does the literature use the paper for what it claims? The paper's own conclusions set against
+    the roles its citers actually assign it.</p>`,
 };
-window.addEventListener('hashchange', route);
-route();
+const UNAVAILABLE = '<p class="muted">Not available in live mode; run the pipeline for this paper.</p>';
 
 async function json(url) {
   const r = await fetch(url);
@@ -35,17 +38,17 @@ async function home() {
     <h2>Reports</h2>
     ${index.length ? index.map((e) => `
       <div class="card">
-        <a class="title" href="#/paper/${esc(e.slug)}">${esc(e.title)}</a>
+        <a class="title" href="?doi=${encodeURIComponent(e.doi)}">${esc(e.title)}</a>
         <div class="muted small">${esc(e.venue || '')} ${esc(e.year || '')} · doi:${esc(e.doi)}</div>
         <div class="nums">
           <div><b>${fmt(e.cited_by_count)}</b><span>citations (OpenAlex)</span></div>
           ${Object.entries(e.windows || {}).map(([w, n]) => `<div><b>${fmt(n)}</b><span>${esc(WINDOW_LABEL[w] || w)}</span></div>`).join('')}
         </div>
       </div>`).join('') : '<p class="muted">No precomputed reports yet.</p>'}
-    <h2>Try any DOI (live, no LLM)</h2>
-    <p class="small muted">Fetches citing works from OpenAlex and citation sentences from Semantic Scholar directly in your browser.
-    Semantic Scholar's own coarse "intents" stand in for the role classification. Run the pipeline locally for the full report.</p>
-    <form class="live" onsubmit="location.hash='#/live/'+encodeURIComponent(this.doi.value.trim().replace(/^https?:\\/\\/doi.org\\//,''));return false">
+    <h2>Try any DOI</h2>
+    <p class="small muted">Shows the precomputed report if the pipeline has produced one. Otherwise a live look-up in your browser, no LLM:
+    citing works from OpenAlex and citation sentences from Semantic Scholar, whose coarse "intents" stand in for the role classification.</p>
+    <form class="live">
       <input name="doi" placeholder="10.1126/science.1225829" required>
       <button>Look up</button>
     </form>`;
@@ -88,13 +91,41 @@ const claims = (s, citers) => s ? `
 
 window.show = (id) => { const d = document.getElementById(`c-${id}`); if (d) { d.open = true; d.scrollIntoView({ block: 'center' }); } };
 
+// ---------- paper page: shared header + one tab per approach ----------
+// report() and live() each return { anchor, nums, years, panels: {tab: html}, note, after() } and paper() lays them out.
+async function paper(doi, tab) {
+  app.innerHTML = `<p class="small"><a href=".">← home</a></p><p class="muted">Loading ${esc(doi)}…</p>`;
+  const slug = doi.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');  // same as slugify() in the pipeline
+  let d = null;
+  try { d = await json(`data/${slug}.json`); } catch { /* ponytail: no report means live mode, at the cost of one 404 in the console */ }
+  let page;
+  try { page = d ? report(d) : await live(doi); } catch (e) {
+    app.innerHTML += `<p class="flash">Lookup failed: ${esc(e.message)}. Check the DOI, or try again if a rate limit was hit.</p>`;
+    return;
+  }
+  if (!TABS[tab]) tab = 'backscatter';
+  const a = page.anchor;
+  app.innerHTML = `
+    <p class="small"><a href=".">← home</a></p>
+    <h1>${esc(a.title)}</h1>
+    <div class="muted">${esc(a.venue || '')} ${esc(a.year || '')} · ${links(a)}</div>
+    <div class="nums">${page.nums}</div>
+    ${yearChart(page.years)}
+    <div class="tabs top">${Object.entries(TABS).map(([k, label]) => `<button data-t="${k}" class="${k === tab ? 'on' : ''}">${label}</button>`).join('')}</div>
+    ${Object.keys(TABS).map((k) => `<section data-t="${k}" ${k === tab ? '' : 'hidden'}>${page.panels[k]}</section>`).join('')}
+    <p class="small muted">${page.note}</p>`;
+  app.querySelector('.tabs.top').addEventListener('click', (e) => {
+    const t = e.target.dataset.t; if (!t) return;
+    app.querySelectorAll('.tabs.top button').forEach((b) => b.classList.toggle('on', b.dataset.t === t));
+    app.querySelectorAll('section[data-t]').forEach((s) => { s.hidden = s.dataset.t !== t; });
+    history.replaceState(null, '', '?' + new URLSearchParams({ doi, tab: t }));
+  });
+  page.after?.();
+}
+
 // ---------- precomputed report ----------
-async function paper(slug) {
-  app.innerHTML = '<p class="muted">Loading report…</p>';
-  let d;
-  try { d = await json(`data/${slug}.json`); } catch (e) { app.innerHTML = `<p>Could not load <code>data/${esc(slug)}.json</code>: ${esc(e.message)}</p>`; return; }
-  const a = d.anchor, C = d.citers, wins = Object.keys(d.windows);
-  let current = wins[wins.length - 1];
+function report(d) {
+  const a = d.anchor, C = d.citers, wins = Object.keys(d.windows), first = wins[wins.length - 1];
   const windowPanel = (w) => {
     const W = d.windows[w];
     const sampled = W.sampled.map((id) => C[id]).filter(Boolean);
@@ -122,80 +153,85 @@ async function paper(slug) {
   const KIND = { 'cited-as-claimed': ['a', 'Cited as claimed'], 'cited-for-something-else': ['b', 'Cited for something else'], 'claimed-but-not-cited': ['c', 'Claimed but not cited'] };
   const comparison = d.comparison ? `<ul>${d.comparison.points.map((p) => `<li><span class="kind ${KIND[p.kind]?.[0]}">${esc(KIND[p.kind]?.[1] || p.kind)}</span>${esc(p.text)}</li>`).join('')}</ul>` : '<p class="muted">Not compared.</p>';
 
-  app.innerHTML = `
-    <p class="small"><a href="#/">← all reports</a></p>
-    <h1>${esc(a.title)}</h1>
-    <div class="muted">${esc(a.venue || '')} ${esc(a.year || '')} · ${links(a)}</div>
-    <div class="nums"><div><b>${fmt(a.cited_by_count)}</b><span>citations in OpenAlex</span></div><div><b>${esc(d.generated)}</b><span>report generated</span></div><div><b>$${(d.cost_usd ?? 0).toFixed(2)}</b><span>LLM cost, all reports so far</span></div></div>
-    ${yearChart(d.years)}
-    <h2>Overall</h2>
-    ${claims(d.overall, C)}
-    <h2>By time window</h2>
-    <div class="tabs">${wins.map((w) => `<button data-w="${esc(w)}" class="${w === current ? 'on' : ''}">${esc(WINDOW_LABEL[w] || w)}</button>`).join('')}</div>
-    <div id="win">${windowPanel(current)}</div>
-    <h2>The paper's own argument</h2>
-    ${structure}
-    <h2>Claimed versus cited</h2>
-    ${comparison}
-    <p class="small muted">Roles were assigned per passage by Claude Haiku from Europe PMC full-text paragraphs (with section) or Semantic Scholar citation sentences; syntheses and the argument structure by Claude Opus. Samples are seeded random draws from citers with a retrievable passage, so paywalled citers are under-represented.</p>`;
-  app.querySelector('.tabs').addEventListener('click', (e) => {
-    const w = e.target.dataset.w; if (!w) return;
-    current = w;
-    app.querySelectorAll('.tabs button').forEach((b) => b.classList.toggle('on', b.dataset.w === w));
-    document.getElementById('win').innerHTML = windowPanel(w);
-  });
+  return {
+    anchor: a,
+    years: d.years,
+    nums: `<div><b>${fmt(a.cited_by_count)}</b><span>citations in OpenAlex</span></div><div><b>${esc(d.generated)}</b><span>report generated</span></div><div><b>$${(d.cost_usd ?? 0).toFixed(2)}</b><span>LLM cost, all reports so far</span></div>`,
+    panels: {
+      backscatter: `${INTRO.backscatter}
+        <h2>Overall</h2>
+        ${claims(d.overall, C)}
+        <h2>By time window</h2>
+        <div class="tabs win">${wins.map((w) => `<button data-w="${esc(w)}" class="${w === first ? 'on' : ''}">${esc(WINDOW_LABEL[w] || w)}</button>`).join('')}</div>
+        <div id="win">${windowPanel(first)}</div>`,
+      argument: INTRO.argument + structure,
+      comparison: INTRO.comparison + comparison,
+    },
+    note: 'Roles were assigned per passage by Claude Haiku from Europe PMC full-text paragraphs (with section) or Semantic Scholar citation sentences; syntheses and the argument structure by Claude Opus. Samples are seeded random draws from citers with a retrievable passage, so paywalled citers are under-represented.',
+    after() {
+      app.querySelector('.tabs.win').addEventListener('click', (e) => {
+        const w = e.target.dataset.w; if (!w) return;
+        app.querySelectorAll('.tabs.win button').forEach((b) => b.classList.toggle('on', b.dataset.w === w));
+        document.getElementById('win').innerHTML = windowPanel(w);
+      });
+    },
+  };
 }
 
 // ---------- live mode ----------
 async function live(doi) {
-  app.innerHTML = `<p class="small"><a href="#/">← home</a></p><p class="muted">Looking up ${esc(doi)}…</p>`;
   const oa = (path, params) => json(`https://api.openalex.org${path}?${new URLSearchParams({ mailto: 'pubwalker@example.org', ...params })}`);
-  try {
-    const w = await oa(`/works/https://doi.org/${doi}`, { select: 'id,doi,ids,title,publication_year,cited_by_count,primary_location' });
-    const id = w.id.split('/').pop();
-    const today = new Date(), iso = (d) => d.toISOString().slice(0, 10);
-    const since = (days) => iso(new Date(today - days * 864e5));
-    const [y1, y5, byYear] = await Promise.all([
-      oa('/works', { filter: `cites:${id},from_publication_date:${since(365)}`, 'per-page': 1 }),
-      oa('/works', { filter: `cites:${id},from_publication_date:${since(5 * 365 + 1)}`, 'per-page': 1 }),
-      oa('/works', { filter: `cites:${id}`, group_by: 'publication_year' }),  // per-page would also cap the groups
-    ]);
-    const years = byYear.group_by.map((g) => [+g.key, g.count]).filter(([y]) => y > 1900).sort((a, b) => a[0] - b[0]);
-    const anchor = { id, doi: (w.doi || '').replace('https://doi.org/', ''), pmid: w.ids?.pmid?.split('/').pop(), title: w.title, year: w.publication_year, venue: w.primary_location?.source?.display_name, cited_by_count: w.cited_by_count };
-    app.innerHTML = `
-      <p class="small"><a href="#/">← home</a></p>
-      <h1>${esc(anchor.title)}</h1>
-      <div class="muted">${esc(anchor.venue || '')} ${esc(anchor.year || '')} · ${links(anchor)}</div>
-      <div class="nums">
-        <div><b>${fmt(w.cited_by_count)}</b><span>citations (OpenAlex)</span></div>
-        <div><b>${fmt(y1.meta.count)}</b><span>last 12 months</span></div>
-        <div><b>${fmt(y5.meta.count)}</b><span>last 5 years</span></div>
-      </div>
-      ${yearChart(years)}
-      <h2>Citation sentences from Semantic Scholar</h2>
-      <div id="s2" class="muted">Fetching…</div>
-      <p class="small muted">Live mode stops here. The pipeline adds: Europe PMC full-text paragraphs with their section, a role for every passage, per-window syntheses with linked evidence, and the paper's argument structure.</p>`;
-    const s2 = document.getElementById('s2');
-    let data = [], offset = 0;
-    while (offset != null && offset < 3000) {
-      const r = await fetch(`https://api.semanticscholar.org/graph/v1/paper/DOI:${doi}/citations?fields=contexts,intents,title,year,externalIds&limit=1000&offset=${offset}`);
-      if (r.status === 429) { s2.innerHTML = `<p>Semantic Scholar rate limit hit after ${data.length} citers; try again in a minute.</p>`; break; }
-      if (!r.ok) throw new Error(`Semantic Scholar ${r.status}`);
-      const page = await r.json();
-      data = data.concat(page.data || []);
-      offset = page.next ?? null;
-      s2.textContent = `Fetched ${data.length} citers…`;
-    }
-    const withCtx = data.filter((c) => c.contexts?.length).sort((a, b) => (b.citingPaper.year || 0) - (a.citingPaper.year || 0));
-    const intents = {};
-    for (const c of data) for (const i of (c.intents?.length ? c.intents : ['(none given)'])) intents[i] = (intents[i] || 0) + 1;
-    s2.className = '';
-    s2.innerHTML = `
-      <div class="nums"><div><b>${fmt(data.length)}</b><span>citers known to Semantic Scholar</span></div><div><b>${fmt(withCtx.length)}</b><span>with a citation sentence</span></div></div>
-      <h3>Semantic Scholar's coarse intents</h3>${bars(intents)}
-      <h3>Passages (newest first, up to 60)</h3>
-      ${withCtx.slice(0, 60).map((c) => citerDetails({ id: c.citingPaper.paperId, title: c.citingPaper.title, year: c.citingPaper.year, doi: c.citingPaper.externalIds?.DOI, pmid: c.citingPaper.externalIds?.PubMed, passages: c.contexts.map((t) => ({ source: 's2', text: t })) })).join('')}`;
-  } catch (e) {
-    app.innerHTML += `<p class="flash">Lookup failed: ${esc(e.message)}. Check the DOI, or try again if a rate limit was hit.</p>`;
-  }
+  const w = await oa(`/works/https://doi.org/${doi}`, { select: 'id,doi,ids,title,publication_year,cited_by_count,primary_location' });
+  const id = w.id.split('/').pop();
+  const today = new Date(), iso = (d) => d.toISOString().slice(0, 10);
+  const since = (days) => iso(new Date(today - days * 864e5));
+  const [y1, y5, byYear] = await Promise.all([
+    oa('/works', { filter: `cites:${id},from_publication_date:${since(365)}`, 'per-page': 1 }),
+    oa('/works', { filter: `cites:${id},from_publication_date:${since(5 * 365 + 1)}`, 'per-page': 1 }),
+    oa('/works', { filter: `cites:${id}`, group_by: 'publication_year' }),  // per-page would also cap the groups
+  ]);
+  const years = byYear.group_by.map((g) => [+g.key, g.count]).filter(([y]) => y > 1900).sort((a, b) => a[0] - b[0]);
+  const anchor = { id, doi: (w.doi || '').replace('https://doi.org/', ''), pmid: w.ids?.pmid?.split('/').pop(), title: w.title, year: w.publication_year, venue: w.primary_location?.source?.display_name, cited_by_count: w.cited_by_count };
+  return {
+    anchor,
+    years,
+    nums: `<div><b>${fmt(w.cited_by_count)}</b><span>citations (OpenAlex)</span></div><div><b>${fmt(y1.meta.count)}</b><span>last 12 months</span></div><div><b>${fmt(y5.meta.count)}</b><span>last 5 years</span></div>`,
+    panels: {
+      backscatter: `${INTRO.backscatter}<h2>Citation sentences from Semantic Scholar</h2><div id="s2" class="muted">Fetching…</div>`,
+      argument: INTRO.argument + UNAVAILABLE,
+      comparison: INTRO.comparison + UNAVAILABLE,
+    },
+    note: "Live mode stops here. The pipeline adds: Europe PMC full-text paragraphs with their section, a role for every passage, per-window syntheses with linked evidence, and the paper's argument structure.",
+    async after() {
+      const s2 = document.getElementById('s2');
+      try {
+        let data = [], offset = 0;
+        while (offset != null && offset < 3000) {
+          const r = await fetch(`https://api.semanticscholar.org/graph/v1/paper/DOI:${doi}/citations?fields=contexts,intents,title,year,externalIds&limit=1000&offset=${offset}`);
+          if (r.status === 429) { s2.innerHTML = `<p>Semantic Scholar rate limit hit after ${data.length} citers; try again in a minute.</p>`; break; }
+          if (!r.ok) throw new Error(`Semantic Scholar ${r.status}`);
+          const page = await r.json();
+          data = data.concat(page.data || []);
+          offset = page.next ?? null;
+          s2.textContent = `Fetched ${data.length} citers…`;
+        }
+        const withCtx = data.filter((c) => c.contexts?.length).sort((a, b) => (b.citingPaper.year || 0) - (a.citingPaper.year || 0));
+        const intents = {};
+        for (const c of data) for (const i of (c.intents?.length ? c.intents : ['(none given)'])) intents[i] = (intents[i] || 0) + 1;
+        s2.className = '';
+        s2.innerHTML = `
+          <div class="nums"><div><b>${fmt(data.length)}</b><span>citers known to Semantic Scholar</span></div><div><b>${fmt(withCtx.length)}</b><span>with a citation sentence</span></div></div>
+          <h3>Semantic Scholar's coarse intents</h3>${bars(intents)}
+          <h3>Passages (newest first, up to 60)</h3>
+          ${withCtx.slice(0, 60).map((c) => citerDetails({ id: c.citingPaper.paperId, title: c.citingPaper.title, year: c.citingPaper.year, doi: c.citingPaper.externalIds?.DOI, pmid: c.citingPaper.externalIds?.PubMed, passages: c.contexts.map((t) => ({ source: 's2', text: t })) })).join('')}`;
+      } catch (e) {
+        s2.innerHTML = `<p class="flash">Semantic Scholar lookup failed: ${esc(e.message)}. Try again if a rate limit was hit.</p>`;
+      }
+    },
+  };
 }
+
+// ---------- route ----------
+const q = new URLSearchParams(location.search);
+const doi = (q.get('doi') || '').trim().replace(/^https?:\/\/doi\.org\//, '');
+doi ? paper(doi, q.get('tab')) : home();
