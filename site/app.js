@@ -167,8 +167,10 @@ function report(d) {
         <label><input type="checkbox" id="ev-on"> show evidence spans</label>
         <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => `<span class="k k-${k}" title="${esc(t)}">${g} ${k}</span>`).join(' ')}</div>
       </nav>
+      <div class="body">
       <h3>Question</h3><p class="q">${esc(S.question)}</p>
       ${present.map(([k, L]) => `<section id="s-${k}"><h3>${cap(k)}</h3><ul class="items">${S[k].map((it, i) => structItem(it, `${L}${i + 1}`)).join('')}</ul></section>`).join('')}
+      </div>
     </div>` : '<p class="muted">Not extracted.</p>';
   const KIND = { 'cited-as-claimed': ['a', 'Cited as claimed'], 'cited-for-something-else': ['b', 'Cited for something else'], 'claimed-but-not-cited': ['c', 'Claimed but not cited'] };
   const comparison = d.comparison ? `<ul>${d.comparison.points.map((p) => `<li><span class="kind ${KIND[p.kind]?.[0]}">${esc(KIND[p.kind]?.[1] || p.kind)}</span>${esc(p.text)}</li>`).join('')}</ul>` : '<p class="muted">Not compared.</p>';
