@@ -144,11 +144,11 @@ function report(d) {
         <div><b>${fmt(W.with_passages)}</b><span>with a retrievable passage</span></div>
         <div><b>${fmt(sampled.length)}</b><span>sampled and classified</span></div>
       </div>
-      <h3>What the sampled citers use it for</h3>
+      <h3 id="bs-roles">What the sampled citers use it for</h3>
       ${bars(W.roles, roleColor)}
-      <h3>Synthesis</h3>
+      <h3 id="bs-synthesis">Synthesis</h3>
       ${claims(W.synthesis, C)}
-      <h3>Evidence: the ${sampled.length} sampled citing papers</h3>
+      <h3 id="bs-evidence">Evidence: the ${sampled.length} sampled citing papers</h3>
       ${sampled.sort((x, y) => (y.year || 0) - (x.year || 0)).map((c) => citerDetails(c)).join('')}`;
   };
   const S = d.structure;
@@ -189,11 +189,19 @@ function report(d) {
     nums: `<div><b>${fmt(a.cited_by_count)}</b><span>citations in OpenAlex</span></div><div><b>${esc(d.generated)}</b><span>report generated</span></div><div><b>$${(d.cost_usd ?? 0).toFixed(2)}</b><span>LLM cost, all reports so far</span></div>`,
     panels: {
       backscatter: `${INTRO.backscatter}
-        <h2>Overall</h2>
+        <div class="struct">
+        <nav class="toc"><ul>
+          <li><a href="#bs-overall">Overall</a></li>
+          <li><a href="#bs-window">By time window</a>
+            <ul><li><a href="#bs-roles">Roles</a></li><li><a href="#bs-synthesis">Synthesis</a></li><li><a href="#bs-evidence">Evidence</a></li></ul></li>
+        </ul></nav>
+        <div class="body">
+        <h2 id="bs-overall">Overall</h2>
         ${claims(d.overall, C)}
-        <h2>By time window</h2>
+        <h2 id="bs-window">By time window</h2>
         <div class="tabs win">${wins.map((w) => `<button data-w="${esc(w)}" class="${w === first ? 'on' : ''}">${esc(WINDOW_LABEL[w] || w)}</button>`).join('')}</div>
-        <div id="win">${windowPanel(first)}</div>`,
+        <div id="win">${windowPanel(first)}</div>
+        </div></div>`,
       anatomy: INTRO.anatomy + structure,
       comparison: INTRO.comparison + comparison,
     },
