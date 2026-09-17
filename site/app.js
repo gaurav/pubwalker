@@ -256,9 +256,11 @@ async function live(doi) {
 }
 
 // ---------- route ----------
-// Header jump box: the datalist offers the precomputed reports, anything else typed is a live look-up.
-// ponytail: a datalist is fine while there are a few dozen reports; a real picker if it grows past that.
-INDEX.then((index) => { document.getElementById('examples').innerHTML = index.map((e) => `<option value="${esc(e.doi)}">${esc(e.title)}</option>`).join(''); });
 const q = new URLSearchParams(location.search);
 const doi = (q.get('doi') || '').trim().replace(/^https?:\/\/doi\.org\//, '');
+// Header: the "Examples" select lists the precomputed reports, the box takes any DOI for a live look-up.
+// ponytail: a plain <select> is fine while there are a few dozen reports; a searchable picker if it grows past that.
+INDEX.then((index) => {
+  document.getElementById('examples').insertAdjacentHTML('beforeend', index.map((e) => `<option value="${esc(e.doi)}">${esc(e.title)}</option>`).join(''));
+});
 doi ? paper(doi, q.get('tab')) : home();

@@ -11,7 +11,8 @@
 <header>
   <a href="." class="brand">pubwalker</a>
   <span class="tag">what a paper is cited for, and what it argues</span>
-  <form class="jump"><input name="doi" list="examples" placeholder="pick a report or enter a DOI" required><datalist id="examples"></datalist><button>Go</button></form>
+  <select id="examples" class="jump" onchange="if(this.value)location.search='?doi='+encodeURIComponent(this.value)"><option value="">Examples</option></select>
+  <form class="jump"><input name="doi" placeholder="or enter a DOI" required><button>Go</button></form>
   <a href="https://github.com/gaurav/pubwalker" class="right">source</a>
 </header>
 <main id="app"><p class="muted">Loading…</p></main>
