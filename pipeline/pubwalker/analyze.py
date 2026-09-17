@@ -122,6 +122,8 @@ def roles(doi, workers=4):
         try:
             return cid, ask(prompt, model="haiku", system=ROLE_SYSTEM, schema=ROLE_SCHEMA)
         except RuntimeError as e:  # one bad passage must not sink the run; it is simply left unclassified
+            if "limit" in str(e).lower():  # but a usage or rate limit would leave every passage unclassified: stop and retry later
+                raise
             print(f"  {cid}: {e}")
             return cid, None
 
@@ -253,6 +255,8 @@ def outgoing(doi, workers=4):
         try:
             return r["id"], ask(prompt, model="haiku", system=OUT_ROLE_SYSTEM, schema=ROLE_SCHEMA)
         except RuntimeError as e:
+            if "limit" in str(e).lower():
+                raise
             print(f"  {r['id']}: {e}")
             return r["id"], None
 
