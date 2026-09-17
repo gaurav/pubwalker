@@ -1,5 +1,5 @@
 // pubwalker site. No build step, no dependencies. One route:
-//   /?doi=<doi>[&tab=backscatter|argument|comparison]
+//   /?doi=<doi>[&tab=backscatter|anatomy|comparison]
 // shows the precomputed report from data/<slug>.json when the pipeline has produced one, otherwise a
 // keyless live look-up (OpenAlex citers + Semantic Scholar contexts, no LLM). The tabs are the two
 // approaches (how the paper is cited; what it argues) and the comparison that needs both.
@@ -7,12 +7,12 @@ const app = document.getElementById('app');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const WINDOW_LABEL = { 'last-12-months': 'Last 12 months', 'last-5-years': 'Last 5 years', 'all-time': 'All time' };
 const fmt = (n) => (n ?? 0).toLocaleString();
-const TABS = { backscatter: 'Backscatter', argument: 'Argument', comparison: 'Claimed vs cited' };
+const TABS = { backscatter: 'Backscatter', anatomy: 'Anatomy', comparison: 'Claimed vs cited' };
 const INTRO = {
   backscatter: `<p class="small muted">How the literature uses this paper. Every citing passage we could retrieve was given a role
     (a tool run, data reused, a background claim, a comparison, an extension, a critique, or incidental), then synthesised per
     time window; each claim links to the citing papers it rests on.</p>`,
-  argument: `<p class="small muted">What the paper's own argument rests on: the question it asks, the assumptions it borrows, its
+  anatomy: `<p class="small muted">The paper taken apart: the question it asks, the assumptions it borrows, its
     design, data, analysis, results, conclusions, implications and stated limitations, each with the span of text it was read from.</p>`,
   comparison: `<p class="small muted">Does the literature use the paper for what it claims? The paper's own conclusions set against
     the roles its citers actually assign it.</p>`,
@@ -188,7 +188,7 @@ function report(d) {
         <h2>By time window</h2>
         <div class="tabs win">${wins.map((w) => `<button data-w="${esc(w)}" class="${w === first ? 'on' : ''}">${esc(WINDOW_LABEL[w] || w)}</button>`).join('')}</div>
         <div id="win">${windowPanel(first)}</div>`,
-      argument: INTRO.argument + structure,
+      anatomy: INTRO.anatomy + structure,
       comparison: INTRO.comparison + comparison,
     },
     note: 'Roles were assigned per passage by Claude Haiku from Europe PMC full-text paragraphs (with section) or Semantic Scholar citation sentences; syntheses and the argument structure by Claude Opus. Samples are seeded random draws from citers with a retrievable passage, so paywalled citers are under-represented.',
@@ -222,7 +222,7 @@ async function live(doi) {
     nums: `<div><b>${fmt(w.cited_by_count)}</b><span>citations (OpenAlex)</span></div><div><b>${fmt(y1.meta.count)}</b><span>last 12 months</span></div><div><b>${fmt(y5.meta.count)}</b><span>last 5 years</span></div>`,
     panels: {
       backscatter: `${INTRO.backscatter}<h2>Citation sentences from Semantic Scholar</h2><div id="s2" class="muted">Fetching…</div>`,
-      argument: INTRO.argument + UNAVAILABLE,
+      anatomy: INTRO.anatomy + UNAVAILABLE,
       comparison: INTRO.comparison + UNAVAILABLE,
     },
     note: "Live mode stops here. The pipeline adds: Europe PMC full-text paragraphs with their section, a role for every passage, per-window syntheses with linked evidence, and the paper's argument structure.",

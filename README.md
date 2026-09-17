@@ -34,7 +34,7 @@ cd pipeline && uv run serve   # http://localhost:8765/, reloads the browser when
 
 Without uv, `python3 -m http.server 8765 -d site` does the same minus the reloading.
 
-A paper page is `/?doi=<doi>&tab=backscatter|argument|comparison`; a DOI without a precomputed
+A paper page is `/?doi=<doi>&tab=backscatter|anatomy|comparison`; a DOI without a precomputed
 report falls back to the live look-up.
 
 `pipeline/` produces the reports. It needs [uv](https://docs.astral.sh/uv/) and a Claude Code
