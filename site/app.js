@@ -165,6 +165,7 @@ function report(d) {
         <ul>${present.map(([k]) => `<li><a href="#s-${k}">${cap(k)}</a> <span class="muted">${S[k].length}</span></li>`).join('')}</ul>
         <label><input type="checkbox" id="hi-only"> highlights only</label>
         <label><input type="checkbox" id="ev-on"> show evidence spans</label>
+        <div class="kp muted">key phrase: <label><input type="radio" name="kp" id="kp-tint" checked> tint</label> <label><input type="radio" name="kp" id="kp-sc"> small caps</label> <label><input type="radio" name="kp" id="kp-md"> medium</label></div>
         <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => `<span class="k k-${k}" title="${esc(t)}">${g} ${k}</span>`).join(' ')}</div>
       </nav>
       <div class="body">
