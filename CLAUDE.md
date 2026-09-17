@@ -11,6 +11,12 @@
   cache hits at their original price. That is why `roles` and `outgoing` re-ask for items they have
   already classified rather than skipping them: the cache, not a skip list, is what makes a re-run
   free, and skipping hides those calls from the tally. Don't reintroduce the skip.
+- To re-run a paper for bookkeeping alone (a new cost field, say), run the steps that spend --
+  `roles synth structure outgoing compare` -- then `export`. **Do not run `passages`, or `all`.**
+  `passages` windows citers against `dt.date.today()`, so re-running it re-samples `last-12-months`
+  and `last-5-years`; a changed sample changes the `synth` prompt, which misses the cache and bills
+  real Opus calls. The tell that a re-run really was free is silence: `llm.ask` prints
+  `  [model] $x.xxxx` only on a cache miss, so a correct bookkeeping re-run prints none of them.
 - `site/` is dependency-free vanilla HTML/JS with no build step; it reads `site/data/*.json`
   written by `pubwalker export`. Check it with `cd pipeline && uv run serve`
   (livereload on :8765) or `python3 -m http.server -d site`. To see it rendered without a
