@@ -25,7 +25,7 @@ Scholar, Europe PMC, pubmed2db, Claude Code in headless mode, and so on).
 
 ## Demo
 
-`site/` is a static page (no build step) that shows precomputed reports for fourteen papers and a
+`site/` is a static page (no build step) that shows precomputed reports for fifteen papers and a
 keyless live look-up for any DOI. It is live at <http://www.ggvaidya.com/pubwalker/> (the account's
 custom domain, not `gaurav.github.io`), deployed by `.github/workflows/pages.yml` on every push to
 `main` that touches `site/**`. While the site still lives on a branch, that workflow is dispatched
@@ -75,8 +75,10 @@ and the total over all reports.
 To add a report, run `all` for the DOI and commit the new `site/data/` files; `export` merges it
 into `index.json`. Anatomy and Outgoing need PMC full text with a body, which a PMCID alone does
 not guarantee (some deposits are PDF-only; see the gotchas in `CLAUDE.md`), so check
-`analyze.has_body(passages.jats(pmcid))` first. The fourteen demo papers were sampled from OpenAlex
-(open access, in PMC, 100–2000 citations, 2008–2019) for variety of field and paper type.
+`analyze.has_body(passages.jats(pmcid))` first. Fourteen of the demo papers were sampled from
+OpenAlex (open access, in PMC, 100–2000 citations, 2008–2019) for variety of field and paper type;
+Meier et al. 2006 was added afterwards as the deliberate opposite — closed access, no PMC deposit
+at all — so the set exercises the abstract-only Anatomy and the absent Outgoing tab.
 
 ## Setup
 

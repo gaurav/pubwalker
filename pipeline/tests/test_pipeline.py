@@ -164,6 +164,39 @@ class Export(unittest.TestCase):
             self.assertEqual((entry["source"], entry["outgoing"]), (None, None))
 
 
+class ClosedAccess(unittest.TestCase):
+    """An anchor with no PMCID at all (a paywalled paper Europe PMC has no deposit for). Both steps
+    that need the anchor's own full text must degrade rather than fail, and neither may reach the
+    network to find that out."""
+
+    def anchor(self, tmp, **extra):
+        d = Path(tmp) / "10-1-a"
+        d.mkdir()
+        (d / "anchor.json").write_text(json.dumps({"id": "W0", "doi": "10.1/a", "title": "T", "year": 2006, "pmcid": None, **extra}))
+        return d
+
+    def test_outgoing_is_skipped_without_a_pmcid_and_does_not_fetch(self):
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(analyze, "DATA", Path(tmp)), \
+                mock.patch.object(analyze, "jats", side_effect=AssertionError("must not fetch")) as jats:
+            self.anchor(tmp)
+            self.assertIsNone(analyze.outgoing("10.1/a"))
+            jats.assert_not_called()
+            self.assertFalse((Path(tmp) / "10-1-a" / "outgoing.json").exists())  # export reads its absence as "no outgoing"
+
+    def test_structure_falls_back_to_the_abstract_and_keeps_what_the_model_saw(self):
+        struct = {k: [] for k in ["assumptions", "conclusions", "design", "data", "analysis", "results", "implications", "limitations"]}
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(analyze, "DATA", Path(tmp)), \
+                mock.patch.object(analyze, "jats", side_effect=AssertionError("must not fetch")), \
+                mock.patch.object(analyze, "abstract", return_value="Barcoding fails in flies."), \
+                mock.patch.object(analyze, "ask", return_value={**struct, "question": "Q"}) as ask:
+            self.anchor(tmp)
+            out = analyze.structure("10.1/a")
+            self.assertEqual(out["source"], "abstract-only")
+            self.assertEqual(out["abstract"], "Barcoding fails in flies.")  # shown on the site so a reader sees the model's whole input
+            self.assertEqual(out["references"], {})  # no full text means no reference list to attribute assumptions to
+            self.assertIn("Only the abstract is available", ask.call_args.args[0])
+
+
 class Cost(unittest.TestCase):
     def test_each_step_banks_its_own_spend_and_a_rerun_does_not_double_count(self):
         with tempfile.TemporaryDirectory() as tmp, mock.patch.object(llm, "DATA", Path(tmp)):

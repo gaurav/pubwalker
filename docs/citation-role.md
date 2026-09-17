@@ -105,6 +105,22 @@ way it is itself cited.
   re-bill for unchanged passages.
 - **Spot-check.** Hand-label 20 to 30 passages against the model's labels before trusting the
   histogram.
+- **The windows are nested, so they cannot show a trend.** `last-12-months` is a subset of
+  `last-5-years` is a subset of `all-time`, and each is sampled independently across its whole
+  span. Comparing the three answers "what does a recent citer do, versus a citer at any time",
+  not "has this changed since publication" — the all-time sample is thin in the early years
+  precisely where a trend question needs it (for a 2006 paper it was 9 pre-2013 citers out of
+  40). To ask whether the pattern shifted, sample a fixed number per *era* and classify those;
+  the roles step is Haiku and cheap, so a 45-per-era run over four eras costs little. Note that
+  the synthesis prompt cheerfully generates "has this shifted by year?" as a follow-up question
+  the report itself cannot answer.
+- **Role counts undercount method reuse.** A passage citing a paper for where a protocol came
+  from often reads as `background-claim`, because the citing sentence is about the method's
+  provenance rather than about running it. Testing "is this now cited as a method template?" on
+  the role label alone was noisy and non-significant across eras, while the same passages tested
+  for whether they *name* the toolkit or protocol gave a clean, significant trend. When a
+  question is about one specific reuse, search the `what_for`, `combined_with` and
+  `evidence_quote` fields for it rather than counting roles.
 
 ## Relation to the argument-structure idea
 
