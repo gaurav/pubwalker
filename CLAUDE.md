@@ -16,6 +16,8 @@
   `-headless -screenshot` fails on this machine ("Could not find profile folder").
 - Tests: `cd pipeline && uv run python -m unittest discover -s tests`. They use inline fixtures
   and never touch the network or `claude`.
-- Gotchas: Europe PMC `fullTextXML` returns 500 for author manuscripts (NCBI efetch works);
+- Gotchas: Europe PMC `fullTextXML` returns 500 for author manuscripts (NCBI efetch works); some PMC
+  records are PDF-only deposits whose XML is front matter with no `<body>` (e.g. PMC2994087,
+  PMC3063043), so check `analyze.has_body` before trusting a PMCID as full text;
   OpenAlex's `per-page` also caps `group_by` results; NIH's SPARK page gives a wrong PMCID for
   Bunting 2010 (correct: PMC2857570); Semantic Scholar contexts are sometimes just reference numbers.

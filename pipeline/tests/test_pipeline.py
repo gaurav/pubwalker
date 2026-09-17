@@ -4,7 +4,7 @@ import datetime as dt
 import unittest
 import xml.etree.ElementTree as ET
 
-from pubwalker.analyze import fulltext, grounded, histogram, references, tidy_structure
+from pubwalker.analyze import fulltext, grounded, has_body, histogram, references, tidy_structure
 from pubwalker.fetch import flatten, slugify
 from pubwalker.passages import citing_paragraphs, find_ref, in_window
 
@@ -68,6 +68,11 @@ class Analyze(unittest.TestCase):
         self.assertIn("SequenceMatrix [B2] and analysed in RAxML [B3]", body)
         self.assertIn("## Phylogenetics", body)
         self.assertIn("10.1111/j.1096-0031.2010.00329.x", refs["B2"])
+
+    def test_has_body_rejects_front_matter_only_records(self):
+        self.assertTrue(has_body(ROOT))
+        self.assertFalse(has_body(ET.fromstring("<article><front><article-meta/></front></article>")))
+        self.assertFalse(has_body(ET.fromstring("<article><body/></article>")))
 
     def test_references_carry_ids_years_and_mentions(self):
         refs = {r["id"]: r for r in references(ROOT)}

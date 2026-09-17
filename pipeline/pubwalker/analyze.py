@@ -189,6 +189,12 @@ def synth(doi):
     return out
 
 
+def has_body(root):
+    """Some PMC records are PDF-only deposits whose XML is front matter alone; treat those as no full text."""
+    body = root.find(".//body")
+    return body is not None and body.find(".//p") is not None
+
+
 def fulltext(root):
     """Body text with section headings and [rid] markers for bibliographic xrefs, plus the reference list."""
     def walk(el):
@@ -242,10 +248,11 @@ def enrich(refs):
 
 def outgoing(doi, workers=4):
     anchor = load(doi, "anchor")
-    if not anchor.get("pmcid"):
+    root = jats(anchor["pmcid"]) if anchor.get("pmcid") else None
+    if root is None or not has_body(root):
         print("no full text, so no outgoing citations")
         return None
-    refs = enrich(references(jats(anchor["pmcid"])))
+    refs = enrich(references(root))
     prev = load(doi, "outgoing")["references"] if (DATA / slugify(doi) / "outgoing.json").exists() else []
     done = {r["id"]: r["role"] for r in prev if r.get("role")}
 
@@ -293,8 +300,9 @@ def tidy_structure(out):
 def structure(doi):
     anchor = load(doi, "anchor")
     refs = {}
-    if anchor.get("pmcid"):
-        body, refs = fulltext(jats(anchor["pmcid"]))
+    root = jats(anchor["pmcid"]) if anchor.get("pmcid") else None
+    if root is not None and has_body(root):
+        body, refs = fulltext(root)
         source, reflist = "pmc-full-text", "\n".join(f"[{k}] {v}" for k, v in refs.items())
         prompt = f"Paper: {anchor['title']} ({anchor['year']}).\n\n{body[:90000]}\n\n## References\n{reflist[:30000]}"
     else:

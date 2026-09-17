@@ -21,7 +21,13 @@ def get(url, params=None, headers=None, *, text=False):
     if path.exists():
         return path.read_text() if text else json.loads(path.read_text())
     for attempt in range(6):
-        r = httpx.get(url, params=params, headers={"User-Agent": UA, **(headers or {})}, timeout=60)
+        try:
+            r = httpx.get(url, params=params, headers={"User-Agent": UA, **(headers or {})}, timeout=60)
+        except httpx.TransportError:  # read timeouts and dropped connections are as transient as a 503
+            if attempt == 5:
+                raise
+            time.sleep(2 ** attempt)
+            continue
         if r.status_code in (429, 502, 503, 504):
             time.sleep(2 ** attempt)
             continue
