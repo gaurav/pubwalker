@@ -1,5 +1,31 @@
 [
  {
+  "slug": "10-1080-10635150600969864",
+  "doi": "10.1080/10635150600969864",
+  "title": "DNA Barcoding and Taxonomy in Diptera: A Tale of High Intraspecific Variability and Low Identification Success",
+  "year": 2006,
+  "venue": "Systematic Biology",
+  "cited_by_count": 1445,
+  "windows": {
+   "last-12-months": 54,
+   "last-5-years": 351,
+   "all-time": 1414
+  },
+  "generated": "2026-09-17",
+  "cost_usd": 2.3319,
+  "roles": {
+   "uses-tool-or-method": 17,
+   "uses-data": 0,
+   "background-claim": 21,
+   "compares-against": 1,
+   "extends-or-modifies": 0,
+   "critiques-or-contradicts": 0,
+   "incidental": 0
+  },
+  "source": "abstract-only",
+  "outgoing": null
+ },
+ {
   "slug": "10-1371-journal-pone-0001897",
   "doi": "10.1371/journal.pone.0001897",
   "title": "Regulation of the Neural Circuitry of Emotion by Compassion Meditation: Effects of Meditative Expertise",
