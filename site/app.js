@@ -151,7 +151,7 @@ function report(d) {
   const KINDS = { fact: ['◆', 'fact: established knowledge taken as given'], method: ['⚙', 'method: how something was done'], finding: ['▲', 'finding: observed or measured in this work'], claim: ['✦', 'claim: the authors’ interpretation, argument or proposal'], gap: ['○', 'gap: a caveat or something not addressed'] };
   const cap = (k) => k[0].toUpperCase() + k.slice(1);
   const emph = (text) => esc(text).replace(/\*\*(.+?)\*\*/, '<b>$1</b>');  // the model marks each item's key phrase with **…**
-  const structItem = (it, id) => `<li id="${id}" class="${it.highlight ? 'hi' : ''}">
+  const structItem = (it, id) => `<li id="${id}" class="${it.highlight ? 'hi' : ''}" data-kind="${esc(it.kind || '')}">
       ${it.kind ? `<span class="k k-${it.kind}" title="${esc(KINDS[it.kind]?.[1] || it.kind)}">${KINDS[it.kind]?.[0] || '•'}</span>` : ''}<span class="n">${id}</span>
       ${emph(it.text)}${it.sources?.length ? ` <span class="muted small">[${it.sources.map((s) => `<abbr title="${esc(S.references?.[s] || s)}">${esc(s)}</abbr>`).join(', ')}]</span>` : ''}${it.based_on?.length ? ` <span class="small muted">rests on</span> ${it.based_on.map((r) => `<a class="chip" href="#${esc(r)}">${esc(r)}</a>`).join('')}` : ''}${it.evidence && it.evidence !== 'not stated' ? `<div class="ev">“${esc(it.evidence)}”</div>` : ''}</li>`;
   const present = SECTIONS.filter(([k]) => S?.[k]?.length);
@@ -165,8 +165,7 @@ function report(d) {
         <ul>${present.map(([k]) => `<li><a href="#s-${k}">${cap(k)}</a> <span class="muted">${S[k].length}</span></li>`).join('')}</ul>
         <label><input type="checkbox" id="hi-only"> highlights only</label>
         <label><input type="checkbox" id="ev-on"> show evidence spans</label>
-        <div class="kp muted">key phrase: <label><input type="radio" name="kp" id="kp-tint" checked> tint</label> <label><input type="radio" name="kp" id="kp-sc"> small caps</label> <label><input type="radio" name="kp" id="kp-md"> medium</label></div>
-        <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => `<span class="k k-${k}" title="${esc(t)}">${g} ${k}</span>`).join(' ')}</div>
+        <div class="legend">${Object.entries(KINDS).map(([k, [g, t]]) => `<label class="k k-${k}" title="${esc(t)}"><input type="checkbox" id="kind-${k}"> ${g} ${k}</label>`).join(' ')}</div>
       </nav>
       <div class="body">
       <h3>Question</h3><p class="q">${esc(S.question)}</p>
