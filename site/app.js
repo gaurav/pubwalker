@@ -132,7 +132,7 @@ function outgoingPanel(d, index) {
   for (const y of years) perYear[y] = (perYear[y] || 0) + 1;
   const roleYears = used.map((k) => [k, median(refs.filter((r) => r.role?.role === k).map((r) => r.year))]).filter(([, y]) => y);
   const assumptions = (d.structure?.assumptions || []).map((s, i) => [`A${i + 1}`, s.sources || []]);
-  const grounds = (r) => assumptions.filter(([, src]) => src.includes(r.id)).map(([id]) => `<a class="chip" href="#${id}" onclick="tab('anatomy')">${id}</a>`).join('');
+  const grounds = (r) => assumptions.filter(([, src]) => src.includes(r.id)).map(([id]) => `<a class="chip" href="#${id}" onclick="showTab('anatomy')">${id}</a>`).join('');
   const weight = (r) => [r.mentions.length, new Set(r.mentions.map((m) => m.section)).size];
   const bearing = [...cited].sort((x, y) => weight(y)[0] - weight(x)[0] || weight(y)[1] - weight(x)[1]).slice(0, 10);
   const refDetails = (r) => `
@@ -211,12 +211,12 @@ async function paper(doi, tab) {
     <div class="tabs top">${Object.entries(TABS).map(([k, label]) => `<button data-t="${k}" class="${k === tab ? 'on' : ''}">${label}</button>`).join('')}</div>
     ${Object.keys(TABS).map((k) => `<section data-t="${k}" ${k === tab ? '' : 'hidden'}>${page.panels[k]}</section>`).join('')}
     <p class="small muted">${page.note}</p>`;
-  window.tab = (t) => {  // also called by cross-tab links, e.g. Outgoing's "grounds A3" chips into Anatomy
+  window.showTab = (t) => {  // also called by cross-tab links, e.g. Outgoing's "grounds A3" chips into Anatomy
     app.querySelectorAll('.tabs.top button').forEach((b) => b.classList.toggle('on', b.dataset.t === t));
     app.querySelectorAll('section[data-t]').forEach((s) => { s.hidden = s.dataset.t !== t; });
     history.replaceState(null, '', '?' + new URLSearchParams({ doi, tab: t }));
   };
-  app.querySelector('.tabs.top').addEventListener('click', (e) => { if (e.target.dataset.t) tab(e.target.dataset.t); });
+  app.querySelector('.tabs.top').addEventListener('click', (e) => { if (e.target.dataset.t) showTab(e.target.dataset.t); });
   page.after?.();
 }
 
