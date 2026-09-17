@@ -110,8 +110,11 @@ way it is itself cited.
   span. Comparing the three answers "what does a recent citer do, versus a citer at any time",
   not "has this changed since publication" — the all-time sample is thin in the early years
   precisely where a trend question needs it (for a 2006 paper it was 9 pre-2013 citers out of
-  40). To ask whether the pattern shifted, sample a fixed number per *era* and classify those;
-  the roles step is Haiku and cheap, so a 45-per-era run over four eras costs little. Note that
+  40). To ask whether the pattern shifted, sample a fixed number per *era* and classify those:
+  `cd pipeline && uv run python tools/eras.py <doi>` does exactly that, reusing the passages and
+  the LLM cache, and `--names <regex>` adds the measure described in the next point. Folding eras
+  into the pipeline proper is issue #10. The roles step is Haiku and cheap, so a 45-per-era run
+  over four eras costs little. Note that
   the synthesis prompt cheerfully generates "has this shifted by year?" as a follow-up question
   the report itself cannot answer.
 - **Role counts undercount method reuse.** A passage citing a paper for where a protocol came
