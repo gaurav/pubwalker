@@ -94,6 +94,7 @@ window.show = (id) => { const d = document.getElementById(`c-${id}`); if (d) { d
 // ---------- paper page: shared header + one tab per approach ----------
 // report() and live() each return { anchor, nums, years, panels: {tab: html}, note, after() } and paper() lays them out.
 async function paper(doi, tab) {
+  document.title = `pubwalker: ${doi}`;
   app.innerHTML = `<p class="small"><a href=".">← home</a></p><p class="muted">Loading ${esc(doi)}…</p>`;
   const slug = doi.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');  // same as slugify() in the pipeline
   let d = null;
@@ -105,10 +106,12 @@ async function paper(doi, tab) {
   }
   if (!TABS[tab]) tab = 'backscatter';
   const a = page.anchor;
+  document.title = `pubwalker: ${a.title}`;
   app.innerHTML = `
     <p class="small"><a href=".">← home</a></p>
     <h1>${esc(a.title)}</h1>
-    <div class="muted">${esc(a.venue || '')} ${esc(a.year || '')} · ${links(a)}</div>
+    <div class="muted">${esc(a.venue || '')} ${esc(a.year || '')} · ${links(a)} ·
+      <button class="chip" onclick="navigator.clipboard.writeText(location.href).then(() => { this.textContent = 'copied'; })">copy link</button></div>
     <div class="nums">${page.nums}</div>
     ${yearChart(page.years)}
     <div class="tabs top">${Object.entries(TABS).map(([k, label]) => `<button data-t="${k}" class="${k === tab ? 'on' : ''}">${label}</button>`).join('')}</div>
