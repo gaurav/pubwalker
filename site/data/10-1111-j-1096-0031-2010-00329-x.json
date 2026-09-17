@@ -17,7 +17,7 @@
   ],
   "cited_by_count": 2685
  },
- "generated": "2026-09-16",
+ "generated": "2026-09-17",
  "windows": {
   "last-12-months": {
    "total": 208,
@@ -4490,198 +4490,324 @@
   ]
  ],
  "structure": {
-  "question": "How can multi-gene sequence datasets be concatenated quickly while preserving character set and codon information, and while flagging sequences possibly compromised by contamination or data management error?",
+  "question": "How can multi-gene datasets be concatenated quickly and flexibly while preserving character set and codon information and flagging potentially compromised sequences?",
   "assumptions": [
    {
-    "text": "Multi-gene dataset assembly and analysis is a task that needs dedicated software support.",
-    "sources": [],
-    "evidence": "software that is designed to facilitate the assembly and analysis of multi-gene datasets"
+    "text": "Phylogenetics routinely requires **assembling multi-gene datasets** from separately aligned gene files.",
+    "kind": "fact",
+    "highlight": true,
+    "evidence": "software that is designed to facilitate the assembly and analysis of multi-gene datasets",
+    "sources": []
    },
    {
-    "text": "Users work with aligned sequences already in FASTA, NEXUS, or TNT formats.",
-    "sources": [],
-    "evidence": "dragging and dropping FASTA, NEXUS, or TNT files with aligned sequences into the program window"
+    "text": "FASTA, NEXUS and TNT are treated as the **relevant input formats**.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "dragging and dropping FASTA, NEXUS, or TNT files with aligned sequences",
+    "sources": []
    },
    {
-    "text": "Per-sequence metadata (length, indels, ambiguous bases, codon information) is informative for assessing matrix quality.",
-    "sources": [],
-    "evidence": "each sequence is represented by a cell that provides information on sequence length, number of indels, the number of ambiguous bases (\"Ns\"), and the availability of codon information"
+    "text": "Character set and codon information are assumed **worth preserving on export**.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "preserving both character set and codon information for TNT and NEXUS files",
+    "sources": []
    },
    {
-    "text": "Laboratory contamination and data management errors leave detectable signatures: near-identical sequences and anomalous pairwise distance patterns for one gene.",
-    "sources": [],
-    "evidence": "two tools that help to identify sequences that may have been compromised through laboratory contamination or data management error"
+    "text": "Identical or near-identical sequences within a gene are assumed to **signal contamination or error**.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "tools that help to identify sequences that may have been compromised through laboratory contamination or data management error",
+    "sources": []
    },
    {
-    "text": "Cross-platform, freely available Java software best serves the user community.",
-    "sources": [],
-    "evidence": "SequenceMatrix is Java-based and compatible with the Microsoft Windows, Apple MacOS X and Linux operating systems."
+    "text": "A gene whose pairwise distance pattern deviates from the remaining genes is assumed **anomalous and suspect**.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "compares the pairwise distance pattern of one gene against the pattern for all remaining genes combined",
+    "sources": []
+   },
+   {
+    "text": "Java is assumed adequate for **cross-platform distribution**.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "SequenceMatrix is Java-based and compatible with the Microsoft Windows, Apple MacOS X and Linux operating systems.",
+    "sources": []
    }
   ],
   "design": [
    {
-    "text": "Software description paper presenting a tool, not an experimental study with comparison arms.",
+    "text": "The paper is a **software description**, not a comparative or benchmarked study.",
+    "kind": "method",
+    "highlight": true,
     "evidence": "We present SequenceMatrix, software that is designed to facilitate the assembly and analysis of multi-gene datasets."
    },
    {
-    "text": "Input handled by drag-and-drop of alignment files; output exported in multiple phylogenetic formats.",
-    "evidence": "exported in TNT, NEXUS, or PHYLIP formats, preserving both character set and codon information for TNT and NEXUS files"
+    "text": "Input is by **drag-and-drop of aligned files** into the program window.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "Genes are concatenated by dragging and dropping FASTA, NEXUS, or TNT files with aligned sequences into the program window."
    },
    {
-    "text": "Interactive spreadsheet display of the concatenated matrix, one cell per sequence, with optional GenBank number view.",
-    "evidence": "A multi-gene dataset is concatenated and displayed in a spreadsheet"
+    "text": "The concatenated matrix is displayed as a **spreadsheet of per-sequence cells** summarizing length, indels, Ns and codon information.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "each sequence is represented by a cell that provides information on sequence length, number of indels, the number of ambiguous bases (\"Ns\"), and the availability of codon information"
    },
    {
-    "text": "Filtering and splitting functions: taxon sets by minimum characters/fragments, exclusion of taxa/genes/individual sequences, re-splitting into component genes.",
+    "text": "Export targets are **TNT, NEXUS and PHYLIP** formats.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "exported in TNT, NEXUS, or PHYLIP formats"
+   },
+   {
+    "text": "Users can **exclude taxa, genes or single sequences** before export, and re-split matrices into component genes.",
+    "kind": "method",
+    "highlight": false,
     "evidence": "Entire taxa, whole gene fragments, or individual sequences for a particular gene and species can be excluded from export."
    },
    {
-    "text": "Two error-detection modules: identical/near-identical sequence listing and one-gene-versus-rest pairwise distance comparison.",
+    "text": "Two **error-detection tools** are built in: duplicate detection and cross-gene distance comparison.",
+    "kind": "method",
+    "highlight": false,
     "evidence": "One tool lists identical or near-identical sequences within genes, while the other compares the pairwise distance pattern of one gene against the pattern for all remaining genes combined."
    }
   ],
   "data": [
    {
-    "text": "No specific empirical dataset is reported; inputs are user-supplied aligned sequence files.",
-    "evidence": "not stated"
+    "text": "Inputs are **user-supplied aligned sequence files**; no specific dataset is named.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "dragging and dropping FASTA, NEXUS, or TNT files with aligned sequences"
    },
    {
-    "text": "Scale referenced only generically as matrices with hundreds of genes and taxa.",
-    "evidence": "Matrices with hundreds of genes and taxa can be concatenated within minutes"
-   },
-   {
-    "text": "GenBank accession numbers can be carried through and exported.",
+    "text": "**GenBank accession numbers** can be displayed and exported alongside sequences.",
+    "kind": "method",
+    "highlight": false,
     "evidence": "Alternatively, GenBank numbers for the sequences can be displayed and exported."
    },
    {
-    "text": "Software distributed openly at a project URL.",
+    "text": "Scale is described only as **hundreds of genes and taxa**, with no named benchmark dataset.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "Matrices with hundreds of genes and taxa can be concatenated within minutes"
+   },
+   {
+    "text": "The software itself is the distributed artifact, **freely available at code.google.com/p/sequencematrix**.",
+    "kind": "fact",
+    "highlight": false,
     "evidence": "The software is freely available from http://code.google.com/p/sequencematrix/."
    }
   ],
   "analysis": [
    {
-    "text": "Implementation in Java for cross-platform operation.",
-    "evidence": "SequenceMatrix is Java-based and compatible with the Microsoft Windows, Apple MacOS X and Linux operating systems."
-   },
-   {
-    "text": "Pairwise distance computation used comparatively across genes for error screening.",
-    "evidence": "compares the pairwise distance pattern of one gene against the pattern for all remaining genes combined"
-   },
-   {
-    "text": "Similarity screening within genes to flag identical or near-identical sequences.",
+    "text": "Duplicate detection **lists identical or near-identical sequences** within each gene.",
+    "kind": "method",
+    "highlight": true,
     "evidence": "One tool lists identical or near-identical sequences within genes"
    },
    {
-    "text": "No statistical tests, benchmarks against other software, or validation experiments described.",
+    "text": "The second tool performs a **pairwise distance comparison** of one gene against all remaining genes combined.",
+    "kind": "method",
+    "highlight": true,
+    "evidence": "the other compares the pairwise distance pattern of one gene against the pattern for all remaining genes combined"
+   },
+   {
+    "text": "Taxon sets are generated by **thresholding characters or gene fragments** per taxon.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "creates taxon sets listing taxa with a minimum number of characters or gene fragments"
+   },
+   {
+    "text": "Per-sequence summary statistics (**length, indels, ambiguous bases**) are computed for display.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "information on sequence length, number of indels, the number of ambiguous bases (\"Ns\")"
+   },
+   {
+    "text": "**No statistical tests or benchmarking protocol** is reported.",
+    "kind": "gap",
+    "highlight": false,
     "evidence": "not stated"
    }
   ],
   "results": [
    {
-    "text": "Concatenation of large matrices completes in minutes.",
+    "text": "Matrices with hundreds of genes and taxa are concatenated **within minutes**.",
+    "kind": "finding",
+    "highlight": true,
     "evidence": "Matrices with hundreds of genes and taxa can be concatenated within minutes"
    },
    {
-    "text": "Export preserves character set and codon information for TNT and NEXUS output.",
-    "evidence": "preserving both character set and codon information for TNT and NEXUS files"
+    "text": "Exports **retain character set and codon information** for TNT and NEXUS.",
+    "kind": "finding",
+    "highlight": true,
+    "evidence": "exported in TNT, NEXUS, or PHYLIP formats, preserving both character set and codon information for TNT and NEXUS files"
    },
    {
-    "text": "Taxon sets can be generated by minimum character or gene-fragment thresholds to assess preliminary datasets.",
-    "evidence": "SequenceMatrix also creates taxon sets listing taxa with a minimum number of characters or gene fragments, which helps assess preliminary datasets."
+    "text": "Generated taxon sets **help assess preliminary datasets** by completeness threshold.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "which helps assess preliminary datasets"
    },
    {
-    "text": "Concatenated matrices can be re-split and exported as individual gene files.",
+    "text": "Concatenation is **reversible into component gene files**.",
+    "kind": "finding",
+    "highlight": false,
     "evidence": "Data matrices can be re-split into their component genes and the gene fragments can be exported as individual gene files."
+   },
+   {
+    "text": "The program **runs on Windows, MacOS X and Linux**.",
+    "kind": "finding",
+    "highlight": false,
+    "evidence": "Java-based and compatible with the Microsoft Windows, Apple MacOS X and Linux operating systems"
    }
   ],
   "conclusions": [
    {
-    "text": "SequenceMatrix facilitates fast assembly and analysis of multi-gene datasets.",
-    "evidence": "software that is designed to facilitate the assembly and analysis of multi-gene datasets"
+    "text": "SequenceMatrix **facilitates assembly and analysis** of large multi-gene datasets.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "software that is designed to facilitate the assembly and analysis of multi-gene datasets",
+    "based_on": [
+     "R1",
+     "R2"
+    ]
    },
    {
-    "text": "The included tools help identify sequences compromised by contamination or data management error.",
-    "evidence": "two tools that help to identify sequences that may have been compromised through laboratory contamination or data management error"
+    "text": "Concatenation need not lose metadata: **partition and codon information survive** the round trip.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "preserving both character set and codon information for TNT and NEXUS files",
+    "based_on": [
+     "R2",
+     "R4"
+    ]
+   },
+   {
+    "text": "Built-in tools let users **catch contamination and data-management errors** before analysis.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "two tools that help to identify sequences that may have been compromised through laboratory contamination or data management error",
+    "based_on": [
+     "R3"
+    ]
+   },
+   {
+    "text": "Free cross-platform Java distribution makes the tool **broadly accessible**.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "The software is freely available from http://code.google.com/p/sequencematrix/.",
+    "based_on": [
+     "R5"
+    ]
    }
   ],
   "implications": [
    {
-    "text": "Phylogenetic workflows can move data between concatenated and per-gene analyses without losing partition or codon metadata.",
-    "evidence": "Data matrices can be re-split into their component genes and the gene fragments can be exported as individual gene files."
+    "text": "Dataset assembly ceases to be a bottleneck for **large multi-gene phylogenetic projects**.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "Matrices with hundreds of genes and taxa can be concatenated within minutes"
    },
    {
-    "text": "Preliminary dataset quality can be assessed before analysis via taxon completeness sets and error-screening tools.",
-    "evidence": "which helps assess preliminary datasets"
+    "text": "Routine **pre-analysis screening for contamination** becomes practical within the assembly step.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "SequenceMatrix also includes two tools that help to identify sequences that may have been compromised"
    },
    {
-    "text": "Free cross-platform availability lowers the barrier to adoption across operating systems.",
-    "evidence": "The software is freely available from http://code.google.com/p/sequencematrix/."
+    "text": "Taxon-set generation supports **iterative dataset design** by taxon completeness.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "creates taxon sets listing taxa with a minimum number of characters or gene fragments, which helps assess preliminary datasets"
    },
    {
-    "text": "No next steps or planned development are described.",
+    "text": "Downstream TNT and NEXUS analyses can **use partitioned, codon-aware models** without manual re-annotation.",
+    "kind": "claim",
+    "highlight": false,
+    "evidence": "preserving both character set and codon information for TNT and NEXUS files"
+   },
+   {
+    "text": "**No next steps or roadmap** are proposed in the abstract.",
+    "kind": "gap",
+    "highlight": false,
     "evidence": "not stated"
    }
   ],
   "limitations": [
    {
-    "text": "Codon and character set information is preserved only for TNT and NEXUS export, not PHYLIP.",
+    "text": "Codon and character set preservation is **not available for PHYLIP export**.",
+    "kind": "finding",
+    "highlight": true,
     "evidence": "preserving both character set and codon information for TNT and NEXUS files"
    },
    {
-    "text": "Input must already be aligned; alignment is not performed by the software.",
-    "evidence": "FASTA, NEXUS, or TNT files with aligned sequences"
+    "text": "The speed claim is **unquantified and unbenchmarked**, with no hardware or dataset given.",
+    "kind": "gap",
+    "highlight": true,
+    "evidence": "can be concatenated within minutes"
    },
    {
-    "text": "Not addressed: any benchmark of speed or accuracy against competing concatenation tools.",
+    "text": "No **validation of the contamination-detection tools** (sensitivity, false positives) is reported.",
+    "kind": "gap",
+    "highlight": true,
     "evidence": "not stated"
    },
    {
-    "text": "Not addressed: false-positive/false-negative rates of the contamination-detection tools, which only flag candidates.",
-    "evidence": "two tools that help to identify sequences that may have been compromised"
+    "text": "Sequences must be **already aligned**; the program performs no alignment.",
+    "kind": "fact",
+    "highlight": false,
+    "evidence": "dragging and dropping FASTA, NEXUS, or TNT files with aligned sequences"
    },
    {
-    "text": "Not addressed: scalability limits beyond 'hundreds of genes and taxa', or hardware requirements.",
+    "text": "**No comparison with other concatenation software** is offered.",
+    "kind": "gap",
+    "highlight": false,
     "evidence": "not stated"
+   },
+   {
+    "text": "Long-term availability from a **now-defunct Google Code URL** is not addressed.",
+    "kind": "gap",
+    "highlight": false,
+    "evidence": "The software is freely available from http://code.google.com/p/sequencematrix/."
    }
   ],
   "source": "abstract-only",
+  "abstract": "We present SequenceMatrix, software that is designed to facilitate the assembly and analysis of multi-gene datasets. Genes are concatenated by dragging and dropping FASTA, NEXUS, or TNT files with aligned sequences into the program window. A multi-gene dataset is concatenated and displayed in a spreadsheet; each sequence is represented by a cell that provides information on sequence length, number of indels, the number of ambiguous bases (\"Ns\"), and the availability of codon information. Alternatively, GenBank numbers for the sequences can be displayed and exported. Matrices with hundreds of genes and taxa can be concatenated within minutes and exported in TNT, NEXUS, or PHYLIP formats, preserving both character set and codon information for TNT and NEXUS files. SequenceMatrix also creates taxon sets listing taxa with a minimum number of characters or gene fragments, which helps assess preliminary datasets. Entire taxa, whole gene fragments, or individual sequences for a particular gene and species can be excluded from export. Data matrices can be re-split into their component genes and the gene fragments can be exported as individual gene files. SequenceMatrix also includes two tools that help to identify sequences that may have been compromised through laboratory contamination or data management error. One tool lists identical or near-identical sequences within genes, while the other compares the pairwise distance pattern of one gene against the pattern for all remaining genes combined. SequenceMatrix is Java-based and compatible with the Microsoft Windows, Apple MacOS X and Linux operating systems. The software is freely available from http://code.google.com/p/sequencematrix/. \u00a9 The Willi Hennig Society 2010.",
   "references": {}
  },
  "comparison": {
   "points": [
    {
     "kind": "cited-as-claimed",
-    "text": "Fast concatenation of individually aligned gene/protein alignments into a single supermatrix is exactly what the paper set out to deliver, and 39 of 40 citing papers use it precisely that way (e.g. 79 partitions merged into one supermatrix, 67 plastid protein-coding genes, seven housekeeping genes for MLST)."
+    "text": "The core claim \u2014 fast concatenation of individually aligned gene files into a single multi-gene supermatrix \u2014 is exactly what 39 of 40 citers use it for, almost always as a one-line methods step before phylogenetic inference (e.g. 67 plastid protein-coding genes, 79 nuclear+mitochondrial partitions, seven housekeeping genes for MLST)."
    },
    {
     "kind": "cited-as-claimed",
-    "text": "Export of character-set/codon information in NEXUS and TNT format is cited as claimed by the minority of citers who mention output detail \u2014 one paper exports to Nexus with edited sequence names, another specifies codon partitions carried through from SequenceMatrix into downstream partitioned analyses."
+    "text": "Preservation of character set and codon information across the round trip is picked up by only a small minority: one citer explicitly specifies codon partitions in the exported supermatrix and another exports in NEXUS format. The claim that partition metadata survives is confirmed in practice but rarely worth mentioning to citers."
    },
    {
     "kind": "cited-for-something-else",
-    "text": "Most citers treat SequenceMatrix as a generic file-format plumbing step ('generate input files for Bayesian inference', 'manually combine trimmed alignments') rather than as the fast-assembly-plus-quality-control package the paper presented; speed on large matrices is assumed, never the reason given."
+    "text": "Several citers use it as a general alignment-management/editing utility rather than a concatenator proper \u2014 editing sequence names, 'manually combining trimmed alignments', or concatenating 14 already-aligned protein sequences \u2014 housekeeping the paper never advertised as its selling point."
    },
    {
     "kind": "cited-for-something-else",
-    "text": "Several uses fall outside the multi-gene phylogenetics framing the paper built for: concatenating 14 protein sequences for comparative genomics, joining two plant barcode regions (ITS2 + rbcLa) to examine species separation, and MLST-based strain typing of phytoplasmas \u2014 concatenation as a data-prep utility, not as multi-gene matrix assembly."
+    "text": "One citer concatenates just two loci (ITS2 + rbcLa, and elsewhere cox1+cox2, SSU+cox1, CO1+EF1\u03b1). The paper's pitch was matrices with hundreds of genes and taxa assembled in minutes; a large share of real use is two- to six-gene datasets where speed is irrelevant and the tool is chosen for convenience and format export."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "The headline conclusion that the built-in tools help flag sequences compromised by contamination or data management error (pairwise distance inspection, per-gene diagnostics) draws zero citations in the sample \u2014 no citing paper reports using SequenceMatrix for quality control."
+    "text": "The contamination- and error-flagging tools \u2014 the stated conclusion that users can 'catch data-management errors before analysis' via pairwise distance checks and flagged sequences \u2014 appear in none of the 40 sampled uses. Citers treat the program purely as a file-joining step, not as a QC gate."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "Taxon-set generation by minimum character or gene-fragment thresholds, offered as a way to evaluate preliminary datasets, is never invoked by citers; dataset subsetting decisions are made elsewhere in their pipelines."
+    "text": "Generated taxon sets for assessing preliminary datasets by completeness threshold, and the reversibility of concatenation back into component gene files, are never invoked. No citer reports splitting a matrix or using completeness-based taxon selection."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "The re-splitting of a concatenated matrix back into individual gene files goes uncited, even though many citers run per-gene analyses alongside the concatenated one \u2014 they evidently keep their original single-locus files instead."
-   },
-   {
-    "kind": "cited-for-something-else",
-    "text": "One citation is purely positional rather than functional: BAD2matrix cites SequenceMatrix only to establish the existing landscape of multilocus concatenation tools that motivated a new program, using it as a background marker rather than for any of its results."
+    "text": "Cross-platform Java accessibility is a stated conclusion but is invisible in citation practice; the single non-methods citation is a background mention positioning SequenceMatrix as one of the existing concatenation tools that motivated BAD2matrix, not as a portability or accessibility benchmark."
    }
   ]
  },
- "cost_usd": 4.9149
+ "cost_usd": 7.7403
 }
