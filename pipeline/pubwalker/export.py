@@ -33,6 +33,9 @@ def run(doi):
     index = {e["slug"]: e for e in json.loads(index_path.read_text())} if index_path.exists() else {}
     index[slug] = {"slug": slug, "doi": anchor["doi"], "title": anchor["title"], "year": anchor["year"], "venue": anchor.get("venue"),
                    "cited_by_count": anchor.get("cited_by_count"), "windows": {n: w["total"] for n, w in P["windows"].items()},
-                   "generated": out["generated"], "cost_usd": out["cost_usd"]}
+                   "generated": out["generated"], "cost_usd": out["cost_usd"],
+                   # enough of each section for the home page to say what the report holds, without loading the report itself
+                   "roles": out["windows"]["all-time"]["roles"], "source": (struct or {}).get("source"),
+                   "outgoing": len(outgoing["references"]) if outgoing else None}
     index_path.write_text(json.dumps(sorted(index.values(), key=lambda e: e["year"] or 0), indent=1))
     print(f"wrote {SITE_DATA / (slug + '.json')} ({len(out['citers'])} citers with passages)")

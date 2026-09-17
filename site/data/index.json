@@ -12,7 +12,18 @@
    "all-time": 947
   },
   "generated": "2026-09-17",
-  "cost_usd": 2.921
+  "cost_usd": 2.921,
+  "roles": {
+   "uses-tool-or-method": 0,
+   "uses-data": 0,
+   "background-claim": 38,
+   "compares-against": 0,
+   "extends-or-modifies": 0,
+   "critiques-or-contradicts": 0,
+   "incidental": 1
+  },
+  "source": "pmc-full-text",
+  "outgoing": 28
  },
  {
   "slug": "10-1039-b814285h",
@@ -27,7 +38,18 @@
    "all-time": 563
   },
   "generated": "2026-09-17",
-  "cost_usd": 3.8605
+  "cost_usd": 3.8605,
+  "roles": {
+   "uses-tool-or-method": 2,
+   "uses-data": 0,
+   "background-claim": 34,
+   "compares-against": 0,
+   "extends-or-modifies": 2,
+   "critiques-or-contradicts": 0,
+   "incidental": 2
+  },
+  "source": "pmc-full-text",
+  "outgoing": 62
  },
  {
   "slug": "10-1111-j-1474-9726-2009-00459-x",
@@ -42,7 +64,18 @@
    "all-time": 588
   },
   "generated": "2026-09-17",
-  "cost_usd": 4.3375
+  "cost_usd": 4.3375,
+  "roles": {
+   "uses-tool-or-method": 1,
+   "uses-data": 0,
+   "background-claim": 37,
+   "compares-against": 0,
+   "extends-or-modifies": 2,
+   "critiques-or-contradicts": 0,
+   "incidental": 0
+  },
+  "source": "pmc-full-text",
+  "outgoing": 87
  },
  {
   "slug": "10-1111-j-1096-0031-2010-00329-x",
@@ -57,7 +90,18 @@
    "all-time": 2594
   },
   "generated": "2026-09-17",
-  "cost_usd": 2.1734
+  "cost_usd": 2.1734,
+  "roles": {
+   "uses-tool-or-method": 39,
+   "uses-data": 0,
+   "background-claim": 1,
+   "compares-against": 0,
+   "extends-or-modifies": 0,
+   "critiques-or-contradicts": 0,
+   "incidental": 0
+  },
+  "source": "abstract-only",
+  "outgoing": null
  },
  {
   "slug": "10-1016-j-cell-2010-03-012",
@@ -72,7 +116,18 @@
    "all-time": 1687
   },
   "generated": "2026-09-17",
-  "cost_usd": 4.5269
+  "cost_usd": 4.5269,
+  "roles": {
+   "uses-tool-or-method": 0,
+   "uses-data": 0,
+   "background-claim": 36,
+   "compares-against": 2,
+   "extends-or-modifies": 1,
+   "critiques-or-contradicts": 0,
+   "incidental": 0
+  },
+  "source": "pmc-full-text",
+  "outgoing": 64
  },
  {
   "slug": "10-1038-nature09565",
@@ -87,7 +142,18 @@
    "all-time": 813
   },
   "generated": "2026-09-17",
-  "cost_usd": 2.7182
+  "cost_usd": 2.7182,
+  "roles": {
+   "uses-tool-or-method": 1,
+   "uses-data": 0,
+   "background-claim": 27,
+   "compares-against": 2,
+   "extends-or-modifies": 5,
+   "critiques-or-contradicts": 1,
+   "incidental": 3
+  },
+  "source": "pmc-full-text",
+  "outgoing": 30
  },
  {
   "slug": "10-1038-nature10489",
@@ -102,7 +168,18 @@
    "all-time": 643
   },
   "generated": "2026-09-17",
-  "cost_usd": 2.6211
+  "cost_usd": 2.6211,
+  "roles": {
+   "uses-tool-or-method": 0,
+   "uses-data": 0,
+   "background-claim": 36,
+   "compares-against": 0,
+   "extends-or-modifies": 0,
+   "critiques-or-contradicts": 0,
+   "incidental": 0
+  },
+  "source": "pmc-full-text",
+  "outgoing": 30
  },
  {
   "slug": "10-1371-journal-pone-0036674",
@@ -117,7 +194,18 @@
    "all-time": 247
   },
   "generated": "2026-09-17",
-  "cost_usd": 4.0322
+  "cost_usd": 4.0322,
+  "roles": {
+   "uses-tool-or-method": 2,
+   "uses-data": 1,
+   "background-claim": 23,
+   "compares-against": 10,
+   "extends-or-modifies": 1,
+   "critiques-or-contradicts": 0,
+   "incidental": 1
+  },
+  "source": "pmc-full-text",
+  "outgoing": 47
  },
  {
   "slug": "10-1016-j-socscimed-2013-06-014",
@@ -132,7 +220,18 @@
    "all-time": 214
   },
   "generated": "2026-09-17",
-  "cost_usd": 2.8231
+  "cost_usd": 2.8231,
+  "roles": {
+   "uses-tool-or-method": 0,
+   "uses-data": 0,
+   "background-claim": 39,
+   "compares-against": 0,
+   "extends-or-modifies": 0,
+   "critiques-or-contradicts": 0,
+   "incidental": 1
+  },
+  "source": "pmc-full-text",
+  "outgoing": 36
  },
  {
   "slug": "10-1161-circulationaha-114-012957",
@@ -147,7 +246,18 @@
    "all-time": 307
   },
   "generated": "2026-09-17",
-  "cost_usd": 3.1439
+  "cost_usd": 3.1439,
+  "roles": {
+   "uses-tool-or-method": 0,
+   "uses-data": 2,
+   "background-claim": 34,
+   "compares-against": 2,
+   "extends-or-modifies": 1,
+   "critiques-or-contradicts": 0,
+   "incidental": 0
+  },
+  "source": "pmc-full-text",
+  "outgoing": 49
  },
  {
   "slug": "10-1257-aer-20130397",
@@ -162,7 +272,18 @@
    "all-time": 103
   },
   "generated": "2026-09-17",
-  "cost_usd": 2.6051
+  "cost_usd": 2.6051,
+  "roles": {
+   "uses-tool-or-method": 0,
+   "uses-data": 0,
+   "background-claim": 20,
+   "compares-against": 1,
+   "extends-or-modifies": 0,
+   "critiques-or-contradicts": 1,
+   "incidental": 2
+  },
+  "source": "pmc-full-text",
+  "outgoing": 48
  },
  {
   "slug": "10-1093-nar-gkx1092",
@@ -177,7 +298,18 @@
    "all-time": 276
   },
   "generated": "2026-09-17",
-  "cost_usd": 3.1268
+  "cost_usd": 3.1268,
+  "roles": {
+   "uses-tool-or-method": 3,
+   "uses-data": 24,
+   "background-claim": 7,
+   "compares-against": 3,
+   "extends-or-modifies": 1,
+   "critiques-or-contradicts": 0,
+   "incidental": 1
+  },
+  "source": "pmc-full-text",
+  "outgoing": 26
  },
  {
   "slug": "10-1007-s40273-018-0623-8",
@@ -192,7 +324,18 @@
    "all-time": 345
   },
   "generated": "2026-09-17",
-  "cost_usd": 3.6316
+  "cost_usd": 3.6316,
+  "roles": {
+   "uses-tool-or-method": 8,
+   "uses-data": 1,
+   "background-claim": 27,
+   "compares-against": 0,
+   "extends-or-modifies": 1,
+   "critiques-or-contradicts": 0,
+   "incidental": 0
+  },
+  "source": "pmc-full-text",
+  "outgoing": 59
  },
  {
   "slug": "10-1186-s40168-018-0568-3",
@@ -207,6 +350,17 @@
    "all-time": 126
   },
   "generated": "2026-09-17",
-  "cost_usd": 3.3809
+  "cost_usd": 3.3809,
+  "roles": {
+   "uses-tool-or-method": 9,
+   "uses-data": 0,
+   "background-claim": 24,
+   "compares-against": 0,
+   "extends-or-modifies": 2,
+   "critiques-or-contradicts": 1,
+   "incidental": 2
+  },
+  "source": "pmc-full-text",
+  "outgoing": 70
  }
 ]
