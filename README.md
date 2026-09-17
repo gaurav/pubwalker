@@ -29,8 +29,10 @@ Scholar, Europe PMC, pubmed2db, Claude Code in headless mode, and so on).
 keyless live look-up for any DOI. It deploys to GitHub Pages from `main`; locally:
 
 ```sh
-python3 -m http.server 8765 -d site   # then open http://localhost:8765/
+cd pipeline && uv run serve   # http://localhost:8765/, reloads the browser when site/ changes
 ```
+
+Without uv, `python3 -m http.server 8765 -d site` does the same minus the reloading.
 
 `pipeline/` produces the reports. It needs [uv](https://docs.astral.sh/uv/) and a Claude Code
 login (`claude` on your PATH); every LLM call goes through `claude -p` and is cached, as is

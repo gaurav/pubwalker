@@ -26,5 +26,18 @@ def main():
         STEPS[name](a)
 
 
+def serve():
+    """uv run serve [port]: serve site/ and reload the browser when a file in it changes."""
+    import sys
+
+    from livereload import Server  # dev dependency
+
+    from . import SITE_DATA
+
+    server = Server()
+    server.watch(str(SITE_DATA.parent))
+    server.serve(root=str(SITE_DATA.parent), port=int(sys.argv[1]) if len(sys.argv) > 1 else 8765)
+
+
 if __name__ == "__main__":
     main()
