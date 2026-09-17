@@ -127,7 +127,7 @@ def roles(doi, workers=4):
             print(f"  {cid}: {e}")
             return cid, None
 
-    todo = [cid for cid in P["passages"] if cid not in done]
+    todo = list(P["passages"])  # already-classified ids are re-asked, which the llm cache serves for free; that keeps them in the cost tally
     with ThreadPoolExecutor(workers) as ex:
         for cid, out in ex.map(one, todo):
             if out:
@@ -267,7 +267,7 @@ def outgoing(doi, workers=4):
             print(f"  {r['id']}: {e}")
             return r["id"], None
 
-    todo = [r for r in refs if r["mentions"] and r["id"] not in done]  # a reference never cited in a paragraph (figure-only, say) is left unclassified
+    todo = [r for r in refs if r["mentions"]]  # a reference never cited in a paragraph (figure-only, say) is left unclassified
     with ThreadPoolExecutor(workers) as ex:
         for rid, out in ex.map(one, todo):
             if out:

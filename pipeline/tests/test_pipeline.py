@@ -13,7 +13,7 @@ from unittest import mock
 
 import httpx
 
-from pubwalker import analyze, http
+from pubwalker import analyze, http, llm
 from pubwalker.analyze import fulltext, grounded, has_body, histogram, references, tidy_structure
 from pubwalker.fetch import flatten, slugify
 from pubwalker.passages import citing_paragraphs, find_ref, in_window
@@ -125,6 +125,21 @@ class Fetch(unittest.TestCase):
         f = flatten(w)
         self.assertEqual((f["id"], f["doi"], f["pmid"], f["pmcid"], f["venue"], f["topics"]), ("W1", "10.1000/abc", "42", None, "J", ["A", "B"]))
         self.assertEqual(slugify("10.1111/j.1096-0031.2010.00329.x"), "10-1111-j-1096-0031-2010-00329-x")
+
+
+class Cost(unittest.TestCase):
+    def test_each_step_banks_its_own_spend_and_a_rerun_does_not_double_count(self):
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(llm, "DATA", Path(tmp)):
+            (Path(tmp) / "10-1-a").mkdir()
+            self.assertIsNone(llm.cost("10.1/a"))  # nothing spent on this paper yet
+            for step, spend in [("roles", [0.01, 0.02]), ("synth", [0.5])]:
+                llm.SPENT.extend(spend)
+                llm.record("10.1/a", step)
+            self.assertEqual(llm.cost("10.1/a"), 0.53)
+            llm.SPENT.extend([0.01, 0.02])  # a re-run of roles replays the same cached calls
+            llm.record("10.1/a", "roles")
+            self.assertEqual(llm.cost("10.1/a"), 0.53)
+            self.assertEqual(llm.SPENT, [])  # and the tally is cleared for the next step
 
 
 APP_JS = Path(__file__).resolve().parents[2] / "site" / "app.js"

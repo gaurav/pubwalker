@@ -62,7 +62,9 @@ window; `roles` labels each passage with Haiku; `synth` writes per-window and ov
 syntheses with Opus, each claim tied to citer ids; `structure` extracts the anchor's argument
 from its PMC full text (or abstract); `outgoing` classifies what the anchor uses each of its own
 references for, with the same roles; `compare` sets claimed against cited; `export` writes
-`site/data/<slug>.json`. A full run for one paper costs a few dollars.
+`site/data/<slug>.json`. A full run for one paper costs a few dollars: each step banks what it
+spent in `data/<slug>/cost.json`, and the report page and the home page show the per-paper total
+and the total over all reports.
 
 To add a report, run `all` for the DOI and commit the new `site/data/` files; `export` merges it
 into `index.json`. Anatomy and Outgoing need PMC full text with a body, which a PMCID alone does

@@ -1,7 +1,7 @@
 """uv run pubwalker <step|all> <doi> [--n 40] [--seed 1]. Steps are idempotent and cached."""
 import argparse
 
-from . import analyze, export, fetch, passages
+from . import analyze, export, fetch, llm, passages
 
 STEPS = {
     "fetch": lambda a: fetch.run(a.doi),
@@ -25,6 +25,7 @@ def main():
     for name in (STEPS if a.step == "all" else [a.step]):
         print(f"== {name}")
         STEPS[name](a)
+        llm.record(a.doi, name)
 
 
 def serve():

@@ -8,15 +8,19 @@ import subprocess
 import sys
 
 from . import DATA
+from .fetch import slugify
 
 CACHE = DATA / "cache" / "llm"
+SPENT = []  # what this process spent, counting cached calls at their original price so a re-run still tallies
 
 
 def ask(prompt, *, model, system, schema=None):
     key = hashlib.sha256(json.dumps([model, system, prompt, schema], sort_keys=True).encode()).hexdigest()
     path = CACHE / f"{key}.json"
     if path.exists():
-        return json.loads(path.read_text())["output"]
+        cached = json.loads(path.read_text())
+        SPENT.append(cached.get("cost_usd") or 0)
+        return cached["output"]
     cmd = ["claude", "-p", "--model", model, "--output-format", "json", "--system-prompt", system,
            "--no-session-persistence", "--tools", ""]
     if schema:
@@ -36,9 +40,24 @@ def ask(prompt, *, model, system, schema=None):
             raise RuntimeError(f"claude -p returned no structured output ({d.get('subtype')}): {str(d.get('result'))[:300]!r}")
     CACHE.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({"model": model, "cost_usd": d.get("total_cost_usd"), "output": out}))
+    SPENT.append(d.get("total_cost_usd") or 0)
     print(f"  [{model}] ${d.get('total_cost_usd', 0):.4f}", file=sys.stderr)
     return out
 
 
-def total_cost():
-    return round(sum(json.loads(p.read_text()).get("cost_usd") or 0 for p in CACHE.glob("*.json")), 4) if CACHE.exists() else 0
+def record(doi, step):
+    """Bank what this step spent in data/<slug>/cost.json, one entry per step so a re-run overwrites its own
+    entry rather than double-counting. The whole-cache total would be misleading: it also holds papers that
+    were dropped from the site and every prompt iteration thrown away along the way."""
+    if not SPENT:
+        return
+    path = DATA / slugify(doi) / "cost.json"
+    costs = json.loads(path.read_text()) if path.exists() else {}
+    costs[step] = round(sum(SPENT), 4)
+    path.write_text(json.dumps(costs, indent=1))
+    SPENT.clear()
+
+
+def cost(doi):
+    path = DATA / slugify(doi) / "cost.json"
+    return round(sum(json.loads(path.read_text()).values()), 4) if path.exists() else None

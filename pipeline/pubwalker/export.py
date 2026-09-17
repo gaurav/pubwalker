@@ -5,7 +5,7 @@ import json
 from . import DATA, SITE_DATA
 from .analyze import histogram, load
 from .fetch import slugify
-from .llm import total_cost
+from .llm import cost
 
 
 def run(doi):
@@ -25,13 +25,14 @@ def run(doi):
         "overall": S.get("overall"),
         "citers": {i: {**{k: citers[i].get(k) for k in keep}, **P["passages"][i], "role": R.get(i)} for i in P["passages"]},
         "years": sorted(years.items()),
-        "structure": struct, "comparison": comp, "outgoing": outgoing, "cost_usd": total_cost(),
+        "structure": struct, "comparison": comp, "outgoing": outgoing, "cost_usd": cost(doi),
     }
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     (SITE_DATA / f"{slug}.json").write_text(json.dumps(out, indent=1))
     index_path = SITE_DATA / "index.json"
     index = {e["slug"]: e for e in json.loads(index_path.read_text())} if index_path.exists() else {}
     index[slug] = {"slug": slug, "doi": anchor["doi"], "title": anchor["title"], "year": anchor["year"], "venue": anchor.get("venue"),
-                   "cited_by_count": anchor.get("cited_by_count"), "windows": {n: w["total"] for n, w in P["windows"].items()}, "generated": out["generated"]}
+                   "cited_by_count": anchor.get("cited_by_count"), "windows": {n: w["total"] for n, w in P["windows"].items()},
+                   "generated": out["generated"], "cost_usd": out["cost_usd"]}
     index_path.write_text(json.dumps(sorted(index.values(), key=lambda e: e["year"] or 0), indent=1))
     print(f"wrote {SITE_DATA / (slug + '.json')} ({len(out['citers'])} citers with passages)")
