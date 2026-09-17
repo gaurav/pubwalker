@@ -7,6 +7,8 @@ const app = document.getElementById('app');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const WINDOW_LABEL = { 'last-12-months': 'Last 12 months', 'last-5-years': 'Last 5 years', 'all-time': 'All time' };
 const fmt = (n) => (n ?? 0).toLocaleString();
+// A stat tile for a dollar figure, dropped entirely for a report exported before per-report costs were tracked.
+const money = (usd, label) => (usd == null ? '' : `<div><b>$${usd.toFixed(2)}</b><span>${label}</span></div>`);
 // In order of direction: the paper itself, what it cites, what cites it, and the two directions compared.
 const TABS = { anatomy: 'Anatomy', outgoing: 'Outgoing', backscatter: 'Backscatter', comparison: 'Claimed vs cited' };
 const ROLES = ['uses-tool-or-method', 'uses-data', 'background-claim', 'compares-against', 'extends-or-modifies', 'critiques-or-contradicts', 'incidental'];
@@ -41,6 +43,7 @@ async function home() {
     <b>what does its argument rest on</b>. Reports below were produced by the <a href="https://github.com/gaurav/pubwalker">pipeline</a>
     with a cheap model classifying each citing passage and a stronger one synthesising; every claim links to its evidence.</p>
     <h2>Reports</h2>
+    ${index.some((e) => e.cost_usd != null) ? `<p class="small muted">${index.length} reports, $${index.reduce((t, e) => t + (e.cost_usd || 0), 0).toFixed(2)} of LLM calls to produce all of them.</p>` : ''}
     ${index.length ? index.map((e) => `
       <div class="card">
         <a class="title" href="?doi=${encodeURIComponent(e.doi)}">${esc(e.title)}</a>
@@ -274,7 +277,7 @@ function report(d, index) {
   return {
     anchor: a,
     years: d.years,
-    nums: `<div><b>${fmt(a.cited_by_count)}</b><span>citations in OpenAlex</span></div><div><b>${esc(d.generated)}</b><span>report generated</span></div><div><b>$${(d.cost_usd ?? 0).toFixed(2)}</b><span>LLM cost, all reports so far</span></div>`,
+    nums: `<div><b>${fmt(a.cited_by_count)}</b><span>citations in OpenAlex</span></div><div><b>${esc(d.generated)}</b><span>report generated</span></div>${money(d.cost_usd, 'LLM cost for this report')}`,
     panels: {
       backscatter: `${INTRO.backscatter}
         <div class="struct">
