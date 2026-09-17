@@ -4129,32 +4129,25 @@
   ]
  ],
  "structure": {
-  "question": "How does loss of 53BP1 rescue the DNA repair defects, genomic instability, PARP-inhibitor sensitivity and tumorigenesis of Brca1-deficient cells?",
+  "question": "How does loss of 53BP1 rescue viability, genomic stability and tumor suppression in Brca1-deficient cells?",
   "assumptions": [
    {
-    "text": "Brca1 loss impairs Rad51 foci and **homology-dependent repair**, making HR the pathway at issue.",
+    "text": "Brca1 loss **impairs Rad51 foci and HR**, the pathway needed for replication-associated break repair.",
     "kind": "fact",
     "highlight": true,
     "evidence": "In the absence of Brca1, Xrcc2 or other HR proteins, Rad51 foci formation and homology dependent repair are impaired",
+    "section": "INTRODUCTION",
     "sources": [
      "R32",
      "R47"
     ]
    },
    {
-    "text": "Asymmetric radial chromosomes are taken as a **characteristic marker of HR deficiency**.",
-    "kind": "fact",
-    "highlight": false,
-    "evidence": "a type of chromatid exchange characteristic of HR deficiency",
-    "sources": [
-     "R54"
-    ]
-   },
-   {
-    "text": "PARP inhibition is **selectively toxic to HR-deficient cells** because unrepaired ssDNA breaks become replication-associated DSBs.",
+    "text": "**HR-deficient cells are hypersensitive to PARP inhibition**, the basis of the synthetic-lethality assays used here.",
     "kind": "fact",
     "highlight": true,
-    "evidence": "hence PARP inhibition is particularly toxic in Brca1- or Brca2-deficient cells which are HR-defective",
+    "evidence": "HR-deficient cells exhibit an acute sensitivity to killing by inhibitors of the single strand DNA (ssDNA) repair protein poly(ADP-ribose) polymerase (PARP)",
+    "section": "INTRODUCTION",
     "sources": [
      "R5",
      "R16",
@@ -4162,37 +4155,52 @@
     ]
    },
    {
-    "text": "Sister chromatid exchanges are assumed to be a **Rad51-dependent readout of HR**.",
+    "text": "**Deletion of 53BP1 rescues viability** of Brca1\u039411/\u039411 mice by an unknown mechanism.",
     "kind": "fact",
-    "highlight": false,
-    "evidence": "we monitored sister chromatid exchanges (SCEs), which are dependent on Rad51 activity",
-    "sources": [
-     "R51"
-    ]
-   },
-   {
-    "text": "RPA phosphorylation on ssDNA is treated as a **proxy for DSB resection**, requiring ATM.",
-    "kind": "fact",
-    "highlight": false,
-    "evidence": "ATM kinase activity is required for nucleolytic processing of DSBs to generate RPA-coated ssDNA",
-    "sources": [
-     "R22"
-    ]
-   },
-   {
-    "text": "Deletion of 53BP1 was already known to **rescue Brca1\u039411/\u039411 lethality** with little tumorigenesis, a mechanism left unexplained.",
-    "kind": "fact",
-    "highlight": false,
-    "evidence": "Deletion of 53BP1 also rescues the viability of Brca1\u039411/\u039411 mice",
+    "highlight": true,
+    "evidence": "Deletion of 53BP1 also rescues the viability of Brca1\u039411/\u039411 mice ([R8]).",
+    "section": "INTRODUCTION",
     "sources": [
      "R8"
     ]
    },
    {
-    "text": "NHEJ proteins are assumed capable of **suppressing HR**, motivating the Lig4 test.",
-    "kind": "claim",
+    "text": "Asymmetric radial chromosomes are taken as a **marker of HR deficiency**.",
+    "kind": "fact",
+    "highlight": false,
+    "evidence": "a type of chromatid exchange characteristic of HR deficiency ([R54])",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice",
+    "sources": [
+     "R54"
+    ]
+   },
+   {
+    "text": "**Sister chromatid exchanges depend on Rad51**, so SCE frequency reports HR proficiency.",
+    "kind": "fact",
+    "highlight": false,
+    "evidence": "we monitored sister chromatid exchanges (SCEs), which are dependent on Rad51 activity ([R51])",
+    "section": "Loss of 53BP1 increases HR in Brca1-mutant cells",
+    "sources": [
+     "R51"
+    ]
+   },
+   {
+    "text": "**ATM activity is required for resection** generating RPA-coated ssDNA, and CtIP is an ATM substrate in that pathway.",
+    "kind": "fact",
+    "highlight": false,
+    "evidence": "ATM kinase activity is required for nucleolytic processing of DSBs to generate RPA-coated ssDNA ([R22]).",
+    "section": "Rescue of Brca1 mutant cells by 53BP1 deletion is dependent on ATM",
+    "sources": [
+     "R22",
+     "R27"
+    ]
+   },
+   {
+    "text": "**NHEJ proteins can suppress HR**, motivating the test of Lig4 deletion.",
+    "kind": "fact",
     "highlight": false,
     "evidence": "suggesting that proteins of the NHEJ pathway can have suppressive effects on HR",
+    "section": "Lig4 is required for radial fusions in Brca1 mutant cells",
     "sources": [
      "R36",
      "R58"
@@ -4201,180 +4209,201 @@
   ],
   "design": [
    {
-    "text": "Mouse genetics study comparing **Brca1 mutant versus Brca1/53BP1 double mutant** cells and animals, with WT and 53BP1-/- controls.",
+    "text": "Mouse genetic epistasis study comparing **WT, Brca1\u039411/\u039411, Brca1/53BP1, Brca1/Lig4 and Xrcc2 mutant** B cells and MEFs.",
     "kind": "method",
     "highlight": true,
-    "evidence": "we examined chromosomal aberrations in metaphase spreads from WT, Brca1\u039411/\u039411 p53+/- and Brca1\u039411/\u039411 53BP1-/- B cells"
+    "evidence": "we examined chromosomal aberrations in metaphase spreads from WT, Brca1\u039411/\u039411 p53+/- and Brca1\u039411/\u039411 53BP1-/- B cells that were stimulated to divide ex vivo for three days",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice"
    },
    {
-    "text": "Tumor-free survival was followed in **cohorts of female mice** with mammary Brca1 exon 11 deletion, with or without 53BP1.",
+    "text": "**Tumor-free survival cohorts** of females with breast-specific Brca1 exon 11 deletion with or without 53BP1.",
     "kind": "method",
     "highlight": true,
-    "evidence": "we followed the onset of development of mammary tumors in cohorts of female mice with deletion mutations in Brca1 exon 11"
+    "evidence": "we followed the onset of development of mammary tumors in cohorts of female mice with deletion mutations in Brca1 exon 11 (Fig. 1A)",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice"
    },
    {
-    "text": "Genotoxic challenge arms used **PARP inhibitor, camptothecin and IR**, plus ATM and DNA-PKcs inhibitors as pathway manipulations.",
+    "text": "Damage was manipulated with **PARPi, camptothecin, IR, ATMi and DNA-PKi** with aberrations, survival, proliferation and foci as readouts.",
     "kind": "method",
     "highlight": false,
-    "evidence": "we challenged Brca1 mutant cells with a chemical inhibitor of PARP (PARPi; KU58948)"
+    "evidence": "ATM inhibitor (KU55993, KuDOS Pharmaceuticals) was used at 5 \u03bcM, DNA-PK inhibitor (NU7026, Sigma) was used at 20 \u03bcM and PARP inhibitor (KU58948, KuDOS) was used at various concentrations",
+    "section": "B cell cultures, retroviral transduction, and metaphase preparation"
    },
    {
-    "text": "Specificity was tested by swapping the HR lesion to **Xrcc2-deficient cells** and the NHEJ lesion to Lig4-deficient cells.",
+    "text": "Conditional alleles deleted by **Cre retrovirus infection** allowed p53-sufficient Brca1, Lig4 and Xrcc2 knockouts.",
+    "kind": "method",
+    "highlight": false,
+    "evidence": "we used Cre-mediated deletion to delete conditional alleles of Lig4 and Brca1 to make B cells homozygous for the knockout Lig4\u03d5/\u03d5 and Brca1\u03d5/\u03d5 alleles",
+    "section": "Lig4 is required for radial fusions in Brca1 mutant cells"
+   },
+   {
+    "text": "HR was measured three independent ways: **Rad51 foci, SCE and DR-GFPhyg reporter**.",
     "kind": "method",
     "highlight": true,
-    "evidence": "we examined chromosomal aberrations in cells from mice deficient for Xrcc2, a Rad51 paralog which, like Brca1, is required for Rad51 foci formation"
+    "evidence": "loss of 53BP1 increases HR in Brca1 mutant cells, as evidenced by Rad51 foci, sister chromatid exchange, and recombination reporter assays",
+    "section": "Loss of 53BP1 increases HR in Brca1-mutant cells"
    },
    {
-    "text": "p53 status was controlled by using **Cre-deleted conditional Brca1 B cells** that remain p53-sufficient.",
+    "text": "Resection was assayed by **RPA phosphorylation and translocation breakpoint mapping** at I-SceI-induced c-myc/IgH junctions.",
     "kind": "method",
     "highlight": false,
-    "evidence": "By infecting these cells with a virus expressing Cre recombinase, we were able to specifically delete Brca1 exon 11 in p53-sufficient cells."
+    "evidence": "We used PCR to map translocation breakpoints induced by the I-SceI system in AID-/- and AID-/- 53BP1-/- cells",
+    "section": "Loss of 53BP1 promotes RPA phosphorylation in a manner dependent on ATM and CtIP"
    },
    {
-    "text": "CtIP dependence was manipulated by **shRNA knockdown in MEFs** carrying the double mutation.",
+    "text": "**CtIP shRNA knockdown** in Brca1\u039411/\u039411 53BP1-/- MEFs tested the requirement for CtIP.",
     "kind": "method",
     "highlight": false,
-    "evidence": "Brca1\u039411/\u039411 53BP1-/- MEFs infected with CtIP shRNA showed impairment of RPA phosphorylation"
+    "evidence": "Brca1\u039411/\u039411 53BP1-/- MEFs infected with CtIP shRNA showed impairment of RPA phosphorylation",
+    "section": "Rescue of Brca1 mutant cells by 53BP1 deletion is dependent on ATM"
    }
   ],
   "data": [
    {
-    "text": "**Metaphase spread counts** from 100\u2013300 cells per genotype gave radial and break frequencies.",
+    "text": "**Metaphase spreads scored in hundreds of cells** per genotype (n=300 for Brca1 genotypes, n=100 controls).",
     "kind": "method",
     "highlight": true,
-    "evidence": "10.7 % of Brca1\u039411/\u039411p53+/- B cells (n=300) carried one or more asymmetric radial chromosome structures"
+    "evidence": "10.7 % of Brca1\u039411/\u039411p53+/- B cells (n=300) carried one or more asymmetric radial chromosome structures",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice"
    },
    {
-    "text": "Mouse cohorts of **27 Brca1 exon 11 mammary-deleted females** were followed to 18\u201322 months.",
-    "kind": "method",
+    "text": "**Mammary tumor cohort of 27 animals** with Brca1 exon 11 deletion followed to 18-22 months.",
+    "kind": "finding",
     "highlight": true,
-    "evidence": "with 12 out of 27 animals affected by 18 months of age"
+    "evidence": "with 12 out of 27 animals affected by 18 months of age (Fig. 1A)",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice"
    },
    {
-    "text": "Mouse strains were **obtained from NCI and collaborators** (53BP1-/- from Junjie Chen; Xrcc2 and Lig4 conditionals from Peter McKinnon).",
+    "text": "Mouse strains were **obtained from NCI repository and collaborators** (Junjie Chen; Peter McKinnon).",
     "kind": "method",
     "highlight": false,
-    "evidence": "Mice carrying the Brca1 exon 11 allele were obtained from the NCI mouse repository, 53BP1-/- mice were a gift from Junjie Chen"
+    "evidence": "Mice carrying the Brca1 exon 11 allele were obtained from the NCI mouse repository, 53BP1-/- mice were a gift from Junjie Chen, and Xrcc2 and Lig4 conditional mice were gifts from Peter McKinnon.",
+    "section": "Mice"
    },
    {
-    "text": "The **HPRT-DRGFPhyg reporter** was integrated into WT, Brca1\u039411/\u039411 and double-mutant immortalized MEF lines.",
+    "text": "The **HPRT-DRGFPhyg reporter** was electroporated into MEF lines and integrants verified by Southern blot.",
     "kind": "method",
     "highlight": false,
-    "evidence": "HPRT-DRGFPhyg ([R35]) was electroporated into various MEF cell lines and integrants were selected in 90-125 \u03bcg/ml Hygromycin"
+    "evidence": "HPRT-DRGFPhyg ([R35]) was electroporated into various MEF cell lines and integrants were selected in 90-125 \u03bcg/ml Hygromycin (Roche).",
+    "section": "GFP HR assay"
    },
    {
-    "text": "**Sequenced c-myc/IgH translocation junctions** from AID-/- and AID-/- 53BP1-/- B cells provided breakpoint positions.",
-    "kind": "method",
+    "text": "**Sequenced translocation junctions** from AID-/- and AID-/- 53BP1-/- cells provided resection distances.",
+    "kind": "finding",
     "highlight": false,
-    "evidence": "We used PCR to map translocation breakpoints induced by the I-SceI system in AID-/- and AID-/- 53BP1-/- cells"
+    "evidence": "All of the sequenced junctions showed processed DNA ends (Fig. S3C).",
+    "section": "Loss of 53BP1 promotes RPA phosphorylation in a manner dependent on ATM and CtIP"
    },
    {
-    "text": "Blots used **phospho-specific RPA pS4/S8 and Kap-1 pS824** antibodies; Rad51 foci by immunofluorescence.",
+    "text": "A defined **CtIP shRNA hairpin sequence** cloned into pMX-pie-IRES-GFP is reported.",
     "kind": "method",
     "highlight": false,
-    "evidence": "anti-Kap-1 pS824 (1:700, Bethyl Labs), anti-RPA pS4/S8 (1:1000 Bethyl Laboratories)"
+    "evidence": "TGCTGTTGACAGTGAGCGAGCTCTCTATGTACAAATGAATTAGTGAAGCCAC AGATGTAATTCATTTGTACATAGAGAGCGTGCCTACTGCCTCGGA",
+    "section": "shRNA"
    }
   ],
   "analysis": [
    {
-    "text": "Aberrations were **scored per cell in metaphase spreads** after overnight drug treatment.",
+    "text": "HR reporter values were **normalized to transfection efficiency** using a parallel GFP transfection.",
     "kind": "method",
     "highlight": true,
-    "evidence": "We scored the level of chromosomal aberrations in mitotic spreads from these cells after overnight treatment with 1 \u03bcM PARPi."
+    "evidence": "HR relative to total transfected cells was determined by dividing the %GFP+ cells from each I-SceI transfection by the %GFP+ cells from a parallel GFP transfection.",
+    "section": "GFP HR assay"
    },
    {
-    "text": "HR was assessed by **three independent assays**: Rad51 foci, SCE frequency, and the DR-GFP reporter.",
+    "text": "Reporter statistics used **unpaired t-tests over \u22656 transfections** per genotype.",
     "kind": "method",
     "highlight": true,
-    "evidence": "loss of 53BP1 increases HR in Brca1 mutant cells, as evidenced by Rad51 foci, sister chromatid exchange, and recombination reporter assays"
+    "evidence": "Statistical analysis was performed using an unpaired t-test.",
+    "section": "GFP HR assay"
    },
    {
-    "text": "Reporter HR was **normalized to transfection efficiency** and compared with unpaired t-tests over at least six transfections.",
+    "text": "Damage signaling was quantified by **western blot for pKap-1 and pRPA S4/S8**.",
     "kind": "method",
     "highlight": false,
-    "evidence": "Statistical analysis was performed using an unpaired t-test."
+    "evidence": "anti-Kap-1 pS824 (1:700, Bethyl Labs), anti-RPA pS4/S8 (1:1000 Bethyl Laboratories)",
+    "section": "Western blotting and Immunofluorescence"
    },
    {
-    "text": "Resection was read out as **RPA phosphorylation by western blot**, with Kap-1 phosphorylation as a resection-independent control.",
+    "text": "Proliferation and apoptosis were read by **CFSE dilution and PhiPhiLux flow cytometry**, and MEF viability by MTT.",
     "kind": "method",
     "highlight": false,
-    "evidence": "Kap-1 phosphorylation, which occurs independently of DSB resection, was similar in irradiated WT and 53BP1-/- cells"
+    "evidence": "For analysis of cell proliferation, CFSE (5 \u03bcM, Molecular Probes) labeling was at 37\u00b0C for 10 min. To quantify apoptotic cells, the PhiPhiLux G1D2 kit was used",
+    "section": "B cell cultures, retroviral transduction, and metaphase preparation"
    },
    {
-    "text": "Breakpoint sequencing quantified **average distance from I-SceI sites**, compared with a p-value.",
+    "text": "Cell-cycle distribution was checked as a **confounder control for foci counts**.",
     "kind": "method",
     "highlight": false,
-    "evidence": "average resection, AID-/-: 448.2 nucleotides vs. AID-/- 53BP1-/-: 742.3 nucleotides, p=0.032"
-   },
-   {
-    "text": "Proliferation and viability used **CFSE dilution, PhiPhiLux apoptosis and MTT** assays.",
-    "kind": "method",
-    "highlight": false,
-    "evidence": "For analysis of cell proliferation, CFSE (5 \u03bcM, Molecular Probes) labeling was at 37\u00b0C for 10 min."
-   },
-   {
-    "text": "Cell cycle distribution was checked to **exclude a confound in foci scoring**.",
-    "kind": "method",
-    "highlight": false,
-    "evidence": "Differences in the frequency of Rad51 foci formation was not due to alterations in cell cycle distribution"
+    "evidence": "Differences in the frequency of Rad51 foci formation was not due to alterations in cell cycle distribution, as the percentage of cycling cells was equivalent in all genotypes tested (Fig. S2).",
+    "section": "Loss of 53BP1 increases HR in Brca1-mutant cells"
    }
   ],
   "results": [
    {
-    "text": "Mammary tumors affected 12/27 Brca1 exon 11 mice but **almost none of the double mutants**.",
+    "text": "Brca1/53BP1 double mutants developed **almost no mammary tumors** versus 12/27 in Brca1 mutants.",
     "kind": "finding",
     "highlight": true,
-    "evidence": "developed almost no breast tumors, with just one animal affected at the age of 22 months"
+    "evidence": "developed almost no breast tumors, with just one animal affected at the age of 22 months",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice"
    },
    {
-    "text": "Radial chromosomes fell **10-fold in Brca1\u039411/\u039411 53BP1-/- cells** (10.7% to 1.0%), and 8-fold in p53-sufficient conditional cells.",
+    "text": "Radial chromosomes were **10-fold reduced** in Brca1\u039411/\u039411 53BP1-/- cells and 8-fold in p53-sufficient Brca1\u03d5/\u03d5 53BP1-/- cells.",
     "kind": "finding",
     "highlight": true,
-    "evidence": "these chromosome aberrations were present in just 1.0% of Brca1\u039411/\u039411 53BP1-/- cells, equivalent to a 10-fold reduction"
+    "evidence": "these chromosome aberrations were present in just 1.0% of Brca1\u039411/\u039411 53BP1-/- cells, equivalent to a 10-fold reduction",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice"
    },
    {
-    "text": "Brca1/53BP1 double-deficient B cells and MEFs were **insensitive to PARPi killing** and to CPT-induced radials.",
+    "text": "**PARPi killed Brca1 mutant but not Brca1/53BP1 double-mutant** cells, with 10-fold fewer aberrations and no Kap1 phosphorylation.",
     "kind": "finding",
     "highlight": true,
-    "evidence": "Brca1\u039411/\u039411 53BP1-/- cells were distinct in that they were practically insensitive to PARPi-induced apoptosis"
+    "evidence": "the total frequency of chromosomal aberrations in PARPi-treated Brca1\u039411/\u039411 53BP1-/- cells was just 0.5 per cell, which is 10-fold lower",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice"
    },
    {
-    "text": "Loss of 53BP1 restored Rad51 foci (>30% vs 6.8%), PARPi-induced SCEs, and gave a **16-fold increase in reporter HR**.",
+    "text": "Loss of 53BP1 restored Rad51 foci (6.8% to >30%), raised PARPi-induced SCEs, and gave a **16-fold increase in reporter HR**.",
     "kind": "finding",
     "highlight": false,
-    "evidence": "in Brca1\u039411/\u039411 MEFs, loss of 53BP1 causes a 16-fold increase in HR repair of a site-specific chromosomal break"
+    "evidence": "in Brca1\u039411/\u039411 MEFs, loss of 53BP1 causes a 16-fold increase in HR repair of a site-specific chromosomal break",
+    "section": "Loss of 53BP1 increases HR in Brca1-mutant cells"
    },
    {
-    "text": "53BP1 deletion **did not rescue Xrcc2-deficient cells**, whose breaks and radials were unchanged.",
+    "text": "53BP1 deletion **did not rescue Xrcc2-deficient** genomic instability.",
     "kind": "finding",
     "highlight": false,
-    "evidence": "the frequency of breaks and asymmetric radial chromosomes was similar in Xrcc2\u03d5/\u03d5 53BP1-/- and Xrcc2\u03d5/\u03d5 cells"
+    "evidence": "the frequency of breaks and asymmetric radial chromosomes was similar in Xrcc2\u03d5/\u03d5 53BP1-/- and Xrcc2\u03d5/\u03d5 cells",
+    "section": "53BP1 does not affect the activity of XRCC2 in HR"
    },
    {
-    "text": "Lig4 loss cut radials (2.1 to 0.66/cell) but **left chromatid breaks elevated**, PARPi toxicity intact and Rad51 foci low.",
+    "text": "Lig4 loss **cut radials but left chromatid breaks, PARPi killing and Rad51 defects** intact, as did DNA-PKcs inhibition.",
     "kind": "finding",
     "highlight": false,
-    "evidence": "only 53BP1 but not Lig4 deficiency rescues PARPi induced cell death, chromosomal instability and defects in IR-induced Rad51 foci formation"
+    "evidence": "only 53BP1 but not Lig4 deficiency rescues PARPi induced cell death, chromosomal instability and defects in IR-induced Rad51 foci formation",
+    "section": "Lig4 is required for radial fusions in Brca1 mutant cells"
    },
    {
-    "text": "RPA phosphorylation was **restored to near WT in Brca1\u03d5/\u03d5 53BP1-/-** but not Brca1\u03d5/\u03d5 Lig4\u03d5/\u03d5 cells, and junction resection roughly doubled without 53BP1.",
+    "text": "RPA phosphorylation was **restored to near WT in Brca1\u03d5/\u03d5 53BP1-/-** but not Brca1\u03d5/\u03d5 Lig4\u03d5/\u03d5 cells, and junctions showed ~2-fold more resection without 53BP1 (448 vs 742 nt, p=0.032).",
     "kind": "finding",
     "highlight": false,
-    "evidence": "Brca1\u03d5/\u03d5 53BP1-/- B cells displayed a rescue of RPA phosphorylation to near WT levels"
+    "evidence": "Brca1\u03d5/\u03d5 53BP1-/- B cells displayed a rescue of RPA phosphorylation to near WT levels (Fig. 5B)",
+    "section": "Loss of 53BP1 promotes RPA phosphorylation in a manner dependent on ATM and CtIP"
    },
    {
-    "text": "ATM inhibition or CtIP knockdown **abolished the rescue**, restoring radials (15-fold with PARPi), blocking growth and reducing Rad51 foci.",
+    "text": "**ATM inhibition or CtIP knockdown reversed the rescue**, restoring PARPi sensitivity, radials (15-fold) and reducing Rad51 foci.",
     "kind": "finding",
-    "highlight": false,
-    "evidence": "combination of ATMi and PARPi led to a 15-fold enhancement in radials relative to ATMi alone"
+    "highlight": true,
+    "evidence": "combination of ATMi and PARPi led to a 15-fold enhancement in radials relative to ATMi alone (Fig. 5E)",
+    "section": "Rescue of Brca1 mutant cells by 53BP1 deletion is dependent on ATM"
    }
   ],
   "conclusions": [
    {
-    "text": "53BP1 **blocks resection in Brca1-deficient cells**, and its loss restores HR via ATM- and CtIP-dependent end processing.",
+    "text": "53BP1 **blocks ATM/CtIP-dependent resection** at breaks in Brca1-deficient cells, so its loss restores HR.",
     "kind": "claim",
     "highlight": true,
     "evidence": "53BP1-binding to chromatid breaks in Brca1 deficient cells interferes with HR, not by promoting end-joining per se, but rather by partially blocking ATM-dependent resection at the break site",
+    "section": "Interplay between NHEJ and HR proteins in S phase",
     "based_on": [
      "R4",
      "R7",
@@ -4382,127 +4411,129 @@
     ]
    },
    {
-    "text": "53BP1, unlike Lig4 or DNA-PKcs, governs the **initial HR-versus-NHEJ pathway choice**.",
+    "text": "**Restored HR explains the rescue** of genomic stability, PARPi resistance and tumor suppression in Brca1 mutants.",
+    "kind": "claim",
+    "highlight": true,
+    "evidence": "can now be explained by our finding that 53BP1 deficiency rescues HR by a mechanism dependent on ATM-mediated resection",
+    "section": "Interplay between NHEJ and HR proteins in S phase",
+    "based_on": [
+     "R1",
+     "R2",
+     "R3",
+     "R4"
+    ]
+   },
+   {
+    "text": "**NHEJ factors differ in pathway-choice roles**: Lig4 makes radials but does not govern the HR/NHEJ decision.",
     "kind": "claim",
     "highlight": true,
     "evidence": "53BP1 plays a major role in pathway choice in Brca1-deficient cells, whereas Lig4 does not affect the initial choice of HR versus NHEJ.",
+    "section": "Interplay between NHEJ and HR proteins in S phase",
     "based_on": [
      "R6"
     ]
    },
    {
-    "text": "Lig4-mediated NHEJ is **specifically responsible for radial fusions** in Brca1 mutant cells, but not for the underlying breaks.",
+    "text": "53BP1 acts at the **initial resection step**, so Xrcc2 defects acting downstream are not rescued.",
     "kind": "claim",
     "highlight": false,
-    "evidence": "Lig4 therefore appears to be specifically required for the processing of chromatid breaks into radial fusions in Brca1 mutant cells.",
-    "based_on": [
-     "R6"
-    ]
-   },
-   {
-    "text": "The rescue is **specific to Brca1, not general HR deficiency**, because Xrcc2 acts downstream of resection.",
-    "kind": "claim",
-    "highlight": false,
-    "evidence": "Loss of 53BP1 does not have the general effect of rescuing any defect in HR; for example, it does not normalize the genomic instability in Xrcc2-deficient cells",
+    "evidence": "According to our model, 53BP1 affects the initial stage of HR, that is, exonuclease-mediated resection of the DSB.",
+    "section": "Interplay between NHEJ and HR proteins in S phase",
     "based_on": [
      "R5"
     ]
    },
    {
-    "text": "The previously puzzling **rescue of Brca1\u039411/\u039411 lethality and tumorigenesis** by 53BP1 loss is explained by restored HR.",
+    "text": "A proposed function of Brca1 is to **remove end-joining proteins such as 53BP1** from replication-associated breaks.",
     "kind": "claim",
     "highlight": false,
-    "evidence": "can now be explained by our finding that 53BP1 deficiency rescues HR by a mechanism dependent on ATM-mediated resection",
+    "evidence": "we propose that one critical function for Brca1, and perhaps other factors that commit cells to HR, might be to remove end-joining proteins such as 53BP1 from replication-associated breaks",
+    "section": "53BP1 and Brca1 regulate the choice between NHEJ and HR",
     "based_on": [
-     "R1",
-     "R2",
+     "R7",
      "R4"
-    ]
-   },
-   {
-    "text": "Brca1's critical function may be to **remove end-joining proteins like 53BP1** from replication-associated breaks.",
-    "kind": "claim",
-    "highlight": false,
-    "evidence": "we propose that one critical function for Brca1... might be to remove end-joining proteins such as 53BP1 from replication-associated breaks",
-    "based_on": [
-     "R7"
     ]
    }
   ],
   "implications": [
    {
-    "text": "Loss of 53BP1 is predicted to be a **secondary mutation conferring PARPi resistance** in Brca1-mutant tumors.",
+    "text": "**Loss of 53BP1 could cause clinical PARPi resistance** in Brca1-mutant tumors.",
     "kind": "claim",
     "highlight": true,
-    "evidence": "loss of 53BP1 is another secondary mutation which would render Brca1-mutant cells HR competent and resistant to PARP inhibitors"
+    "evidence": "loss of 53BP1 is another secondary mutation which would render Brca1-mutant cells HR competent and resistant to PARP inhibitors",
+    "section": "Implications for cancer therapy"
    },
    {
-    "text": "**ATM inhibitors could re-sensitize** PARPi-resistant Brca1-deficient tumors as second-line therapy.",
+    "text": "**ATM inhibitors are proposed as second-line therapy** to re-sensitize PARPi-resistant Brca1-deficient tumors.",
     "kind": "claim",
     "highlight": true,
-    "evidence": "ATM inhibitors might be used therapeutically to re-sensitize Brca1 deficient tumors that develop resistance to PARPi"
+    "evidence": "ATM inhibitors might be used therapeutically to re-sensitize Brca1 deficient tumors that develop resistance to PARPi",
+    "section": "Implications for cancer therapy"
    },
    {
-    "text": "Systemic **53BP1 inhibition is proposed as prophylaxis** to make Brca1 heterozygous carriers more HR competent.",
+    "text": "**Inhibiting 53BP1 prophylactically** might make Brca1 heterozygous carriers more HR competent.",
     "kind": "claim",
     "highlight": false,
-    "evidence": "one therapeutic strategy to treat Brca1-mutation carriers might be the systemic use of compounds that inhibit 53BP1"
+    "evidence": "one therapeutic strategy to treat Brca1-mutation carriers might be the systemic use of compounds that inhibit 53BP1",
+    "section": "Implications for cancer therapy"
    },
    {
-    "text": "Any mutation that **enhances DSB resection** should similarly confer PARPi resistance, a testable prediction.",
+    "text": "Any **mutation that enhances resection** is predicted to confer PARPi resistance in Brca1 mutants.",
     "kind": "claim",
     "highlight": false,
-    "evidence": "our model predicts that other mutations that enhance DSB resection would make Brca1 mutant cells resistant to PARP inhibition"
+    "evidence": "our model predicts that other mutations that enhance DSB resection would make Brca1 mutant cells resistant to PARP inhibition",
+    "section": "Implications for cancer therapy"
    },
    {
-    "text": "HR defects in general **cannot be rescued by inhibiting any NHEJ protein**, constraining therapeutic targeting.",
+    "text": "HR defects **cannot be rescued by inhibiting NHEJ generally**, redirecting therapeutic targeting.",
     "kind": "claim",
     "highlight": false,
-    "evidence": "Defects in HR in mammalian cells therefore might not be rescued simply by inhibiting the activity of any protein associated with NHEJ."
+    "evidence": "Defects in HR in mammalian cells therefore might not be rescued simply by inhibiting the activity of any protein associated with NHEJ.",
+    "section": "Interplay between NHEJ and HR proteins in S phase"
    }
   ],
   "limitations": [
    {
-    "text": "Rescue is **incomplete: instability remains above WT** in PARPi-treated double mutants.",
+    "text": "Rescue is **incomplete: instability remains elevated** above WT in double mutants.",
     "kind": "finding",
     "highlight": true,
-    "evidence": "PARPi-induced genomic instability in Brca1/53BP1 double mutant mice was somewhat elevated relative to WT"
+    "evidence": "PARPi-induced genomic instability in Brca1/53BP1 double mutant mice was somewhat elevated relative to WT.",
+    "section": "53BP1 promotes genomic instability and mammary tumorigenesis in Brca1-mutant mice"
    },
    {
-    "text": "Inhibiting 53BP1 therapeutically would likely cause **defects in immunoglobulin class switching**.",
+    "text": "Inhibiting 53BP1 therapeutically would carry an **immunoglobulin class-switching side effect**.",
     "kind": "finding",
     "highlight": true,
-    "evidence": "One potential side-effect of this approach could be defects in B cell immunoglobulin isotype switching, which is strictly dependent on 53BP1"
+    "evidence": "One potential side-effect of this approach could be defects in B cell immunoglobulin isotype switching, which is strictly dependent on 53BP1",
+    "section": "Implications for cancer therapy"
    },
    {
-    "text": "The placement of **Xrcc2 downstream of resection is hypothesized**, not directly demonstrated here.",
-    "kind": "finding",
-    "highlight": false,
-    "evidence": "We hypothesize that Xrcc2 acts downstream of Brca1 in HR ([R33]), at a later stage that is not affected by the presence of 53BP1"
-   },
-   {
-    "text": "The **precise role of 53BP1 in NHEJ remains unresolved**.",
-    "kind": "finding",
-    "highlight": false,
-    "evidence": "The precise role of 53BP1 in NHEJ is a matter of ongoing investigation."
-   },
-   {
-    "text": "Whether 53BP1 loss actually occurs in **human PARPi-resistant tumors is not tested** here.",
+    "text": "The **precise role of 53BP1 in NHEJ remains unresolved**, and its epistasis with Xrcc2 is only hypothesized.",
     "kind": "gap",
     "highlight": false,
-    "evidence": "not stated"
+    "evidence": "The precise role of 53BP1 in NHEJ is a matter of ongoing investigation.",
+    "section": "53BP1 and Brca1 regulate the choice between NHEJ and HR"
    },
    {
-    "text": "Findings rest on **mouse B cells and MEFs** only, with no human Brca1-mutant tumor cells examined.",
+    "text": "Why **Brca1 loss is tolerated in tumor cells** is still unclear.",
     "kind": "gap",
     "highlight": false,
-    "evidence": "not stated"
+    "evidence": "Since Brca1 is an essential gene, it remains unclear why deficiency in Brca1 is tolerated in tumor cells.",
+    "section": "Implications for cancer therapy"
    },
    {
-    "text": "The proposed **direct removal of 53BP1 by Brca1 is untested**, offered only as a model.",
+    "text": "The mechanism by which **Brca1 would displace 53BP1** is proposed but not directly tested here.",
+    "kind": "gap",
+    "highlight": true,
+    "evidence": "Brca1 might play a similar role in the dynamic removal of NHEJ proteins from DSBs",
+    "section": "53BP1 and Brca1 regulate the choice between NHEJ and HR"
+   },
+   {
+    "text": "Findings rest on **mouse Brca1 exon 11 deletion cells**, with no human tumor or clinical validation.",
     "kind": "gap",
     "highlight": false,
-    "evidence": "not stated"
+    "evidence": "not stated",
+    "section": ""
    }
   ],
   "source": "pmc-full-text",
@@ -4510,6 +4541,7 @@
    "R16": "FarmerHMcCabeNLordCJTuttANJohnsonDARichardsonTBSantarosaMDillonKJHicksonIKnightsCTargeting the DNA repair defect in BRCA mutant cells as a therapeutic strategy.Nature20054349179211582996710.1038/nature03445",
    "R21": "JacksonSPBartekJThe DNA-damage response in human biology and disease.Nature2009461107110781984725810.1038/nature08467PMC2906700",
    "R22": "JazayeriAFalckJLukasCBartekJSmithGCLukasJJacksonSPATM- and cell cycle-dependent regulation of ATR in response to DNA double-strand breaks.Nat Cell Biol2006837451632778110.1038/ncb1337",
+   "R27": "LiSTingNSZhengLChenPLZivYShilohYLeeEYLeeWHFunctional link of BRCA1 and ataxia telangiectasia gene product in DNA damage response.Nature20004062102151091036510.1038/35018134",
    "R32": "MoynahanMEChiuJWKollerBHJasinMBrca1 controls homology-directed DNA repair.Mol Cell199945115181054928310.1016/s1097-2765(00)80202-6",
    "R36": "PierceAJHuPHanMEllisNJasinMKu DNA end-binding protein modulates homologous repair of double-strand breaks in mammalian cells.Genes & development200115323732421175162910.1101/gad.946401PMC312854",
    "R47": "ScullyRGanesanSVlasakovaKChenJSocolovskyMLivingstonDMGenetic analysis of BRCA1 function in a defined tumor cell line.Mol Cell19994109310991063533410.1016/s1097-2765(00)80238-5",
@@ -4524,37 +4556,37 @@
   "points": [
    {
     "kind": "cited-as-claimed",
-    "text": "The core claim \u2014 53BP1 blocks DNA end resection in BRCA1-deficient cells, and its loss restores HR (Rad51 foci, 16-fold reporter HR) \u2014 is what the overwhelming majority of the 35 background citations invoke, usually as a one-line established fact framing a new resection regulator (RNF4, CYLD/TIRR, CCAR2, Msl2, SCAF1, ZPET, XAB2)."
+    "text": "The core mechanism \u2014 53BP1 blocks DNA end resection in BRCA1-deficient cells, so deleting it restores HR and Rad51 loading \u2014 is what the large majority of the 35 background citations invoke (e.g. RNF4, RNF168, CYLD/TIRR, CCAR2, Msl2 papers all frame 53BP1 as a resection barrier)."
    },
    {
     "kind": "cited-as-claimed",
-    "text": "The PARPi-resistance consequence is cited as claimed: several papers use the insensitivity of Brca1/53BP1 double-deficient cells to PARPi killing to explain HR-restorative PARPi resistance in the clinic, including one recommending TP53BP1 status be assessed in patient biopsies."
+    "text": "The therapeutic corollary, that 53BP1 loss confers PARP inhibitor resistance in BRCA1-mutant cells, is cited exactly as presented, including a recommendation that the mechanism be assessed in clinical biopsies."
+   },
+   {
+    "kind": "cited-as-claimed",
+    "text": "The paper's framing of BRCA1 and 53BP1 as antagonistic arbiters of HR-vs-NHEJ pathway choice is used as the canonical reference, including by papers extending it to replication fork restart choice."
    },
    {
     "kind": "cited-for-something-else",
-    "text": "Citers repeatedly reduce the paper to a generic '53BP1 favors NHEJ / regulates pathway choice' textbook statement, dropping the Brca1-specific conditionality the paper insisted on; some use it merely to justify 53BP1 foci as a DSB marker for biodosimetry or to distinguish replication-dependent damage, which is assay background, not a finding of the paper."
+    "text": "Several citers strip the paper down to reagent-level facts it never argued: that 53BP1 forms nuclear foci at damage (used for biodosimetry, and to score replication-dependent vs -independent damage after benzoquinone), and that RPA32 phosphorylation marks resection (used to read out resection in LMO2-overexpressing cells).  These were assays, not conclusions."
    },
    {
     "kind": "cited-for-something-else",
-    "text": "The RPA32 phosphorylation panel is borrowed as a validated readout of resection (e.g. in LMO2-overexpressing cells), and the irradiation-induced radial chromosome phenotype is borrowed as a reference phenotype for an EXO1 phosphorylation mutant \u2014 methodological reuse of figures the paper presented as evidence, not as tools."
+    "text": "The radial chromosome phenotype of irradiated BRCA1-deficient cells is borrowed as a benchmark image/phenotype for unrelated mutants (EXO1 phosphorylation mutant, S401D 53BP1 foci patterns), and the BRCA1-deficient background itself is reused as a positive-control comparator for HR rescue by depleting SCAF1, XAB2 or ZPET \u2014 the paper as a assay template rather than as a result."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "The specificity control \u2014 53BP1 deletion does not rescue Xrcc2-deficient cells because Xrcc2 acts downstream of resection \u2014 is essentially ignored, even though it is the result that bounds the 53BP1-loss rescue to BRCA1 rather than to HR deficiency generally. Only one citing paper (XAB2) actually tests that boundary."
+    "text": "The genetic-dissection conclusions are almost entirely ignored: that Lig4 loss reduces radials but does not rescue PARPi killing, chromatid breaks or Rad51 foci (so NHEJ factors are not interchangeable in pathway choice), and that DNA-PKcs inhibition behaves likewise.  No sampled citer picks up this distinction."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "The Lig4 dissection is not picked up: that Lig4 loss cuts radials but leaves chromatid breaks, PARPi toxicity and low Rad51 intact, so radial fusions are Lig4-mediated NHEJ products while the underlying breaks are not. Citers cite 53BP1 'promotes telomere fusions and mis-rejoining' without this separation of fusion from lesion."
+    "text": "The epistasis result placing 53BP1 at the initial resection step \u2014 53BP1 deletion fails to rescue Xrcc2-deficient instability, and ATM inhibition or CtIP knockdown reverses the rescue \u2014 is not cited, even though it is the evidence behind the 'ATM/CtIP-dependent resection' claim that citers repeat as settled."
    },
    {
     "kind": "claimed-but-not-cited",
-    "text": "The ATM- and CtIP-dependence of the rescue (ATM inhibition or CtIP knockdown abolishing it, restoring radials 15-fold with PARPi) is almost absent from the citation record, as is the speculative conclusion that BRCA1's critical job is to evict end-joining proteins from replication-associated breaks \u2014 one citing paper instead substitutes PALB2 chromatin recruitment as the mechanism, explicitly extending past the resection hypothesis."
-   },
-   {
-    "kind": "claimed-but-not-cited",
-    "text": "The in vivo endpoint \u2014 mammary tumors in 12/27 Brca1 exon 11 mice but almost none in double mutants, i.e. 53BP1 loss suppressing tumorigenesis and the embryonic lethality rescue \u2014 is rarely cited; citers stay at the cell-biological mechanism and skip the mouse genetics that motivated the study."
+    "text": "The headline in vivo result \u2014 Brca1/53BP1 double mutants develop almost no mammary tumors versus 12/27 in Brca1 mutants \u2014 is rarely invoked; citers use the cell-biological mechanism and skip the tumor-suppression rescue, as well as the proposal that BRCA1's function is to evict end-joining proteins from replication-associated breaks (one paper substitutes PALB2 recruitment as the mechanism instead)."
    }
   ]
  },
- "cost_usd": 7.2279
+ "cost_usd": 8.6837
 }
