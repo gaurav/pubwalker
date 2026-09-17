@@ -143,22 +143,41 @@ class Cost(unittest.TestCase):
 
 
 APP_JS = Path(__file__).resolve().parents[2] / "site" / "app.js"
-# yearChart() is vanilla JS in the dependency-free site, so lift it out of app.js and run it under node
-# rather than reimplementing the logic here.
-YEAR_CHART = """
+# The site is dependency-free vanilla JS, so lift a single top-level arrow function out of app.js by name
+# and run it under node rather than reimplementing it here. Its result comes back as JSON.
+CALL_JS = """
 const src = require('node:fs').readFileSync(process.env.APP_JS, 'utf8');
-const yearChart = eval('(' + src.match(/const yearChart = ([\\s\\S]*?\\n\\});/)[1] + ')');
-process.stdout.write(yearChart(JSON.parse(process.env.YEARS)));
+const fn = eval('(' + src.match(new RegExp(`const ${process.env.FN} = ([\\\\s\\\\S]*?\\\\n\\\\});`))[1] + ')');
+process.stdout.write(JSON.stringify(fn(...JSON.parse(process.env.ARGS))));
 """
+
+
+def call_js(fn, *args):
+    out = subprocess.run(["node", "-e", CALL_JS], capture_output=True, text=True,
+                         env={"PATH": os.environ["PATH"], "APP_JS": str(APP_JS), "FN": fn, "ARGS": json.dumps(args)})
+    assert out.returncode == 0, out.stderr
+    return json.loads(out.stdout)
+
+
+@unittest.skipUnless(shutil.which("node"), "node is not installed")
+class Variety(unittest.TestCase):
+    """The order of the home page and of the Examples dropdown: the effective number of roles a paper is cited for."""
+
+    def test_effective_number_of_roles(self):
+        self.assertAlmostEqual(call_js("variety", {"background-claim": 39}), 1.0)  # cited for one thing only
+        self.assertAlmostEqual(call_js("variety", {r: 5 for r in "abcdefg"}), 7.0)  # an even spread over all seven roles
+        remap = {"uses-tool-or-method": 3, "uses-data": 24, "background-claim": 7, "compares-against": 3, "extends-or-modifies": 1, "incidental": 1}
+        self.assertAlmostEqual(call_js("variety", remap), 3.29, places=2)
+        self.assertLess(call_js("variety", {"uses-data": 20, "background-claim": 19}),  # an even split of two roles beats
+                        call_js("variety", remap))                                     # a lopsided spread over six
+        self.assertEqual(call_js("variety", {"uses-data": 0}), None)  # nothing classified, so nothing to say
+        self.assertEqual(call_js("variety", None), None)
 
 
 @unittest.skipUnless(shutil.which("node"), "node is not installed")
 class YearChart(unittest.TestCase):
     def chart(self, years):
-        out = subprocess.run(["node", "-e", YEAR_CHART], capture_output=True, text=True,
-                             env={"PATH": os.environ["PATH"], "APP_JS": str(APP_JS), "YEARS": json.dumps(years)})
-        self.assertEqual(out.returncode, 0, out.stderr)
-        return out.stdout
+        return call_js("yearChart", years)
 
     def test_empty_years_are_filled_so_the_axis_stays_linear(self):
         html = self.chart([[2001, 3], [2009, 5], [2010, 1]])
