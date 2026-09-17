@@ -71,7 +71,8 @@ LLM calls that changed.
 
 5. **Synthesise per window** with a frontier model (Claude Opus). Input is the classified
    passages with quotes; output is a short report whose every numbered claim points at
-   specific citing papers and quotes, plus three to five follow-up questions. Then one
+   specific citing papers and quotes, with its key phrase marked and the one to three most
+   important claims flagged as highlights, plus three to five follow-up questions. Then one
    cross-window synthesis: what changed over time. This is deliberately the shape of a SPARK
    Track 2 answer (synthesis, citations, supporting passages, follow-up actions).
 

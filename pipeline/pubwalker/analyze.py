@@ -34,15 +34,18 @@ The section a passage comes from is a strong hint: Methods usually means use, In
 CLAIMS_SCHEMA = {
     "type": "object", "additionalProperties": False, "required": ["claims", "follow_ups"],
     "properties": {
-        "claims": {"type": "array", "items": {"type": "object", "additionalProperties": False, "required": ["text", "cites"],
-                   "properties": {"text": {"type": "string"}, "cites": {"type": "array", "items": {"type": "string"}, "description": "Ids of the citing papers that support this claim."}}}},
+        "claims": {"type": "array", "items": {"type": "object", "additionalProperties": False, "required": ["text", "cites", "highlight"],
+                   "properties": {"text": {"type": "string", "description": "One or two sentences, with the 2-6 words that carry the point wrapped in **double asterisks**."},
+                                  "cites": {"type": "array", "items": {"type": "string"}, "description": "Ids of the citing papers that support this claim."},
+                                  "highlight": {"type": "boolean", "description": "True for the 1-3 claims a reader should see first."}}}},
         "follow_ups": {"type": "array", "items": {"type": "string"}, "description": "3 to 5 follow-up questions a reader could pursue next."},
     },
 }
 SYNTH_SYSTEM = """You write short, grounded syntheses of how a paper is used by the papers that cite it.
 Every claim must be supported by the listed citing papers and cite them by id. Say what the evidence shows, including
 disagreement and complaints. Cover: the dominant use; the workflows and other tools it appears alongside; stance and
-complaints; anything unexpected. Write 5 to 8 claims of one or two sentences each, then 3 to 5 follow-up questions."""
+complaints; anything unexpected. Write 5 to 8 claims of one or two sentences each, wrapping the 2 to 6 words that carry each
+claim's point in **double asterisks** and marking the 1 to 3 most important claims highlight=true, then 3 to 5 follow-up questions."""
 
 STRUCT_KINDS = ["fact", "method", "finding", "claim", "gap"]
 STRUCT_ITEM_PROPS = {
@@ -149,9 +152,15 @@ def listing(ids, citers, R):
     return "\n".join(lines)
 
 
+def key_phrase(text):
+    """Keep the **key phrase** markup only when there is exactly one pair."""
+    return text if text.count("**") == 2 else text.replace("**", "")
+
+
 def grounded(out, allowed):
     for cl in out["claims"]:
         cl["cites"] = [x.strip("[]") for x in cl["cites"] if x.strip("[]") in allowed]
+        cl["text"] = key_phrase(cl["text"])
     return out
 
 
@@ -206,8 +215,7 @@ def tidy_structure(out):
     """Keep the **key phrase** markup only when there is exactly one pair, and only `based_on` ids that name a real result."""
     fields = ["assumptions", "design", "data", "analysis", "results", "conclusions", "implications", "limitations"]
     for it in (it for k in fields for it in out[k]):
-        if it["text"].count("**") != 2:
-            it["text"] = it["text"].replace("**", "")
+        it["text"] = key_phrase(it["text"])
     ok = {f"R{i}" for i in range(1, len(out["results"]) + 1)}
     for c in out["conclusions"]:
         c["based_on"] = [r for r in (s.strip("[] ").upper() for s in c.get("based_on", [])) if r in ok]

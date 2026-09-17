@@ -45,8 +45,9 @@ class Passages(unittest.TestCase):
 
 class Analyze(unittest.TestCase):
     def test_grounded_keeps_only_known_ids(self):
-        out = grounded({"claims": [{"text": "x", "cites": ["[W1]", "W2", "W9"]}], "follow_ups": []}, {"W1", "W2"})
+        out = grounded({"claims": [{"text": "**x** and **y**", "cites": ["[W1]", "W2", "W9"]}, {"text": "a **b** c", "cites": []}], "follow_ups": []}, {"W1", "W2"})
         self.assertEqual(out["claims"][0]["cites"], ["W1", "W2"])
+        self.assertEqual([c["text"] for c in out["claims"]], ["x and y", "a **b** c"])  # one key phrase kept, two stripped
 
     def test_histogram_ignores_unclassified(self):
         h = histogram(["a", "b", "c"], {"a": {"role": "incidental"}, "b": {"role": "incidental"}})
