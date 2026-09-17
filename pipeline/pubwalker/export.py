@@ -16,7 +16,7 @@ def run(doi):
     keep = ["id", "doi", "pmid", "pmcid", "title", "year", "venue", "type"]
     years = {}
     for c in citers.values():
-        if c.get("year"):
+        if c.get("year") and c["year"] >= (anchor.get("year") or 0):  # OpenAlex dates the odd citer before the paper it cites
             years[c["year"]] = years.get(c["year"], 0) + 1
     out = {
         "slug": slug, "anchor": anchor, "generated": dt.date.today().isoformat(),
