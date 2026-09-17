@@ -75,7 +75,7 @@ async function home() {
     <h1>What is this paper used for?</h1>
     <p>Two questions about any paper, answered from the papers that cite it and from its own text:
     <b>what role does it play in the literature</b> (a tool people run, a finding people build on, a name in a list), and
-    <b>what does its argument rest on</b>. Reports below were produced by the <a href="https://github.com/gaurav/pubwalker">pipeline</a>
+    <b>what does its argument rest on</b>. Reports below were produced by the <a href="https://github.com/gaurav/pubwalker" target="_blank" rel="noopener">pipeline</a>
     with a cheap model classifying each citing passage and a stronger one synthesising; every claim links to its evidence.</p>
     <div class="rowhead"><h2>Reports</h2>
       ${index.length > 1 ? `<label class="small muted">Sort by <select class="jump" onchange="setSort(this.value)">${Object.entries(SORTS).map(([k, [label]]) =>
