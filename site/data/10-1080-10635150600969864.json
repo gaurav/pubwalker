@@ -4543,5 +4543,9 @@
   ]
  },
  "outgoing": null,
- "cost_usd": 2.3319
+ "cost_usd": 2.3319,
+ "cost_by_model": {
+  "haiku": 1.326,
+  "opus": 1.0059
+ }
 }

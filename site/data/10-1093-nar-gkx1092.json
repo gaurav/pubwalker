@@ -4548,5 +4548,9 @@
    "incidental": 0
   }
  },
- "cost_usd": 3.1268
+ "cost_usd": 3.1268,
+ "cost_by_model": {
+  "haiku": 1.6136,
+  "opus": 1.5132
+ }
 }
