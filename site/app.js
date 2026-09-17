@@ -43,6 +43,14 @@ const roleLead = (roles) => {
 // Which per-model tiles a report shows beside its total: a cheap model classifies passages and a strong one
 // synthesises, and the split is the point of that division of labour. Nothing for a report exported before the
 // split was recorded, and nothing when one model did the whole run, where a tile would just repeat the total.
+// The models a report actually billed for a set of pipeline steps, for the note beneath it. Read from what was
+// spent rather than hardcoded, so swapping a model in cannot leave the prose describing the old one. No vendor
+// prefix: the point of reading it from data is that the model need not be a Claude one.
+const modelsFor = (byStep, steps) => {
+  const used = new Set();
+  for (const step of steps) for (const m of Object.keys((byStep || {})[step] || {})) used.add(m);
+  return [...used].sort().map((m) => m[0].toUpperCase() + m.slice(1)).join(' and ');
+};
 const costRows = (byModel) => {
   const rows = Object.entries(byModel || {}).filter(([, usd]) => usd > 0);
   return rows.length > 1 ? rows.sort((a, b) => b[1] - a[1]) : [];
@@ -347,7 +355,7 @@ function report(d, index) {
       outgoing: INTRO.outgoing + outgoingPanel(d, index),
       comparison: INTRO.comparison + comparison,
     },
-    note: 'Roles were assigned per passage by Claude Haiku from Europe PMC full-text paragraphs (with section) or Semantic Scholar citation sentences; syntheses and the argument structure by Claude Opus. Samples are seeded random draws from citers with a retrievable passage, so paywalled citers are under-represented.',
+    note: `Roles were assigned per passage by ${esc(modelsFor(d.cost_by_step, ['roles', 'outgoing']) || 'a cheap model')} from Europe PMC full-text paragraphs (with section) or Semantic Scholar citation sentences; syntheses and the argument structure by ${esc(modelsFor(d.cost_by_step, ['synth', 'structure']) || 'a stronger model')}. Samples are seeded random draws from citers with a retrievable passage, so paywalled citers are under-represented.`,
     after() {
       app.querySelector('.tabs.win').addEventListener('click', (e) => {
         const w = e.target.dataset.w; if (!w) return;

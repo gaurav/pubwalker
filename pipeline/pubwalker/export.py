@@ -5,7 +5,7 @@ import json
 from . import DATA, SITE_DATA
 from .analyze import histogram, load
 from .fetch import slugify
-from .llm import cost, per_model
+from .llm import by_step, cost, per_model
 
 
 def run(doi):
@@ -25,7 +25,7 @@ def run(doi):
         "overall": S.get("overall"),
         "citers": {i: {**{k: citers[i].get(k) for k in keep}, **P["passages"][i], "role": R.get(i)} for i in P["passages"]},
         "years": sorted(years.items()),
-        "structure": struct, "comparison": comp, "outgoing": outgoing, "cost_usd": cost(doi), "cost_by_model": per_model(doi),
+        "structure": struct, "comparison": comp, "outgoing": outgoing, "cost_usd": cost(doi), "cost_by_model": per_model(doi), "cost_by_step": by_step(doi),
     }
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     (SITE_DATA / f"{slug}.json").write_text(json.dumps(out, indent=1))

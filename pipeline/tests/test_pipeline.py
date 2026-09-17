@@ -153,6 +153,7 @@ class Export(unittest.TestCase):
             report = json.loads((Path(site) / "10-1-a.json").read_text())
             self.assertEqual(report["cost_usd"], 0.75)
             self.assertEqual(report["cost_by_model"], {"opus": 0.5, "haiku": 0.25})  # biggest first
+            self.assertEqual(report["cost_by_step"], {"roles": {"haiku": 0.25}, "synth": {"opus": 0.5}})  # the site says which model did which job
             self.assertNotIn("cost_by_model", entry)  # the split is a report-page figure; the home page keeps the scalar
             self.assertEqual(report["years"], [[2012, 1]])  # the citer OpenAlex dates before the paper it cites is dropped
 
@@ -238,6 +239,7 @@ class Cost(unittest.TestCase):
             self.paper(tmp, {"roles": 1.0, "synth": 2.0})
             self.assertEqual(llm.cost("10.1/a"), 3.0)
             self.assertIsNone(llm.per_model("10.1/a"))
+            self.assertIsNone(llm.by_step("10.1/a"))  # nor can it say which model did which job
 
     def test_a_half_migrated_cost_file_totals_without_claiming_a_split(self):
         """`record` migrates one step at a time, so this is the ordinary state of a run in progress -- not a
@@ -283,6 +285,13 @@ class Variety(unittest.TestCase):
 @unittest.skipUnless(shutil.which("node"), "node is not installed")
 class CostSplit(unittest.TestCase):
     """Which per-model cost tiles a report page shows beside its total."""
+
+    def test_the_note_names_the_models_that_were_actually_billed(self):
+        by = {"roles": {"haiku": 1.0}, "synth": {"opus": 2.0}, "structure": {"opus": 0.5}}
+        self.assertEqual(call_js("modelsFor", by, ["roles", "outgoing"]), "Haiku")  # a step that never ran contributes nothing
+        self.assertEqual(call_js("modelsFor", by, ["synth", "structure"]), "Opus")  # one name, not two, when both used it
+        self.assertEqual(call_js("modelsFor", {"roles": {"haiku": 1.0, "llama": 0.0}}, ["roles"]), "Haiku and Llama")
+        self.assertEqual(call_js("modelsFor", None, ["roles"]), "")  # a report exported before the split; the note falls back
 
     def test_rows_are_biggest_first_and_only_when_there_is_something_to_compare(self):
         self.assertEqual(call_js("costRows", {"haiku": 2.5, "opus": 1.0}), [["haiku", 2.5], ["opus", 1.0]])

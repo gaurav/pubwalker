@@ -4552,5 +4552,22 @@
  "cost_by_model": {
   "haiku": 1.6136,
   "opus": 1.5132
+ },
+ "cost_by_step": {
+  "roles": {
+   "haiku": 1.1476
+  },
+  "synth": {
+   "opus": 0.7669
+  },
+  "structure": {
+   "opus": 0.6484
+  },
+  "outgoing": {
+   "haiku": 0.466
+  },
+  "compare": {
+   "opus": 0.0979
+  }
  }
 }

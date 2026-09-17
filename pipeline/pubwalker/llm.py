@@ -61,9 +61,21 @@ def record(doi, step):
     SPENT.clear()
 
 
-def _steps(doi):
+def _costs(doi):
     path = DATA / slugify(doi) / "cost.json"
-    return list(json.loads(path.read_text()).values()) if path.exists() else None
+    return json.loads(path.read_text()) if path.exists() else None
+
+
+def _steps(doi):
+    costs = _costs(doi)
+    return list(costs.values()) if costs is not None else None
+
+
+def by_step(doi):
+    """{step: {model: dollars}}, or None if any step predates the split. The site reads it to say which model
+    did which job instead of hardcoding the names, so swapping a model in cannot leave the prose lying."""
+    costs = _costs(doi)
+    return costs if costs and all(isinstance(s, dict) for s in costs.values()) else None
 
 
 def cost(doi):
