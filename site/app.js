@@ -40,6 +40,13 @@ const roleLead = (roles) => {
 // How varied the downstream use is: the effective number of roles, exp(Shannon entropy) of the role mix.
 // 1 means every classified citer used the paper for the same thing, 7 means an even spread over all seven roles.
 // It is what citation counts cannot say: SequenceMatrix is cited 2,685 times for one thing (1.1), ReMap 282 times for six (3.3).
+// Which per-model tiles a report shows beside its total: a cheap model classifies passages and a strong one
+// synthesises, and the split is the point of that division of labour. Nothing for a report exported before the
+// split was recorded, and nothing when one model did the whole run, where a tile would just repeat the total.
+const costRows = (byModel) => {
+  const rows = Object.entries(byModel || {}).filter(([, usd]) => usd > 0);
+  return rows.length > 1 ? rows.sort((a, b) => b[1] - a[1]) : [];
+};
 const variety = (roles) => {
   const ns = Object.values(roles || {}).filter((n) => n > 0);
   const total = ns.reduce((a, b) => a + b, 0);
@@ -319,7 +326,7 @@ function report(d, index) {
   return {
     anchor: a,
     years: d.years,
-    nums: `<div><b>${fmt(a.cited_by_count)}</b><span>citations in OpenAlex</span></div><div><b>${esc(d.generated)}</b><span>report generated</span></div>${money(d.cost_usd, 'LLM cost for this report')}`,
+    nums: `<div><b>${fmt(a.cited_by_count)}</b><span>citations in OpenAlex</span></div><div><b>${esc(d.generated)}</b><span>report generated</span></div>${money(d.cost_usd, 'LLM cost for this report')}${costRows(d.cost_by_model).map(([m, usd]) => money(usd, `of that on ${esc(m[0].toUpperCase() + m.slice(1))}`)).join('')}`,
     panels: {
       backscatter: `${INTRO.backscatter}
         <div class="struct">

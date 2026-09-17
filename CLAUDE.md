@@ -22,7 +22,11 @@
 - Tests: `cd pipeline && uv run python -m unittest discover -s tests`. They use inline fixtures
   and never touch the network or `claude`. The site's logic is tested from the same suite: `call_js`
   lifts one top-level arrow function out of `site/app.js` by name and runs it under node, so don't
-  reimplement a site function in Python to test it.
+  reimplement a site function in Python to test it. Its regex only matches a multi-line arrow
+  function ending in a line-initial `};`, so a one-liner like `money` or `fmt` cannot be lifted
+  (the lazy match runs past it and `eval` throws); and the lifted function is evaluated alone, so
+  it must not reference anything else in `app.js`. Put logic worth testing in a self-contained
+  helper rather than reformatting a one-liner to suit the harness.
 - Gotchas: Europe PMC `fullTextXML` returns 500 for author manuscripts (NCBI efetch works); some PMC
   records are PDF-only deposits whose XML is front matter with no `<body>` (e.g. PMC2994087,
   PMC3063043), so check `analyze.has_body` before trusting a PMCID as full text; OpenAlex's

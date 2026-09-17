@@ -136,7 +136,7 @@ class Export(unittest.TestCase):
                  "citers": [{"id": "W1", "title": "C", "year": 2012, "type": "article"}, {"id": "W2", "title": "Predates it", "year": 2009}],
                  "passages": {"windows": {"all-time": {"total": 2, "with_passages": 1, "sampled": ["W1"]}}, "passages": {"W1": {"passages": []}}},
                  "roles": {"W1": {"role": "uses-data"}}, "synthesis": {"all-time": {"claims": []}, "overall": {"claims": []}},
-                 "cost": {"roles": 0.25, "synth": 0.5}, **extra}
+                 "cost": {"roles": {"haiku": 0.25}, "synth": {"opus": 0.5}}, **extra}
         for name, obj in files.items():
             (d / f"{name}.json").write_text(json.dumps(obj))
         return d
@@ -152,6 +152,8 @@ class Export(unittest.TestCase):
             self.assertEqual(entry["roles"]["uses-data"], 1)  # the all-time histogram, for the home page's bar and sort
             report = json.loads((Path(site) / "10-1-a.json").read_text())
             self.assertEqual(report["cost_usd"], 0.75)
+            self.assertEqual(report["cost_by_model"], {"opus": 0.5, "haiku": 0.25})  # biggest first
+            self.assertNotIn("cost_by_model", entry)  # the split is a report-page figure; the home page keeps the scalar
             self.assertEqual(report["years"], [[2012, 1]])  # the citer OpenAlex dates before the paper it cites is dropped
 
     def test_a_paper_without_full_text_says_so_rather_than_reporting_nothing(self):
@@ -198,18 +200,52 @@ class ClosedAccess(unittest.TestCase):
 
 
 class Cost(unittest.TestCase):
+    def paper(self, tmp, costs=None):
+        d = Path(tmp) / "10-1-a"
+        d.mkdir()
+        if costs is not None:
+            (d / "cost.json").write_text(json.dumps(costs))
+        return d
+
     def test_each_step_banks_its_own_spend_and_a_rerun_does_not_double_count(self):
         with tempfile.TemporaryDirectory() as tmp, mock.patch.object(llm, "DATA", Path(tmp)):
-            (Path(tmp) / "10-1-a").mkdir()
+            self.paper(tmp)
             self.assertIsNone(llm.cost("10.1/a"))  # nothing spent on this paper yet
-            for step, spend in [("roles", [0.01, 0.02]), ("synth", [0.5])]:
+            for step, spend in [("roles", [("haiku", 0.01), ("haiku", 0.02)]), ("synth", [("opus", 0.5)])]:
                 llm.SPENT.extend(spend)
                 llm.record("10.1/a", step)
             self.assertEqual(llm.cost("10.1/a"), 0.53)
-            llm.SPENT.extend([0.01, 0.02])  # a re-run of roles replays the same cached calls
+            self.assertEqual(llm.per_model("10.1/a"), {"opus": 0.5, "haiku": 0.03})
+            self.assertEqual(json.loads((Path(tmp) / "10-1-a" / "cost.json").read_text()),
+                             {"roles": {"haiku": 0.03}, "synth": {"opus": 0.5}})
+            llm.SPENT.extend([("haiku", 0.01), ("haiku", 0.02)])  # a re-run of roles replays the same cached calls
             llm.record("10.1/a", "roles")
             self.assertEqual(llm.cost("10.1/a"), 0.53)
             self.assertEqual(llm.SPENT, [])  # and the tally is cleared for the next step
+
+    def test_a_step_that_mixes_models_banks_one_entry_per_model(self):
+        """Nothing enforces one model per step, and CLAUDE.md expects an open-weight model to be swapped in,
+        which is exactly when inferring the model from the step name would go quietly wrong."""
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(llm, "DATA", Path(tmp)):
+            self.paper(tmp)
+            llm.SPENT.extend([("haiku", 0.01), ("opus", 0.2), ("haiku", 0.02)])
+            llm.record("10.1/a", "roles")
+            self.assertEqual(json.loads((Path(tmp) / "10-1-a" / "cost.json").read_text()), {"roles": {"haiku": 0.03, "opus": 0.2}})
+            self.assertEqual(llm.per_model("10.1/a"), {"opus": 0.2, "haiku": 0.03})
+
+    def test_a_cost_file_from_before_the_split_still_totals_but_cannot_be_split(self):
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(llm, "DATA", Path(tmp)):
+            self.paper(tmp, {"roles": 1.0, "synth": 2.0})
+            self.assertEqual(llm.cost("10.1/a"), 3.0)
+            self.assertIsNone(llm.per_model("10.1/a"))
+
+    def test_a_half_migrated_cost_file_totals_without_claiming_a_split(self):
+        """`record` migrates one step at a time, so this is the ordinary state of a run in progress -- not a
+        stale checkout. It must total correctly rather than raising, and must not report a partial split."""
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(llm, "DATA", Path(tmp)):
+            self.paper(tmp, {"roles": {"haiku": 1.0}, "synth": 2.0})
+            self.assertEqual(llm.cost("10.1/a"), 3.0)
+            self.assertIsNone(llm.per_model("10.1/a"))
 
 
 APP_JS = Path(__file__).resolve().parents[2] / "site" / "app.js"
@@ -242,6 +278,18 @@ class Variety(unittest.TestCase):
                         call_js("variety", remap))                                     # a lopsided spread over six
         self.assertEqual(call_js("variety", {"uses-data": 0}), None)  # nothing classified, so nothing to say
         self.assertEqual(call_js("variety", None), None)
+
+
+@unittest.skipUnless(shutil.which("node"), "node is not installed")
+class CostSplit(unittest.TestCase):
+    """Which per-model cost tiles a report page shows beside its total."""
+
+    def test_rows_are_biggest_first_and_only_when_there_is_something_to_compare(self):
+        self.assertEqual(call_js("costRows", {"haiku": 2.5, "opus": 1.0}), [["haiku", 2.5], ["opus", 1.0]])
+        self.assertEqual(call_js("costRows", {"opus": 1.0, "haiku": 2.5}), [["haiku", 2.5], ["opus", 1.0]])  # key order does not matter
+        self.assertEqual(call_js("costRows", {"opus": 1.0}), [])  # one model says nothing the total does not
+        self.assertEqual(call_js("costRows", {"haiku": 2.5, "opus": 0}), [])  # a model that billed nothing is not a second model
+        self.assertEqual(call_js("costRows", None), [])  # a report exported before the split was recorded
 
 
 @unittest.skipUnless(shutil.which("node"), "node is not installed")

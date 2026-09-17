@@ -11,7 +11,7 @@ from . import DATA
 from .fetch import slugify
 
 CACHE = DATA / "cache" / "llm"
-SPENT = []  # what this process spent, counting cached calls at their original price so a re-run still tallies
+SPENT = []  # (model, usd) per call this process made, counting cached calls at their original price so a re-run still tallies
 
 
 def ask(prompt, *, model, system, schema=None):
@@ -19,7 +19,7 @@ def ask(prompt, *, model, system, schema=None):
     path = CACHE / f"{key}.json"
     if path.exists():
         cached = json.loads(path.read_text())
-        SPENT.append(cached.get("cost_usd") or 0)
+        SPENT.append((model, cached.get("cost_usd") or 0))  # the model is part of the cache key, so the argument is the record's model
         return cached["output"]
     cmd = ["claude", "-p", "--model", model, "--output-format", "json", "--system-prompt", system,
            "--no-session-persistence", "--tools", ""]
@@ -40,7 +40,7 @@ def ask(prompt, *, model, system, schema=None):
             raise RuntimeError(f"claude -p returned no structured output ({d.get('subtype')}): {str(d.get('result'))[:300]!r}")
     CACHE.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({"model": model, "cost_usd": d.get("total_cost_usd"), "output": out}))
-    SPENT.append(d.get("total_cost_usd") or 0)
+    SPENT.append((model, d.get("total_cost_usd") or 0))
     print(f"  [{model}] ${d.get('total_cost_usd', 0):.4f}", file=sys.stderr)
     return out
 
@@ -53,11 +53,35 @@ def record(doi, step):
         return
     path = DATA / slugify(doi) / "cost.json"
     costs = json.loads(path.read_text()) if path.exists() else {}
-    costs[step] = round(sum(SPENT), 4)
+    by = {}
+    for model, usd in SPENT:
+        by[model] = by.get(model, 0) + usd
+    costs[step] = {m: round(v, 4) for m, v in by.items()}  # rounded once at the end, so a single-model step matches the old scalar exactly
     path.write_text(json.dumps(costs, indent=1))
     SPENT.clear()
 
 
-def cost(doi):
+def _steps(doi):
     path = DATA / slugify(doi) / "cost.json"
-    return round(sum(json.loads(path.read_text()).values()), 4) if path.exists() else None
+    return list(json.loads(path.read_text()).values()) if path.exists() else None
+
+
+def cost(doi):
+    """Total dollars banked for a paper. Tolerates the flat {step: dollars} shape written before costs were
+    split by model: `record` migrates one step at a time, so a half-migrated file is the ordinary state of
+    the tool mid-run, not a stale-checkout edge case."""
+    steps = _steps(doi)
+    return round(sum(sum(s.values()) if isinstance(s, dict) else s for s in steps), 4) if steps is not None else None
+
+
+def per_model(doi):
+    """{model: dollars}, biggest first, or None if any step predates the split. A partial split would not add
+    up to the total shown beside it, which is worse than showing no split at all."""
+    steps = _steps(doi)
+    if not steps or not all(isinstance(s, dict) for s in steps):
+        return None
+    by = {}
+    for s in steps:
+        for m, usd in s.items():
+            by[m] = by.get(m, 0) + usd
+    return {m: round(v, 4) for m, v in sorted(by.items(), key=lambda kv: -kv[1])}
