@@ -69,6 +69,8 @@ const roleBadge = (r) => r ? `<span class="role" style="background:${roleColor(r
 
 const yearChart = (years) => {
   if (!years?.length) return '';
+  const by = Object.fromEntries(years), lo = years[0][0], hi = years[years.length - 1][0];
+  years = Array.from({ length: hi - lo + 1 }, (_, i) => [lo + i, by[lo + i] || 0]);  // fill empty years so the axis stays linear
   const max = Math.max(...years.map(([, n]) => n));
   return `<div class="years">${years.map(([y, n]) => `<div style="height:${(100 * n / max).toFixed(1)}%" data-l="${y}: ${n}"></div>`).join('')}</div>
     <div class="yl"><span>${years[0][0]}</span><span>${years[years.length - 1][0]}</span></div>`;
