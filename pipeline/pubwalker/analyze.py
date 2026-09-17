@@ -46,9 +46,8 @@ complaints; anything unexpected. Write 5 to 8 claims of one or two sentences eac
 
 STRUCT_KINDS = ["fact", "method", "finding", "claim", "gap"]
 STRUCT_ITEM_PROPS = {
-    "text": {"type": "string"},
+    "text": {"type": "string", "description": "One sentence, with the 2-6 words that carry its point wrapped in **double asterisks**."},
     "kind": {"type": "string", "enum": STRUCT_KINDS, "description": "fact: established knowledge taken as given; method: how something was done; finding: observed or measured in this work; claim: the authors' interpretation, argument or proposal; gap: a caveat or something not addressed."},
-    "key": {"type": "string", "description": "A 2-6 word verbatim substring of `text` that is the point of the sentence."},
     "highlight": {"type": "boolean", "description": "True for the 1-3 items in this field a reader should see first."},
     "evidence": {"type": "string", "description": "Verbatim span from the paper, or 'not stated'."},
 }
@@ -74,9 +73,11 @@ measured); data (what was collected or reused, with identifiers); analysis (meth
 stated, tied to the design they come from); conclusions (what the authors say the results show, each listing the
 results it rests on as R1, R2, ... in the order you give them); implications (what follows for the field if the
 conclusions hold, and proposed next steps); limitations (stated caveats, plus anything important the paper does not
-address, marked as such). Every item carries a verbatim evidence span, a kind (fact, method, finding, claim or gap),
-a key phrase copied verbatim from its own text, and highlight=true for the 1 to 3 items per field a reader should see
-first. Use 'not stated' rather than inventing. Be concise: 3 to 10 items per field."""
+address, marked as such). Every item is one sentence with its key 2 to 6 words wrapped in **double asterisks**, plus a
+verbatim evidence span, a kind, and highlight=true for the 1 to 3 items per field a reader should see first. The kind
+is independent of the field: an assumption asserted without citation is a claim, not a fact; a result that interprets
+rather than reports is a claim; a limitation the authors state is a finding or fact, one they do not address is a gap.
+Use 'not stated' rather than inventing. Be concise: 3 to 10 items per field."""
 
 COMPARE_SCHEMA = {
     "type": "object", "additionalProperties": False, "required": ["points"],
@@ -199,11 +200,11 @@ def abstract(work_id):
 
 
 def tidy_structure(out):
-    """Drop a `key` that is not actually in its text, and keep only `based_on` ids that name a real result."""
+    """Keep the **key phrase** markup only when there is exactly one pair, and only `based_on` ids that name a real result."""
     fields = ["assumptions", "design", "data", "analysis", "results", "conclusions", "implications", "limitations"]
     for it in (it for k in fields for it in out[k]):
-        if it.get("key") and it["key"] not in it["text"]:
-            it["key"] = ""
+        if it["text"].count("**") != 2:
+            it["text"] = it["text"].replace("**", "")
     ok = {f"R{i}" for i in range(1, len(out["results"]) + 1)}
     for c in out["conclusions"]:
         c["based_on"] = [r for r in (s.strip("[] ").upper() for s in c.get("based_on", [])) if r in ok]

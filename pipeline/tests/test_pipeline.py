@@ -54,13 +54,13 @@ class Analyze(unittest.TestCase):
         self.assertEqual(sum(h.values()), 2)
 
     def test_tidy_structure_checks_keys_and_result_ids(self):
-        item = lambda text, key: {"text": text, "key": key, "kind": "claim", "highlight": True, "evidence": "x"}
+        item = lambda text: {"text": text, "kind": "claim", "highlight": True, "evidence": "x"}
         out = {k: [] for k in ["assumptions", "design", "data", "analysis", "implications", "limitations"]}
-        out["results"] = [item("Tumours fell tenfold.", "fell tenfold"), item("HR was restored.", "not in text")]
-        out["conclusions"] = [{**item("53BP1 is required.", "is required"), "based_on": ["R1", "[r2]", "R3", "D1"]}]
+        out["results"] = [item("Tumours **fell tenfold**."), item("**HR** was **restored**."), item("Stray ** marker.")]
+        out["conclusions"] = [{**item("53BP1 **is required**."), "based_on": ["R1", "[r2]", "R3", "D1"]}]
         tidy_structure(out)
-        self.assertEqual([r["key"] for r in out["results"]], ["fell tenfold", ""])
-        self.assertEqual(out["conclusions"][0]["based_on"], ["R1", "R2"])
+        self.assertEqual([r["text"] for r in out["results"]], ["Tumours **fell tenfold**.", "HR was restored.", "Stray  marker."])
+        self.assertEqual(out["conclusions"][0]["based_on"], ["R1", "R2", "R3"])
 
     def test_fulltext_marks_bibr_xrefs_and_collects_refs(self):
         body, refs = fulltext(ROOT)
