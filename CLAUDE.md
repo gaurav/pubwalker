@@ -18,6 +18,8 @@
   and never touch the network or `claude`.
 - Gotchas: Europe PMC `fullTextXML` returns 500 for author manuscripts (NCBI efetch works); some PMC
   records are PDF-only deposits whose XML is front matter with no `<body>` (e.g. PMC2994087,
-  PMC3063043), so check `analyze.has_body` before trusting a PMCID as full text;
+  PMC3063043), so check `analyze.has_body` before trusting a PMCID as full text; OpenAlex's
+  `has_pmcid:true` filter returns 0 results, so to find PMC papers filter on
+  `locations.source.id:S2764455111|S4306400806` (PMC, Europe PMC) instead;
   OpenAlex's `per-page` also caps `group_by` results; NIH's SPARK page gives a wrong PMCID for
   Bunting 2010 (correct: PMC2857570); Semantic Scholar contexts are sometimes just reference numbers.

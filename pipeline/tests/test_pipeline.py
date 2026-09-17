@@ -1,9 +1,15 @@
 """Offline checks for the pure logic: JATS passage extraction, windowing, grounding, flattening.
 Run: cd pipeline && uv run python -m unittest discover -s tests"""
 import datetime as dt
+import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+from pathlib import Path
+from unittest import mock
 
+import httpx
+
+from pubwalker import analyze, http
 from pubwalker.analyze import fulltext, grounded, has_body, histogram, references, tidy_structure
 from pubwalker.fetch import flatten, slugify
 from pubwalker.passages import citing_paragraphs, find_ref, in_window
@@ -78,6 +84,33 @@ class Analyze(unittest.TestCase):
         refs = {r["id"]: r for r in references(ROOT)}
         self.assertEqual((refs["B2"]["doi"], refs["B2"]["year"], len(refs["B2"]["mentions"])), ("10.1111/j.1096-0031.2010.00329.x", 2011, 1))
         self.assertEqual((refs["B3"]["pmid"], [m["section"] for m in refs["B3"]["mentions"]]), ("24451623", ["Methods > Phylogenetics", "Discussion"]))
+
+    def test_enrich_matches_by_doi_then_pmid_and_fills_year(self):
+        work = lambda id, doi=None, pmid=None, year=2000: {"id": f"https://openalex.org/{id}", "doi": doi and f"https://doi.org/{doi}", "ids": {"pmid": pmid and f"https://pubmed.ncbi.nlm.nih.gov/{pmid}"},
+                                                              "cited_by_count": 7, "publication_year": year, "open_access": {"is_oa": True}}
+        calls = []
+
+        def fake_openalex(path, **params):
+            calls.append(params["filter"])
+            return {"results": [work("W1", doi="10.1/a")] if params["filter"].startswith("doi:") else [work("W2", pmid="99", year=1999)]}
+
+        refs = [{"id": "B1", "doi": "10.1/a", "pmid": None, "year": 2001}, {"id": "B2", "doi": None, "pmid": "99", "year": None}, {"id": "B3", "doi": None, "pmid": None, "year": None}]
+        with mock.patch.object(analyze, "openalex", fake_openalex):
+            analyze.enrich(refs)
+        self.assertEqual(calls, ["doi:10.1/a", "pmid:99"])  # one batched request per id type, only for refs still unmatched
+        self.assertEqual((refs[0]["openalex_id"], refs[0]["cited_by_count"], refs[0]["year"]), ("W1", 7, 2001))  # a known year is kept
+        self.assertEqual((refs[1]["openalex_id"], refs[1]["year"]), ("W2", 1999))  # a missing one is filled
+        self.assertNotIn("openalex_id", refs[2])
+
+
+class Http(unittest.TestCase):
+    def test_get_retries_transport_errors_then_succeeds(self):
+        ok = httpx.Response(200, json={"a": 1}, request=httpx.Request("GET", "https://x/y"))
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(http, "CACHE", Path(tmp)), mock.patch.object(http.time, "sleep") as sleep, \
+                mock.patch.object(http.httpx, "get", side_effect=[httpx.ReadTimeout("slow"), ok]) as get:
+            self.assertEqual(http.get("https://x/y", {"q": "test-retry"}), {"a": 1})
+            self.assertEqual((get.call_count, sleep.call_count), (2, 1))
+            self.assertEqual(len(list(Path(tmp).iterdir())), 1)  # the successful response was cached
 
 
 class Fetch(unittest.TestCase):
