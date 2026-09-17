@@ -4,7 +4,7 @@ import datetime as dt
 import unittest
 import xml.etree.ElementTree as ET
 
-from pubwalker.analyze import fulltext, grounded, histogram
+from pubwalker.analyze import fulltext, grounded, histogram, tidy_structure
 from pubwalker.fetch import flatten, slugify
 from pubwalker.passages import citing_paragraphs, find_ref, in_window
 
@@ -52,6 +52,15 @@ class Analyze(unittest.TestCase):
         h = histogram(["a", "b", "c"], {"a": {"role": "incidental"}, "b": {"role": "incidental"}})
         self.assertEqual(h["incidental"], 2)
         self.assertEqual(sum(h.values()), 2)
+
+    def test_tidy_structure_checks_keys_and_result_ids(self):
+        item = lambda text, key: {"text": text, "key": key, "kind": "claim", "highlight": True, "evidence": "x"}
+        out = {k: [] for k in ["assumptions", "design", "data", "analysis", "implications", "limitations"]}
+        out["results"] = [item("Tumours fell tenfold.", "fell tenfold"), item("HR was restored.", "not in text")]
+        out["conclusions"] = [{**item("53BP1 is required.", "is required"), "based_on": ["R1", "[r2]", "R3", "D1"]}]
+        tidy_structure(out)
+        self.assertEqual([r["key"] for r in out["results"]], ["fell tenfold", ""])
+        self.assertEqual(out["conclusions"][0]["based_on"], ["R1", "R2"])
 
     def test_fulltext_marks_bibr_xrefs_and_collects_refs(self):
         body, refs = fulltext(ROOT)

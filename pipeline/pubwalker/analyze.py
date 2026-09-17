@@ -44,27 +44,39 @@ Every claim must be supported by the listed citing papers and cite them by id. S
 disagreement and complaints. Cover: the dominant use; the workflows and other tools it appears alongside; stance and
 complaints; anything unexpected. Write 5 to 8 claims of one or two sentences each, then 3 to 5 follow-up questions."""
 
-STRUCT_ITEM = {"type": "object", "additionalProperties": False, "required": ["text", "evidence"],
-               "properties": {"text": {"type": "string"}, "evidence": {"type": "string", "description": "Verbatim span from the paper, or 'not stated'."}}}
-STRUCT_SOURCED = {"type": "object", "additionalProperties": False, "required": ["text", "sources", "evidence"],
-                  "properties": {"text": {"type": "string"}, "sources": {"type": "array", "items": {"type": "string"}, "description": "Reference ids like B12 that the paper attributes this to; empty if unsourced."}, "evidence": {"type": "string"}}}
+STRUCT_KINDS = ["fact", "method", "finding", "claim", "gap"]
+STRUCT_ITEM_PROPS = {
+    "text": {"type": "string"},
+    "kind": {"type": "string", "enum": STRUCT_KINDS, "description": "fact: established knowledge taken as given; method: how something was done; finding: observed or measured in this work; claim: the authors' interpretation, argument or proposal; gap: a caveat or something not addressed."},
+    "key": {"type": "string", "description": "A 2-6 word verbatim substring of `text` that is the point of the sentence."},
+    "highlight": {"type": "boolean", "description": "True for the 1-3 items in this field a reader should see first."},
+    "evidence": {"type": "string", "description": "Verbatim span from the paper, or 'not stated'."},
+}
+STRUCT_ITEM = {"type": "object", "additionalProperties": False, "required": [*STRUCT_ITEM_PROPS], "properties": STRUCT_ITEM_PROPS}
+STRUCT_SOURCED = {"type": "object", "additionalProperties": False, "required": [*STRUCT_ITEM_PROPS, "sources"],
+                  "properties": {**STRUCT_ITEM_PROPS, "sources": {"type": "array", "items": {"type": "string"}, "description": "Reference ids like B12 that the paper attributes this to; empty if unsourced."}}}
+STRUCT_CONCLUSION = {"type": "object", "additionalProperties": False, "required": [*STRUCT_ITEM_PROPS, "based_on"],
+                     "properties": {**STRUCT_ITEM_PROPS, "based_on": {"type": "array", "items": {"type": "string"}, "description": "The results this conclusion rests on, as R1, R2, ... numbering the results field from 1."}}}
 STRUCT_SCHEMA = {
     "type": "object", "additionalProperties": False,
     "required": ["question", "assumptions", "design", "data", "analysis", "results", "conclusions", "implications", "limitations"],
     "properties": {
         "question": {"type": "string"},
         "assumptions": {"type": "array", "items": STRUCT_SOURCED},
-        **{k: {"type": "array", "items": STRUCT_ITEM} for k in ["design", "data", "analysis", "results", "conclusions", "implications", "limitations"]},
+        "conclusions": {"type": "array", "items": STRUCT_CONCLUSION},
+        **{k: {"type": "array", "items": STRUCT_ITEM} for k in ["design", "data", "analysis", "results", "implications", "limitations"]},
     },
 }
 STRUCT_SYSTEM = """You extract the structure of a scientific paper's argument. Fill each field only from the text:
 question (what it sets out to answer); assumptions (premises it relies on, with the reference ids it attributes them to,
 or empty sources if asserted without citation); design (study type, arms or comparison groups, what is manipulated and
 measured); data (what was collected or reused, with identifiers); analysis (methods, software, tests); results (as
-stated, tied to the design they come from); conclusions (what the authors say the results show); implications (what
-follows for the field if the conclusions hold, and proposed next steps); limitations (stated caveats, plus anything
-important the paper does not address, marked as such). Every item carries a verbatim evidence span. Use 'not stated'
-rather than inventing. Be concise: 3 to 10 items per field."""
+stated, tied to the design they come from); conclusions (what the authors say the results show, each listing the
+results it rests on as R1, R2, ... in the order you give them); implications (what follows for the field if the
+conclusions hold, and proposed next steps); limitations (stated caveats, plus anything important the paper does not
+address, marked as such). Every item carries a verbatim evidence span, a kind (fact, method, finding, claim or gap),
+a key phrase copied verbatim from its own text, and highlight=true for the 1 to 3 items per field a reader should see
+first. Use 'not stated' rather than inventing. Be concise: 3 to 10 items per field."""
 
 COMPARE_SCHEMA = {
     "type": "object", "additionalProperties": False, "required": ["points"],
@@ -186,6 +198,18 @@ def abstract(work_id):
     return " ".join(w for _, w in words)
 
 
+def tidy_structure(out):
+    """Drop a `key` that is not actually in its text, and keep only `based_on` ids that name a real result."""
+    fields = ["assumptions", "design", "data", "analysis", "results", "conclusions", "implications", "limitations"]
+    for it in (it for k in fields for it in out[k]):
+        if it.get("key") and it["key"] not in it["text"]:
+            it["key"] = ""
+    ok = {f"R{i}" for i in range(1, len(out["results"]) + 1)}
+    for c in out["conclusions"]:
+        c["based_on"] = [r for r in (s.strip("[] ").upper() for s in c.get("based_on", [])) if r in ok]
+    return out
+
+
 def structure(doi):
     anchor = load(doi, "anchor")
     refs = {}
@@ -194,12 +218,16 @@ def structure(doi):
         source, reflist = "pmc-full-text", "\n".join(f"[{k}] {v}" for k, v in refs.items())
         prompt = f"Paper: {anchor['title']} ({anchor['year']}).\n\n{body[:90000]}\n\n## References\n{reflist[:30000]}"
     else:
-        source, prompt = "abstract-only", f"Paper: {anchor['title']} ({anchor['year']}).\nOnly the abstract is available:\n\n{abstract(anchor['id'])}"
+        abs_text = abstract(anchor["id"])
+        source, prompt = "abstract-only", f"Paper: {anchor['title']} ({anchor['year']}).\nOnly the abstract is available:\n\n{abs_text}"
     out = ask(prompt, model="opus", system=STRUCT_SYSTEM, schema=STRUCT_SCHEMA)
     out["source"] = source
+    if source == "abstract-only":
+        out["abstract"] = abs_text  # shown on the site so a reader can see everything the model saw
     for a in out["assumptions"]:
         a["sources"] = [s.strip("[]") for s in a["sources"]]
     out["references"] = {k: refs[k] for k in sorted({s for a in out["assumptions"] for s in a["sources"]} & set(refs))}
+    tidy_structure(out)
     save(doi, "structure", out)
     print(f"structure from {source}: {len(out['assumptions'])} assumptions, {len(out['conclusions'])} conclusions")
     return out

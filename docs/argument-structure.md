@@ -33,7 +33,14 @@ Produced as JSON from the full text (PMC JATS XML where available), one record p
 | `limitations` | Stated caveats, and anything the model notices the paper does not address. |
 
 Every entry carries an `evidence` field with the verbatim span it was derived from and the
-section it came from, so the markup can be checked against the paper.
+section it came from, so the markup can be checked against the paper. Each entry also carries:
+
+| Field | Contents |
+| --- | --- |
+| `kind` | A statement type that cuts across the sections: `fact` (established knowledge taken as given), `method` (how something was done), `finding` (observed or measured in this work), `claim` (the authors' interpretation, argument or proposal), `gap` (a caveat or something not addressed). Within Assumptions this separates cited facts from bare premises; within Results, measurements from interpretation; within Limitations, stated caveats from gaps the model noticed. |
+| `key` | A 2–6 word verbatim substring of the entry's own text, the phrase that carries its point; the site bolds it. |
+| `highlight` | True for the one to three entries per section a reader should see first. |
+| `based_on` | Conclusions only: the results the conclusion rests on, as `R1`, `R2`, … numbering the `results` list from 1. |
 
 ## Uses
 
