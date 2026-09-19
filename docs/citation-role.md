@@ -71,7 +71,8 @@ LLM calls that changed.
 
 5. **Synthesise per window** with a frontier model (Claude Opus). Input is the classified
    passages with quotes; output is a short report whose every numbered claim points at
-   specific citing papers and quotes, plus three to five follow-up questions. Then one
+   specific citing papers and quotes, with its key phrase marked and the one to three most
+   important claims flagged as highlights, plus three to five follow-up questions. Then one
    cross-window synthesis: what changed over time. This is deliberately the shape of a SPARK
    Track 2 answer (synthesis, citations, supporting passages, follow-up actions).
 
@@ -79,6 +80,18 @@ LLM calls that changed.
    in (what it is combined with, upstream and downstream); recurring complaints; what
    citers who did *not* use it chose instead. For a results paper: which claim is cited,
    whether it is being confirmed or contested, and by whom.
+
+## The other direction: outgoing citations
+
+The same question can be asked of the paper's own reference list: what does *it* use each
+reference for? Where we have JATS full text, every `<ref>` is paired with the paragraphs that
+`<xref>` it (with their section path), enriched from OpenAlex (id, citation count, OA), and
+classified by the cheap model with the **same seven roles**, from the citing side. Using one
+taxonomy in both directions is the point: the site can set "roles out" against "roles in", show
+where in the paper each role appears (Introduction is background, Methods is tools, or not), how
+old the references are per role, which references carry the most weight (mentions, sections,
+assumptions in the argument structure that name them), and whether the paper cites others the
+way it is itself cited.
 
 ## Things to watch
 
@@ -92,6 +105,25 @@ LLM calls that changed.
   re-bill for unchanged passages.
 - **Spot-check.** Hand-label 20 to 30 passages against the model's labels before trusting the
   histogram.
+- **The windows are nested, so they cannot show a trend.** `last-12-months` is a subset of
+  `last-5-years` is a subset of `all-time`, and each is sampled independently across its whole
+  span. Comparing the three answers "what does a recent citer do, versus a citer at any time",
+  not "has this changed since publication" — the all-time sample is thin in the early years
+  precisely where a trend question needs it (for a 2006 paper it was 9 pre-2013 citers out of
+  40). To ask whether the pattern shifted, sample a fixed number per *era* and classify those:
+  `cd pipeline && uv run python tools/eras.py <doi>` does exactly that, reusing the passages and
+  the LLM cache, and `--names <regex>` adds the measure described in the next point. Folding eras
+  into the pipeline proper is issue #10. The roles step is Haiku and cheap, so a 45-per-era run
+  over four eras costs little. Note that
+  the synthesis prompt cheerfully generates "has this shifted by year?" as a follow-up question
+  the report itself cannot answer.
+- **Role counts undercount method reuse.** A passage citing a paper for where a protocol came
+  from often reads as `background-claim`, because the citing sentence is about the method's
+  provenance rather than about running it. Testing "is this now cited as a method template?" on
+  the role label alone was noisy and non-significant across eras, while the same passages tested
+  for whether they *name* the toolkit or protocol gave a clean, significant trend. When a
+  question is about one specific reuse, search the `what_for`, `combined_with` and
+  `evidence_quote` fields for it rather than counting roles.
 
 ## Relation to the argument-structure idea
 

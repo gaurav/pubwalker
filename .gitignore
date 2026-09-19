@@ -3,3 +3,8 @@
 
 # Local secrets; copy env.default to .env and fill in.
 .env
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store

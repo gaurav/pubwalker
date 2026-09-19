@@ -23,11 +23,62 @@ Two ideas, which are the same problem facing in opposite directions:
 `docs/tooling.md` surveys the data sources and tools we can lean on (OpenAlex, Semantic
 Scholar, Europe PMC, pubmed2db, Claude Code in headless mode, and so on).
 
-## Status
+## Demo
 
-Ideas and tooling notes only. A demo website with a pipeline that produces these reports for
-a couple of example papers is being built on a separate branch; when it lands it will live in
-`pipeline/` (Python, run locally) and `site/` (static, GitHub Pages).
+`site/` is a static page (no build step) that shows precomputed reports for fifteen papers and a
+keyless live look-up for any DOI. It is live at <http://www.ggvaidya.com/pubwalker/> (the account's
+custom domain, not `gaurav.github.io`), deployed by `.github/workflows/pages.yml` on every push to
+`main` that touches `site/**`. While the site still lives on a branch, that workflow is dispatched
+by hand — `gh workflow run pages.yml --ref demo-site` — which needs two things a fresh clone will
+not have: the workflow file present on the default branch, since `workflow_dispatch` is only
+offered there, and the `github-pages` environment set to custom branch policies with that branch
+allowed, or the run fails with "Branch … is not allowed to deploy to github-pages". Locally:
+
+```sh
+cd pipeline && uv run serve   # http://localhost:8765/, reloads the browser when site/ changes
+```
+
+Without uv, `python3 -m http.server 8765 -d site` does the same minus the reloading.
+
+A paper page is `/?doi=<doi>&tab=anatomy|outgoing|backscatter|comparison`; a DOI without a
+precomputed report falls back to the live look-up. The tabs run from the paper outwards.
+**Anatomy** is the paper taken apart: question and conclusions first, then assumptions, design,
+data, analysis, results, implications and limitations, each statement typed and tied to the span
+and section it was read from (schema in [docs/argument-structure.md](docs/argument-structure.md)).
+**Outgoing** is its own reference list read with the citation roles: what it uses each reference
+for, where in the paper, how old they are, and which ones carry the argument. **Backscatter** is
+how the literature uses the paper (roles per citing passage, syntheses per time window with
+linked evidence). **Claimed vs cited** sets the paper's claims against what it is cited for. `uv run screenshot out.png <doi> anatomy` renders a
+page in headless Chromium for checking without a browser window, and `uv run clicktest [doi]`
+clicks through every tab and fails on any page error.
+
+`pipeline/` produces the reports. It needs [uv](https://docs.astral.sh/uv/) and a Claude Code
+login (`claude` on your PATH); every LLM call goes through `claude -p` and is cached, as is
+every HTTP response, under `data/`.
+
+```sh
+cd pipeline
+uv run pubwalker all 10.1111/j.1096-0031.2010.00329.x     # fetch → passages → roles → synth → structure → compare → export
+uv run pubwalker roles 10.1016/j.cell.2010.03.012 --n 40  # or one step at a time
+```
+
+Steps: `fetch` lists citers from OpenAlex; `passages` pulls the citing paragraph from Europe
+PMC full text or the citing sentence from Semantic Scholar and samples 40 citers per time
+window; `roles` labels each passage with Haiku; `synth` writes per-window and overall
+syntheses with Opus, each claim tied to citer ids; `structure` extracts the anchor's argument
+from its PMC full text (or abstract); `outgoing` classifies what the anchor uses each of its own
+references for, with the same roles; `compare` sets claimed against cited; `export` writes
+`site/data/<slug>.json`. A full run for one paper costs a few dollars: each step banks what it
+spent in `data/<slug>/cost.json`, and the report page and the home page show the per-paper total
+and the total over all reports.
+
+To add a report, run `all` for the DOI and commit the new `site/data/` files; `export` merges it
+into `index.json`. Anatomy and Outgoing need PMC full text with a body, which a PMCID alone does
+not guarantee (some deposits are PDF-only; see the gotchas in `CLAUDE.md`), so check
+`analyze.has_body(passages.jats(pmcid))` first. Fourteen of the demo papers were sampled from
+OpenAlex (open access, in PMC, 100–2000 citations, 2008–2019) for variety of field and paper type;
+Meier et al. 2006 was added afterwards as the deliberate opposite — closed access, no PMC deposit
+at all — so the set exercises the abstract-only Anatomy and the absent Outgoing tab.
 
 ## Setup
 

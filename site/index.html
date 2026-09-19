@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pubwalker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='44'%20fill='%23fff7e0'%20stroke='%23d4a017'%20stroke-width='9'/%3E%3Ctext%20x='50'%20y='62'%20text-anchor='middle'%20font-family='Georgia,serif'%20font-weight='bold'%20font-size='34'%20fill='%23222'%3EPW%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a href="." class="brand">pubwalker</a>
+  <span class="tag">what a paper is cited for, and what it argues</span>
+  <select id="examples" class="jump" onchange="if(this.value)location.search='?doi='+encodeURIComponent(this.value)"><option value="">Examples</option></select>
+  <form class="jump"><input name="doi" placeholder="or enter a DOI" required><button>Go</button></form>
+  <a href="https://github.com/gaurav/pubwalker" class="right" target="_blank" rel="noopener">GitHub</a>
+</header>
+<main id="app"><p class="muted">Loading…</p></main>
+<script src="app.js"></script>
+</body>
+</html>
