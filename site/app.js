@@ -67,12 +67,15 @@ const SORTS = {
   citations: ['citations', (e) => -(e.cited_by_count ?? 0)],
   year: ['year', (e) => e.year ?? 0],
 };
-// ponytail: the choice lives for one page load, so a report page's Examples list is back in the default order; localStorage if that grates.
-let sortKey = 'variety';
+// The choice follows the reader to a report page, whose Examples list is sorted the same way. A browser that
+// refuses localStorage (private mode, blocked site data) just gets the default back on every page.
+const remembered = (value) => { try { return value === undefined ? localStorage.getItem('sort') : localStorage.setItem('sort', value); } catch { return null; } };
+let sortKey = SORTS[remembered()] ? remembered() : 'variety';
 const ordered = (index) => [...index].sort((a, b) => SORTS[sortKey][1](a) - SORTS[sortKey][1](b));
 
 function setSort(key) {
   sortKey = key;
+  remembered(key);
   fillExamples();
   home();
 }
